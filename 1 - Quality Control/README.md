@@ -133,7 +133,9 @@ Input Read Pairs: 767
 **NB!**<br>
 When searching for genetic variants using modern tools, removing adapters may not only not improve but even worsen the results of the analysis!
 
-PNG!!!!
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/1%20-%20Quality%20Control/imgs/Adapters%20trimming.png" align='center', width="50%">
+</div>
 
 ### **3.) Evaluate the data quality after trimming using `FastQC`**
 > Did the data quality get better after trimming?
