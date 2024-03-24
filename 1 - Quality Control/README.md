@@ -50,7 +50,7 @@ Quality averaged per read. Distribution: more than 100 reads with normal quality
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/BI-NGS/blob/main/1%20-%20Quality%20Control/imgs/pre-trim/Per%20base%20sequence%20quality%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/BI-NGS/blob/main/1%20-%20Quality%20Control/imgs/pre-trim/Per%20base%20sequence%20quality%20R2.png" width="100%">|
+|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/1%20-%20Quality%20Control/imgs/pre-trim/Per%20base%20sequence%20content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/1%20-%20Quality%20Control/imgs/pre-trim/Per%20base%20sequence%20content%20R2.png" width="100%">|
 
 Distribution of nucleotide composition by position in the read. It can be seen that there are no sharp peaks here, although the graph looks rather broken. This is also because we have few reads. If we had more reads, the graph would probably be more or less even. The main thing is that there are no sharp big peaks.
 
