@@ -1,0 +1,16 @@
+maxthreads: 12
+
+# === Reference genome ===
+# https://www.ncbi.nlm.nih.gov/nuccore/U00096
+reference_ncbi_id: U00096.3
+reference: EcoliK12MG1655
+
+# === Samples ===
+
+# Data source: https://www.ncbi.nlm.nih.gov/bioproject/PRJNA777472
+# SRA Study: https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=study&acc=SRP345243
+# Run selector: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP345243&o=acc_s%3Aa
+# Run: https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&page_size=10&acc=SRR17909485&display=metadata
+
+#samples: [SRR17909485, SRR17909486]
+samples: [SRR17909486]
