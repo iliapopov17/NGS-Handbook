@@ -16,7 +16,7 @@ conda env create -f bioinf-intensive-2023.yml
 
 ## Genomic Variation Analysis
 
-In the [Genomic Variation Analysis folder](1%20-%20Quality%20Control) there is a detailed guide how to conduct studies on Variant Calling using `fastqc`, `trimmomatic`, `bwa`, `samtools`, `abra2`, `bcftools`, `snpEff` & `SnpSift`
+In the [Genomic Variation Analysis folder](2%20-%20Genomic%20Variation%20Analysis) there is a detailed guide how to conduct studies on Variant Calling using `fastqc`, `trimmomatic`, `bwa`, `samtools`, `abra2`, `bcftools`, `snpEff` & `SnpSift`
 
 ## Quality Control of raw data
 
