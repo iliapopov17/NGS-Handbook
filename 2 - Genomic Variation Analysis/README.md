@@ -10,11 +10,15 @@
 
 **Download reference file from NCBI in FASTA format**
 
+**_Input_**
+
 ```bash
 efetch -db nuccore -id U00096.3 -format fasta > data/reference/EcoliK12MG1655.fa
 ```
 
 **Download reference file from NCBI in GB format**
+
+**_Input_**
 
 ```bash
 efetch -db nuccore -id U00096.3 -format gb > data/reference/EcoliK12MG1655.gb
@@ -22,9 +26,13 @@ efetch -db nuccore -id U00096.3 -format gb > data/reference/EcoliK12MG1655.gb
 
 **Download sample FASTQ files from SRA via `sra-tools`**
 
+**_Input_**
+
 ```bash
 fastq-dump -v --split-3 --gzip SRR17909485 -O data
 ```
+
+**_Output_**
 
 ```
 Preference setting is: Prefer SRA Normalized Format files with full base quality scores if available.
@@ -35,9 +43,18 @@ Written 1251776 spots for SRR17909485
 
 ### **Check the reads quality**
 
+**_Input_**
+
 ```bash
 fastqc data/SRR17909485_*.fastq.gz -o data/fastqc_results
 ```
+
+**_Output_**
+
+Results are saved to:
+- `SRR17909485_1_fastqc.html`
+- `SRR17909485_2_fastqc.html`<br>
+Please open them in any web browser you use:
 
 #### **Per base sequence quality**
 
@@ -69,9 +86,12 @@ fastqc data/SRR17909485_*.fastq.gz -o data/fastqc_results
 |-|-|
 |<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/2%20-%20Genomic%20Variation%20Analysis/imgs/Adapter%20Content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/2%20-%20Genomic%20Variation%20Analysis/imgs/Adapter%20Content%20R2.png" width="100%">|
 
-The main problem is `Per base sequence quality`. So we will solve it using `trimmomatic`. Details on `trimmomatic` and QC in the [Quality Control manual](1%20-%20Quality%20Control)
+The main problem is `Per base sequence quality`. So we will solve it using `trimmomatic`.<br>
+Details on `trimmomatic` and QC in the [Quality Control manual](1%20-%20Quality%20Control)
 
 ### **Trim low-quality bases**
+
+**_Input_**
 
 ```bash
 trimmomatic PE -threads 2 data/SRR17909485_1.fastq.gz data/SRR17909485_2.fastq.gz \
@@ -79,6 +99,8 @@ trimmomatic PE -threads 2 data/SRR17909485_1.fastq.gz data/SRR17909485_2.fastq.g
         data/trimmed/SRR17909485_R2.trim.paired.fastq.gz data/trimmed/SRR17909485_R2.trim.unpaired.fastq.gz \
             LEADING:22 TRAILING:22 SLIDINGWINDOW:6:22 MINLEN:32
 ```
+
+**_Output_**
 
 ```
 TrimmomaticPE: Started with arguments:
@@ -101,10 +123,14 @@ Input Read Pairs: 1251776
 
 ### **Index reference**
 
+**_Input_**
+
 ```bash
 bwa index data/reference/EcoliK12MG1655.fa
 ```
 ### **Align to reference**
+
+**_Input_**
 
 ```bash
 bwa mem -t 2 -R '@RG\tID:1' \
@@ -116,11 +142,15 @@ bwa mem -t 2 -R '@RG\tID:1' \
 
 ### **Sort alignment**
 
+**_Input_**
+
 ```bash
 samtools sort --threads 2 data/bam/EcoliK12MG1655.SRR17909485.unsorted.bam > data/bam/EcoliK12MG1655.SRR17909485.sorted.bam
 ```
 
 ### **Make bam index**
+
+**_Input_**
 
 ```bash
 samtools index data/bam/EcoliK12MG1655.SRR17909485.sorted.bam
@@ -128,17 +158,23 @@ samtools index data/bam/EcoliK12MG1655.SRR17909485.sorted.bam
 
 ### **Realign indels**
 
+**_Input_**
+
 ```bash
 abra2 --threads 2 --mad 100 --mbq 24 --ref data/reference/EcoliK12MG1655.fa --in data/bam/EcoliK12MG1655.SRR17909485.sorted.bam --out data/bam/EcoliK12MG1655.SRR17909485.final.bam
 ```
 
 ### **Index final bam**
 
+**_Input_**
+
 ```bash
 samtools index data/bam/EcoliK12MG1655.SRR17909485.final.bam
 ```
 
 ### **Call variants**
+
+**_Input_**
 
 ```bash
 bcftools mpileup -Ou --max-depth 5000 -f data/reference/EcoliK12MG1655.fa data/bam/EcoliK12MG1655.SRR17909485.final.bam \
@@ -154,9 +190,13 @@ Unfortunately `bcftools` is not multithreaded. If we do re-alignment with `abra2
 `vcf` = variant call format.
 This is actually a list of variations in a clear text format: chromosome, position, which letter was replaced by which letter, the quality of how much `bcftools` considers it important, some set of certain statistics (frequency of letter occurrence, etc.).
 
+**_Input_**
+
 ```bash
 tail data/vcf/EcoliK12MG1655.SRR17909485.called.bcftools.vcf
 ```
+
+**_Output_**
 
 ```
 U00096.3	3110421	.	C	A	225.417	.	DP=41;VDB=0.454064;SGB=-0.692914;MQSBZ=1.45774;MQ0F=0;AC=1;AN=1;DP4=0,0,8,17;MQ=59	GT:PL	1:255,0
@@ -177,22 +217,32 @@ U00096.3	4616669	.	G	T	225.417	.	DP=88;VDB=0.58582;SGB=-0.693147;MQSBZ=0;MQ0F=0;
 By _E. coli_ snpEff has over 3500 databases, which is a lot.<br>
 The best way to handle this is to make your own database.
 
+**_Input_**
+
 ```bash
 mkdir -p data/EcoliK12MG1655
 ```
 
+**_Input_**
+
 ```bash
 cp data/reference/EcoliK12MG1655.gb data/EcoliK12MG1655/genes.gbk
 ```
+
+**_Input_**
 
 ```bash
 echo "EcoliK12MG1655.genome : EcoliK12MG1655\nEcoliK12MG1655.chromosomes : EcoliK12MG1655.gb\nEcoliK12MG1655.codonTable : Standard" \
     > snpEff.config
 ```
 
+**_Input_**
+
 ```bash
 cat snpEff.config
 ```
+
+**_Output_**
 
 ```
 EcoliK12MG1655.genome : EcoliK12MG1655
@@ -204,9 +254,13 @@ EcoliK12MG1655.codonTable : Standard
 2. Line 2 - the chromosomes from this genome (all contigs with all annotations) will be in the file `EcoliK12MG1655.gb`
 3. Line 3 - standard genetic code table
 
+**_Input_**
+
 ```bash
 snpEff build -c snpEff.config -genbank EcoliK12MG1655
 ```
+
+**_Output_**
 
 ```
 00:00:00 Codon table 'Standard' for genome 'EcoliK12MG1655'
@@ -215,21 +269,31 @@ snpEff build -c snpEff.config -genbank EcoliK12MG1655
 
 ### **Annotate variants**
 
+**_Input_**
+
 ```bash
 snpEff ann -v EcoliK12MG1655  data/vcf/EcoliK12MG1655.SRR17909485.called.bcftools.vcf > data/vcf/EcoliK12MG1655.SRR17909485.annotated.vcf
 ```
+
+**_Input_**
 
 ```bash
 mv snpEff_genes.txt EcoliK12MG1655.SRR17909485.snpEff_genes.txt
 ```
 
+**_Input_**
+
 ```bash
 mv snpEff_summary.html EcoliK12MG1655.SRR17909485.snpEff_summary.html
 ```
 
+**_Input_**
+
 ```bash
 tail data/vcf/EcoliK12MG1655.SRR17909485.annotated.vcf
 ```
+
+**_Output_**
 
 ```
 U00096.3	3110421	.	C	A	225.417	.	DP=41;VDB=0.454064;SGB=-0.692914;MQSBZ=1.45774;MQ0F=0;AC=1;AN=1;DP4=0,0,8,17;MQ=59;ANN=A|upstream_gene_variant|MODIFIER|speC|b2965|transcript|b2965|protein_coding||c.-1266G>T|||||1266|,A|upstream_gene_variant|MODIFIER|yqgH|b4785|transcript|b4785|protein_coding||c.-1021G>T|||||1021|,A|upstream_gene_variant|MODIFIER|yqhJ|b4786|transcript|b4786|protein_coding||c.-845C>A|||||845|WARNING_TRANSCRIPT_NO_START_CODON,A|downstream_gene_variant|MODIFIER|mltC|b2963|transcript|b2963|protein_coding||c.*4909C>A|||||4909|,A|downstream_gene_variant|MODIFIER|nupG|b2964|transcript|b2964|protein_coding||c.*3451C>A|||||3451|,A|downstream_gene_variant|MODIFIER|yqgA|b2966|transcript|b2966|protein_coding||c.*161C>A|||||161|WARNING_TRANSCRIPT_NO_START_CODON,A|downstream_gene_variant|MODIFIER|yghD|b2968|transcript|b2968|protein_coding||c.*169G>T|||||169|,A|downstream_gene_variant|MODIFIER|yghE|b2969|transcript|b2969|protein_coding||c.*707G>T|||||707|WARNING_TRANSCRIPT_NO_START_CODON,A|downstream_gene_variant|MODIFIER|yghF|b2970|transcript|b2970|protein_coding||c.*1633G>T|||||1633|WARNING_TRANSCRIPT_NO_START_CODON,A|downstream_gene_variant|MODIFIER|yghG|b2971|transcript|b2971|protein_coding||c.*2646G>T|||||2646|,A|downstream_gene_variant|MODIFIER|pppA|b2972|transcript|b2972|protein_coding||c.*3122G>T|||||3122|,A|downstream_gene_variant|MODIFIER|yghJ|b4466|transcript|b4466|protein_coding||c.*4129G>T|||||4129|,A|intragenic_variant|MODIFIER|pheV|b2967|gene_variant|b2967|||n.3110421C>A||||||	GT:PL	1:255,0
@@ -266,13 +330,19 @@ Let's filter out high and moderate effect mutations:
 - missense
 - frameshifts
 
+**_Input_**
+
 ```bash
 SnpSift filter "(ANN[*].IMPACT has 'HIGH') | (ANN[*].IMPACT has 'MODERATE')" data/vcf/EcoliK12MG1655.SRR17909485.annotated.vcf > data/vcf/EcoliK12MG1655.SRR17909485.higheffect.vcf
 ```
 
+**_Input_**
+
 ```bash
 tail data/vcf/EcoliK12MG1655.SRR17909485.higheffect.vcf
 ```
+
+**_Output_**
 
 ```
 U00096.3	705013	.	T	C	225.417	.	DP=103;VDB=0.0387749;SGB=-0.693147;MQSBZ=0;MQ0F=0;AC=1;AN=1;DP4=0,0,30,36;MQ=60;ANN=C|missense_variant|MODERATE|nagE|b0679|transcript|b0679|protein_coding|1/1|c.1070T>C|p.Leu357Ser|1070/1947|1070/1947|357/648||,C|upstream_gene_variant|MODIFIER|umpH|b0675|transcript|b0675|protein_coding||c.-4687A>G|||||4687|,C|upstream_gene_variant|MODIFIER|nagC|b0676|transcript|b0676|protein_coding||c.-3419A>G|||||3419|,C|upstream_gene_variant|MODIFIER|nagA|b0677|transcript|b0677|protein_coding||c.-2262A>G|||||2262|,C|upstream_gene_variant|MODIFIER|nagB|b0678|transcript|b0678|protein_coding||c.-1402A>G|||||1402|,C|upstream_gene_variant|MODIFIER|glnS|b0680|transcript|b0680|protein_coding||c.-1080T>C|||||1080|,C|upstream_gene_variant|MODIFIER|chiP|b0681|transcript|b0681|protein_coding||c.-3321T>C|||||3321|,C|upstream_gene_variant|MODIFIER|chiQ|b0682|transcript|b0682|protein_coding||c.-4777T>C|||||4777|	GT:PL	1:255,0
