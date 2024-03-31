@@ -9,9 +9,13 @@ We will use the `FastQC` program to assess the quality of the raw sequencing dat
 > Note that the folder for output results must exist, i.e. it should be created before running the program.
 > What problems are observed? How can they be fixed?
 
+**_Input_**
+
 ```bash
 fastqc data/Sample_1.R1.fastq.gz data/Sample_1.R2.fastq.gz -o fastqc_results
 ```
+
+**_Output_**
 
 ```
 application/gzip
@@ -21,6 +25,11 @@ Analysis complete for Sample_1.R1.fastq.gz
 Started analysis of Sample_1.R2.fastq.gz
 Analysis complete for Sample_1.R2.fastq.gz
 ```
+
+Results are saved to:
+- `Sample_1.R1_fastqc.html`
+- `Sample_1.R2_fastqc.html`<br>
+Please open them in any web browser you use:
 
 #### **Per base sequence quality**
 
@@ -74,6 +83,8 @@ This is the biggest problem in our data. We see that we have a fairly early incr
 >What do the options mean?<br>
 >How many readings remain after `Trimmomatic` data processing?
 
+**_Input_**
+
 ```bash
 trimmomatic PE -phred33 data/Sample_1.R1.fastq.gz data/Sample_1.R2.fastq.gz \
     trimmomatic_result/Sample_1.R1.paired.fastq.gz \
@@ -83,6 +94,8 @@ trimmomatic PE -phred33 data/Sample_1.R1.fastq.gz data/Sample_1.R2.fastq.gz \
                     ILLUMINACLIP:'adapters/NexteraPE-PE.fa':2:30:10 \
                         LEADING:10 TRAILING:10 SLIDINGWINDOW:4:10 MINLEN:50
 ```
+
+**_Output_**
 
 ```
 TrimmomaticPE: Started with arguments:
@@ -140,9 +153,13 @@ When searching for genetic variants using modern tools, removing adapters may no
 ### **3.) Evaluate the data quality after trimming using `FastQC`**
 > Did the data quality get better after trimming?
 
+**_Input_**
+
 ```bash
 fastqc trimmomatic_result/Sample_1.*paired.fastq.gz -o fastqc_results
 ```
+
+**_Output_**
 
 ```
 application/gzip
@@ -158,6 +175,13 @@ Analysis complete for Sample_1.R2.paired.fastq.gz
 Started analysis of Sample_1.R2.unpaired.fastq.gz
 Analysis complete for Sample_1.R2.unpaired.fastq.gz
 ```
+
+Results are saved to:
+- `Sample_1.R1.paired_fastqc.html`
+- `Sample_1.R1.unpaired_fastqc.html`
+- `Sample_2.R1.paired_fastqc.html`
+- `Sample_2.R1.unpaired_fastqc.html`<br>
+Please open them in any web browser you use:
 
 #### **Per base sequence quality**
 
