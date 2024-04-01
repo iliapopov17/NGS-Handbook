@@ -1,6 +1,6 @@
 # NGS Data Analysis Manuals
 
-> Materials of the repository were prepared on the basis of materials of the educational intensive from the Bioinformatics Institute<br>
+> Materials of the repository were prepared on the basis of the educational intensive from the Bioinformatics Institute<br>
 > It can be used as a helpful repository with cheat-sheets for NGS studies.
 
 To recreate any of the steps of this manual please install:
