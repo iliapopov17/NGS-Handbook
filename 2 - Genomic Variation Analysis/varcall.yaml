@@ -1,4 +1,4 @@
-name: bioschool_varcall
+name: varcall
 channels:
   - bioconda
   - conda-forge

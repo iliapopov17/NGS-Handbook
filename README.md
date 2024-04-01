@@ -6,7 +6,7 @@
 To recreate any of the steps of this manual please install:
 
 ```bash
-conda env create -f bioinf-intensive-2023.yml
+conda env create -f ngs-manual.yml
 ```
 
 ## Much more to be disclosured soon:

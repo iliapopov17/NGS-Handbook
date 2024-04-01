@@ -1,4 +1,4 @@
-name: bioinf-intensive-2023
+name: ngs-manual
 channels:
   - conda-forge
   - bioconda
@@ -397,4 +397,4 @@ dependencies:
       - webcolors==1.13
       - webencodings==0.5.1
       - websocket-client==1.5.1
-prefix: /home/vm2/miniconda3/envs/bioinf-intensive-2023
+prefix: /home/vm2/miniconda3/envs/ngs-manual

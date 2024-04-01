@@ -30,7 +30,7 @@ rule fetch_reference_fasta:
     output: 
         REFERENCE+".fa"
     params:  ref_id=REFERENCE_ID
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "efetch -db nuccore -id {params.ref_id} -format fasta > {output}"
 
 rule fetch_reference_gb:
@@ -38,7 +38,7 @@ rule fetch_reference_gb:
     output: 
         REFERENCE+".gb"
     params:  ref_id=REFERENCE_ID
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "efetch -db nuccore -id {params.ref_id} -format gb > {output}"
 
 
@@ -48,28 +48,28 @@ rule fetch_sample:
         "{sample}_1.fastq.gz",
         "{sample}_2.fastq.gz",
     params: sra_id="{sample}"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "fastq-dump -v --split-3 --gzip {params.sra_id}"
 
 rule reference_index_bwa:
     # Prepare BWA index for gzipped fasta
     input:  "{reference}.fa"
     output: multiext("{reference}.fa", ".amb", ".ann", ".bwt",".pac",".sa")
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "bwa index {input}"
 
 rule ref_index_fai:
     # Make fai index for fasta reference (required by GATK and some other utilities)
     input:  "{reference}.fa"
     output: "{reference}.fa.fai"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "samtools faidx {input}"
 
 rule ref_index_dict:
     # Make dict index for fasta reference (required by GATK) 
     input:  "{reference}.fa"
     output: "{reference}.dict"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "samtools dict {input} > {output}"
 
 rule sample_trimmomatic:
@@ -85,7 +85,7 @@ rule sample_trimmomatic:
     log: "logs/{sample}.reads_trim.log"
     threads: MAXTHREADS
     params: trimrule="LEADING:22 TRAILING:22 SLIDINGWINDOW:6:22 MINLEN:32"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "trimmomatic PE -threads {threads} {input} {output} {params.trimrule} 2> {log}"
 
 rule bwa_align:
@@ -101,7 +101,7 @@ rule bwa_align:
     resources:
         mem_gb=4
     params: readgroup=r"@RG\tID:1\tPL:illumina\tPU:barcode1\tSM:{sample}\tLB:Library1\tCN:BioschoolVarCall"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  r'''bwa mem -t {threads} -R '{params.readgroup}' {input.ref} {input.r1} {input.r2} 2> {log} | samtools view -b > {output}'''
 
 rule bam_sort:
@@ -110,14 +110,14 @@ rule bam_sort:
     output: "{sample}.sorted.bam"
     log:    "logs/{sample}.bam_sort.log"
     threads: MAXTHREADS
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "samtools sort --threads {threads} {input} > {output} 2> {log}"
 
 rule bam_index:
     # Make BAI index for BAM file
     input:  "{sample}.bam"
     output: "{sample}.bam.bai"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "samtools index {input}"
 
 rule realign_indels:
@@ -130,7 +130,7 @@ rule realign_indels:
     benchmark: "{reference}.{sample}.abra2_realign.benchmark.txt"
     log:    "logs/{reference}.{sample}.abra2_realign.log"
     threads: MAXTHREADS
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  """JAVA_TOOL_OPTIONS="-Xmx8G" abra2 --threads {threads} --mad 100 --mbq 24 --ref {input.ref} --in {input.bam} --out {output} 2> {log}"""
     
 rule call_variants_bcftools:
@@ -143,7 +143,7 @@ rule call_variants_bcftools:
     output: "{reference}.{sample}.called.bcftools.vcf",
     benchmark: "{reference}.{sample}.call_variants.bcftools.benchmark.txt"
     log:    "logs/{reference}.{sample}.call_variants.bcftools.log"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "bcftools mpileup -Ou --max-depth 5000 -f {input.ref} {input.bam} | bcftools call -mv --ploidy 1 -Ov -o {output}"
 
     
@@ -158,14 +158,14 @@ rule call_variants_gatk:
         bai="{reference}.{sample}.sorted.bam.bai"
     output: "{reference}.{sample}.called.gatk.vcf",
     log:    "logs/{reference}.{sample}.call_variants.gatk4.log"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "gatk HaplotypeCaller --reference {input.ref} --input {input.bam} --output {output} 2> {log}"
 
 rule vcf_index:
     # Make tabix index for VCF file
     input:  "{sample}.vcf.gz"
     output: "{sample}.vcf.gz.tbi"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  "tabix {input} {output}"
 
 rule make_snpeff_database:
@@ -173,7 +173,7 @@ rule make_snpeff_database:
     input:  "{reference}.gb"
     output: 
         dir=directory("data/{reference}")
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     params: 
         genome = "{reference}",
         dir="data/{reference}",
@@ -181,7 +181,7 @@ rule make_snpeff_database:
         {reference}.chromosomes : {reference}.gb
         {reference}.codonTable : Standard"""
     log:    "logs/{reference}.snpeff_db.log"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:"""
         echo "{params.snpeff_config}" > snpEff.config
         mkdir -p {output}
@@ -201,7 +201,7 @@ rule vcf_annotate_variants:
     log:    "logs/{reference}.{sample}.annotate_variants.log"
     threads: MAXTHREADS
     params: genome="{reference}"
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  """snpEff ann -v {params.genome}  {input.vcf} > {output.vcf} 2> {log}
                mv snpEff_genes.txt {output.genes}
                mv snpEff_summary.html {output.summary}"""
@@ -210,5 +210,5 @@ rule vcf_filter_effect:
     # Select only high and moderate impact variations
     input:  "{reference}.{sample}.annotated.vcf"
     output: "{reference}.{sample}.higheffect.vcf",
-    conda:  "bioschool_varcall.yaml"
+    conda:  "varcall.yaml"
     shell:  """SnpSift filter "(ANN[*].IMPACT has 'HIGH') | (ANN[*].IMPACT has 'MODERATE')" {input} > {output}"""
