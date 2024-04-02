@@ -9,6 +9,12 @@ To recreate any of the steps of this manual please install:
 conda env create -f ngs-manual.yml
 ```
 
+And of cource do not forget to activate the envinronment!
+
+```bash
+conda activate ngs-manual
+```
+
 ## Much more to be disclosured soon:
 - Reference-free approach in the comparative analysis of metagenomic data
 - Whole Genome and Pangenome Analyses
