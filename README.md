@@ -3,6 +3,12 @@
 > The materials in this repository are based on educational courses I have taken<br>
 > It can be used as a helpful repository with cheat-sheets for NGS studies.
 
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/imgs/NGS%20analysis%20workflow.png" align='center', width="100%">
+</div>
+
+_Typical workflow of NGS data analysis_
+
 To recreate any of the steps of this manual please install:
 
 ```bash
