@@ -11,8 +11,12 @@ _Typical workflow of NGS data analysis_
 
 ## Much more to be disclosured soon:
 - Whole Genome and Pangenome Analyses
-- Merging Phylogenetics pipeline into this handbook repository
 - 16S Amplicon Analysis
+- Maybe HiC...?
+
+## Phylogenetics
+
+In the [Phylogenetics folder](04_Phylogenetics) there is a complete pipeline of simple research in phylogenetics, from working with NCBI (and other databases) to building trees, evaluating them, and getting some worthwhile results.
 
 ## Genomic Variation Analysis
 
