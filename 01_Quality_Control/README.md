@@ -5,6 +5,18 @@
 
 We will use the `FastQC` program to assess the quality of the raw sequencing data.
 
+To recreate any of the steps of this manual please install:
+
+```bash
+conda env create -f qc.yaml
+```
+
+And of cource do not forget to activate the envinronment!
+
+```bash
+conda activate qc
+```
+
 ### **1.) Run `FastQC` on a pair of files `Sample_1.R1.fastq.gz` and `Sample_1.R2.fastq.gz`**
 > Note that the folder for output results must exist, i.e. it should be created before running the program.
 > What problems are observed? How can they be fixed?

@@ -6,6 +6,18 @@
 - `snpEff.config` - configuration file for snpEff database
 - `EcoliK12MG1655.SRR17909485.snpEff_genes.*` - snpEff outputs with annotated variants
 
+To recreate any of the steps of this manual please install:
+
+```bash
+conda env create -f varcall.yaml
+```
+
+And of cource do not forget to activate the envinronment!
+
+```bash
+conda activate varcall
+```
+
 ### **Downloading the data**
 
 **Download reference file from NCBI in FASTA format**

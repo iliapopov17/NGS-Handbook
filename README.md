@@ -9,18 +9,6 @@
 
 _Typical workflow of NGS data analysis_
 
-To recreate any of the steps of this manual please install:
-
-```bash
-conda env create -f ngs-manual.yml
-```
-
-And of cource do not forget to activate the envinronment!
-
-```bash
-conda activate ngs-manual
-```
-
 ## Much more to be disclosured soon:
 - Whole Genome and Pangenome Analyses
 - Merging Phylogenetics pipeline into this handbook repository
