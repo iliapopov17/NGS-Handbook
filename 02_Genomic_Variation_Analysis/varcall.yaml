@@ -1,0 +1,15 @@
+name: varcall
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - entrez-direct>=16.2
+  - sra-tools=3.0.3
+  - fastqc>=0.12
+  - trimmomatic>=0.39
+  - bwa>=0.7.17
+  - samtools>=1.6
+  - abra2>=2.24
+  - bcftools>=1.9
+  - snpeff>=5.1
+  - snpsift>=5.1
