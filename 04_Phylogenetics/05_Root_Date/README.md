@@ -313,4 +313,4 @@ Well. The common ancestor of our smoky leopards is about 2.5 million years old.
 In the first article - https://www.science.org/doi/10.1126/sciadv.adh9143 there was a full genome analysis. Their estimate of the age of the common ancestor of smoky leopards is 2.2 million years.
 And we hit 100 nucleotides pretty good!
 
-But in the second article - https://www.sciencedirect.com/science/article/pii/S2589004222019198 - the age of the ancestor is 5.1 million years old.... Well. Interesting. I can't explain it yet. The only thing I can say is that this article has a cool map of leopard populations. Too bad I didn't see them in Sumatra or Kalimantan when I was there...(
+But in the second article - https://www.sciencedirect.com/science/article/pii/S2589004222019198 - the age of the ancestor is 5.1 million years old.... Well. Interesting. I can't explain it yet.
