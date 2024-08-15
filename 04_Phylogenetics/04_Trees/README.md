@@ -74,7 +74,7 @@ raxml-ng --msa data/SUP35_aln_prank.trim.fas --model TIM3+G4 --prefix data/raxml
 **_Input_**
 
 ```bash
-Rscript draw_tree.R data/raxml/SUP35_raxml.raxml.bestTree imgs/SUP35_raxml.png
+Rscript scripts/draw_tree.R data/raxml/SUP35_raxml.raxml.bestTree imgs/SUP35_raxml.png
 ```
 
 **_Output_**
@@ -238,7 +238,7 @@ iqtree2 -s data/SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre data/iqtree_ufb_alrt_
 **_Input_**
 
 ```bash
-Rscript draw_tree_max.R data/iqtree_ufb_alrt_abayes/SUP35_TIM3_B_alrt_abayes.treefile imgs/SUP35_TIM3_B_alrt_abayes.png
+Rscript scripts/draw_tree_max.R data/iqtree_ufb_alrt_abayes/SUP35_TIM3_B_alrt_abayes.treefile imgs/SUP35_TIM3_B_alrt_abayes.png
 ```
 
 **_Output_**

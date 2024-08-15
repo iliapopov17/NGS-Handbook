@@ -11,19 +11,19 @@
 **_Input_**
 
 ```bash
-iqtree2 -s SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre SUP35_TIM3_ufb -bb 1000
+iqtree2 -s data/SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre data/iqtree_ufb/SUP35_TIM3_ufb -bb 1000
 ```
 
 **_Input_**
 
 ```bash
-iqtree2 -s SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre SUP35_TIM3_ufb_alrt_abayes -bb 1000 -alrt 1000 -abayes
+iqtree2 -s data/SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre data/iqtree_ufb_alrt_abayes/SUP35_TIM3_ufb_alrt_abayes -bb 1000 -alrt 1000 -abayes
 ```
 
 **_Input_**
 
 ```bash
-iqtree2 -s SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre SUP35_TIM3_root_outgroup -bb 1000 -alrt 1000 -abayes  -o SUP35_Kla_AB039749,SUP35_Agos_ATCC_10895_NM_211584
+iqtree2 -s data/SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre data/iqtree_root_outgroup/SUP35_TIM3_root_outgroup -bb 1000 -alrt 1000 -abayes  -o SUP35_Kla_AB039749,SUP35_Agos_ATCC_10895_NM_211584
 ```
 
 ### **2) Rooting a tree using `midpoint rooting`**
@@ -31,13 +31,13 @@ iqtree2 -s SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre SUP35_TIM3_root_outgroup -
 **_Input_**
 
 ```bash
-! python3 midpoint_root.py SUP35_TIM3_ufb.treefile >SUP35_TIM3_ufb_midpoint.treefile
+python3 scripts/midpoint_root.py data/iqtree_ufb/SUP35_TIM3_ufb.treefile >data/iqtree_ufb/SUP35_TIM3_ufb_midpoint.treefile
 ```
 
 **_Input_**
 
 ```bash
-! Rscript midpoint_root.R
+Rscript scripts/midpoint_root.R
 ```
 
 #### **2.1) Visualisation of the rooted trees from the previous paragraphs**
@@ -45,10 +45,10 @@ iqtree2 -s SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre SUP35_TIM3_root_outgroup -
 **_Input_**
 
 ```bash
-! Rscript draw_tree.R SUP35_TIM3_ufb.treefile SUP35_TIM3_ufb.png
-! Rscript draw_tree.R SUP35_TIM3_ufb_midpoint.treefile SUP35_TIM3_ufb_midpoint.png
-! Rscript draw_tree.R SUP35_TIM3_root_outgroup.treefile SUP35_TIM3_root_outgroup.png
-! Rscript draw_tree.R SUP35_TIM3_ufb_alrt_abayes_rooted.treefile SUP35_TIM3_ufb_alrt_abayes_rooted.png
+Rscript scripts/draw_tree.R data/iqtree_ufb/SUP35_TIM3_ufb.treefile imgs/SUP35_TIM3_ufb.png
+Rscript scripts/draw_tree.R data/iqtree_ufb/SUP35_TIM3_ufb_midpoint.treefile imgs/SUP35_TIM3_ufb_midpoint.png
+Rscript scripts/draw_tree.R data/iqtree_root_outgroup/SUP35_TIM3_root_outgroup.treefile imgs/SUP35_TIM3_root_outgroup.png
+Rscript scripts/draw_tree.R data/iqtree_ufb_alrt_abayes/SUP35_TIM3_ufb_alrt_abayes_rooted.treefile imgs/SUP35_TIM3_ufb_alrt_abayes_rooted.png
 ```
 
 **_Output_**
@@ -88,14 +88,14 @@ The idea is that they allow you to predict where the root was! This, by analogy 
 **_Input_**
 
 ```bash
-iqtree2 -s SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre SUP35_TIM3_root_auto --model-joint 12.12 -B 1000
+iqtree2 -s data/SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre data/iqtree_root_auto/SUP35_TIM3_root_auto --model-joint 12.12 -B 1000
 # -B 1000 -  it's not `bootstrap`, it's how many times to run `rootstrap`
 ```
 
 **_Input_**
 
 ```bash
-cat SUP35_TIM3_root_auto.rootstrap.nex
+cat data/iqtree_root_auto/SUP35_TIM3_root_auto.rootstrap.nex
 # - contains information about the algorithm's confidence in where the root is located
 ```
 
@@ -118,7 +118,7 @@ Programs that read `Newick` format will not be able to read this tree. According
 **_Input_**
 
 ```bash
-figtree SUP35_TIM3_root_auto.rootstrap.nex
+figtree data/iqtree_root_auto/SUP35_TIM3_root_auto.rootstrap.nex
 ```
 
 **_Output_**
@@ -140,31 +140,31 @@ It can't say anything specific about where the tree splits. There's a 42.4% chan
 **_Input_**
 
 ```bash
-efetch -db popset -id 126256179 -format fasta >felidae_atp8.fa
+efetch -db popset -id 126256179 -format fasta >data/atp8/felidae_atp8.fa
 ```
 
 **_Input_**
 
 ```bash
-cut -d ' ' -f 1,2,3 felidae_atp8.fa | sed -e 's/ /_/g' > felidae_atp8.renamed.fa
+cut -d ' ' -f 1,2,3 data/atp8/felidae_atp8.fa | sed -e 's/ /_/g' > data/atp8/felidae_atp8.renamed.fa
 ```
 
 **_Input_**
 
 ```bash
-mafft --auto felidae_atp8.renamed.fa >felidae_atp8.aln
+mafft --auto data/atp8/felidae_atp8.renamed.fa >data/atp8/felidae_atp8.aln
 ```
 
 **_Input_**
 
 ```bash
-trimal -in felidae_atp8.aln -out felidae_atp8.trim.fas -nogaps
+trimal -in data/atp8/felidae_atp8.aln -out data/atp8/felidae_atp8.trim.fas -nogaps
 ```
 
 **_Input_**
 
 ```bash
-iqtree2 -s felidae_atp8.trim.fas -o EF437591.1_Felis_catus -alrt 1000 -abayes
+iqtree2 -s data/atp8/felidae_atp8.trim.fas -o EF437591.1_Felis_catus -alrt 1000 -abayes
 ```
 
 **_Input_**
@@ -176,7 +176,7 @@ from Bio import Phylo
 **_Input_**
 
 ```python
-tree = Phylo.read("felidae_atp8.trim.fas.treefile", "newick")
+tree = Phylo.read("data/atp8/felidae_atp8.trim.fas.treefile", "newick")
 ```
 
 **_Input_**
@@ -262,7 +262,7 @@ Save everything to `felidae_2percent.xml`.
 **_Input_**
 
 ```bash
-beast felidae_2percent.xml
+beast data/atp8/felidae_2percent.xml
 ```
 
 **Tracer**

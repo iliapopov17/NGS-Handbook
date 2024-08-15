@@ -1,5 +1,5 @@
 #install.packages("phytools")
 library(phytools)
-tree_alrt_abayes_ufb <- read.tree("SUP35_TIM3_ufb_alrt_abayes.treefile")
+tree_alrt_abayes_ufb <- read.tree("iqtree_ufb_alrt_abayes/SUP35_TIM3_ufb_alrt_abayes.treefile")
 midpoint.root(tree_alrt_abayes_ufb)
-write.tree(tree_alrt_abayes_ufb, "SUP35_TIM3_ufb_alrt_abayes_rooted.treefile")
+write.tree(tree_alrt_abayes_ufb, "iqtree_ufb_alrt_abayes/SUP35_TIM3_ufb_alrt_abayes_rooted.treefile")

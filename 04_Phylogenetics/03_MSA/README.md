@@ -70,7 +70,7 @@ Let's take a look at this alignment in UGENE
 
 It can be seen that the sequence `SUP35_Spar_A12_Liti_` is strange. Most likely it is a reverse, i.e. it is reverse complementary.
 
-Let's do a couple of youtz, youtz, youtz, youtz.
+Let's do a couple of youtz, youtz, youtz.
 
 <div style='justify-content: center'>
 <img src="https://github.com/iliapopov17/BI-Phylogenetics/blob/main/3%20-%20MSA/imgs/2.png" align='center', width="50%">
@@ -140,7 +140,7 @@ The simplest and fastest variant. With its help, we "stupidly" do the translatio
 **_Input_**
 
 ```bash
-transeq -sequence data/<file_name>.fa -outseq data/<file_name>.t.faa
+transeq -sequence data/SUP35_10seqs.fa -outseq data/SUP35_10seqs.t.faa
 ```
 
 **Option 2 - `getorf`**
@@ -154,7 +154,7 @@ But if we know how long this junk should be and we need to predict proteins quic
 **_Input_**
 
 ```bash
-getorf -sequence data/<file_name>.fa -outseq data/<file_name>.g.faa -noreverse -minsize 500
+getorf -sequence data/SUP35_10seqs.fa -outseq data/SUP35_10seqs.g.faa -noreverse -minsize 500
 ```
 
 ### 7) Commands to run 6 possible alignment variants for 10 protein sequences.
@@ -216,8 +216,8 @@ This is where I like `muscle` the best. It worked for less than 1 second and its
 **_Input_**
 
 ```bash
-mafft --auto data/<file_name>.fa > 252_DNA_seqs/<file_name>_mafft.fa
-mafft --add 252_DNA_seqs/<file_name>_mafft.fa 250_DNA_seqs/<file_name>_mafft.fa > 252_DNA_seqs/<file_name>_mafft.fa
+mafft --auto data/SUP35_2addseqs.fa > 252_DNA_seqs/10_SUP35_2addseqs_mafft.fa
+mafft --add 252_DNA_seqs/10_SUP35_2addseqs_mafft.fa 250_DNA_seqs/05_SUP35_250seqs_mafft.fa > 252_DNA_seqs/10_SUP35_252seqs_mafft.fa
 ```
 
 ### 10) Extract from NCBI using any variation of eutils all sequences for the query "Parapallasea 18S" (Parapallasea is a taxon and 18S is a gene) and save to the file fasta.
@@ -226,7 +226,7 @@ mafft --add 252_DNA_seqs/<file_name>_mafft.fa 250_DNA_seqs/<file_name>_mafft.fa 
 **_Input_**
 
 ```bash
-esearch -db nucleotide -query "Parapallasea 18S" | efetch -format fasta >Parapallasea_18.fa
+esearch -db nucleotide -query "Parapallasea 18S" | efetch -format fasta >data/Parapallasea_18.fa
 ```
 
 **Option 1 - `muscle`**
@@ -234,7 +234,7 @@ esearch -db nucleotide -query "Parapallasea 18S" | efetch -format fasta >Parapal
 **_Input_**
 
 ```bash
-muscle -align Parapallasea_18.fa -output Parapallasea_18.fa.muscle.aln
+muscle -align data/Parapallasea_18.fa -output data/Parapallasea_18.fa.muscle.aln
 ```
 
 `muscle` worked very well for me. At the lecture we discussed that:
@@ -267,7 +267,7 @@ The end of the gene<br>
 **_Input_**
 
 ```bash
-mafft --auto Parapallasea_18.fa > Parapallasea_18.fa.mafft.aln
+mafft --auto data/Parapallasea_18.fa > data/Parapallasea_18.fa.mafft.aln
 ```
 
 ### 11) Commands for creating a blast database from a set of Ommatogammarus_flavus_transcriptome_assembly.fa sequences, and for searching this database for the protein sequence Acanthogammarus_victorii_COI.faa and recording the results in a table (tab-separated text).
