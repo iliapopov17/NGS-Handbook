@@ -1,0 +1,150 @@
+IQ-TREE 2.1.4-beta COVID-edition built Jun 24 2021
+
+Input file name: SUP35_aln_prank.trim.fas
+Type of analysis: tree reconstruction + non-parametric bootstrap (100 replicates)
+Random seed number: 84335
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 10 sequences with 2025 nucleotide sites
+Number of constant sites: 1139 (= 56.2469% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 1139 (= 56.2469% of all sites)
+Number of parsimony informative sites: 499
+Number of distinct site patterns: 570
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TIM3+F+G4
+
+Rate parameter R:
+
+  A-C: 1.8026
+  A-G: 5.9665
+  A-T: 1.0000
+  C-G: 1.8026
+  C-T: 15.2220
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.3413
+  pi(C) = 0.1927
+  pi(G) = 0.2249
+  pi(T) = 0.2412
+
+Rate matrix Q:
+
+  A   -0.6441    0.1159    0.4477   0.08047
+  C    0.2053    -1.565    0.1353     1.225
+  G    0.6794    0.1159   -0.8758   0.08047
+  T    0.1139    0.9787   0.07504    -1.168
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.3997
+
+ Category  Relative_rate  Proportion
+  1         0.01668        0.25
+  2         0.1816         0.25
+  3         0.731          0.25
+  4         3.071          0.25
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -8993.1564 (s.e. 149.1479)
+Unconstrained log-likelihood (without tree): -8823.4302
+Number of free parameters (#branches + #model parameters): 24
+Akaike information criterion (AIC) score: 18034.3128
+Corrected Akaike information criterion (AICc) score: 18034.9128
+Bayesian information criterion (BIC) score: 18169.0326
+
+Total tree length (sum of branch lengths): 1.4275
+Sum of internal branch lengths: 0.4508 (31.5770% of tree length)
+
+WARNING: 1 near-zero internal branches (<0.0005) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'SUP35_Kla_AB039749' is drawn at root
+Numbers in parentheses are  standard bootstrap support (%)
+
++----------------------------------SUP35_Kla_AB039749
+|
++-------------------------------------------SUP35_Agos_ATCC_10895_NM_211584
+|
+|                                                         +**SUP35_Scer_74-D694_GCA_001578265.1
+|                                                      +**| (63)
+|                                                      |  +**SUP35_Scer_beer078_CM005938
+|                                                +-----| (100)
+|                                                |     +**SUP35_Sbou_unique28_CM003560
+|                                            +---| (100)
+|                                            |   +---SUP35_Spar_A12_Liti
+|                                         +--| (95)
+|                                         |  +--------SUP35_Smik_IFO1815T_30
++-----------------------------------------| (100)
+                                          |     +---------SUP35_Sarb_H-6_chrXIII_CM001575
+                                          |  +--| (62)
+                                          |  |  +------------SUP35_Seub_CBS12357_chr_II_IV_DF968535
+                                          +--| (38)
+                                             +------------SUP35_Skud_IFO1802T_36
+
+Tree in newick format:
+
+(SUP35_Kla_AB039749:0.2654546964,SUP35_Agos_ATCC_10895_NM_211584:0.3293989080,(((((SUP35_Scer_74-D694_GCA_001578265.1:0.0004799269,SUP35_Scer_beer078_CM005938:0.0000010000)63:0.0000010000,SUP35_Sbou_unique28_CM003560:0.0004799969)100:0.0469377855,SUP35_Spar_A12_Liti:0.0317241859)100:0.0354563094,SUP35_Smik_IFO1815T_30:0.0731640094)95:0.0250665482,((SUP35_Sarb_H-6_chrXIII_CM001575:0.0778109410,SUP35_Seub_CBS12357_chr_II_IV_DF968535:0.1003352719)62:0.0171297337,SUP35_Skud_IFO1802T_36:0.0978702948)38:0.0087250108)100:0.3174378528);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 100 bootstrap trees
+Log-likelihood of consensus tree: -8993.177696
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++----------------------------------SUP35_Kla_AB039749
+|
++-------------------------------------------SUP35_Agos_ATCC_10895_NM_211584
+|
+|                                                              +--SUP35_Scer_74-D694_GCA_001578265.1
+|                                                           +--| (63)
+|                                                           |  +--SUP35_Scer_beer078_CM005938
+|                                                     +-----| (100)
+|                                                     |     +--SUP35_Sbou_unique28_CM003560
+|                                                 +---| (100)
+|                                                 |   +---SUP35_Spar_A12_Liti
+|                                             +---| (95)
+|                                             |   +--------SUP35_Smik_IFO1815T_30
+|                                          +--| (47)
+|                                          |  +------------SUP35_Skud_IFO1802T_36
++------------------------------------------| (100)
+                                           |  +---------SUP35_Sarb_H-6_chrXIII_CM001575
+                                           +--| (62)
+                                              +------------SUP35_Seub_CBS12357_chr_II_IV_DF968535
+
+
+Consensus tree in newick format: 
+
+(SUP35_Kla_AB039749:0.2630021990,SUP35_Agos_ATCC_10895_NM_211584:0.3325267286,((((((SUP35_Scer_74-D694_GCA_001578265.1:0.0004801971,SUP35_Scer_beer078_CM005938:0.0000029274)63:0.0000029274,SUP35_Sbou_unique28_CM003560:0.0004798546)100:0.0468373359,SUP35_Spar_A12_Liti:0.0318529984)100:0.0354242752,SUP35_Smik_IFO1815T_30:0.0736636442)95:0.0323717661,SUP35_Skud_IFO1802T_36:0.0976712841)47:0.0073158306,(SUP35_Sarb_H-6_chrXIII_CM001575:0.0776465012,SUP35_Seub_CBS12357_chr_II_IV_DF968535:0.1002882200)62:0.0110159528)100:0.3210267258);
+
+TIME STAMP
+----------
+
+Date and time: Wed Feb 28 19:21:43 2024
+Total CPU time used: 2.48821 seconds (0h:0m:2s)
+Total wall-clock time used: 2.5164365 seconds (0h:0m:2s)
+

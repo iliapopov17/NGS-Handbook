@@ -1,0 +1,129 @@
+IQ-TREE multicore version 2.1.4-beta COVID-edition for Linux 64-bit built Jun 24 2021
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    IliaPC (AVX2, FMA3, 15 GB RAM)
+Command: iqtree2 -s SUP35_aln_prank.trim.fas -m TIM3+F+G4 -pre SUP35_TIM3_root_auto --model-joint 12.12 -B 1000
+Seed:    994619 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Mar  7 15:11:00 2024
+Kernel:  AVX+FMA - 1 threads (24 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 24 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file SUP35_aln_prank.trim.fas ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 10 sequences with 2025 columns, 570 distinct patterns
+499 parsimony-informative, 387 singleton sites, 1139 constant sites
+                                        Gap/Ambiguity  Composition  p-value
+   1  SUP35_Kla_AB039749                        7.11%    passed     27.73%
+   2  SUP35_Agos_ATCC_10895_NM_211584          10.67%    failed      0.00%
+   3  SUP35_Scer_74-D694_GCA_001578265.1        0.00%    passed     94.19%
+   4  SUP35_Sbou_unique28_CM003560              0.00%    passed     92.62%
+   5  SUP35_Scer_beer078_CM005938               2.22%    passed     92.29%
+   6  SUP35_Spar_A12_Liti                       0.00%    passed     51.58%
+   7  SUP35_Smik_IFO1815T_30                    0.00%    passed     73.50%
+   8  SUP35_Sarb_H-6_chrXIII_CM001575           0.00%    passed     55.73%
+   9  SUP35_Skud_IFO1802T_36                    0.44%    passed     99.03%
+  10  SUP35_Seub_CBS12357_chr_II_IV_DF968535    0.59%    passed     60.63%
+****  TOTAL                                     2.10%  1 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.002 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 994619)...
+
+NOTE: 3 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -9604.077
+WARNING: evec not invertible
+2. Current log-likelihood: -9101.443
+3. Current log-likelihood: -8992.690
+4. Current log-likelihood: -8984.035
+5. Current log-likelihood: -8983.325
+Optimal log-likelihood: -8983.225
+Model parameters: 0.758,-0.015,0.012,-0.913,0.110,0.161,-0.103,0.242,0.070,0.203,-0.181
+Gamma shape alpha: 0.400
+Parameters optimization took 5 rounds (0.339 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.002209 sec (of wall-clock time) 0.001836 sec(of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing RapidNJ tree took 0.000076 sec (of wall-clock time) 0.000075 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -9025.182
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.100 second
+Computing log-likelihood of 93 initial trees ... 0.279 seconds
+Current best score: -8983.225
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -8983.194
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -8983.013
+WARNING: NNI search needs unusual large number of steps (11) to converge!
+Iteration 10 / LogL: -8983.323 / Time: 0h:0m:1s
+WARNING: NNI search needs unusual large number of steps (11) to converge!
+Iteration 20 / LogL: -8983.168 / Time: 0h:0m:2s
+Finish initializing candidate tree set (4)
+Current best tree score: -8983.013 / CPU time: 1.780
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -8983.012
+Iteration 30 / LogL: -9136.406 / Time: 0h:0m:2s (0h:0m:7s left)
+Iteration 40 / LogL: -8983.307 / Time: 0h:0m:3s (0h:0m:5s left)
+Iteration 50 / LogL: -8983.089 / Time: 0h:0m:4s (0h:0m:4s left)
+Log-likelihood cutoff on original alignment: -9001.313
+Iteration 60 / LogL: -8983.030 / Time: 0h:0m:4s (0h:0m:3s left)
+Iteration 70 / LogL: -8983.107 / Time: 0h:0m:5s (0h:0m:2s left)
+Iteration 80 / LogL: -8983.498 / Time: 0h:0m:6s (0h:0m:1s left)
+Iteration 90 / LogL: -8983.186 / Time: 0h:0m:6s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -8983.012
+Iteration 100 / LogL: -8983.926 / Time: 0h:0m:7s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -9000.290
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:7s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -8983.012
+Optimal log-likelihood: -8983.012
+Model parameters: 0.756,-0.020,0.003,-0.912,0.121,0.167,-0.117,0.237,0.070,0.200,-0.181
+Gamma shape alpha: 0.399
+Parameters optimization took 1 rounds (0.031 sec)
+BEST SCORE FOUND : -8983.012
+Creating bootstrap support values...
+Split supports printed to NEXUS file SUP35_TIM3_root_auto.splits.nex
+Total tree length: 1.429
+
+Total number of iterations: 102
+CPU time used for tree search: 6.891 sec (0h:0m:6s)
+Wall-clock time used for tree search: 6.971 sec (0h:0m:6s)
+Total CPU time used: 7.429 sec (0h:0m:7s)
+Total wall-clock time used: 7.613 sec (0h:0m:7s)
+Computing rootstrap supports...
+Annotated tree (best viewed in FigTree) written to SUP35_TIM3_root_auto.rootstrap.nex
+
+Computing bootstrap consensus tree...
+Reading input file SUP35_TIM3_root_auto.splits.nex...
+10 taxa and 49 splits.
+Consensus tree written to SUP35_TIM3_root_auto.contree
+Reading input trees file SUP35_TIM3_root_auto.contree
+Log-likelihood of consensus tree: -8983.021
+
+Analysis results written to: 
+  IQ-TREE report:                SUP35_TIM3_root_auto.iqtree
+  Maximum-likelihood tree:       SUP35_TIM3_root_auto.treefile
+  Likelihood distances:          SUP35_TIM3_root_auto.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          SUP35_TIM3_root_auto.splits.nex
+  Consensus tree:                SUP35_TIM3_root_auto.contree
+  ML tree with rootstrap:        SUP35_TIM3_root_auto.rootstrap.nex
+  Screen log file:               SUP35_TIM3_root_auto.log
+
+Date and Time: Thu Mar  7 15:11:08 2024

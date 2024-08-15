@@ -1,0 +1,97 @@
+IQ-TREE multicore version 2.1.4-beta COVID-edition for Linux 64-bit built Jun 24 2021
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    IliaPC (AVX2, FMA3, 15 GB RAM)
+Command: iqtree2 -s SUP35_aln_prank.best.fas -m JC -pre SUP35_iqtree_JC
+Seed:    62916 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Feb 28 01:33:30 2024
+Kernel:  AVX+FMA - 1 threads (24 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 24 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file SUP35_aln_prank.best.fas ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 10 sequences with 2490 columns, 614 distinct patterns
+500 parsimony-informative, 404 singleton sites, 1586 constant sites
+                                        Gap/Ambiguity  Composition  p-value
+   1  SUP35_Kla_AB039749                       15.54%    passed     87.59%
+   2  SUP35_Agos_ATCC_10895_NM_211584          16.75%    failed      0.00%
+   3  SUP35_Scer_74-D694_GCA_001578265.1       17.35%    passed     92.67%
+   4  SUP35_Sbou_unique28_CM003560             17.47%    passed     92.66%
+   5  SUP35_Scer_beer078_CM005938              19.76%    passed     89.91%
+   6  SUP35_Spar_A12_Liti                      17.95%    passed     57.90%
+   7  SUP35_Smik_IFO1815T_30                   17.95%    passed     62.29%
+   8  SUP35_Sarb_H-6_chrXIII_CM001575          18.07%    passed     58.91%
+   9  SUP35_Skud_IFO1802T_36                   18.31%    passed     98.46%
+  10  SUP35_Seub_CBS12357_chr_II_IV_DF968535   18.80%    passed     64.21%
+****  TOTAL                                    17.80%  1 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -10551.737
+Optimal log-likelihood: -10482.726
+Rate parameters:  A-C: 1.00000  A-G: 1.00000  A-T: 1.00000  C-G: 1.00000  C-T: 1.00000  G-T: 1.00000
+Base frequencies:  A: 0.250  C: 0.250  G: 0.250  T: 0.250
+Parameters optimization took 1 rounds (0.002 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.000652 sec (of wall-clock time) 0.000498 sec(of CPU time)
+Computing RapidNJ tree took 0.000125 sec (of wall-clock time) 0.000094 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -10549.961
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.096 second
+Computing log-likelihood of 88 initial trees ... 0.069 seconds
+Current best score: -10482.726
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -10482.725
+Iteration 10 / LogL: -10482.725 / Time: 0h:0m:0s
+Iteration 20 / LogL: -10485.897 / Time: 0h:0m:0s
+Finish initializing candidate tree set (3)
+Current best tree score: -10482.725 / CPU time: 0.315
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -10482.729 / Time: 0h:0m:0s (0h:0m:1s left)
+Iteration 40 / LogL: -10485.786 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -10482.749 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 60 / LogL: -10482.725 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -10677.826 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 80 / LogL: -10485.786 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 90 / LogL: -10677.790 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 100 / LogL: -10485.788 / Time: 0h:0m:0s (0h:0m:0s left)
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:1s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -10482.725
+Optimal log-likelihood: -10482.725
+Rate parameters:  A-C: 1.00000  A-G: 1.00000  A-T: 1.00000  C-G: 1.00000  C-T: 1.00000  G-T: 1.00000
+Base frequencies:  A: 0.250  C: 0.250  G: 0.250  T: 0.250
+Parameters optimization took 1 rounds (0.001 sec)
+BEST SCORE FOUND : -10482.725
+Total tree length: 0.885
+
+Total number of iterations: 102
+CPU time used for tree search: 0.971 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.988 sec (0h:0m:0s)
+Total CPU time used: 0.993 sec (0h:0m:0s)
+Total wall-clock time used: 1.008 sec (0h:0m:1s)
+
+Analysis results written to: 
+  IQ-TREE report:                SUP35_iqtree_JC.iqtree
+  Maximum-likelihood tree:       SUP35_iqtree_JC.treefile
+  Likelihood distances:          SUP35_iqtree_JC.mldist
+  Screen log file:               SUP35_iqtree_JC.log
+
+Date and Time: Wed Feb 28 01:33:31 2024
