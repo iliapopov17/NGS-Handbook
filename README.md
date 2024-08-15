@@ -12,16 +12,16 @@ _Typical workflow of NGS data analysis_
 ## Much more to be disclosured soon:
 - Whole Genome and Pangenome Analyses
 - 16S Amplicon Analysis
-- Maybe HiC...?
+- Maybe someday HiC...?
 
-## Phylogenetics
+## Phylogenetics 🌳
 
 In the [Phylogenetics folder](04_Phylogenetics) there is a complete pipeline of simple research in phylogenetics, from working with NCBI (and other databases) to building trees, evaluating them, and getting some worthwhile results.
 
-## Genomic Variation Analysis
+## Genomic Variation Analysis 🧬
 
 In the [Genomic Variation Analysis folder](02_Genomic_Variation_Analysis) there is a detailed guide how to conduct studies on Variant Calling using `fastqc`, `trimmomatic`, `bwa`, `samtools`, `abra2`, `bcftools`, `snpEff` & `SnpSift`
 
-## Quality Control of raw data
+## Quality Control of raw data 💎
 
 In the [Quality Control folder](01_Quality_Control) there is a detailed guide how to conduct quality control of raw data using `fastqc` and `trimmomatic`.
