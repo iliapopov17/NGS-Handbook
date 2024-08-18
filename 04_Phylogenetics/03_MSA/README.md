@@ -251,13 +251,13 @@ And at the lecture, muscle broke down slightly. `muscle' put the third sequence 
 But I had muscle aligned it fine. The end of the gene went to the end, the beginning went to the beginning. See the screenshot below. Probably in the new version `muscle` has learnt to handle such sequences well. Nevertheless, I legitimate that with partially overlapping sequences it is better to try different algorithms, and `mafft` and `prank` were better than `muscle` at one time.
 
 <div style='justify-content: center'>
-<img src="https://github.chttps://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/03_MSAom/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/04_Trees/imgs/4.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/03_MSA/imgs/4.png" align='center', width="50%">
 </div>
 
 The beginning of a gene
 
 <div style='justify-content: center'>
-<img src="https://github.chttps://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/03_MSAom/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/04_Trees/imgs/5.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/03_MSA/imgs/5.png" align='center', width="50%">
 </div>
 
 The end of the gene<br>
