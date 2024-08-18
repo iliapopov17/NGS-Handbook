@@ -73,11 +73,11 @@ It can be seen that the sequence `SUP35_Spar_A12_Liti_` is strange. Most likely 
 Let's do a couple of youtz, youtz, youtz.
 
 <div style='justify-content: center'>
-<img src="https://github.chttps://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/03_MSAom/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/04_Trees/imgs/2.png" align='center', width="50%">
+<img src="https://github.chttps://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/03_MSA/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/04_Trees/imgs/2.png" align='center', width="50%">
 </div>
 
 <div style='justify-content: center'>
-<img src="https://github.chttps://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/03_MSAom/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/04_Trees/imgs/3.png" align='center', width="50%">
+<img src="https://github.chttps://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/03_MSA/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/04_Trees/imgs/3.png" align='center', width="50%">
 </div>
 
 It's beautiful!
