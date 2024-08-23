@@ -9,7 +9,7 @@ We will use the `FastQC` program to assess the quality of the raw sequencing dat
 - Language: `bash`
 - IDE: `VSCode` / `Jupyter Notebook` / `Terminal`
 
-You can run commands below in your terminal.<br>
+You can run commands below in your `terminal`.<br>
 Or if you want to write a beautiful & convenient to read laboratory journal you can use `VSCode` or `Jupyter Notebook`. In that case write `!` in the beggining of each cell to make it understand `bash` commands.
 
 To recreate any of the steps of this manual please install:
@@ -23,6 +23,8 @@ And of cource do not forget to activate the envinronment!
 ```bash
 conda activate qc
 ```
+
+📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/01_Quality_Control/qc.ipynb)
 
 ### **1.) Run `FastQC` on a pair of files `Sample_1.R1.fastq.gz` and `Sample_1.R2.fastq.gz`**
 > Note that the folder for output results must exist, i.e. it should be created before running the program.
