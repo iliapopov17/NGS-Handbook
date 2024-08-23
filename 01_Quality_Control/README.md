@@ -5,6 +5,13 @@
 
 We will use the `FastQC` program to assess the quality of the raw sequencing data.
 
+## Instruction
+- Language: `bash`
+- IDE: `VSCode` / `Jupyter Notebook` / `Terminal`
+
+You can run commands below in your terminal.<br>
+Or if you want to write a beautiful & convenient to read laboratory journal you can use `VSCode` or `Jupyter Notebook`. In that case write `!` in the beggining of each cell to make it understand `bash` commands.
+
 To recreate any of the steps of this manual please install:
 
 ```bash
