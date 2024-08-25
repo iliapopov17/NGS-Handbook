@@ -38,6 +38,8 @@ setwd(main_dir)
 
 The data we will be working with are the same as those used in the mothur MiSeq SOP. The data can be downloaded here: https://mothur.s3.us-east-2.amazonaws.com/wiki/miseqsopdata.zip
 
+Sometimes `R` does not like to download files. If it falls with error - download a zip archive manually and move it into working directory
+
 **_Input_**
 
 ```r
@@ -307,6 +309,8 @@ F3D144  4827     4312      4290      4301   4020    3515
 
 To determine the taxonomic position of the found sequences, we first need to download the classifier.
 https://zenodo.org/record/1172783/files/silva_nr_v132_train_set.fa.gz
+
+Sometimes `R` does not like to download files. If it falls with error - download a gz archive manually and move it into working directory
 
 **_Input_**
 
