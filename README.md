@@ -8,11 +8,6 @@
 
 _Typical workflow of NGS data analysis_
 
-## Much more to be disclosured soon:
-- Whole Genome and Pangenome Analyses
-- Phylogenomics
-- Maybe someday HiC...?
-
 ## 05 16S Amplicon Analysis 🧫
 
 In the [16S amplicon analysis folder](05_16S_amplicon_analysis) there is an introductory guide on conducting analysis using `DADA2` followed by two interesting examples of "real-life" analysis pipeline with the data from studies on Crohn's and Parkinson's diseases.
@@ -21,7 +16,11 @@ In the [16S amplicon analysis folder](05_16S_amplicon_analysis) there is an intr
 
 In the [Phylogenetics folder](04_Phylogenetics) there is a complete pipeline of simple research in phylogenetics, from working with NCBI (and other databases) to building trees, evaluating them, and getting some worthwhile results.
 
-## 02 Genomic Variation Analysis 🧬
+## 03 Whole Genome and Pangenome Analyses 🧬
+
+_In work_
+
+## 02 Genomic Variation Analysis 🔬
 
 In the [Genomic Variation Analysis folder](02_Genomic_Variation_Analysis) there is a detailed guide how to conduct studies on Variant Calling using `fastqc`, `trimmomatic`, `bwa`, `samtools`, `abra2`, `bcftools`, `snpEff` & `SnpSift`
 
