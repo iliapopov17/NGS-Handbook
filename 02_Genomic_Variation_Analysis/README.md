@@ -25,7 +25,7 @@ And of cource do not forget to activate the envinronment!
 conda activate varcall
 ```
 
-📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/varcall.ipynb)
+📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/varcall.ipynb)
 
 ### **Downloading the data**
 
@@ -81,31 +81,31 @@ Please open them in any web browser you use:
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20quality%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20quality%20R2.png" width="100%">|
+|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20quality%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20quality%20R2.png" width="100%">|
 
 #### **Per sequence quality scores**
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20quality%20scores%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20quality%20scores%20R2.png" width="100%">|
+|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20quality%20scores%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20quality%20scores%20R2.png" width="100%">|
 
 #### **Per base sequence content**
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20content%20R2.png" width="100%">|
+|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20content%20R2.png" width="100%">|
 
 #### **Per sequence GC content**
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20GC%20content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20GC%20content%20R2.png" width="100%">|
+|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20GC%20content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20GC%20content%20R2.png" width="100%">|
 
 #### **Adapter Content**
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/imgs/Adapter%20Content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/02_Genomic_Variation_Analysis/imgs/Adapter%20Content%20R2.png" width="100%">|
+|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Adapter%20Content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Adapter%20Content%20R2.png" width="100%">|
 
 The main problem is `Per base sequence quality`. So we will solve it using `trimmomatic`.<br>
 Details on `trimmomatic` and QC in the [Quality Control manual](1%20-%20Quality%20Control)

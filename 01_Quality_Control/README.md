@@ -24,7 +24,7 @@ And of cource do not forget to activate the envinronment!
 conda activate qc
 ```
 
-📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/01_Quality_Control/qc.ipynb)
+📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Handbook/blob/main/01_Quality_Control/qc.ipynb)
 
 ### **1.) Run `FastQC` on a pair of files `Sample_1.R1.fastq.gz` and `Sample_1.R2.fastq.gz`**
 > Note that the folder for output results must exist, i.e. it should be created before running the program.
@@ -80,7 +80,7 @@ Quality averaged per read. Distribution: more than 100 reads with normal quality
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/01_Quality_Control/imgs/pre-trim/Per%20base%20sequence%20content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/01_Quality_Control/imgs/pre-trim/Per%20base%20sequence%20content%20R2.png" width="100%">|
+|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/01_Quality_Control/imgs/pre-trim/Per%20base%20sequence%20content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/01_Quality_Control/imgs/pre-trim/Per%20base%20sequence%20content%20R2.png" width="100%">|
 
 Distribution of nucleotide composition by position in the read. It can be seen that there are no sharp peaks here, although the graph looks rather broken. This is also because we have few reads. If we had more reads, the graph would probably be more or less even. The main thing is that there are no sharp big peaks.
 
@@ -168,7 +168,7 @@ Input Read Pairs: 767
 When searching for genetic variants using modern tools, removing adapters may not only not improve but even worsen the results of the analysis!
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/01_Quality_Control/imgs/Adapters%20trimming.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/01_Quality_Control/imgs/Adapters%20trimming.png" align='center', width="50%">
 </div>
 
 ### **3.) Evaluate the data quality after trimming using `FastQC`**

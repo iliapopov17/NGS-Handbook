@@ -25,7 +25,7 @@ plot.phylo(simpletree)
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/2.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/2.png" align='center', width="50%">
 </div>
 
 ### 3) Save this tree in raster format (png) and vector format (svg or pdf)
@@ -65,7 +65,7 @@ dev.off()
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/5.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/5.png" align='center', width="50%">
 </div>
 
 ### 6) Draw `treeoflife` unrooted or circular
@@ -81,11 +81,11 @@ plot.phylo(treeoflife, type = "radial", cex = 0.2)
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/6.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/6.png" align='center', width="50%">
 </div>
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/6.5.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/6.5.png" align='center', width="50%">
 </div>
 
 ## Part 1.2 - `library(ggtree)`
@@ -104,7 +104,7 @@ ggtree(treeoflife)
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/7.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/7.png" align='center', width="50%">
 </div>
 
 ### 8) Draw treeoflife with ggtree so that the inscriptions are readable
@@ -118,7 +118,7 @@ ggtree(treeoflife) + geom_tiplab(size = 1)
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/8.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/8.png" align='center', width="50%">
 </div>
 
 ### 9) Draw treeoflife in a circular shape with readable inscriptions.
@@ -132,7 +132,7 @@ ggtree(treeoflife) + layout_circular() + geom_tiplab(size = 2)
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/9.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/9.png" align='center', width="50%">
 </div>
    
 ### 10) Draw treeoflife with additional highlighting of some part of it.
@@ -150,7 +150,7 @@ ggtree(treeoflife) + layout_circular() +
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/10.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/10.png" align='center', width="50%">
 </div>
 
 ## Part 2 - `Python`
@@ -581,7 +581,7 @@ Phylo.draw(tree1, do_show = False)
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/13.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/13.png" align='center', width="50%">
 </div>
 
 ### 14) Save the tree image in raster (png) and vector (svg/pdf) formats
@@ -597,7 +597,7 @@ matplotlib.pyplot.savefig("py_tree1_phylo.pdf")
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/14.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/14.png" align='center', width="50%">
 </div>
 
 ### 15) Draw the tree in a more or less readable form
@@ -612,7 +612,7 @@ Phylo.draw(tree1, do_show = False) matplotlib.pyplot.savefig("py_tree1_phylo_enh
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/15.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/15.png" align='center', width="50%">
 </div>
 
 ## Part 2.2 - `Python: ETE (ETE3)`
@@ -636,7 +636,7 @@ simpletree.render("simpletree.png", w=183, units="mm") ;
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/17.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/17.png" align='center', width="50%">
 </div>
 
 ### 18) Read the tree https://www.jasondavies.com/tree-of-life/life.txt and draw this tree with default settings
@@ -651,7 +651,7 @@ tree2.render("py_tree2_ete3.pdf") ;
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/18.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/18.png" align='center', width="50%">
 </div>
 
 ### 19) Draw this tree circular
@@ -668,7 +668,7 @@ tree2.render("py_tree2_ete3_circ.pdf", tree_style=circular_style) ;
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/19.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/19.png" align='center', width="50%">
 </div>
 
 ### 20) Draw this treeoflife with additional highlighting of some part of your choice
@@ -685,5 +685,5 @@ tree2.render("py_tree2_ete3_vertebrates.png", tree_style=circular_style) ;
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/20.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/01_Intro_Trees/imgs/20.png" align='center', width="50%">
 </div>
