@@ -340,6 +340,8 @@ ggsave("imgs/balance_value.jpg", width = 8, height = 8, dpi = 300)
 wilcox.test(balance ~ diagnosis_full, metadata)$p.value
 ```
 
+The p-value of `2.621864e-17` indicates a significant difference in balance between the two groups.
+
 # **References**
 
 The following packages must be installed to work with the dataset:

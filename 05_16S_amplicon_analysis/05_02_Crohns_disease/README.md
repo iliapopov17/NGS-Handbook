@@ -558,3 +558,5 @@ wilcox.test(balance ~ diagnosis_full, metadata)$p.value
 ```
 [1] 2.621864e-17
 ```
+
+The p-value of `2.621864e-17` indicates a significant difference in balance between the two groups.
