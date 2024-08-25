@@ -7,6 +7,8 @@
 - `EcoliK12MG1655.SRR17909485.snpEff_genes.*` - snpEff outputs with annotated variants
 
 ## Instruction
+![bash](https://img.shields.io/badge/Language-bash-steelblue)
+![IDE](https://img.shields.io/badge/IDE-VSCode/JupyterNotebook/Terminal-steelblue)
 - Language: `bash`
 - IDE: `VSCode` / `Jupyter Notebook` / `Terminal`
 
