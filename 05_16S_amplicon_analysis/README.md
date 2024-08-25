@@ -3,7 +3,7 @@
 
 ## 03 Parkinsons disease
 
-In the [Parkinsons disease folder](05_03_Parkinsonss_disease) there is an example of "real-life" analysis pipeline with the data from study on Parkinson's disease (still in work)
+_In work_
 
 ## 02 Crohns disease
 
