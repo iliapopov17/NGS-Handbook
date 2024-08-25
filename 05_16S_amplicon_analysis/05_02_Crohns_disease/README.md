@@ -9,6 +9,8 @@ In this study, the gut microbiome composition in individuals with Crohn’s Dise
 Data obtained from the article [«_A microbial signature for Crohn's disease_»](https://pubmed.ncbi.nlm.nih.gov/28179361/) was used. These data include information on microbial samples from healthy individuals and patients with Crohn's disease.
 
 ## Instruction
+![R](https://img.shields.io/badge/Language-R-steelblue)
+![IDE](https://img.shields.io/badge/IDE-RStudio-steelblue)
 - Language: `R` v.4.2+
 - IDE: `RStudio`
 
