@@ -10,9 +10,12 @@ _Typical workflow of NGS data analysis_
 
 ## Much more to be disclosured soon:
 - Whole Genome and Pangenome Analyses
-- 16S Amplicon Analysis (soon)
 - Phylogenomics
 - Maybe someday HiC...?
+
+## 05 16S Amplicon Analysis 🧫
+
+In the [16S amplicon analysis folder](05_16S_amplicon_analysis) there is an introductory guide on conducting analysis using `DADA2` followed by two interesting examples of "real-life" analysis pipeline with the data from studies on Crohn's and Parkinson's diseases.
 
 ## 04 Phylogenetics 🌳
 
