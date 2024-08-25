@@ -1,6 +1,10 @@
 # Phylogenetics
 >This folder contains a manual on phylogenetic analysis 
 
+## 06 Phylogenomics
+
+_In work_
+
 ## 05 Rooting and comparing trees & Dating
 
 In the [Root Date folder](04_05_Root_Date) there is guide how to root trees using different approaches (by a known external clade / `midpoint rooting` / `non-reversible` model), how to compare these approaches and how to perform root-supporte tree visualisation (`rootstrap`). Also there is a mini-project on dating the common ancestor of smoky leopards with "full-circle" study: downloading the data from NCBI using `efetch`, aligning the sequences with `mafft`, trimming with `trimal` and tree construnction with `iqtree2` followed by visualization and analysis in GUI apps: `Beauti`, `Tracer`, `TreeAnnotator` and `FigTree`.
