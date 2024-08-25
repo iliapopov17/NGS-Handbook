@@ -221,6 +221,8 @@ ggsave("imgs/alpha_diversity.jpg", width = 8, height = 8, dpi = 300)
 wilcox.test(Shannon.index ~ diagnosis_full, metadata)$p.value
 ```
 
+The _p_-value of `1.314773e-09` indicates a significant difference in alpha diversity between the two groups. CD samples exhibit lower alpha diversity compared to HC samples.
+
 # **Aitchison's beta diversity: is there a difference in proportions?**
 
 ```{r}
@@ -253,6 +255,8 @@ ggsave("imgs/beta_diversity.jpg", width = 8, height = 8, dpi = 300)
 ```{r}
 adonis2(beta_div ~ metadata$diagnosis_full)
 ```
+
+The statistical analysis using the `adonis2` test shows that the difference in beta diversity between the two groups is statistically significant (p-value = 0.001).
 
 # **What exactly is the difference**
 

@@ -362,6 +362,7 @@ wilcox.test(Shannon.index ~ diagnosis_full, metadata)$p.value
 ```
 [1] 1.314773e-09
 ```
+The _p_-value of `1.314773e-09` indicates a significant difference in alpha diversity between the two groups. CD samples exhibit lower alpha diversity compared to HC samples.
 
 ### Aitchison's beta diversity: is there a difference in proportions?
 
@@ -426,6 +427,8 @@ Total                   67    32605 1.00000
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ```
+
+The statistical analysis using the `adonis2` test shows that the difference in beta diversity between the two groups is statistically significant (p-value = 0.001).
 
 ### What exactly is the difference
 
