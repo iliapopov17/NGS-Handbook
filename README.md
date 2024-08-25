@@ -1,7 +1,6 @@
-# NGS Data Analysis Manuals
+# NGS Data Analysis Handbook
 
-> The materials in this repository are based on educational courses I have taken<br>
-> It can be used as a helpful repository with cheat-sheets for NGS studies.
+> Helpful repository with cheat-sheets for NGS studies!
 
 <div style='justify-content: center'>
 <img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/imgs/NGS_workflow.png" align='center', width="100%">
@@ -11,7 +10,7 @@ _Typical workflow of NGS data analysis_
 
 ## Much more to be disclosured soon:
 - Whole Genome and Pangenome Analyses
-- 16S Amplicon Analysis
+- 16S Amplicon Analysis (soon)
 - Maybe someday HiC...?
 
 ## 04 Phylogenetics 🌳
