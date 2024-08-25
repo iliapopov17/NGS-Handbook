@@ -6,6 +6,8 @@
 We will use the `FastQC` program to assess the quality of the raw sequencing data.
 
 ## Instruction
+![bash](https://img.shields.io/badge/Language-bash-steelblue)
+![IDE](https://img.shields.io/badge/IDE-VSCode/JupyterNotebook/Terminal-steelblue)
 - Language: `bash`
 - IDE: `VSCode` / `Jupyter Notebook` / `Terminal`
 
