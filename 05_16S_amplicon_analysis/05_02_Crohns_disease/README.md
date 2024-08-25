@@ -140,7 +140,7 @@ Microbiome.Barplot(t(raw_abund), metadata, CATEGORY = "diagnosis_full")
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/microbiome_barplot.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/microbiome_barplot.jpg" width="100%">
 
 **_Input_**
 
@@ -167,7 +167,7 @@ ggplot(metadata) +
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/coverage_quality.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/coverage_quality.jpg" width="100%">
 
 **_Input_**
 
@@ -203,7 +203,7 @@ ggplot(metadata)+
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/post-filtration_coverage.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/post-filtration_coverage.jpg" width="100%">
 
 **_Input_**
 
@@ -225,7 +225,7 @@ ggplot(metadata)+
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/remaining_proportion.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/remaining_proportion.jpg" width="100%">
 
 **_Input_**
 
@@ -309,7 +309,7 @@ heatmap_with_split(abundance,
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/relative_abundance.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/relative_abundance.jpg" width="100%">
 
 **_Input_**
 
@@ -341,7 +341,7 @@ ggplot(metadata) +
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/alpha_diversity.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/alpha_diversity.jpg" width="100%">
 
 **_Input_**
 
@@ -394,7 +394,7 @@ ggplot(cbind(metadata,pcoa_res)) +
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/beta_diversity.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/beta_diversity.jpg" width="100%">
 
 **_Input_**
 
@@ -451,7 +451,7 @@ heatmap_with_split(abundance = abundance[, unlist(nb$nb$b1)],
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/heatmap_w_split.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/heatmap_w_split.jpg" width="100%">
 
 **_Input_**
 
@@ -488,7 +488,7 @@ ggplot(tab) +
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/mean_difference.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/mean_difference.jpg" width="100%">
 
 **_Input_**
 
@@ -509,7 +509,7 @@ ggplot(tab) +
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/approximate_difference.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/approximate_difference.jpg" width="100%">
 
 **_Input_**
 
@@ -537,7 +537,7 @@ ggplot(metadata) +
 
 **_Output_**
 
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohs_disease/imgs/balance_value.jpg" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/balance_value.jpg" width="100%">
 
 **_Input_**
 
