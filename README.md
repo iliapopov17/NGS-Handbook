@@ -11,6 +11,7 @@ _Typical workflow of NGS data analysis_
 ## Much more to be disclosured soon:
 - Whole Genome and Pangenome Analyses
 - 16S Amplicon Analysis (soon)
+- Phylogenomics
 - Maybe someday HiC...?
 
 ## 04 Phylogenetics 🌳
