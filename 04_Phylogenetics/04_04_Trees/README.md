@@ -12,7 +12,7 @@ prank -codon -d=data/SUP35_10seqs.fa -o=data/SUP35_aln_prank.best.fas -F
 ```
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_Trees/imgs/tree_building_overview.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_04_Trees/imgs/tree_building_overview.png" align='center', width="50%">
 </div>
 
 _Tree building overview_
@@ -80,7 +80,7 @@ Rscript scripts/draw_tree.R data/raxml/SUP35_raxml.raxml.bestTree imgs/SUP35_rax
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_Trees/imgs/SUP35_raxml.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_04_Trees/imgs/SUP35_raxml.png" align='center', width="50%">
 </div>
 
 ### 5) Model selection in ModelFinder (IQ-TREE)
@@ -133,7 +133,7 @@ Rscript draw_tree.R data/iqtree/SUP35_iqtree.treefile imgs/SUP35_iqtree.png
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_Trees/imgs/SUP35_iqtree.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_04_Trees/imgs/SUP35_iqtree.png" align='center', width="50%">
 </div>
 
 The trees obtained with RAxML and IQTREE are fundamentally similar.<br>
@@ -244,7 +244,7 @@ Rscript scripts/draw_tree_max.R data/iqtree_ufb_alrt_abayes/SUP35_TIM3_B_alrt_ab
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_Trees/imgs/SUP35_TIM3_B_alrt_abayes.png" align='center', width="50%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_04_Trees/imgs/SUP35_TIM3_B_alrt_abayes.png" align='center', width="50%">
 </div>
 
 All values ​​- `alrt`, `abayes` and `ufb` are positively correlated - that is, if the indicators are high, then they are all high, as a rule. But this is not proportional.
