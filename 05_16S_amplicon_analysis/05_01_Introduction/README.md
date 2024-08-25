@@ -3,6 +3,8 @@
 - `16S_analysis_pipeline.Rmd` - `R Markdown` journal with this whole pipeline done
 
 ## Instruction
+![R](https://img.shields.io/badge/Language-R-steelblue)
+![IDE](https://img.shields.io/badge/IDE-RStudio-steelblue)
 - Language: `R` v.4.2+
 - IDE: `RStudio`
 
