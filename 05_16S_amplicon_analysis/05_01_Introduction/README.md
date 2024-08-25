@@ -1,4 +1,4 @@
-# 16S Amplicon Analysis
+# 16S analysis with DADA2
 >This folder contains a manual on 16S analysis with DADA2
 - `16S_analysis_pipeline.Rmd` - `R Markdown` journal with this whole pipeline done
 
