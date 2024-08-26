@@ -1,6 +1,6 @@
 # 16S analysis with DADA2
 >This folder contains a manual on 16S analysis with DADA2
-- `16S_analysis_pipeline.Rmd` - `R Markdown` journal with this whole pipeline done
+- `05_01_Lab_journal.Rmd` - `R Markdown` journal with this whole pipeline done
 
 ## Instruction
 ![R](https://img.shields.io/badge/Language-R-steelblue)
@@ -11,7 +11,7 @@
 You can run commands below in your `RStudio` in `R script`.<br>
 Or if you want to write a beautiful & convenient to read laboratory journal you can use `R Markdown`.
 
-📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_01_Introduction/16S_analysis_pipeline.Rmd)
+📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_01_Introduction/05_01_Lab_journal.Rmd)
 
 ### Downloading the necessary packages and data
 

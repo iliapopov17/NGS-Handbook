@@ -1,6 +1,6 @@
 # Crohn's disease
 >This folder contains a training data for 16S amplicon analysis and an example of analysis.
-- `Crohns_disease.Rmd` - `R Markdown` journal with this whole pipeline done
+- `05_02_Lab_journal.Rmd` - `R Markdown` journal with this whole pipeline done
 
 ## Introduction
 
@@ -17,7 +17,7 @@ Data obtained from the article [«_A microbial signature for Crohn's disease_»]
 You can run commands below in your `RStudio` in `R script`.<br>
 Or if you want to write a beautiful & convenient to read laboratory journal you can use `R Markdown`.
 
-📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_01_Introduction/16S_analysis_pipeline.Rmd)
+📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_01_Introduction/05_02_Lab_journal.Rmd)
 
 ### Loading libraries and data
 

@@ -2,7 +2,7 @@
 >This folder contains a manual on variant calling pipeline. Details are described here only on how to conduct such a study from the time the data are downloaded to the time the genetic variant annotation files are received. The biological interpretation of the results is not given here. For that, please visit these repositories: ["Alignment to reference, variant calling" project](https://github.com/iliapopov17/BI-Workshop-miniProjects/tree/main/Project%201), ["Deep Sequencing" project](https://github.com/iliapopov17/BI-Workshop-miniProjects/tree/main/Project%202), ["H+" project](https://github.com/iliapopov17/BI-Workshop-miniProjects/tree/main/Project%205)
 - `Snakefile`, `varcall.yaml` & `config.yaml` - files to conduct this whole varcall pipeline with just one command - `snakemake`
 - `varcall-commands.sh` - bash script of this whole pipeline
-- `varcall.ipynb` - contains this whole pipeline done
+- `02_Lab_journal.ipynb` - contains this whole pipeline done
 - `snpEff.config` - configuration file for snpEff database
 - `EcoliK12MG1655.SRR17909485.snpEff_genes.*` - snpEff outputs with annotated variants
 
@@ -27,7 +27,7 @@ And of cource do not forget to activate the envinronment!
 conda activate varcall
 ```
 
-📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/varcall.ipynb)
+📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/02_Lab_journal.ipynb)
 
 ### **Downloading the data**
 

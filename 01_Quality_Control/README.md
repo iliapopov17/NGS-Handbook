@@ -1,7 +1,7 @@
 # Quality Control (QC) of raw data
 >This folder contains a manual on quality control of raw data in NGS data analysis 
 - `data` folder contains raw `fastq` samples
-- `qc.ipynb` - contains this whole pipeline done
+- `01_Lab_journal.ipynb` - contains this whole pipeline done
 
 We will use the `FastQC` program to assess the quality of the raw sequencing data.
 
@@ -26,7 +26,7 @@ And of cource do not forget to activate the envinronment!
 conda activate qc
 ```
 
-📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Handbook/blob/main/01_Quality_Control/qc.ipynb)
+📝 Also see pre-prepared [laboratory journal](https://github.com/iliapopov17/NGS-Handbook/blob/main/01_Quality_Control/01_Lab_journal.ipynb)
 
 ### **1.) Run `FastQC` on a pair of files `Sample_1.R1.fastq.gz` and `Sample_1.R2.fastq.gz`**
 > Note that the folder for output results must exist, i.e. it should be created before running the program.
