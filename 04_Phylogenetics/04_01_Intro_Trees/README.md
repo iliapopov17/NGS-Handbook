@@ -173,7 +173,8 @@ from ete3 import Tree, TreeStyle, NodeStyle
 **_Input_**
 
 ```python
-raw_tree = StringIO(requests.get('https://www.jasondavies.com/tree-of-life/life.txt').text) tree1 = Phylo.read(raw_tree, "newick")
+raw_tree = StringIO(requests.get('https://www.jasondavies.com/tree-of-life/life.txt').text)
+tree1 = Phylo.read(raw_tree, "newick")
 ```
 
 ### 12) Draw this tree with pseudo-graphics (draw_ascii)
