@@ -1,5 +1,5 @@
 # Rooting and comparing trees; Dating
-- `phylo-5.ipynb` - contains this whole pipeline done. Due to a lot of screenshots in this notebook it cannot be displayed in GitHub. Please download it in case you want to look at it.
+- `04_05_Lab_journal.ipynb` - contains this whole pipeline done. Due to a lot of screenshots in this notebook it cannot be displayed in GitHub. Please download it in case you want to look at it.
 - `scripts` - contains all `Python` and `R` scripts used in this pipeline
 
 > For this work, we will use a filtered alignment (this is the same one we got in the [Trees step](https://github.com/iliapopov17/NGS-Handbook/tree/main/04_Phylogenetics/04_04_Trees)

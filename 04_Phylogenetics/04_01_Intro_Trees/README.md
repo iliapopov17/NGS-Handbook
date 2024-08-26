@@ -1,6 +1,6 @@
 # Drawing Trees
 
-- `phylo-1.Rmd` & `phylo-1.ipynb` - contains this whole pipeline done with visualisation
+- `04_01_Lab_journal_01.Rmd` & `04_01_Lab_journal_02.ipynb` - contains this whole pipeline done with visualisation
 
 ## Part 1 - `R`
 

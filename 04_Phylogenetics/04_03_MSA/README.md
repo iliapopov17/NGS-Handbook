@@ -1,6 +1,6 @@
 # Multiple sequence alignment
 
-- `phylo-3.ipynb` - contains this whole pipeline done
+- `04_03_Lab_journal.ipynb` - contains this whole pipeline done
 
 > For this work, we will use the alignments of [SUP35 gene](https://www.yeastgenome.org/locus/S000002579)
 

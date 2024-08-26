@@ -1,6 +1,6 @@
 # Working with NCBI
 
-- `phylo-2.Rmd` & `phylo-2.ipynb` - contains this whole pipeline done
+- `04_01_Lab_journal_01.ipynb` & `04_02_Lab_journal_02.Rmd` - contains this whole pipeline done
 
 ## Part 1 - `Python`
 
