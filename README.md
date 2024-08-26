@@ -18,11 +18,11 @@ In the [Phylogenetics folder](04_Phylogenetics) there is a complete pipeline of 
 
 ## 03 Whole Genome and Pangenome Analyses 🧬
 
-In the [Whole (pan)genome analyses](03_Whole_(pan)genome_analyses) there is a pipeline of whole genome and pangenome analyses with `PanACoTA` pipeline which includes genomes filtering with `mash`, annotating with `prokka` & `prodigal`, pangenome building with `mmseqs`, core genomes alignment with `mafft` and finally building phylogenetic tree with `iq-tree`
+In the [Whole (pan)genome analyses](03_Whole_(pan)genome_analyses) there is a pipeline of whole genome and pangenome analyses with `PanACoTA` pipeline which includes genomes filtering with `mash`, annotating with `prokka` & `prodigal`, pangenome building with `mmseqs`, core genomes alignment with `mafft` and finally building phylogenetic tree with `iq-tree`.
 
 ## 02 Genomic Variation Analysis 🔬
 
-In the [Genomic Variation Analysis folder](02_Genomic_Variation_Analysis) there is a detailed guide how to conduct studies on Variant Calling using `fastqc`, `trimmomatic`, `bwa`, `samtools`, `abra2`, `bcftools`, `snpEff` & `SnpSift`
+In the [Genomic Variation Analysis folder](02_Genomic_Variation_Analysis) there is a detailed guide how to conduct studies on Variant Calling using `fastqc`, `trimmomatic`, `bwa`, `samtools`, `abra2`, `bcftools`, `snpEff` & `SnpSift`.
 
 ## 01 Quality Control of raw data 💎
 
