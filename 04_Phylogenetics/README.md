@@ -1,6 +1,26 @@
 # Phylogenetics
 >This folder contains a manual on phylogenetic analysis 
 
+## Instruction
+![language](https://img.shields.io/badge/Language-bash/Python/R-steelblue)
+![IDE](https://img.shields.io/badge/IDE-VSCode/JupyterNotebook/RStudio-steelblue)
+- Language: `bash` / `python` / `R`
+- IDE: `VSCode` / `Jupyter Notebook` / `RStudio`
+
+To recreate any of the part of this manual please install:
+
+```bash
+conda env create -f phylo.yaml
+```
+
+And of cource do not forget to activate the envinronment!
+
+```bash
+conda activate phylo
+```
+
+>Disclaimer: when using `ete3` on `WSL` it will crash with error if you try to render any kind of picture. It is recommended to usw `Ubuntu` or `macOS` for steps with `ete3`. Anyway there is always an alternative!
+
 ## 06 Phylogenomics
 
 _In work_
