@@ -18,7 +18,7 @@ In the [Phylogenetics folder](04_Phylogenetics) there is a complete pipeline of 
 
 ## 03 Whole Genome and Pangenome Analyses 🧬
 
-_In work_ - **TOMORROW**
+_In work_ - **TODAY**
 
 ## 02 Genomic Variation Analysis 🔬
 
