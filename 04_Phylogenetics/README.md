@@ -19,7 +19,7 @@ And of cource do not forget to activate the envinronment!
 conda activate phylo
 ```
 
->Disclaimer: when using `ete3` on `WSL` it will crash with error if you try to render any kind of picture. It is recommended to usw `Ubuntu` or `macOS` for steps with `ete3`. Anyway there is always an alternative!
+>Disclaimer: when using `ete3` on `WSL` it will crash with error if you try to render any kind of picture. It is recommended to use `Ubuntu` or `macOS` for steps with `ete3`. Anyway there is always an alternative!
 
 ## 06 Phylogenomics
 
