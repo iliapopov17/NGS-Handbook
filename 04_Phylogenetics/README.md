@@ -27,7 +27,7 @@ _In work_
 
 ## 07 Visualization Pro
 
-_In work_
+_In work_ (soon)
 
 ## 06 Phylogenomics
 
