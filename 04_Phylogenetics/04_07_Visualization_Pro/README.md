@@ -1,4 +1,4 @@
-# Rooting and comparing trees; Dating
+# Visualization Pro
 - `04_07_Lab_journal_1.ipynb` - contains the 1st part of pipeline done. Due to a lot of screenshots in this notebook it cannot be displayed in GitHub. Please download it in case you want to look at it.
 - `04_07_Lab_journal_2.ipynb` - contains the 2nd part of pipeline done.
 
