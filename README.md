@@ -8,6 +8,27 @@
 
 _Typical workflow of NGS data analysis_
 
+📚NGS-Handbook<br>
+ ┣ 📕01_Quality_Control<br>
+ ┣ 📗02_Genomic_Variation_Analysis<br>
+ ┣ 📘03_Whole_(Pan)genome_Analyses<br>
+ ┣ 📙04_Phylogenetics<br>
+ ┃ ┣ 📃04_01_Intro_trees<br>
+ ┃ ┣ 📃04_02_Mining_Data<br>
+ ┃ ┣ 📃04_03_MSA<br>
+ ┃ ┣ 📃04_04_Trees<br>
+ ┃ ┣ 📃04_05_Root_Date<br>
+ ┃ ┣ 📃04_06_Phylogenomics<br>
+ ┃ ┣ 📃04_07_Visualization_Pro<br>
+ ┃ ┗ 📃04_08_Tanglegram<br>
+ ┗ 📓05_16S_Amplicon_Analysis<br>
+ ┃ ┣ 📃05_01_Introduction<br>
+ ┃ ┣ 📃05_02_Crohns_disease<br>
+ ┃ ┗ 📃05_03_Parkinsons_disease<br>
+ ┗ ℹ️ README.md
+ 
+_Handbook's structure_
+
 ## 05 16S Amplicon Analysis 🧫
 
 In the [16S amplicon analysis folder](05_16S_amplicon_analysis) there is an introductory guide on conducting analysis using `DADA2` followed by two interesting examples of "real-life" analysis pipeline with the data from studies on Crohn's and Parkinson's diseases.
