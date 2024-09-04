@@ -19,7 +19,7 @@ And of cource do not forget to activate the envinronment!
 conda activate phylo
 ```
 
->Disclaimer: when using `ete3` on `WSL` it will crash with error if you try to render any kind of picture (unless you have tunned X11 forwarding). It is recommended to use `Ubuntu` or `macOS` for steps with `ete3`. Anyway there is always an alternative!
+>Disclaimer: when using `ete3` on `WSL` it will crash with error if you try to render any kind of picture (unless you have tunned `X11` forwarding). It is recommended to use `Ubuntu` or `macOS` for steps with `ete3`. Anyway there is always an alternative!
 
 ## 08 Tanglegram
 
@@ -27,7 +27,7 @@ _In work_
 
 ## 07 Visualization Pro
 
-_In work_ (soon)
+In the [Visualization Pro folder](04_07_Visualization_Pro) there is guide how to make a 1st class publication ready quality tree visualization using `ggtree` in `R`. By the end of the guide the circular ML-tree annotated with `tip-points`, `tip-labels` and `heatmaps` is created. The ideas from the first lesson continue here.
 
 ## 06 Phylogenomics
 
