@@ -1,4 +1,15 @@
+# Tanglegram
+- `04_08_Lab_journal.Rmd` - contains the whole pipeline done.
 
+## **Introduction**
+  - Language: `R`
+  - IDE: `RStudio`<br>
+  
+This guide is about making co-phylogeny tanglegrams.<br>
+It consists of 3 parts:
+1. [**Manual tanglegram with `ggtree`**](https://github.com/iliapopov17/NGS-Handbook/edit/main/04_Phylogenetics/04_08_Tanglegram/README.md#part-1-manual-tanglegram-with-ggtree)
+2. [**Tanglegram with `ape` and `cophyloplot()`**](https://github.com/iliapopov17/NGS-Handbook/edit/main/04_Phylogenetics/04_08_Tanglegram/README.md#part-2-tanglegram-with-ape-and-cophyloplot)
+3. [**Tanglegram with `dendextend`**](https://github.com/iliapopov17/NGS-Handbook/edit/main/04_Phylogenetics/04_08_Tanglegram/README.md#part-3-tanglegram-with-dendextend)
 
 ## **Part 1: Manual tanglegram with `ggtree`**
 
@@ -66,7 +77,13 @@ two_trees <- t1 + t2
 two_trees
 ```
 
-These are the trees we will be working with
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees.png" align='center', width="50%">
+</div>
+
+These are the trees we will be working with<br>
 Now let's save them
 
 **_Input_**
@@ -91,6 +108,12 @@ t2_rotated <- ggtree(tree2) +
 two_trees_w_ro <- t1 + t2_rotated
 two_trees_w_ro
 ```
+
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_w_ro.png" align='center', width="50%">
+</div>
 
 Let's save these trees
 
@@ -133,6 +156,12 @@ two_trees_w_ro_2 <- t1 +
 two_trees_w_ro_2
 ```
 
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_w_ro_2.png" align='center', width="50%">
+</div>
+
 Looking same good! And let's save these twoo trees
 
 **_Input_**
@@ -162,6 +191,13 @@ ggtree_tanglegram_1 <- two_trees_w_ro_2 +
 
 ggtree_tanglegram_1
 ```
+
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ggtree_tanglegram_1.png" align='center', width="50%">
+</div>
+
 Hooray! Let's save this tanglegram. But... the connecting lines overlap the tip labels. Now we must solve this problem!
 
 **_Input_**
@@ -191,6 +227,12 @@ ggtree_tanglegram_2 <- two_trees_w_ro_2 +
 
 ggtree_tanglegram_2
 ```
+
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ggtree_tanglegram_2.png" align='center', width="50%">
+</div>
 
 Just perfect! And let's save it
 
@@ -242,6 +284,12 @@ two_trees_s <- t1s + t2s
 two_trees_s
 ```
 
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_s.png" align='center', width="50%">
+</div>
+
 Interesting trees. Let's save them
 
 **_Input_**
@@ -265,6 +313,12 @@ Now let's display the tanglegram
 ```r
 cophyloplot(TreeA_S, TreeB_S, assoc = association, length.line = 4, space = 28, gap = 3)
 ```
+
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ape_small_tanglegram.png" align='center', width="50%">
+</div>
 
 Wow! Let's save this plot
 
@@ -306,6 +360,12 @@ two_trees_l <- t1l + t2l
 two_trees_l
 ```
 
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_l.png" align='center', width="50%">
+</div>
+
 Wow! Suppose `cophyloplot()` will not do good with such a large trees. Anyway let's save them
 
 **_Input_**
@@ -329,6 +389,12 @@ Now let's display the tanglegram
 ```r
 cophyloplot(TreeA_L, TreeB_L, assoc = association, length.line = 4, space = 28, gap = 3)
 ```
+
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ape_large_tanglegram.png" align='center', width="50%">
+</div>
 
 That looks awful... Anyway let's save it...
 
@@ -392,15 +458,23 @@ two_trees_l_2 <- t1l2 + t2l2
 two_trees_l_2
 ```
 
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_l_2.png" align='center', width="50%">
+</div>
+
+Yeah. Looking massive. Save it.
+
 **_Input_**
 
 ```r
 ggsave("imgs/two_trees_l_2.png", two_trees_l_2, width = 10, height = 8, dpi = 600)
 ```
 
-Yeah. Looking massive. Now let's use `tanglegram` function!
-
 ### **3) Plotting tanglegram**
+
+Now let's use `tanglegram` function!
 
 **_Input_**
 
@@ -411,6 +485,12 @@ tanglegram(TreeA_L_2, TreeB_L_2,
            highlight_distinct_edges  = FALSE,
            highlight_branches_lwd = FALSE)
 ```
+
+**_Output_**
+
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/dendextend_large_tanglegram.png" align='center', width="50%">
+</div>
 
 Finally! That large tanglegram looks great! Let's save it
 
