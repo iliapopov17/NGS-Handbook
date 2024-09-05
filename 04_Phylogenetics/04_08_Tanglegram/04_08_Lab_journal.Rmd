@@ -332,13 +332,15 @@ two_trees_l_2 <- t1l2 + t2l2
 two_trees_l_2
 ```
 
+Yeah. Looking massive. Save it.
+
 ```{r}
 ggsave("imgs/two_trees_l_2.png", two_trees_l_2, width = 10, height = 8, dpi = 600)
 ```
 
-Yeah. Looking massive. Now let's use `tanglegram` function!
-
 ### **3) Plotting tanglegram**
+
+Now let's use `tanglegram` function!
 
 ```{r, fig.align="center", fig.height=16, fig.width=9}
 tanglegram(TreeA_L_2, TreeB_L_2,
