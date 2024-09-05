@@ -23,7 +23,7 @@ conda activate phylo
 
 ## 08 Tanglegram
 
-_In work_
+In the [Tanglegram folder](04_08_Tanglegram) there is guide how to make co-phylogeny plots using `R` by several ways: (1) manually creating it with `ggtree`; (2) easily creating small tanglegram with `cophyloplot()` function in `ape` and (3) creating large tanglegram with `dendextend`.
 
 ## 07 Visualization Pro
 
