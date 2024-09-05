@@ -1,6 +1,6 @@
 # Visualization Pro
 - `04_07_Lab_journal_1.ipynb` - contains the 1st part of pipeline done. Due to a lot of screenshots in this notebook it cannot be displayed in GitHub. Please download it in case you want to look at it.
-- `04_07_Lab_journal_2.ipynb` - contains the 2nd part of pipeline done.
+- `04_07_Lab_journal_2.Rmd` - contains the 2nd part of pipeline done.
 
 >For this work, we will use sequences and metadata from the viral hemorrhagic septicemia virus (VHSV). This virus is a fish novirhabdovirus (negative stranded RNA virus) with an unusually broad host spectra: it has been isolated from more than 80 fish species in locations around the Northern hemisphere.<br>
 >
