@@ -7,9 +7,9 @@
   
 This guide is about making co-phylogeny tanglegrams.<br>
 It consists of 3 parts:
-1. [**Manual tanglegram with `ggtree`**](https://github.com/iliapopov17/NGS-Handbook/edit/main/04_Phylogenetics/04_08_Tanglegram/README.md#part-1-manual-tanglegram-with-ggtree)
-2. [**Tanglegram with `ape` and `cophyloplot()`**](https://github.com/iliapopov17/NGS-Handbook/edit/main/04_Phylogenetics/04_08_Tanglegram/README.md#part-2-tanglegram-with-ape-and-cophyloplot)
-3. [**Tanglegram with `dendextend`**](https://github.com/iliapopov17/NGS-Handbook/edit/main/04_Phylogenetics/04_08_Tanglegram/README.md#part-3-tanglegram-with-dendextend)
+1. [**Manual tanglegram with `ggtree`**](https://github.com/iliapopov17/NGS-Handbook/tree/main/04_Phylogenetics/04_08_Tanglegram#part-1-manual-tanglegram-with-ggtree)
+2. [**Tanglegram with `ape` and `cophyloplot()`**](https://github.com/iliapopov17/NGS-Handbook/tree/main/04_Phylogenetics/04_08_Tanglegram/README.md#part-2-tanglegram-with-ape-and-cophyloplot)
+3. [**Tanglegram with `dendextend`**](https://github.com/iliapopov17/NGS-Handbook/tree/main/04_Phylogenetics/04_08_Tanglegram/README.md#part-3-tanglegram-with-dendextend)
 
 ## **Part 1: Manual tanglegram with `ggtree`**
 
