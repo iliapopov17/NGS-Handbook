@@ -5,6 +5,8 @@
 >For this work, we will use sequences and metadata from the viral hemorrhagic septicemia virus (VHSV). This virus is a fish novirhabdovirus (negative stranded RNA virus) with an unusually broad host spectra: it has been isolated from more than 80 fish species in locations around the Northern hemisphere.<br>
 >
 >This guide was inspired by: https://github.com/acarafat/tutorials. Thanks for the data! Yet there are some new adjustments!
+>
+>For more guides on pro visualization please visit [bioconnector's `ggtree` workshop](https://bioconnector.github.io/workshops/r-ggtree.html)
 
 ## **Introduction**
 
