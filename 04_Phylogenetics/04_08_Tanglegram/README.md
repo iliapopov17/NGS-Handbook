@@ -408,6 +408,8 @@ dev.off()
 
 ## **Part 3: Tanglegram with `dendextend`**
 
+>For more guides `dendextend` package please visit [official guide](https://cran.r-project.org/web/packages/dendextend/vignettes/dendextend.html)
+
 How do we make large tanglegram look good? Use `dendextend`!
 
 ### **1) Preparation**
