@@ -31,7 +31,7 @@ In the [Visualization Pro folder](04_07_Visualization_Pro) there is guide how to
 
 ## 06 Phylogenomics
 
-_In work_
+In the [Phylogenomics folder](04_06_Phylogenomics) there is guide how to reconstruct phylogeny using more than just one gene with two examples of pipelines. The 1st is about using mitochondrial genes and manual work with data. The 2nd is about using proteomes and extracting single-copy orthologs with `Proteinortho`. The main concern in phylogenomics studies is storing the data and naming the sequences properly. This manual pays a lot attention to it and provides insights on using `BBMap` to achieve this goal.
 
 ## 05 Rooting and comparing trees & Dating
 
