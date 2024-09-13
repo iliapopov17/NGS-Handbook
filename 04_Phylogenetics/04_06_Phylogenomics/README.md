@@ -1,3 +1,17 @@
+# Phylogenomics
+- `04_06_Lab_journal_.ipynb` - contains the whole of pipeline done.
+- `scripts` - folder with scripts needed in this pipeline
+- `photos` - animal species photos used in the very end of this pipeline
+
+## **Introduction**
+
+This guide is about reconstructing phylogeny using more than just one gene.<br>
+It is divided into 2 parts:
+1. **Phylogeny of selected mammalian species based on mitochondrial genomes**
+2. **Phylogeny of selected mammalian species based on proteomes**
+
+During this work there are several trees constructed. Some are good, some are bad. If you are interested in comparing the phylogenies - see [04_08_Tanglegram](https://github.com/iliapopov17/NGS-Handbook/tree/main/04_Phylogenetics/04_08_Tanglegram)
+
 ## **Part 1. Phylogeny of selected mammalian species based on mitochondrial genomes.**
 
 > **Objective**: construct a phylogeny for 13 mitochondrial
@@ -446,7 +460,9 @@ Rscript scripts/draw_tree.R data/part_1/CYTB_tree/CYTB.treefile imgs/CYTB_tree.p
 
 Let's take a look at it:
 
-**INSERT PICTURE**
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/CYTB_tree.png" align='center', width="50%">
+</div>
 
 Well... This is a total mess...<br>
 The bat is closer to the cat... The dog is almost a brother to the sheep...<br>
@@ -686,7 +702,9 @@ Rscript scripts/draw_tree.R data/part_1/mt_tree/mt_tree.treefile imgs/mt_protein
 
 Let's take a look at it:
 
-**INSERT PIC**
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/mt_proteins_alns_tree.png" align='center', width="50%">
+</div>
 
 It is sooo much better now!!*Canis lupus* and *Felis catus* are on the same clade!<br>
 But still there are some strange moments... What is wrong with *Macaca mulata*...? It can be explained by the fact that we were working with mitochondrial genes. It is not the perfect material to work with. In the 2nd part of this manual we will work with proteomes!
@@ -1280,7 +1298,9 @@ Run `draw_tree_icons.R` script and see the tree
 Rscript scripts/draw_tree_icons.R data/part_2/tree/tree.treefile imgs/icons_tree.png
 ```
 
-**INSERT PIC**
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/icons_tree.png" align='center', width="50%">
+</div>
 
 Wow! Looking goodThe phylogeny and the tree itself with the icons!<br>
 `draw_tree_icons.R` script uses `phylopic_uid()` function from `ggimage` package to make it possible<br>
@@ -1296,6 +1316,8 @@ Rscript scripts/draw_tree_photos.R data/part_2/tree/tree.treefile photos/ imgs/p
 
 Let's take a look at the tree!
 
-**INSERT PIC**
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/photos_tree.png" align='center', width="50%">
+</div>
 
 Magnificent! So this script just takes a folder with photos as the input and that's all the magic!
