@@ -695,7 +695,7 @@ But still there are some strange moments... What is wrong with *Macaca mulata*..
 
 > **Objective**: construct a phylogeny for 13 proteomes
 
-### **Preparation** {#preparation}
+### **Preparation**
 
 First we create the directories to store the data<br>
 It is the 2nd part of `Phylogenomics` manual, that's why we will store proteomes data to the `part_2` directory
@@ -928,7 +928,7 @@ In proteomes from `ensembl` there are some `*` symbols<br>
 Further we will use `proteinortho`and it will crash with error if it sees `*`<br>
 That's why let's remove `*`s!
 
-### **2nd seqs renaming** {#2nd-seqs-renaming}
+### **2nd seqs renaming**
 
 To store our final files let's create the `proteomes_renamed_final` directory
 
