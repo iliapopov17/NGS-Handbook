@@ -706,7 +706,7 @@ Let's take a look at it:
 <img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/mt_proteins_alns_tree.png" align='center', width="50%">
 </div>
 
-It is sooo much better now!!*Canis lupus* and *Felis catus* are on the same clade!<br>
+It is sooo much better now!!! *Canis lupus* and *Felis catus* are on the same clade!<br>
 But still there are some strange moments... What is wrong with *Macaca mulata*...? It can be explained by the fact that we were working with mitochondrial genes. It is not the perfect material to work with. In the 2nd part of this manual we will work with proteomes!
 
 ## **Part 2. Phylogeny of selected mammalian species based on proteomes.**
