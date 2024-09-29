@@ -1,0 +1,2061 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iliapopov17.github.io/NGS-Handbook/IV.%20Phylogenetics/04_06_Phylogenomics/">
+      
+      
+        <link rel="prev" href="../04_05_Root_Date/">
+      
+      
+        <link rel="next" href="../04_07_Visualization_Pro/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>Phylogenomics - NGS Analysis Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#phylogenomics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NGS Analysis Handbook" class="md-header__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NGS Analysis Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Phylogenomics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NGS Analysis Handbook" class="md-nav__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    NGS Analysis Handbook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Quality_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I. Quality Control of Raw Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Variant_Calling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    II. Genomic Variation Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Whole_%28pan%29genome_analyses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    III. Whole Genome and Pangenome Analyses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IV. Phylogenetics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            IV. Phylogenetics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_01_Intro_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_02_Mining_Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with NCBI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_03_MSA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Sequence Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_04_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparing the alignment and building trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_05_Root_Date/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rooting and comparing trees; Dating
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Phylogenomics
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Phylogenomics
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-phylogeny-of-selected-mammalian-species-based-on-mitochondrial-genomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1. Phylogeny of selected mammalian species based on mitochondrial genomes.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1. Phylogeny of selected mammalian species based on mitochondrial genomes.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-downloading-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Downloading the data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-1st-seqs-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: 1st seqs renaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-install-bbmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Install BBMap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-2nd-seqs-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: 2nd seqs renaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-phylogenomics-on-the-mitochondrial-proteins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Phylogenomics on the mitochondrial proteins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Phylogenomics on the mitochondrial proteins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cytb-phylogeny" class="md-nav__link">
+    <span class="md-ellipsis">
+      CYTB phylogeny
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-mitochondrial-genes-phylogeny" class="md-nav__link">
+    <span class="md-ellipsis">
+      All mitochondrial genes phylogeny
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-phylogeny-of-selected-mammalian-species-based-on-proteomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2. Phylogeny of selected mammalian species based on proteomes.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2. Phylogeny of selected mammalian species based on proteomes.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-preparation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-downloading-the-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Downloading the data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-1st-seqs-renaming_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: 1st seqs renaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-2nd-seqs-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: 2nd seqs renaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-proteinortho-finding-orthologs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Proteinortho: Finding orthologs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-getting-orthologs-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Getting orthologs names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-extracting-orthologs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Extracting orthologs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-phylogeny-on-proteomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Phylogeny on proteomes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9-add-icons-to-the-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Add icons to the tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-10-add-photos-to-the-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 10: Add photos to the tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_07_Visualization_Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualization Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_08_Tanglegram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tanglegram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    V. 16S amplicon analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            V. 16S amplicon analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../V.%2016S_amplicon_analysis/05_01_Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16S analysis with DADA2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../V.%2016S_amplicon_analysis/05_02_Crohns_disease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crohn's disease
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-phylogeny-of-selected-mammalian-species-based-on-mitochondrial-genomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1. Phylogeny of selected mammalian species based on mitochondrial genomes.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1. Phylogeny of selected mammalian species based on mitochondrial genomes.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-downloading-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Downloading the data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-1st-seqs-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: 1st seqs renaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-install-bbmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Install BBMap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-2nd-seqs-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: 2nd seqs renaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-phylogenomics-on-the-mitochondrial-proteins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Phylogenomics on the mitochondrial proteins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Phylogenomics on the mitochondrial proteins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cytb-phylogeny" class="md-nav__link">
+    <span class="md-ellipsis">
+      CYTB phylogeny
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-mitochondrial-genes-phylogeny" class="md-nav__link">
+    <span class="md-ellipsis">
+      All mitochondrial genes phylogeny
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-phylogeny-of-selected-mammalian-species-based-on-proteomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2. Phylogeny of selected mammalian species based on proteomes.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2. Phylogeny of selected mammalian species based on proteomes.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-preparation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-downloading-the-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Downloading the data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-1st-seqs-renaming_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: 1st seqs renaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-2nd-seqs-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: 2nd seqs renaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-proteinortho-finding-orthologs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Proteinortho: Finding orthologs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-getting-orthologs-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Getting orthologs names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-extracting-orthologs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Extracting orthologs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-phylogeny-on-proteomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Phylogeny on proteomes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9-add-icons-to-the-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Add icons to the tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-10-add-photos-to-the-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 10: Add photos to the tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="phylogenomics"><strong>Phylogenomics</strong></h1>
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>This guide is about reconstructing phylogeny using more than just one gene.<br></p>
+<p>During this work there are several trees constructed. Some are good, some are bad. If you are interested in comparing the phylogenies - see <a href="https://github.com/iliapopov17/NGS-Handbook/tree/main/04_Phylogenetics/04_08_Tanglegram">04_08_Tanglegram</a></p>
+<h2 id="part-1-phylogeny-of-selected-mammalian-species-based-on-mitochondrial-genomes"><strong>Part 1. Phylogeny of selected mammalian species based on mitochondrial genomes.</strong></h2>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><strong>Objective</strong>: construct a phylogeny for 13 mitochondrial protein-coding genes using a supermatrix of concatenated genes</p>
+</details>
+<h3 id="step-1-preparation"><strong>Step 1: Preparation</strong></h3>
+<p>First we create the directories to store the data<br>
+There will be 2 parts of <code>Phylogenomics</code> manual, that's why we will store mitochondrion data to the <code>part_1</code> directory</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>data/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mkdir<span class="w"> </span>data/part_1/
+</span></code></pre></div>
+<p>Now create <code>mitochondrions</code> directory to store exactly the data we will be working with</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>data/part_1/mitochondrions/
+</span></code></pre></div>
+<hr />
+<h3 id="step-2-downloading-the-data"><strong>Step 2: Downloading the data</strong></h3>
+<p>Download mitochondrial protein-coding genes of <em>Physeter catodon</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_002503<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>data/part_1/mitochondrions/Physeter_catodon_mt_prot.fa<span class="w"> </span>
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Ovis aries</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_001941<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>data/part_1/mitochondrions/Ovis_aries_mt_prot.fa<span class="w"> </span>
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Equus caballus</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_001640<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>data/part_1/mitochondrions/Equus_caballus_mt_prot.fa<span class="w"> </span>
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Felis catus</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_001700<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span>data/part_1/mitochondrions/Felis_catus_mt_prot.fa<span class="w"> </span>
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Canis lupus familiaris</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_002008<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>data/part_1/mitochondrions/Canis_lupus_familiaris_mt_prot.fa<span class="w"> </span>
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Myotis lucifugus</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_029849<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span>data/part_1/mitochondrions/Myotis_lucifugus_mt_prot.fa<span class="w"> </span>
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Mus spretus</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_025952<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>data/part_1/mitochondrions/Mus_spretus_mt_prot.fa<span class="w">  </span>
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Mus musculus</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_005089<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span>data/part_1/mitochondrions/Mus_musculus_mt_prot.fa<span class="w">  </span>
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Marmota marmota</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>MN935776<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span>data/part_1/mitochondrions/Marmota_marmota_mt_prot.fa
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Macaca mulatta</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_005943<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span>data/part_1/mitochondrions/Macaca_mulatta_mt_prot.fa
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Ornithorhynchus anatinus</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_000891<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span>data/part_1/mitochondrions/Ornithorhynchus_anatinus_mt_prot.fa
+</span></code></pre></div>
+<p>Download mitochondrial protein-coding genes of <em>Vombatus ursinus</em></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>esearch<span class="w"> </span>-db<span class="w"> </span>nuccore<span class="w"> </span>-query<span class="w"> </span>NC_003322<span class="w"> </span><span class="p">|</span><span class="w"> </span>efetch<span class="w"> </span>-format<span class="w"> </span>fasta_cds_aa<span class="w"> </span>&gt;<span class="w"> </span>data/part_1/mitochondrions/Vombatus_ursinus_mt_prot.fa
+</span></code></pre></div>
+<p>Now let's check the <code>data/part_1/mitochondrions/</code> directory!</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>ls<span class="w"> </span>data/part_1/mitochondrions/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Canis_lupus_familiaris_mt_prot.fa  Mus_spretus_mt_prot.fa
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Equus_caballus_mt_prot.fa      Myotis_lucifugus_mt_prot.fa
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Felis_catus_mt_prot.fa         Ornithorhynchus_anatinus_mt_prot.fa
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>Macaca_mulatta_mt_prot.fa      Ovis_aries_mt_prot.fa
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Marmota_marmota_mt_prot.fa     Physeter_catodon_mt_prot.fa
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>Mus_musculus_mt_prot.fa        Vombatus_ursinus_mt_prot.fa
+</span></code></pre></div>
+<p>All right! We have all the data we need to work with, but...<br>
+Let's take a look at how the sequences are named in these files.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>head<span class="w"> </span>-1<span class="w"> </span>data/part_1/mitochondrions/Canis_lupus_familiaris_mt_prot.fa
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&gt;lcl|NC_002008.4_prot_NP_008471.1_1 [gene=ND1] [locus_tag=KEF55_p13] [db_xref=GeneID:804476] [protein=NADH dehydrogenase subunit 1] [transl_except=(pos:955..956,aa:TERM)] [protein_id=NP_008471.1] [location=2747..3702] [gbkey=CDS]
+</span></code></pre></div>
+<p>Total mess!<br>
+Yes, there are a lot of information, but any tool will complain that this is too muchWe need to rename the sequences!<br>
+For that let's create another directory called <code>mitochondrions_renamed</code></p>
+<hr />
+<h3 id="step-3-1st-seqs-renaming"><strong>Step 3: 1st seqs renaming</strong></h3>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>mkdir<span class="w"> </span>data/part_1/mitochondrions_renamed/
+</span></code></pre></div>
+<p>Now let's rename <code>&gt;lcl|NC_002008.4_prot_NP_008471.1_1 [gene=ND1]...</code> to just <code>&gt;ND1</code> and store renamed files in another directory (<code>data/part_1/mitochondrions_renamed/</code>).<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>%%bash
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_1/mitochondrions/*mt_prot.fa
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="k">do</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*ND1.*/&gt;ND1/&#39;</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*ND2.*/&gt;ND2/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*ND3.*/&gt;ND3/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*ND4].*/&gt;ND4/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*ND4L].*/&gt;ND4L/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*ND5.*/&gt;ND5/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w">  </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*ND6.*/&gt;ND6/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*COX1.*/&gt;COX1/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*COX2.*/&gt;COX2/&#39;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*COX3.*/&gt;COX3/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*ATP6.*/&gt;ATP6/&#39;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*ATP8.*/&gt;ATP8/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/.*CYTB.*/&gt;CYTB/&#39;</span><span class="w"> </span>&gt;data/part_1/mitochondrions_renamed/<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>_mt_prot.fa<span class="k">)</span>_renamed_mt_prot.fa
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">done</span>
+</span></code></pre></div>
+<p>Let's check <code>mitochondrions_renamed</code> directory!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>ls<span class="w"> </span>data/part_1/mitochondrions_renamed/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Canis_lupus_familiaris_renamed_mt_prot.fa
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Equus_caballus_renamed_mt_prot.fa
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Felis_catus_renamed_mt_prot.fa
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>Macaca_mulatta_renamed_mt_prot.fa
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>Marmota_marmota_renamed_mt_prot.fa
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>Mus_musculus_renamed_mt_prot.fa
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>Mus_spretus_renamed_mt_prot.fa
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>Myotis_lucifugus_renamed_mt_prot.fa
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>Ornithorhynchus_anatinus_renamed_mt_prot.fa
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>Ovis_aries_renamed_mt_prot.fa
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>Physeter_catodon_renamed_mt_prot.fa
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>Vombatus_ursinus_renamed_mt_prot.fa
+</span></code></pre></div>
+<p>Hooray! we have all 12 files with renamed sequences!<br>
+Anyway let's check that we did everything fine...<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>head<span class="w"> </span>-1<span class="w"> </span>data/part_1/mitochondrions_renamed/Canis_lupus_familiaris_renamed_mt_prot.fa
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>&gt;ND1
+</span></code></pre></div>
+<p>Yep! That's just it!<br>
+But it is still not perfect...<br>
+Let's rename <code>&gt;ND1</code> to <code>&gt;species_ND1</code><br>
+For that we need to install <code>BBMap</code>!<br></p>
+<hr />
+<h3 id="step-4-install-bbmap"><strong>Step 4: Install <code>BBMap</code></strong></h3>
+<p>Download <code>.tar.gz</code> archive.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>wget<span class="w"> </span>https://sourceforge.net/projects/bbmap/files/latest/download<span class="w"> </span>-O<span class="w"> </span>BBMap.tar.gz
+</span></code></pre></div>
+<p>Unpack it.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>tar<span class="w"> </span>-xvzf<span class="w"> </span>BBMap.tar.gz
+</span></code></pre></div>
+<p>Delete the initial archive.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>BBMap.tar.gz
+</span></code></pre></div>
+<hr />
+<h3 id="step-5-2nd-seqs-renaming"><strong>Step 5: 2nd seqs renaming</strong></h3>
+<p>To store our final files let's create the <code>mitochondrions_renamed_final</code> directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>mkdir<span class="w"> </span>data/part_1/mitochondrions_renamed_final/
+</span></code></pre></div>
+<p>Now we rename sequences from <code>&gt;ND1</code> to <code>&gt;species_ND1</code> (it works for every gene).<br>
+The <code>BBMap</code> tool will take species name from the file name (e.g. <code>Canis_lupus_familiaris_renamed_mt_prot.fa</code> = <code>Canis_lupus_familiaris</code>).<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>%%bash
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_1/mitochondrions_renamed/*mt_prot.fa
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="k">do</span><span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">species_name</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="nv">$file</span><span class="w"> </span>_renamed_mt_prot.fa<span class="k">)</span>
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>bbmap/rename.sh<span class="w"> </span><span class="k">in</span><span class="o">=</span><span class="nv">$file</span><span class="w"> </span><span class="nv">prefix</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$species_name</span><span class="s2">&quot;</span><span class="w"> </span><span class="nv">addprefix</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">out</span><span class="o">=</span>data/part_1/mitochondrions_renamed_final/<span class="nv">$species_name</span>.mt_prots.fa<span class="w"> </span><span class="nv">ignorejunk</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="k">done</span>
+</span></code></pre></div>
+<p>Now let's check <code>data/part_1/mitochondrions_renamed_final/</code> directory!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>ls<span class="w"> </span>data/part_1/mitochondrions_renamed_final/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Canis_lupus_familiaris.mt_prots.fa  Mus_spretus.mt_prots.fa
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>Equus_caballus.mt_prots.fa      Myotis_lucifugus.mt_prots.fa
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>Felis_catus.mt_prots.fa         Ornithorhynchus_anatinus.mt_prots.fa
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>Macaca_mulatta.mt_prots.fa      Ovis_aries.mt_prots.fa
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>Marmota_marmota.mt_prots.fa     Physeter_catodon.mt_prots.fa
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>Mus_musculus.mt_prots.fa        Vombatus_ursinus.mt_prots.fa
+</span></code></pre></div>
+<p>Yay! All the 12 files! Finally, let's check the sequences names!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>head<span class="w"> </span>-1<span class="w"> </span>data/part_1/mitochondrions_renamed_final/Canis_lupus_familiaris.mt_prots.fa
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>&gt;Canis_lupus_familiaris_ND1
+</span></code></pre></div>
+<p>Just perfect! That's what we need!<br></p>
+<hr />
+<h3 id="step-6-phylogenomics-on-the-mitochondrial-proteins"><strong>Step 6: Phylogenomics on the mitochondrial proteins</strong></h3>
+<p>For the 1st step let's create the directory where we will store <code>.txt</code> files with gene names and call it <code>gene_names</code></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>mkdir<span class="w"> </span>data/part_1/gene_names/
+</span></code></pre></div>
+<p>Now we will reconstruct the phylogeny 2 times:<br></p>
+<ol>
+<li>Only on <code>CYTB</code> protein.<br></li>
+<li>On every protein.<br></li>
+</ol>
+<h4 id="cytb-phylogeny"><strong>CYTB phylogeny</strong></h4>
+<p>Extract the <code>CYTB</code> gene names from each file we have.<br>
+And write it to the <code>CYTB_names.txt</code> file.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>grep<span class="w"> </span>CYTB<span class="w"> </span>data/part_1/mitochondrions_renamed_final/*mt_prots.fa<span class="w"> </span>--no-filename<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-c2-<span class="w"> </span>&gt;<span class="w"> </span>data/part_1/gene_names/CYTB_names.txt
+</span></code></pre></div>
+<p>Now let's chek the <code>CYTB_names.txt</code> file.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>head<span class="w"> </span>-10<span class="w"> </span>data/part_1/gene_names/CYTB_names.txt
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>Canis_lupus_familiaris_CYTB
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>Equus_caballus_CYTB
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>Felis_catus_CYTB
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>Macaca_mulatta_CYTB
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>Marmota_marmota_CYTB
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>Mus_musculus_CYTB
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>Mus_spretus_CYTB
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>Myotis_lucifugus_CYTB
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>Ornithorhynchus_anatinus_CYTB
+</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>Ovis_aries_CYTB
+</span></code></pre></div>
+<p>Excellent! Now let's extract <code>CYTB</code> sequences only!<br></p>
+<p>For that we will create a directory called <code>mt_genes</code> and there will be 2 sub-directories:<br></p>
+<ol>
+<li><code>sep</code> - there will be stored 12 genes separately for each one of the species we are working with.<br></li>
+<li><code>merged</code> - there will be stored a merged <code>.fasta</code> file with 12 genes in 1 file.<br></li>
+</ol>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>mkdir<span class="w"> </span>data/part_1/mt_genes/
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>mkdir<span class="w"> </span>data/part_1/mt_genes/sep/
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>mkdir<span class="w"> </span>data/part_1/mt_genes/merged/
+</span></code></pre></div>
+<p>Now we extract <code>CYTB</code> gene sequences from the species mitochondrions using <code>BBMap</code> and previously created <code>CYTB_names.txt</code> file.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>%%bash
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_1/mitochondrions_renamed_final/*.mt_prots.fa
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="k">do</span><span class="w"> </span>bbmap/filterbyname.sh<span class="w"> </span><span class="k">in</span><span class="o">=</span><span class="nv">$file</span><span class="w"> </span><span class="nv">out</span><span class="o">=</span>data/part_1/mt_genes/sep/<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>.mt_prots.fa<span class="k">)</span>.CYTB.aa.fa<span class="w"> </span><span class="nv">include</span><span class="o">=</span>t<span class="w"> </span><span class="nv">names</span><span class="o">=</span>data/part_1/gene_names/CYTB_names.txt<span class="w"> </span><span class="nv">overwrite</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">ignorejunk</span><span class="o">=</span><span class="nb">true</span>
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="k">done</span>
+</span></code></pre></div>
+<p>Merge 12 separate sequences to 1 <code>.fasta</code> file with 12 sequences!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>cat<span class="w"> </span>data/part_1/mt_genes/sep/*CYTB.aa.fa<span class="w"> </span>&gt;<span class="w"> </span>data/part_1/mt_genes/merged/CYTB.aa.fa
+</span></code></pre></div>
+<p>Now let's align 12 <code>CYTB</code> gene sequences!<br>
+For that let's create the <code>mt_aligns</code> directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>mkdir<span class="w"> </span>data/part_1/mt_aligns/
+</span></code></pre></div>
+<p>Now let's do the alignment with <code>MAFFT</code>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>mafft<span class="w"> </span>--auto<span class="w"> </span>data/part_1/mt_genes/merged/CYTB.aa.fa<span class="w"> </span>&gt;<span class="w"> </span>data/part_1/mt_aligns/CYTB.aa.aln
+</span></code></pre></div>
+<p>Done!<br>
+And the final step - phylogeny reconstruction with <code>IQ-TREE</code>!<br>
+For that let's create another directory to store tree files.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>mkdir<span class="w"> </span>data/part_1/CYTB_tree/
+</span></code></pre></div>
+<p>Run the <code>IQ-TREE</code>!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>iqtree2<span class="w"> </span>-s<span class="w"> </span>data/part_1/mt_aligns/CYTB.aa.aln<span class="w"> </span>--prefix<span class="w"> </span>data/part_1/CYTB_tree/CYTB<span class="w"> </span>-alrt<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-abayes<span class="w"> </span>-o<span class="w"> </span>Ornithorhynchus_anatinus_CYTB,Vombatus_ursinus_CYTB<span class="w"> </span>--redo
+</span></code></pre></div>
+<p>Now let's make the directory to store all the images.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>mkdir<span class="w"> </span>imgs
+</span></code></pre></div>
+<p>And finally let's visualize the tree with <code>ggtree</code> in <code>R</code>!<br></p>
+<p>But first let's take a look at the script we will use for visualization:<br></p>
+<div class="language-R highlight"><span class="filename">draw_tree.R</span><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="c1">#!/usr/bin/env Rscript</span>
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="n">args</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">commandArgs</span><span class="p">(</span><span class="n">trailingOnly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="nf">library</span><span class="p">(</span><span class="n">ggtree</span><span class="p">)</span>
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="n">tr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.tree</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">1</span><span class="p">])</span>
+</span><span id="__span-45-7"><a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>
+</span><span id="__span-45-8"><a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a><span class="nf">ggtree</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">geom_tiplab</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-45-9"><a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a><span class="w">  </span><span class="nf">xlim</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">geom_label2</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">subset</span><span class="o">=!</span><span class="n">isTip</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;red4&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">label.size</span><span class="o">=</span><span class="m">0.2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-45-10"><a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a><span class="w">  </span><span class="nf">geom_treescale</span><span class="p">()</span>
+</span><span id="__span-45-11"><a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>
+</span><span id="__span-45-12"><a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a><span class="nf">ggsave</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="m">6</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>Rscript<span class="w"> </span>scripts/draw_tree.R<span class="w"> </span>data/part_1/CYTB_tree/CYTB.treefile<span class="w"> </span>imgs/CYTB_tree.png
+</span></code></pre></div>
+<p>Let's take a look at it:</p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/CYTB_tree.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/CYTB_tree.png" align='center', width="50%"></a>
+</div>
+
+<p>Well... This is a total mess...<br>
+The bat is closer to the cat... The dog is almost a brother to the sheep...<br>
+What's wrong? We did the phylogeny using <code>CYTB</code> gene only!!! That's the problem. But how do we reconstruct the phylogeny with every mitochondrial gene?<br>
+Watch'n'learn...<br></p>
+<h4 id="all-mitochondrial-genes-phylogeny"><strong>All mitochondrial genes phylogeny</strong></h4>
+<p>We already have all the data we need in <code>mitochondrions_renamed_final</code> directory<br>
+We just need to repeat all the steps we did with <code>CYTB</code> gene but now using every other gene<br>
+We can do it manually, but it is BORING!<br>
+That's why let's take a look on <code>one_gene_tree.sh</code> script:</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>cat<span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-bash highlight"><span class="filename">one_gene_tree.sh</span><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>grep<span class="w"> </span><span class="nv">$gene</span>$<span class="w"> </span>data/part_1/mitochondrions_renamed_final/*mt_prots.fa<span class="w"> </span>--no-filename<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-c2-<span class="w"> </span>&gt;<span class="w"> </span>data/part_1/gene_names/<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$gene</span><span class="s2">&quot;</span><span class="k">)</span>_names.txt
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_1/mitochondrions_renamed_final/*.mt_prots.fa<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>bbmap/filterbyname.sh<span class="w"> </span><span class="k">in</span><span class="o">=</span><span class="nv">$file</span><span class="w"> </span><span class="nv">out</span><span class="o">=</span>data/part_1/mt_genes/sep/<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>.mt_prots.fa<span class="k">)</span>.<span class="nv">$gene</span>.aa.fa<span class="w"> </span><span class="nv">include</span><span class="o">=</span>t<span class="w"> </span><span class="nv">names</span><span class="o">=</span>data/part_1/gene_names/<span class="nv">$gene_names</span>.txt<span class="w"> </span><span class="nv">overwrite</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">ignorejunk</span><span class="o">=</span>true<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>cat<span class="w"> </span>data/part_1/mt_genes/sep/*<span class="nv">$gene</span>.aa.fa<span class="w"> </span>&gt;<span class="w"> </span>data/part_1/mt_genes/merged/<span class="nv">$gene</span>.aa.fa
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>mafft<span class="w"> </span>--auto<span class="w"> </span>data/part_1/mt_genes/merged/<span class="nv">$gene</span>.aa.fa<span class="w"> </span>&gt;<span class="w"> </span>data/part_1/mt_aligns/<span class="nv">$gene</span>.aa.aln
+</span></code></pre></div>
+<p>It looks just perfect! It does all the steps from creating <code>$gene$_names.txt</code> file to aligning the seqs with <code>MAFFT</code>.<br>
+Now let's launch this script with 12 other genes!<br></p>
+<p><strong>COX1 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>COX1<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>ND2 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>ND2<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>ND3 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>ND3<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>ND4 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>ND4<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>ND4L gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>ND4L<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>ND5 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>ND5<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>ND6 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>ND6<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>COX2 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>COX2<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>COX3 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>COX3<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>ATP6 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>ATP6<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>ATP8 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>ATP8<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p><strong>ND1 gene</strong></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">gene</span><span class="o">=</span>ND1<span class="p">;</span><span class="w"> </span>scripts/one_gene_tree.sh
+</span></code></pre></div>
+<p>Perfect! Now let's check how did the script work. let's check the <code>mt_aligns</code> directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>ls<span class="w"> </span>data/part_1/mt_aligns/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>ATP6.aa.aln  COX2.aa.aln  ND1.aa.aln  ND4.aa.aln   ND6.aa.aln
+</span><span id="__span-62-2"><a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>ATP8.aa.aln  COX3.aa.aln  ND2.aa.aln  ND4L.aa.aln
+</span><span id="__span-62-3"><a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>COX1.aa.aln  CYTB.aa.aln  ND3.aa.aln  ND5.aa.aln
+</span></code></pre></div>
+<p>Yay! There are 13 alignments.<br>
+But we cannot lauch <code>IQ-TREE</code> right now...<br>
+Because:<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>head<span class="w"> </span>-1<span class="w"> </span>data/part_1/mt_aligns/ATP6.aa.aln
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>&gt;Canis_lupus_familiaris_ATP6
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>head<span class="w"> </span>-1<span class="w"> </span>data/part_1/mt_aligns/ND6.aa.aln
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>&gt;Canis_lupus_familiaris_ND6
+</span></code></pre></div>
+<p>Because organisms names are not uniform.<br>
+In <code>ATP6.aa.aln</code> file <em>Canis lupus familiaris</em> is called <code>Canis_lupus_familiaris_ATP6</code> and in <code>ND6.aa.aln</code> file it is called <code>Canis_lupus_familiaris_ND6</code>.<br>
+We need to make it <code>Canis_lupus</code> everywhere!<br></p>
+<p>For that let's make a directory where we will store renamed alignments.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>mkdir<span class="w"> </span>data/part_1/mt_aligns_renamed/
+</span></code></pre></div>
+<p>And now let's just rename them!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_1/mt_aligns/*aln<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>cut<span class="w"> </span>-d_<span class="w"> </span>-f1,2<span class="w"> </span><span class="nv">$file</span><span class="w"> </span>&gt;<span class="w"> </span>data/part_1/mt_aligns_renamed/<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>.aa.aln<span class="k">)</span>_renamed.aa.aln<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-69-1"><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>head<span class="w"> </span>-1<span class="w"> </span>data/part_1/mt_aligns_renamed/ATP6_renamed.aa.aln
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>&gt;Canis_lupus
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>head<span class="w"> </span>-1<span class="w"> </span>data/part_1/mt_aligns_renamed/ND6_renamed.aa.aln
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-72-1"><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>&gt;Canis_lupus
+</span></code></pre></div>
+<p>That's itIt is a perfect input to <code>IQ-TREE</code>!<br>
+So we are ready to run it.<br>
+But first let's make a directory for that tree.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-73-1"><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>mkdir<span class="w"> </span>data/part_1/mt_tree/
+</span></code></pre></div>
+<p>Run the <code>IQ-TREE</code>!</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-74-1"><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>iqtree2<span class="w"> </span>-s<span class="w"> </span>data/part_1/mt_aligns_renamed<span class="w"> </span>--prefix<span class="w"> </span>data/part_1/mt_tree/mt_tree<span class="w"> </span>-alrt<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-abayes<span class="w"> </span>-o<span class="w"> </span>Ornithorhynchus_anatinus,Vombatus_ursinus<span class="w"> </span>--redo
+</span></code></pre></div>
+<p>And finally let's visualize the tree with <code>ggtree</code> in <code>R</code>!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-75-1"><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>Rscript<span class="w"> </span>scripts/draw_tree.R<span class="w"> </span>data/part_1/mt_tree/mt_tree.treefile<span class="w"> </span>imgs/mt_proteins_alns_tree.png
+</span></code></pre></div>
+<p>Let's take a look at it:</p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/mt_proteins_alns_tree.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/mt_proteins_alns_tree.png" align='center', width="50%"></a>
+</div>
+
+<p>It is sooo much better now!!! <em>Canis lupus</em> and <em>Felis catus</em> are on the same clade!<br>
+But still there are some strange moments... What is wrong with <em>Macaca mulata</em>...? It can be explained by the fact that we were working with mitochondrial genes. It is not the perfect material to work with. In the 2nd part of this manual we will work with proteomes!<br></p>
+<hr />
+<h2 id="part-2-phylogeny-of-selected-mammalian-species-based-on-proteomes"><strong>Part 2. Phylogeny of selected mammalian species based on proteomes.</strong></h2>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p><strong>Objective</strong>: construct a phylogeny for 13 proteomes</p>
+</details>
+<h3 id="step-1-preparation_1"><strong>Step 1: Preparation</strong></h3>
+<p>First we create the directories to store the data.<br>
+It is the 2nd part of <code>Phylogenomics</code> manual, that's why we will store proteomes data to the <code>part_2</code> directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-76-1"><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>mkdir<span class="w"> </span>data/part_2/
+</span></code></pre></div>
+<p>Now create <code>proteomes</code> directory to store exactly the data we will be working with.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-77-1"><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>mkdir<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<hr />
+<h3 id="step-2-downloading-the-data_1"><strong>Step 2: Downloading the data</strong></h3>
+<p>Download <em>Physeter catodon</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-78-1"><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/physeter_catodon/pep/Physeter_catodon.ASM283717v2.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Ovis aries</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-79-1"><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/ovis_aries_rambouillet/pep/Ovis_aries_rambouillet.Oar_rambouillet_v1.0.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Equus caballus</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-80-1"><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/equus_caballus/pep/Equus_caballus.EquCab3.0.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Felis catus</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-81-1"><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/felis_catus/pep/Felis_catus.Felis_catus_9.0.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Canis lupus familiaris</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-82-1"><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/canis_lupus_familiaris/pep/Canis_lupus_familiaris.ROS_Cfam_1.0.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Myotis lucifugus</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-83-1"><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/myotis_lucifugus/pep/Myotis_lucifugus.Myoluc2.0.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Mus spretus</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-84-1"><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/mus_spretus/pep/Mus_spretus.SPRET_EiJ_v1.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Mus musculus</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-85-1"><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/mus_musculus/pep/Mus_musculus.GRCm39.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Marmota marmota</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-86-1"><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/marmota_marmota_marmota/pep/Marmota_marmota_marmota.marMar2.1.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Macaca mulatta</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-87-1"><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/macaca_mulatta/pep/Macaca_mulatta.Mmul_10.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Ornithorhynchus anatinus</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-88-1"><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/ornithorhynchus_anatinus/pep/Ornithorhynchus_anatinus.mOrnAna1.p.v1.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Download <em>Vombatus ursinus</em> proteome</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-89-1"><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>wget<span class="w"> </span>https://ftp.ensembl.org/pub/release-110/fasta/vombatus_ursinus/pep/Vombatus_ursinus.bare-nosed_wombat_genome_assembly.pep.all.fa.gz<span class="w"> </span>-P<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p>Now let's unzip the downloaded data.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-90-1"><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a>gunzip<span class="w"> </span>data/part_2/proteomes/*fa.gz
+</span></code></pre></div>
+<p>Now let's check the <code>data/part_2/proteomes/</code> directory!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-91-1"><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a>ls<span class="w"> </span>data/part_2/proteomes/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-92-1"><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a>Canis_lupus_familiaris.ROS_Cfam_1.0.pep.all.fa
+</span><span id="__span-92-2"><a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a>Equus_caballus.EquCab3.0.pep.all.fa
+</span><span id="__span-92-3"><a id="__codelineno-92-3" name="__codelineno-92-3" href="#__codelineno-92-3"></a>Felis_catus.Felis_catus_9.0.pep.all.fa
+</span><span id="__span-92-4"><a id="__codelineno-92-4" name="__codelineno-92-4" href="#__codelineno-92-4"></a>Macaca_mulatta.Mmul_10.pep.all.fa
+</span><span id="__span-92-5"><a id="__codelineno-92-5" name="__codelineno-92-5" href="#__codelineno-92-5"></a>Marmota_marmota_marmota.marMar2.1.pep.all.fa
+</span><span id="__span-92-6"><a id="__codelineno-92-6" name="__codelineno-92-6" href="#__codelineno-92-6"></a>Mus_musculus.GRCm39.pep.all.fa
+</span><span id="__span-92-7"><a id="__codelineno-92-7" name="__codelineno-92-7" href="#__codelineno-92-7"></a>Mus_spretus.SPRET_EiJ_v1.pep.all.fa
+</span><span id="__span-92-8"><a id="__codelineno-92-8" name="__codelineno-92-8" href="#__codelineno-92-8"></a>Myotis_lucifugus.Myoluc2.0.pep.all.fa
+</span><span id="__span-92-9"><a id="__codelineno-92-9" name="__codelineno-92-9" href="#__codelineno-92-9"></a>Ornithorhynchus_anatinus.mOrnAna1.p.v1.pep.all.fa
+</span><span id="__span-92-10"><a id="__codelineno-92-10" name="__codelineno-92-10" href="#__codelineno-92-10"></a>Ovis_aries_rambouillet.Oar_rambouillet_v1.0.pep.all.fa
+</span><span id="__span-92-11"><a id="__codelineno-92-11" name="__codelineno-92-11" href="#__codelineno-92-11"></a>Physeter_catodon.ASM283717v2.pep.all.fa
+</span><span id="__span-92-12"><a id="__codelineno-92-12" name="__codelineno-92-12" href="#__codelineno-92-12"></a>Vombatus_ursinus.bare-nosed_wombat_genome_assembly.pep.all.fa
+</span></code></pre></div>
+<p>All rightWe have all the data we need to work with, but...<br>
+Let's take a look at how the sequences are named in these files.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-93-1"><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a>head<span class="w"> </span>-1<span class="w"> </span>data/part_2/proteomes/Canis_lupus_familiaris.ROS_Cfam_1.0.pep.all.fa
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-94-1"><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a>&gt;ENSCAFP00845002002.1 pep primary_assembly:ROS_Cfam_1.0:8:2544435:2544737:1 gene:ENSCAFG00845001473.1 transcript:ENSCAFT00845002518.1 gene_biotype:TR_V_gene transcript_biotype:TR_V_gene
+</span></code></pre></div>
+<p>Total mess!<br>
+Yes, there are a lot of information, but any tool will complain that this is too muchWe need to rename the sequences!<br>
+For that let's create another directory called <code>proteomes_renamed</code>.<br></p>
+<hr />
+<h3 id="step-3-1st-seqs-renaming_1"><strong>Step 3: 1st seqs renaming</strong></h3>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-95-1"><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a>mkdir<span class="w"> </span>data/part_2/proteomes_renamed/
+</span></code></pre></div>
+<p>Now let's rename <code>&gt;ENSCAFP00845002002.1 pep primary_assembly...</code> to just <code>&gt;ENSCAFP00845002002.1</code> and store renamed files in another directory (<code>data/part_2/proteomes_renamed/</code>).<br></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>What is <code>ENSCAFP00845002002.1</code>? It is <em>Canis lupus familiaris</em>. Do not ask questions. It is.</p>
+</details>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-96-1"><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_2/proteomes/*fa<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="s1">&#39;s/\ .*//&#39;</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span>&gt;<span class="w"> </span>data/part_2/proteomes_renamed/<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>.pep.all.fa<span class="k">)</span>_renamed.pep.all.fa<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
+<p>Let's check <code>proteomes_renamed</code> directory!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-97-1"><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a>ls<span class="w"> </span>data/part_2/proteomes_renamed/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-98-1"><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a>Canis_lupus_familiaris.ROS_Cfam_1.0_renamed.pep.all.fa
+</span><span id="__span-98-2"><a id="__codelineno-98-2" name="__codelineno-98-2" href="#__codelineno-98-2"></a>Equus_caballus.EquCab3.0_renamed.pep.all.fa
+</span><span id="__span-98-3"><a id="__codelineno-98-3" name="__codelineno-98-3" href="#__codelineno-98-3"></a>Felis_catus.Felis_catus_9.0_renamed.pep.all.fa
+</span><span id="__span-98-4"><a id="__codelineno-98-4" name="__codelineno-98-4" href="#__codelineno-98-4"></a>Macaca_mulatta.Mmul_10_renamed.pep.all.fa
+</span><span id="__span-98-5"><a id="__codelineno-98-5" name="__codelineno-98-5" href="#__codelineno-98-5"></a>Marmota_marmota_marmota.marMar2.1_renamed.pep.all.fa
+</span><span id="__span-98-6"><a id="__codelineno-98-6" name="__codelineno-98-6" href="#__codelineno-98-6"></a>Mus_musculus.GRCm39_renamed.pep.all.fa
+</span><span id="__span-98-7"><a id="__codelineno-98-7" name="__codelineno-98-7" href="#__codelineno-98-7"></a>Mus_spretus.SPRET_EiJ_v1_renamed.pep.all.fa
+</span><span id="__span-98-8"><a id="__codelineno-98-8" name="__codelineno-98-8" href="#__codelineno-98-8"></a>Myotis_lucifugus.Myoluc2.0_renamed.pep.all.fa
+</span><span id="__span-98-9"><a id="__codelineno-98-9" name="__codelineno-98-9" href="#__codelineno-98-9"></a>Ornithorhynchus_anatinus.mOrnAna1.p.v1_renamed.pep.all.fa
+</span><span id="__span-98-10"><a id="__codelineno-98-10" name="__codelineno-98-10" href="#__codelineno-98-10"></a>Ovis_aries_rambouillet.Oar_rambouillet_v1.0_renamed.pep.all.fa
+</span><span id="__span-98-11"><a id="__codelineno-98-11" name="__codelineno-98-11" href="#__codelineno-98-11"></a>Physeter_catodon.ASM283717v2_renamed.pep.all.fa
+</span><span id="__span-98-12"><a id="__codelineno-98-12" name="__codelineno-98-12" href="#__codelineno-98-12"></a>Vombatus_ursinus.bare-nosed_wombat_genome_assembly_renamed.pep.all.fa
+</span></code></pre></div>
+<p>Hooraywe have all 12 files with renamed sequences!<br>
+Anyway let's check that we did everything fine...<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-99-1"><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a>head<span class="w"> </span>-1<span class="w"> </span>data/part_2/proteomes_renamed/Canis_lupus_familiaris.ROS_Cfam_1.0_renamed.pep.all.fa
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-100-1"><a id="__codelineno-100-1" name="__codelineno-100-1" href="#__codelineno-100-1"></a>&gt;ENSCAFP00845002002.1
+</span></code></pre></div>
+<p>Yep! That's just it!<br>
+But it is still not perfect...<br>
+In proteomes from <code>ensembl</code> there are some <code>*</code> symbols.<br>
+Further we will use <code>proteinortho</code>and it will crash with error if it sees <code>*</code>.<br>
+That's why let's remove <code>*</code>s!<br></p>
+<hr />
+<h3 id="step-4-2nd-seqs-renaming"><strong>Step 4: 2nd seqs renaming</strong></h3>
+<p>To store our final files let's create the <code>proteomes_renamed_final</code> directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-101-1"><a id="__codelineno-101-1" name="__codelineno-101-1" href="#__codelineno-101-1"></a>mkdir<span class="w"> </span>data/part_2/proteomes_renamed_final/
+</span></code></pre></div>
+<p>Now we remove ALL the <code>*</code>s from every single file.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-102-1"><a id="__codelineno-102-1" name="__codelineno-102-1" href="#__codelineno-102-1"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_2/proteomes_renamed/*fa<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>cat<span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="s1">&#39;s/\*//g&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>data/part_2/proteomes_renamed_final/<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>_renamed.pep.all.fa<span class="k">)</span>_final.pep.all.fa<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-5-proteinortho-finding-orthologs"><strong>Step 5: <code>Proteinortho</code>: Finding orthologs</strong></h3>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p><strong>Note</strong>: if you want to use ANY tool to work with orthologs I strongly recommend to use <code>DIAMOND</code> v2.0.9.<br>
+<strong>Reason</strong>: https://github.com/davidemms/OrthoFinder/issues/603</p>
+</details>
+<p>Launch <code>Proteinortho</code>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-103-1"><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a>proteinortho<span class="w"> </span>data/part_2/proteomes_renamed_final/*.fa<span class="w"> </span>-cpus<span class="o">=</span><span class="m">24</span>
+</span></code></pre></div>
+<p>Unfortunatelly, <code>Proteinortho</code> does not let you to redirect output to any directory you want...<br>
+That's why let's move the files ourselves!<br>
+For that first let's create a directory - <code>protein_ortho_output</code>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-104-1"><a id="__codelineno-104-1" name="__codelineno-104-1" href="#__codelineno-104-1"></a>mkdir<span class="w"> </span>data/part_2/protein_ortho_output/
+</span></code></pre></div>
+<p>Then let's just move any <code>myproject*</code> file to <code>protein_ortho_output</code> directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-105-1"><a id="__codelineno-105-1" name="__codelineno-105-1" href="#__codelineno-105-1"></a>mv<span class="w"> </span>myproject*<span class="w"> </span>data/part_2/protein_ortho_output/
+</span></code></pre></div>
+<p>So, <code>myproject.proteinortho.tsv</code> file there are a lot of entries on any ortholog. But how many Single-Copy Orthologs are there?<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-106-1"><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a>grep<span class="w"> </span>-v<span class="w">  </span><span class="se">\*</span><span class="w"> </span>data/part_2/protein_ortho_output/myproject.proteinortho.tsv<span class="w">  </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;,&quot;</span><span class="w"> </span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-107-1"><a id="__codelineno-107-1" name="__codelineno-107-1" href="#__codelineno-107-1"></a>625
+</span></code></pre></div>
+<p>Okay. That's good. Now, let's filter that <code>.tsv</code> file to store only them (Single-Copy Orthologs).<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-108-1"><a id="__codelineno-108-1" name="__codelineno-108-1" href="#__codelineno-108-1"></a>grep<span class="w"> </span>-v<span class="w">  </span><span class="se">\*</span><span class="w"> </span>data/part_2/protein_ortho_output/myproject.proteinortho.tsv<span class="w">  </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;,&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>data/part_2/protein_ortho_output/myproject.proteinortho.filt.tsv
+</span></code></pre></div>
+<p>Okay. Okay. Okay. We have a <code>.tsv</code> file with info on Single-Copy Orthologs. How do we extract their sequences?<br></p>
+<hr />
+<h3 id="step-6-getting-orthologs-names"><strong>Step 6: Getting orthologs names</strong></h3>
+<p>Meet the <code>write_family_names.R</code> script!</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-109-1"><a id="__codelineno-109-1" name="__codelineno-109-1" href="#__codelineno-109-1"></a>cat<span class="w"> </span>scripts/write_family_names.R
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-R highlight"><span class="filename">write_family_names.R</span><pre><span></span><code><span id="__span-110-1"><a id="__codelineno-110-1" name="__codelineno-110-1" href="#__codelineno-110-1"></a><span class="c1">#!/usr/bin/env Rscript</span>
+</span><span id="__span-110-2"><a id="__codelineno-110-2" name="__codelineno-110-2" href="#__codelineno-110-2"></a><span class="n">args</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">commandArgs</span><span class="p">(</span><span class="n">trailingOnly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</span><span id="__span-110-3"><a id="__codelineno-110-3" name="__codelineno-110-3" href="#__codelineno-110-3"></a>
+</span><span id="__span-110-4"><a id="__codelineno-110-4" name="__codelineno-110-4" href="#__codelineno-110-4"></a><span class="c1"># Read the proteinortho table</span>
+</span><span id="__span-110-5"><a id="__codelineno-110-5" name="__codelineno-110-5" href="#__codelineno-110-5"></a><span class="n">onetoone</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.delim</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">1</span><span class="p">])</span>
+</span><span id="__span-110-6"><a id="__codelineno-110-6" name="__codelineno-110-6" href="#__codelineno-110-6"></a>
+</span><span id="__span-110-7"><a id="__codelineno-110-7" name="__codelineno-110-7" href="#__codelineno-110-7"></a><span class="w">  </span><span class="c1"># Create directory to store SCOs</span>
+</span><span id="__span-110-8"><a id="__codelineno-110-8" name="__codelineno-110-8" href="#__codelineno-110-8"></a><span class="w">  </span><span class="nf">dir.create</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">2</span><span class="p">])</span><span class="w"> </span><span class="c1">#e.g. data/SCOs</span>
+</span><span id="__span-110-9"><a id="__codelineno-110-9" name="__codelineno-110-9" href="#__codelineno-110-9"></a>
+</span><span id="__span-110-10"><a id="__codelineno-110-10" name="__codelineno-110-10" href="#__codelineno-110-10"></a><span class="w">  </span><span class="c1"># Write name lists to later extract</span>
+</span><span id="__span-110-11"><a id="__codelineno-110-11" name="__codelineno-110-11" href="#__codelineno-110-11"></a><span class="w">   </span><span class="nf">for </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="m">4</span><span class="o">:</span><span class="nf">ncol</span><span class="p">(</span><span class="n">onetoone</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-110-12"><a id="__codelineno-110-12" name="__codelineno-110-12" href="#__codelineno-110-12"></a><span class="w">   </span><span class="nf">writeLines</span><span class="p">(</span><span class="n">onetoone</span><span class="p">[,</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">onetoone</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="w"> </span><span class="s">&quot;.names.txt&quot;</span><span class="p">))</span>
+</span><span id="__span-110-13"><a id="__codelineno-110-13" name="__codelineno-110-13" href="#__codelineno-110-13"></a><span class="w">   </span><span class="p">}</span>
+</span><span id="__span-110-14"><a id="__codelineno-110-14" name="__codelineno-110-14" href="#__codelineno-110-14"></a><span class="w">   </span><span class="nf">dir.create</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">3</span><span class="p">])</span><span class="w">  </span>
+</span><span id="__span-110-15"><a id="__codelineno-110-15" name="__codelineno-110-15" href="#__codelineno-110-15"></a><span class="w">   </span><span class="c1"># And gene lists grouped by families</span>
+</span><span id="__span-110-16"><a id="__codelineno-110-16" name="__codelineno-110-16" href="#__codelineno-110-16"></a><span class="w">   </span><span class="nf">for </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">onetoone</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-110-17"><a id="__codelineno-110-17" name="__codelineno-110-17" href="#__codelineno-110-17"></a><span class="w">   </span><span class="n">oo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.matrix</span><span class="p">(</span><span class="n">onetoone</span><span class="p">)</span>
+</span><span id="__span-110-18"><a id="__codelineno-110-18" name="__codelineno-110-18" href="#__codelineno-110-18"></a><span class="w">   </span><span class="nf">writeLines</span><span class="p">(</span><span class="n">oo</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="o">:</span><span class="nf">ncol</span><span class="p">(</span><span class="n">onetoone</span><span class="p">)],</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">3</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;family&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;.names.txt&quot;</span><span class="p">))</span>
+</span><span id="__span-110-19"><a id="__codelineno-110-19" name="__codelineno-110-19" href="#__codelineno-110-19"></a><span class="w">   </span><span class="p">}</span>
+</span></code></pre></div>
+<p>So, this script needs 3 inputs:<br></p>
+<ol>
+<li><code>.tsv</code> file with info on Single-Copy Orthologs (SCOs).<br></li>
+<li>Path to directory where to store names of the SCOs in <code>.txt</code> format.<br></li>
+<li>Path to directory where to store names of all the protein families in <code>.txt</code> format.<br></li>
+</ol>
+<p>Run the script!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-111-1"><a id="__codelineno-111-1" name="__codelineno-111-1" href="#__codelineno-111-1"></a>Rscript<span class="w"> </span>scripts/write_family_names.R<span class="w"> </span>data/part_2/protein_ortho_output/myproject.proteinortho.filt.tsv<span class="w"> </span>data/part_2/SCOs/<span class="w"> </span>data/part_2/families_tree/
+</span></code></pre></div>
+<p>Now let's take a look on some of the outputs.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-112-1"><a id="__codelineno-112-1" name="__codelineno-112-1" href="#__codelineno-112-1"></a>head<span class="w"> </span>-10<span class="w"> </span>data/part_2/SCOs/Canis_lupus_familiaris.ROS_Cfam_1.0.pep.all.fa.clean.fa.faa.names.txt
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-113-1"><a id="__codelineno-113-1" name="__codelineno-113-1" href="#__codelineno-113-1"></a>ENSCAFP00845000007.1
+</span><span id="__span-113-2"><a id="__codelineno-113-2" name="__codelineno-113-2" href="#__codelineno-113-2"></a>ENSCAFP00845000060.1
+</span><span id="__span-113-3"><a id="__codelineno-113-3" name="__codelineno-113-3" href="#__codelineno-113-3"></a>ENSCAFP00845000100.1
+</span><span id="__span-113-4"><a id="__codelineno-113-4" name="__codelineno-113-4" href="#__codelineno-113-4"></a>ENSCAFP00845000116.1
+</span><span id="__span-113-5"><a id="__codelineno-113-5" name="__codelineno-113-5" href="#__codelineno-113-5"></a>ENSCAFP00845000148.1
+</span><span id="__span-113-6"><a id="__codelineno-113-6" name="__codelineno-113-6" href="#__codelineno-113-6"></a>ENSCAFP00845000229.1
+</span><span id="__span-113-7"><a id="__codelineno-113-7" name="__codelineno-113-7" href="#__codelineno-113-7"></a>ENSCAFP00845000280.1
+</span><span id="__span-113-8"><a id="__codelineno-113-8" name="__codelineno-113-8" href="#__codelineno-113-8"></a>ENSCAFP00845000290.1
+</span><span id="__span-113-9"><a id="__codelineno-113-9" name="__codelineno-113-9" href="#__codelineno-113-9"></a>ENSCAFP00845000294.1
+</span><span id="__span-113-10"><a id="__codelineno-113-10" name="__codelineno-113-10" href="#__codelineno-113-10"></a>ENSCAFP00845000434.1
+</span></code></pre></div>
+<p>So, in the <code>Canis_lupus_familiaris.ROS_Cfam_1.0.pep.all.fa.clean.fa.faa.names.txt</code> file there are names of SCOs that belong to <em>Canis lupus familiaris</em>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-114-1"><a id="__codelineno-114-1" name="__codelineno-114-1" href="#__codelineno-114-1"></a>head<span class="w"> </span>-10<span class="w"> </span>data/part_2/families_tree/family1.names.txt
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-115-1"><a id="__codelineno-115-1" name="__codelineno-115-1" href="#__codelineno-115-1"></a>ENSCAFP00845000007.1
+</span><span id="__span-115-2"><a id="__codelineno-115-2" name="__codelineno-115-2" href="#__codelineno-115-2"></a>ENSECAP00000004501.1
+</span><span id="__span-115-3"><a id="__codelineno-115-3" name="__codelineno-115-3" href="#__codelineno-115-3"></a>ENSFCAP00000010065.4
+</span><span id="__span-115-4"><a id="__codelineno-115-4" name="__codelineno-115-4" href="#__codelineno-115-4"></a>ENSMMUP00000023901.1
+</span><span id="__span-115-5"><a id="__codelineno-115-5" name="__codelineno-115-5" href="#__codelineno-115-5"></a>ENSMMMP00000018299.1
+</span><span id="__span-115-6"><a id="__codelineno-115-6" name="__codelineno-115-6" href="#__codelineno-115-6"></a>ENSMUSP00000019920.7
+</span><span id="__span-115-7"><a id="__codelineno-115-7" name="__codelineno-115-7" href="#__codelineno-115-7"></a>MGP_SPRETEiJ_P0023739
+</span><span id="__span-115-8"><a id="__codelineno-115-8" name="__codelineno-115-8" href="#__codelineno-115-8"></a>ENSMLUP00000008174.2
+</span><span id="__span-115-9"><a id="__codelineno-115-9" name="__codelineno-115-9" href="#__codelineno-115-9"></a>ENSOANP00000021746.2
+</span><span id="__span-115-10"><a id="__codelineno-115-10" name="__codelineno-115-10" href="#__codelineno-115-10"></a>ENSOARP00020026787.1
+</span></code></pre></div>
+<p>And in the <code>family1.names.txt</code> there are names of the orthologs that belong to one family.<br></p>
+<hr />
+<h3 id="step-7-extracting-orthologs"><strong>Step 7: Extracting orthologs</strong></h3>
+<p>Remember the <code>proteomes_renamed_final</code> directory?<br>
+There are proteomes with all the filtration done.<br>
+Now let's merge all the proteomes to ONE <code>.fasta</code> file.<br>
+Yeah, now there a lot of files from <code>Proteinortho</code> launch.<br>
+But we will take only <code>.fasta</code> files as the input!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-116-1"><a id="__codelineno-116-1" name="__codelineno-116-1" href="#__codelineno-116-1"></a>cat<span class="w"> </span>data/part_2/proteomes_renamed_final/*.fa<span class="w"> </span>&gt;<span class="w"> </span>data/part_2/all_pep.fa
+</span></code></pre></div>
+<p>Now we will extract the sequences of SCOs.<br>
+Where to store them? Good question. Make a directory named <code>families_seqs</code>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-117-1"><a id="__codelineno-117-1" name="__codelineno-117-1" href="#__codelineno-117-1"></a>mkdir<span class="w"> </span>data/part_2/families_seqs/
+</span></code></pre></div>
+<p>Now we will use <code>BBMap</code> (it was installed during the 1st part of this manual).<br>
+As the input we will provide:<br></p>
+<ol>
+<li><code>all_pep.fa</code> - all 12 proteomes merged.<br></li>
+<li><code>data/part_2/families_tree/family*txt</code> - list of SCOs names that belong to one family.<br></li>
+</ol>
+<p>As the output we will get:<br></p>
+<ol>
+<li><code>data/part_2/families_seqs/family*.seq.fa</code> - <code>.fasta</code> file with the sequences of SCOs that belong to one family.<br></li>
+</ol>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-118-1"><a id="__codelineno-118-1" name="__codelineno-118-1" href="#__codelineno-118-1"></a>%%bash
+</span><span id="__span-118-2"><a id="__codelineno-118-2" name="__codelineno-118-2" href="#__codelineno-118-2"></a>
+</span><span id="__span-118-3"><a id="__codelineno-118-3" name="__codelineno-118-3" href="#__codelineno-118-3"></a><span class="k">for</span><span class="w"> </span>list<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_2/families_tree/family*txt
+</span><span id="__span-118-4"><a id="__codelineno-118-4" name="__codelineno-118-4" href="#__codelineno-118-4"></a><span class="k">do</span><span class="w"> </span>bbmap/filterbyname.sh<span class="w"> </span><span class="k">in</span><span class="o">=</span>data/part_2/all_pep.fa<span class="w"> </span><span class="nv">out</span><span class="o">=</span>data/part_2/families_seqs/<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$list</span><span class="s2">&quot;</span><span class="w"> </span>.names.txt<span class="k">)</span>.seq.fa<span class="w"> </span><span class="nv">include</span><span class="o">=</span>t<span class="w"> </span><span class="nv">names</span><span class="o">=</span><span class="nv">$list</span><span class="w"> </span><span class="nv">overwrite</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">ignorejunk</span><span class="o">=</span><span class="nb">true</span>
+</span><span id="__span-118-5"><a id="__codelineno-118-5" name="__codelineno-118-5" href="#__codelineno-118-5"></a><span class="k">done</span>
+</span></code></pre></div>
+<p>Let's check the output.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-119-1"><a id="__codelineno-119-1" name="__codelineno-119-1" href="#__codelineno-119-1"></a>head<span class="w"> </span>-10<span class="w"> </span>data/part_2/families_seqs/family1.seq.fa
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-120-1"><a id="__codelineno-120-1" name="__codelineno-120-1" href="#__codelineno-120-1"></a>&gt;ENSCAFP00845000007.1
+</span><span id="__span-120-2"><a id="__codelineno-120-2" name="__codelineno-120-2" href="#__codelineno-120-2"></a>MTHLQAGLSPETLEKARLELNENPDTLHQDIQEVRDMVITRPDIGFLRTDDAFILRFLRARKFHHFEAFR
+</span><span id="__span-120-3"><a id="__codelineno-120-3" name="__codelineno-120-3" href="#__codelineno-120-3"></a>LLAQYFEYRQQNLDMFKSFKATDPGIKQALKDGFPGGLANLDHYGRKILVLFAANWDQSRYTLVDILRAI
+</span><span id="__span-120-4"><a id="__codelineno-120-4" name="__codelineno-120-4" href="#__codelineno-120-4"></a>LLSLEAMIEDPELQVNGFVLIIDWSNFTFKQASKLTPSMLRLAIEGLQDSFPARFGGIHFVNQPWYIHAL
+</span><span id="__span-120-5"><a id="__codelineno-120-5" name="__codelineno-120-5" href="#__codelineno-120-5"></a>YTVIRPFLKEKTRKRIFLHGNNLNSLHQLIHPEILPSEFGGMLPPYDMGTWARTLLDHEYDDDSEYNVDS
+</span><span id="__span-120-6"><a id="__codelineno-120-6" name="__codelineno-120-6" href="#__codelineno-120-6"></a>YSMPVKEVEKELSPKSMKRSQSVVDPTVLKRMDKNEEENMQPLLSLD
+</span><span id="__span-120-7"><a id="__codelineno-120-7" name="__codelineno-120-7" href="#__codelineno-120-7"></a>&gt;ENSECAP00000004501.1
+</span><span id="__span-120-8"><a id="__codelineno-120-8" name="__codelineno-120-8" href="#__codelineno-120-8"></a>MTHLQAGLSPETLEKARLELNENPDTLHQDIQEVRDMVITRPDIGFLRTDDAFILRFLRARKFHHFEAFR
+</span><span id="__span-120-9"><a id="__codelineno-120-9" name="__codelineno-120-9" href="#__codelineno-120-9"></a>LLAQYFEYRQQNLDMFKSFKATDPGIKQALKDGFPGGLANLDHYGRKILVLFAANWDQSRYTLVDILRAI
+</span><span id="__span-120-10"><a id="__codelineno-120-10" name="__codelineno-120-10" href="#__codelineno-120-10"></a>LLSLEAMIEDPELQVNGFVLIIDWSNFTFKQASKLTPSMLRLAIEGLQDSFPARFGGIHFVNQPWYIHAL
+</span></code></pre></div>
+<p>Hooray!!!<br>
+But... Are we good with sequences names like <code>&gt;ENSCAFP00845000007.1</code>?<br>
+Of course not!<br>
+Let's rename the sequences (in every 600+ files...).<br></p>
+<p>For that we need to create a directory to store renamed sequences and call it <code>families_seqs_renamed</code>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-121-1"><a id="__codelineno-121-1" name="__codelineno-121-1" href="#__codelineno-121-1"></a>mkdir<span class="w"> </span>data/part_2/families_seqs_renamed/
+</span></code></pre></div>
+<p>Simple <code>bash</code> script using <code>sed</code> to rename <code>&gt;ENSCAFP00845000007.1</code> to <code>&gt;Canis_lupus_familiaris</code> etc.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-122-1"><a id="__codelineno-122-1" name="__codelineno-122-1" href="#__codelineno-122-1"></a>%%bash
+</span><span id="__span-122-2"><a id="__codelineno-122-2" name="__codelineno-122-2" href="#__codelineno-122-2"></a>
+</span><span id="__span-122-3"><a id="__codelineno-122-3" name="__codelineno-122-3" href="#__codelineno-122-3"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_2/families_seqs/*fa
+</span><span id="__span-122-4"><a id="__codelineno-122-4" name="__codelineno-122-4" href="#__codelineno-122-4"></a><span class="k">do</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSCAFP.*/Canis_lupus_familiaris/&#39;</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSECAP.*/Equus_caballus/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSFCAP.*/Felis_catus/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSMMUP.*/Macaca_mulatta/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSMMMP.*/Marmota_marmota/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSMUSP.*/Mus_musculus/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/MGP_SPRETEiJ.*/Mus_spretus/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSMLUP.*/Myotis_lucifugus/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSOANP.*/Ornithorhynchus_anatinus/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSOARP.*/Ovis_aries/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSPCTP.*/Physeter_catodon/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ENSVURP.*/Vombatus_ursinus/&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>data/part_2/families_seqs_renamed/<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>.seq.fa<span class="k">)</span>.seq
+</span><span id="__span-122-5"><a id="__codelineno-122-5" name="__codelineno-122-5" href="#__codelineno-122-5"></a><span class="k">done</span>
+</span></code></pre></div>
+<p>Let's check the output.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-123-1"><a id="__codelineno-123-1" name="__codelineno-123-1" href="#__codelineno-123-1"></a>head<span class="w"> </span>-10<span class="w"> </span>data/part_2/families_seqs_renamed/family1.seq
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-124-1"><a id="__codelineno-124-1" name="__codelineno-124-1" href="#__codelineno-124-1"></a>&gt;Canis_lupus_familiaris
+</span><span id="__span-124-2"><a id="__codelineno-124-2" name="__codelineno-124-2" href="#__codelineno-124-2"></a>MTHLQAGLSPETLEKARLELNENPDTLHQDIQEVRDMVITRPDIGFLRTDDAFILRFLRARKFHHFEAFR
+</span><span id="__span-124-3"><a id="__codelineno-124-3" name="__codelineno-124-3" href="#__codelineno-124-3"></a>LLAQYFEYRQQNLDMFKSFKATDPGIKQALKDGFPGGLANLDHYGRKILVLFAANWDQSRYTLVDILRAI
+</span><span id="__span-124-4"><a id="__codelineno-124-4" name="__codelineno-124-4" href="#__codelineno-124-4"></a>LLSLEAMIEDPELQVNGFVLIIDWSNFTFKQASKLTPSMLRLAIEGLQDSFPARFGGIHFVNQPWYIHAL
+</span><span id="__span-124-5"><a id="__codelineno-124-5" name="__codelineno-124-5" href="#__codelineno-124-5"></a>YTVIRPFLKEKTRKRIFLHGNNLNSLHQLIHPEILPSEFGGMLPPYDMGTWARTLLDHEYDDDSEYNVDS
+</span><span id="__span-124-6"><a id="__codelineno-124-6" name="__codelineno-124-6" href="#__codelineno-124-6"></a>YSMPVKEVEKELSPKSMKRSQSVVDPTVLKRMDKNEEENMQPLLSLD
+</span><span id="__span-124-7"><a id="__codelineno-124-7" name="__codelineno-124-7" href="#__codelineno-124-7"></a>&gt;Equus_caballus
+</span><span id="__span-124-8"><a id="__codelineno-124-8" name="__codelineno-124-8" href="#__codelineno-124-8"></a>MTHLQAGLSPETLEKARLELNENPDTLHQDIQEVRDMVITRPDIGFLRTDDAFILRFLRARKFHHFEAFR
+</span><span id="__span-124-9"><a id="__codelineno-124-9" name="__codelineno-124-9" href="#__codelineno-124-9"></a>LLAQYFEYRQQNLDMFKSFKATDPGIKQALKDGFPGGLANLDHYGRKILVLFAANWDQSRYTLVDILRAI
+</span><span id="__span-124-10"><a id="__codelineno-124-10" name="__codelineno-124-10" href="#__codelineno-124-10"></a>LLSLEAMIEDPELQVNGFVLIIDWSNFTFKQASKLTPSMLRLAIEGLQDSFPARFGGIHFVNQPWYIHAL
+</span></code></pre></div>
+<p>YAY! Good!<br></p>
+<hr />
+<h3 id="step-8-phylogeny-on-proteomes"><strong>Step 8: Phylogeny on proteomes</strong></h3>
+<p>Now we are ready to reconstruct the phylogeny.<br>
+What's the 1st step? Right! MSA!<br>
+Let's make a directory to store the alignments.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-125-1"><a id="__codelineno-125-1" name="__codelineno-125-1" href="#__codelineno-125-1"></a>mkdir<span class="w"> </span>data/part_2/families_align/
+</span></code></pre></div>
+<p>Now let's use <code>MAFFT</code> on every single SCOs families sequences.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-126-1"><a id="__codelineno-126-1" name="__codelineno-126-1" href="#__codelineno-126-1"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_2/families_seqs_renamed/*.seq<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>mafft<span class="w"> </span>--auto<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>data/part_2/families_align/<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>.seq<span class="k">)</span>.aln<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
+<p>We can also trim the alignments with <code>trimAl</code>.<br>
+First let's make a directory where the trimmed alignments will be stored.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-127-1"><a id="__codelineno-127-1" name="__codelineno-127-1" href="#__codelineno-127-1"></a>mkdir<span class="w"> </span>data/part_2/families_trimmed_alns/
+</span></code></pre></div>
+<p>Run <code>trimAl</code>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-128-1"><a id="__codelineno-128-1" name="__codelineno-128-1" href="#__codelineno-128-1"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/part_2/families_align/*aln<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>trimal<span class="w"> </span>-in<span class="w"> </span><span class="nv">$file</span><span class="w"> </span>-out<span class="w"> </span>data/part_2/families_trimmed_alns/trimmed_<span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="k">)</span><span class="w"> </span>-automated1<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
+<p>Now everything is ready to launch <code>IQ-TREE</code>.<br>
+(Of course we need to make a directory where to store tree files).<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-129-1"><a id="__codelineno-129-1" name="__codelineno-129-1" href="#__codelineno-129-1"></a>mkdir<span class="w"> </span>data/part_2/tree/
+</span></code></pre></div>
+<p>Run <code>IQ-TREE</code>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-130-1"><a id="__codelineno-130-1" name="__codelineno-130-1" href="#__codelineno-130-1"></a>iqtree2<span class="w"> </span>-s<span class="w"> </span>data/part_2/families_trimmed_alns/<span class="w"> </span>--prefix<span class="w"> </span>data/part_2/tree/tree<span class="w"> </span>-alrt<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-abayes<span class="w"> </span>-o<span class="w"> </span>Ornithorhynchus_anatinus,Vombatus_ursinus<span class="w"> </span>-nt<span class="w"> </span><span class="m">24</span>
+</span></code></pre></div>
+<p>Yes! We have the tree!<br>
+Let's visualize it with <code>ggtree</code> in <code>R</code>.<br>
+But for now let's use some more difficult scripts.<br></p>
+<hr />
+<h3 id="step-9-add-icons-to-the-tree"><strong>Step 9: Add icons to the tree</strong></h3>
+<p>Run <code>draw_tree_icons.R</code> script and see the tree.<br></p>
+<p>But first let's take a look at the script we will use for visualization:<br></p>
+<div class="language-R highlight"><span class="filename">draw_tree_icons.R</span><pre><span></span><code><span id="__span-131-1"><a id="__codelineno-131-1" name="__codelineno-131-1" href="#__codelineno-131-1"></a><span class="c1">#!/usr/bin/env Rscript</span>
+</span><span id="__span-131-2"><a id="__codelineno-131-2" name="__codelineno-131-2" href="#__codelineno-131-2"></a><span class="n">args</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">commandArgs</span><span class="p">(</span><span class="n">trailingOnly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</span><span id="__span-131-3"><a id="__codelineno-131-3" name="__codelineno-131-3" href="#__codelineno-131-3"></a>
+</span><span id="__span-131-4"><a id="__codelineno-131-4" name="__codelineno-131-4" href="#__codelineno-131-4"></a><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&quot;pacman&quot;</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;pacman&quot;</span><span class="p">)</span>
+</span><span id="__span-131-5"><a id="__codelineno-131-5" name="__codelineno-131-5" href="#__codelineno-131-5"></a>
+</span><span id="__span-131-6"><a id="__codelineno-131-6" name="__codelineno-131-6" href="#__codelineno-131-6"></a><span class="n">pacman</span><span class="o">::</span><span class="nf">p_load</span><span class="p">(</span><span class="n">ggtree</span><span class="p">,</span><span class="w"> </span><span class="n">ggimage</span><span class="p">)</span>
+</span><span id="__span-131-7"><a id="__codelineno-131-7" name="__codelineno-131-7" href="#__codelineno-131-7"></a>
+</span><span id="__span-131-8"><a id="__codelineno-131-8" name="__codelineno-131-8" href="#__codelineno-131-8"></a><span class="n">newick.tree</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.tree</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">1</span><span class="p">])</span>
+</span><span id="__span-131-9"><a id="__codelineno-131-9" name="__codelineno-131-9" href="#__codelineno-131-9"></a>
+</span><span id="__span-131-10"><a id="__codelineno-131-10" name="__codelineno-131-10" href="#__codelineno-131-10"></a><span class="n">newick.tree</span><span class="o">$</span><span class="n">tip.label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;_&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">newick.tree</span><span class="o">$</span><span class="n">tip.label</span><span class="p">)</span>
+</span><span id="__span-131-11"><a id="__codelineno-131-11" name="__codelineno-131-11" href="#__codelineno-131-11"></a>
+</span><span id="__span-131-12"><a id="__codelineno-131-12" name="__codelineno-131-12" href="#__codelineno-131-12"></a><span class="c1">#phylopic images</span>
+</span><span id="__span-131-13"><a id="__codelineno-131-13" name="__codelineno-131-13" href="#__codelineno-131-13"></a><span class="n">tips</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">newick.tree</span><span class="o">$</span><span class="n">tip.label</span>
+</span><span id="__span-131-14"><a id="__codelineno-131-14" name="__codelineno-131-14" href="#__codelineno-131-14"></a><span class="n">tips</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Eptesicus&quot;</span>
+</span><span id="__span-131-15"><a id="__codelineno-131-15" name="__codelineno-131-15" href="#__codelineno-131-15"></a><span class="n">tips</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Marmota monax&quot;</span>
+</span><span id="__span-131-16"><a id="__codelineno-131-16" name="__codelineno-131-16" href="#__codelineno-131-16"></a><span class="n">tips</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Mus musculus&quot;</span>
+</span><span id="__span-131-17"><a id="__codelineno-131-17" name="__codelineno-131-17" href="#__codelineno-131-17"></a><span class="n">tipsimg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ggimage</span><span class="o">::</span><span class="nf">phylopic_uid</span><span class="p">(</span><span class="n">tips</span><span class="p">)</span>
+</span><span id="__span-131-18"><a id="__codelineno-131-18" name="__codelineno-131-18" href="#__codelineno-131-18"></a><span class="n">tipsimg</span><span class="o">$</span><span class="n">name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tips</span>
+</span><span id="__span-131-19"><a id="__codelineno-131-19" name="__codelineno-131-19" href="#__codelineno-131-19"></a><span class="c1">#save time and also edit if necessary</span>
+</span><span id="__span-131-20"><a id="__codelineno-131-20" name="__codelineno-131-20" href="#__codelineno-131-20"></a><span class="c1">#write.csv(tipsimg, &quot;tipsimg.csv&quot;)</span>
+</span><span id="__span-131-21"><a id="__codelineno-131-21" name="__codelineno-131-21" href="#__codelineno-131-21"></a><span class="c1">#tipsimg &lt;- read.csv(&quot;tipsimg.csv&quot;)</span>
+</span><span id="__span-131-22"><a id="__codelineno-131-22" name="__codelineno-131-22" href="#__codelineno-131-22"></a>
+</span><span id="__span-131-23"><a id="__codelineno-131-23" name="__codelineno-131-23" href="#__codelineno-131-23"></a><span class="nf">ggtree</span><span class="p">(</span><span class="n">newick.tree</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-131-24"><a id="__codelineno-131-24" name="__codelineno-131-24" href="#__codelineno-131-24"></a><span class="w">  </span><span class="nf">geom_label2</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">subset</span><span class="o">=!</span><span class="n">isTip</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;red4&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">label.size</span><span class="o">=</span><span class="m">0.2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-131-25"><a id="__codelineno-131-25" name="__codelineno-131-25" href="#__codelineno-131-25"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">tipsimg</span><span class="o">$</span><span class="n">uid</span><span class="p">,</span><span class="w"> </span><span class="n">geom</span><span class="o">=</span><span class="s">&quot;phylopic&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">075</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-131-26"><a id="__codelineno-131-26" name="__codelineno-131-26" href="#__codelineno-131-26"></a><span class="w">  </span><span class="nf">xlim</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="n">.</span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-131-27"><a id="__codelineno-131-27" name="__codelineno-131-27" href="#__codelineno-131-27"></a><span class="w">  </span><span class="nf">geom_treescale</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="m">11</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-131-28"><a id="__codelineno-131-28" name="__codelineno-131-28" href="#__codelineno-131-28"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">fontface</span><span class="o">=</span><span class="s">&quot;italic&quot;</span><span class="p">)</span>
+</span><span id="__span-131-29"><a id="__codelineno-131-29" name="__codelineno-131-29" href="#__codelineno-131-29"></a>
+</span><span id="__span-131-30"><a id="__codelineno-131-30" name="__codelineno-131-30" href="#__codelineno-131-30"></a><span class="nf">ggsave</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="o">=</span><span class="m">600</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-132-1"><a id="__codelineno-132-1" name="__codelineno-132-1" href="#__codelineno-132-1"></a>Rscript<span class="w"> </span>scripts/draw_tree_icons.R<span class="w"> </span>data/part_2/tree/tree.treefile<span class="w"> </span>imgs/icons_tree.png
+</span></code></pre></div>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/icons_tree.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/icons_tree.png" align='center', width="50%"></a>
+</div>
+
+<p>Wow! Looking goodThe phylogeny and the tree itself with the icons!<br>
+<code>draw_tree_icons.R</code> script uses <code>phylopic_uid()</code> function from <code>ggimage</code> package to make it possible.<br>
+But we can do even cooler.<br></p>
+<hr />
+<h3 id="step-10-add-photos-to-the-tree"><strong>Step 10: Add photos to the tree</strong></h3>
+<p>But first let's take a look at the script we will use for visualization:<br></p>
+<div class="language-R highlight"><span class="filename">draw_tree_photos.R</span><pre><span></span><code><span id="__span-133-1"><a id="__codelineno-133-1" name="__codelineno-133-1" href="#__codelineno-133-1"></a><span class="c1">#!/usr/bin/env Rscript</span>
+</span><span id="__span-133-2"><a id="__codelineno-133-2" name="__codelineno-133-2" href="#__codelineno-133-2"></a><span class="n">args</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">commandArgs</span><span class="p">(</span><span class="n">trailingOnly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</span><span id="__span-133-3"><a id="__codelineno-133-3" name="__codelineno-133-3" href="#__codelineno-133-3"></a>
+</span><span id="__span-133-4"><a id="__codelineno-133-4" name="__codelineno-133-4" href="#__codelineno-133-4"></a><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&quot;pacman&quot;</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;pacman&quot;</span><span class="p">)</span>
+</span><span id="__span-133-5"><a id="__codelineno-133-5" name="__codelineno-133-5" href="#__codelineno-133-5"></a>
+</span><span id="__span-133-6"><a id="__codelineno-133-6" name="__codelineno-133-6" href="#__codelineno-133-6"></a><span class="n">pacman</span><span class="o">::</span><span class="nf">p_load</span><span class="p">(</span><span class="n">ggtree</span><span class="p">,</span><span class="w"> </span><span class="n">ggimage</span><span class="p">)</span>
+</span><span id="__span-133-7"><a id="__codelineno-133-7" name="__codelineno-133-7" href="#__codelineno-133-7"></a>
+</span><span id="__span-133-8"><a id="__codelineno-133-8" name="__codelineno-133-8" href="#__codelineno-133-8"></a><span class="n">newick.tree</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.tree</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">1</span><span class="p">])</span>
+</span><span id="__span-133-9"><a id="__codelineno-133-9" name="__codelineno-133-9" href="#__codelineno-133-9"></a>
+</span><span id="__span-133-10"><a id="__codelineno-133-10" name="__codelineno-133-10" href="#__codelineno-133-10"></a><span class="n">newick.tree</span><span class="o">$</span><span class="n">tip.label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;_&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">newick.tree</span><span class="o">$</span><span class="n">tip.label</span><span class="p">)</span>
+</span><span id="__span-133-11"><a id="__codelineno-133-11" name="__codelineno-133-11" href="#__codelineno-133-11"></a>
+</span><span id="__span-133-12"><a id="__codelineno-133-12" name="__codelineno-133-12" href="#__codelineno-133-12"></a><span class="c1">#phylopic images</span>
+</span><span id="__span-133-13"><a id="__codelineno-133-13" name="__codelineno-133-13" href="#__codelineno-133-13"></a><span class="n">tips</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">newick.tree</span><span class="o">$</span><span class="n">tip.label</span>
+</span><span id="__span-133-14"><a id="__codelineno-133-14" name="__codelineno-133-14" href="#__codelineno-133-14"></a><span class="n">tips</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Eptesicus&quot;</span>
+</span><span id="__span-133-15"><a id="__codelineno-133-15" name="__codelineno-133-15" href="#__codelineno-133-15"></a><span class="n">tips</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Marmota monax&quot;</span>
+</span><span id="__span-133-16"><a id="__codelineno-133-16" name="__codelineno-133-16" href="#__codelineno-133-16"></a><span class="n">tips</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Mus musculus&quot;</span>
+</span><span id="__span-133-17"><a id="__codelineno-133-17" name="__codelineno-133-17" href="#__codelineno-133-17"></a><span class="n">tipsimg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ggimage</span><span class="o">::</span><span class="nf">phylopic_uid</span><span class="p">(</span><span class="n">tips</span><span class="p">)</span>
+</span><span id="__span-133-18"><a id="__codelineno-133-18" name="__codelineno-133-18" href="#__codelineno-133-18"></a><span class="n">tipsimg</span><span class="o">$</span><span class="n">name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tips</span>
+</span><span id="__span-133-19"><a id="__codelineno-133-19" name="__codelineno-133-19" href="#__codelineno-133-19"></a><span class="c1">#save time and also edit if necessary</span>
+</span><span id="__span-133-20"><a id="__codelineno-133-20" name="__codelineno-133-20" href="#__codelineno-133-20"></a><span class="c1">#write.csv(tipsimg, &quot;tipsimg.csv&quot;)</span>
+</span><span id="__span-133-21"><a id="__codelineno-133-21" name="__codelineno-133-21" href="#__codelineno-133-21"></a><span class="c1">#tipsimg &lt;- read.csv(&quot;tipsimg.csv&quot;)</span>
+</span><span id="__span-133-22"><a id="__codelineno-133-22" name="__codelineno-133-22" href="#__codelineno-133-22"></a>
+</span><span id="__span-133-23"><a id="__codelineno-133-23" name="__codelineno-133-23" href="#__codelineno-133-23"></a><span class="nf">ggtree</span><span class="p">(</span><span class="n">newick.tree</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-133-24"><a id="__codelineno-133-24" name="__codelineno-133-24" href="#__codelineno-133-24"></a><span class="w">  </span><span class="nf">geom_label2</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">subset</span><span class="o">=!</span><span class="n">isTip</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;red4&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">label.size</span><span class="o">=</span><span class="m">0.2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-133-25"><a id="__codelineno-133-25" name="__codelineno-133-25" href="#__codelineno-133-25"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">tipsimg</span><span class="o">$</span><span class="n">uid</span><span class="p">,</span><span class="w"> </span><span class="n">geom</span><span class="o">=</span><span class="s">&quot;phylopic&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">075</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-133-26"><a id="__codelineno-133-26" name="__codelineno-133-26" href="#__codelineno-133-26"></a><span class="w">  </span><span class="nf">xlim</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="n">.</span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-133-27"><a id="__codelineno-133-27" name="__codelineno-133-27" href="#__codelineno-133-27"></a><span class="w">  </span><span class="nf">geom_treescale</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="m">11</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-133-28"><a id="__codelineno-133-28" name="__codelineno-133-28" href="#__codelineno-133-28"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">fontface</span><span class="o">=</span><span class="s">&quot;italic&quot;</span><span class="p">)</span>
+</span><span id="__span-133-29"><a id="__codelineno-133-29" name="__codelineno-133-29" href="#__codelineno-133-29"></a>
+</span><span id="__span-133-30"><a id="__codelineno-133-30" name="__codelineno-133-30" href="#__codelineno-133-30"></a><span class="nf">ggsave</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="o">=</span><span class="m">600</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-134-1"><a id="__codelineno-134-1" name="__codelineno-134-1" href="#__codelineno-134-1"></a>Rscript<span class="w"> </span>scripts/draw_tree_photos.R<span class="w"> </span>data/part_2/tree/tree.treefile<span class="w"> </span>photos/<span class="w"> </span>imgs/photos_tree.png
+</span></code></pre></div>
+<p>Let's take a look at the tree!<br></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/photos_tree.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/photos_tree.png" align='center', width="50%"></a>
+</div>
+
+<p>Magnificent! So this script just takes a folder with photos as the input and that's all the magic!<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Ilia Popov
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "content.code.copy", "search", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
