@@ -39,7 +39,7 @@ Archive:  04_06_Phylogenomics.zip
   inflating: scripts/draw_tree_icons.R  
   inflating: scripts/draw_tree_photos.R  
   inflating: scripts/one_gene_tree.sh  
-  inflating: scripts/write_family_names.R  
+  inflating: scripts/write_family_names.R
 ```
 
 ## **Introduction**

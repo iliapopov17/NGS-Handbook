@@ -18,6 +18,27 @@ It is divided into 2 parts:<br>
   ![CLT](https://img.shields.io/badge/Language-R-steelblue)<br>
   ![IDE](https://img.shields.io/badge/Recommended IDE-RStudio-steelblue)
 
+???+ question
+    In this chapter we will use a lot of prewritten scripts and even some images for visualization. Where to get them?
+
+Download it from GitHub repository:
+
+```bash
+wget https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/data/04_Phylogenetics/04_07_Visualization_Pro.zip
+```
+
+```bash
+unzip 04_07_Visualization_Pro.zip && rm -rf 04_07_Visualization_Pro.zip
+```
+
+These are the scripts and images we will be working with:
+
+```
+Archive:  04_07_Visualization_Pro.zip
+   creating: data/
+  inflating: data/metadata.csv       
+  inflating: data/vhsv.fasta
+```
 ----------------------------------------------
 
 ## **Part 1: Making the tree**
