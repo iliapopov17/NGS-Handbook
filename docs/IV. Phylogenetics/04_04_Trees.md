@@ -13,7 +13,7 @@ prank -codon -d=data/SUP35_10seqs.fa -o=data/SUP35_aln_prank.best.fas -F
 ```
 
 <div style='justify-content: center'>
-<img src="/images/ngs-handbook/04_Phylogenetics/04_04_Trees/tree_building_overview.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_04_Trees/tree_building_overview.png" align='center', width="100%">
 </div>
 
 _Tree building overview_
@@ -102,7 +102,7 @@ Rscript scripts/draw_tree.R data/raxml/SUP35_raxml.raxml.bestTree imgs/SUP35_rax
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="/images/ngs-handbook/04_Phylogenetics/04_04_Trees/SUP35_raxml.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_04_Trees/SUP35_raxml.png" align='center', width="100%">
 </div>
 
 ----------------------------------------------
@@ -163,7 +163,7 @@ Rscript draw_tree.R data/iqtree/SUP35_iqtree.treefile imgs/SUP35_iqtree.png
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="/images/ngs-handbook/04_Phylogenetics/04_04_Trees/SUP35_iqtree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_04_Trees/SUP35_iqtree.png" align='center', width="100%">
 </div>
 
 The trees obtained with RAxML and IQTREE are fundamentally similar.<br>
@@ -316,7 +316,7 @@ Rscript scripts/draw_tree_max.R data/iqtree_ufb_alrt_abayes/SUP35_TIM3_B_alrt_ab
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="/images/ngs-handbook/04_Phylogenetics/04_04_Trees/SUP35_TIM3_B_alrt_abayes.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_04_Trees/SUP35_TIM3_B_alrt_abayes.png" align='center', width="100%">
 </div>
 
 All values ​​- `alrt`, `abayes` and `ufb` are positively correlated - that is, if the indicators are high, then they are all high, as a rule. But this is not proportional.<br>
