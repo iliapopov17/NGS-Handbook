@@ -6,6 +6,8 @@ hide:
 
 ![NGS_workflow](/imgs/NGS_workflow.png)
 
+<img src="/imgs/NGS_workflow.png" width="100%">
+
 _Typical workflow of NGS data analysis_
 
 ## **05 16S Amplicon Analysis 🧫**
