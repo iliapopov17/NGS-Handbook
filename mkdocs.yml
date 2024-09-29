@@ -28,8 +28,8 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
-  #icon:
-    #repo: fontawesome/brands/github
+  icon:
+    repo: fontawesome/brands/github
 markdown_extensions:
   - attr_list
   - md_in_html
@@ -47,8 +47,8 @@ markdown_extensions:
 plugins:
   - search
   
-#repo_url: https://github.com/iliapopov17/NGS-Handbook
-#repo_name: iliapopov17/NGS-Handbook
+repo_url: https://github.com/iliapopov17/NGS-Handbook
+repo_name: iliapopov17/NGS-Handbook
 
 #extra:
   #analytics:
