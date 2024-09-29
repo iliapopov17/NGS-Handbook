@@ -12,7 +12,7 @@ _Typical workflow of NGS data analysis_
 
 ## **05 16S Amplicon Analysis 🧫**
 
-In the [16S amplicon analysis chapter](05_16S_amplicon_analysis) there is an introductory guide on conducting analysis using `DADA2` followed by two interesting examples of "real-life" analysis pipeline with the data from studies on Crohn's and Parkinson's diseases.
+In the [16S amplicon analysis chapter](V.%2016S_amplicon_analysis/05_00_Overview) there is an introductory guide on conducting analysis using `DADA2` followed by two interesting examples of "real-life" analysis pipeline with the data from studies on Crohn's and Parkinson's diseases.
 
 ----------------------------------------------
 

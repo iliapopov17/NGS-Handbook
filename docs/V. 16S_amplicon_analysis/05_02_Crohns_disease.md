@@ -12,6 +12,8 @@ Data obtained from the article [«_A microbial signature for Crohn's disease_»]
 You can run commands below in your `RStudio` in `R script`.<br>
 Or if you want to write a beautiful & convenient to read laboratory journal you can use `R Markdown`.<br>
 
+----------------------------------------------
+
 ## **Step 1: Loading libraries and data**
 
 In this 16S amplicon analysis pipeline we will use `MicrobeR`, `balance`, `NearestBalance` & `selbal` packages. Their installation is a bit difficult. Please follow the code below:<br>
@@ -55,12 +57,30 @@ main_dir <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(main_dir)
 ```
 
+Download the data to work with.<br>
+
+```r
+url <- "https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/data/05_16S_amplicon_analysis/05_02_Crohns_disease.zip"
+
+zipF<- "05_02_Crohns_disease.zip"
+
+download.file(url, zipF)
+
+outDir<-"."
+
+unzip(zipF,exdir=outDir)
+
+if (file.exists(zipF)) {
+  file.remove(zipF)
+}
+```
+
 Load metadata and sort it by participant number.<br>
 
 **_Input_**
 
 ```r
-metadata = fread("data_Crohns_disease/metadata.csv")
+metadata = fread("data/metadata.csv")
 metadata[, .N, by = diagnosis_full]
 ```
 
@@ -79,9 +99,11 @@ Load the `Counts` table.<br>
 **_Input_**
 
 ```r
-counts <- read.csv("data_Crohns_disease/counts.csv",row.names = 1)
+counts <- read.csv("data/counts.csv",row.names = 1)
 counts <- counts[metadata$sample, colSums(counts) >0]
 ```
+
+----------------------------------------------
 
 ## **Step 2: Check the data**
 
@@ -171,6 +193,8 @@ ggsave("imgs/coverage_quality.jpg", width = 11, height = 3.5, dpi = 300)
 ```
 
 Sequencing quality is sufficient.<br>
+
+----------------------------------------------
 
 ## **Step 3: Filtration from rare and under-represented taxa**
 
@@ -312,6 +336,8 @@ heatmap_with_split(abundance,
 ggsave("imgs/relative_abundance.jpg", width = 8, height = 10, dpi = 300)
 ```
 
+----------------------------------------------
+
 ## **Step 4: Counting alpha diversity**
 
 **_Input_**
@@ -358,6 +384,8 @@ wilcox.test(Shannon.index ~ diagnosis_full, metadata)$p.value
 [1] 1.314773e-09
 ```
 The _p_-value of `1.314773e-09` indicates a significant difference in alpha diversity between the two groups. CD samples exhibit lower alpha diversity compared to HC samples.<br>
+
+----------------------------------------------
 
 ## **Step 5: Aitchison's beta diversity: is there a difference in proportions?**
 
@@ -424,6 +452,8 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 ```
 
 The statistical analysis using the `adonis2` test shows that the difference in beta diversity between the two groups is statistically significant (p-value = 0.001).<br>
+
+----------------------------------------------
 
 ## **Step 6: What exactly is the difference?**
 
