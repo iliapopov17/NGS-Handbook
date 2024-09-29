@@ -135,7 +135,7 @@ Microbiome.Barplot(t(raw_abund), metadata, CATEGORY = "diagnosis_full")
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/microbiome_barplot.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/microbiome_barplot.jpg" width="100%">
 
 **_Input_**
 
@@ -162,7 +162,7 @@ ggplot(metadata) +
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/coverage_quality.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/coverage_quality.jpg" width="100%">
 
 **_Input_**
 
@@ -198,7 +198,7 @@ ggplot(metadata)+
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/post-filtration_coverage.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/post-filtration_coverage.jpg" width="100%">
 
 **_Input_**
 
@@ -220,7 +220,7 @@ ggplot(metadata)+
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/remaining_proportion.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/remaining_proportion.jpg" width="100%">
 
 **_Input_**
 
@@ -304,7 +304,7 @@ heatmap_with_split(abundance,
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/relative_abundance.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/relative_abundance.jpg" width="100%">
 
 **_Input_**
 
@@ -336,7 +336,7 @@ ggplot(metadata) +
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/alpha_diversity.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/alpha_diversity.jpg" width="100%">
 
 **_Input_**
 
@@ -390,7 +390,7 @@ ggplot(cbind(metadata,pcoa_res)) +
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/beta_diversity.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/beta_diversity.jpg" width="100%">
 
 **_Input_**
 
@@ -449,7 +449,7 @@ heatmap_with_split(abundance = abundance[, unlist(nb$nb$b1)],
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/heatmap_w_split.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/heatmap_w_split.jpg" width="100%">
 
 **_Input_**
 
@@ -486,7 +486,7 @@ ggplot(tab) +
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/mean_difference.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/mean_difference.jpg" width="100%">
 
 **_Input_**
 
@@ -507,7 +507,7 @@ ggplot(tab) +
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/approximate_difference.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/approximate_difference.jpg" width="100%">
 
 **_Input_**
 
@@ -535,7 +535,7 @@ ggplot(metadata) +
 
 **_Output_**
 
-<img src="/images/ngs-handbook/05_16S_amplicon_analysis/05_02_Crohns_disease/balance_value.jpg" width="100%">
+<img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_02_Crohns_disease/balance_value.jpg" width="100%">
 
 **_Input_**
 
