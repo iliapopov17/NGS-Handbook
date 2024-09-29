@@ -4,7 +4,7 @@
 
 This guide is about reconstructing phylogeny using more than just one gene.<br>
 
-During this work there are several trees constructed. Some are good, some are bad. If you are interested in comparing the phylogenies - see [04_08_Tanglegram](https://github.com/iliapopov17/NGS-Handbook/tree/main/04_Phylogenetics/04_08_Tanglegram)
+During this work there are several trees constructed. Some are good, some are bad. If you are interested in comparing the phylogenies - see [04_08_Tanglegram](https://iliapopov17.github.io/NGS-Handbook/IV.%20Phylogenetics/04_08_Tanglegram/)
 
 ## **Part 1. Phylogeny of selected mammalian species based on mitochondrial genomes.**
 
@@ -493,7 +493,7 @@ Rscript scripts/draw_tree.R data/part_1/CYTB_tree/CYTB.treefile imgs/CYTB_tree.p
 Let's take a look at it:
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/CYTB_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/CYTB_tree.png" align='center', width="50%">
 </div>
 
 Well... This is a total mess...<br>
@@ -739,7 +739,7 @@ Rscript scripts/draw_tree.R data/part_1/mt_tree/mt_tree.treefile imgs/mt_protein
 Let's take a look at it:
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/mt_proteins_alns_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/mt_proteins_alns_tree.png" align='center', width="50%">
 </div>
 
 It is sooo much better now!!! *Canis lupus* and *Felis catus* are on the same clade!<br>
@@ -1392,7 +1392,7 @@ Rscript scripts/draw_tree_icons.R data/part_2/tree/tree.treefile imgs/icons_tree
 ```
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/icons_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/icons_tree.png" align='center', width="50%">
 </div>
 
 Wow! Looking goodThe phylogeny and the tree itself with the icons!<br>
@@ -1447,7 +1447,7 @@ Rscript scripts/draw_tree_photos.R data/part_2/tree/tree.treefile photos/ imgs/p
 Let's take a look at the tree!<br>
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_06_Phylogenomics/imgs/photos_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/photos_tree.png" align='center', width="50%">
 </div>
 
 Magnificent! So this script just takes a folder with photos as the input and that's all the magic!<br>
