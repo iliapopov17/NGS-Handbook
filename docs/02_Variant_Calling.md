@@ -2,8 +2,8 @@
 >This chapter contains a manual on variant calling pipeline. Details are described here only on how to conduct such a study from the time the data are downloaded to the time the genetic variant annotation files are received. The biological interpretation of the results is not given here.
 
 ## **Instruction**
-![CLT](https://img.shields.io/badge/Language-Command Line Tools-steelblue)<br>
-![IDE](https://img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue)
+![CLT](https:/img.shields.io/badge/Language-Command Line Tools-steelblue)<br>
+![IDE](https:/img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue)
 
 You can run commands below in your `terminal`.<br>
 But if you want to write a convenient to read laboratory journal you can use `Jupyter Notebook`.<br>
@@ -94,31 +94,31 @@ Please open them in any web browser you use:<br>
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20quality%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20quality%20R2.png" width="100%">|
+|<img src="/images/ngs-handbook/02_Variant_Calling/Per%20base%20sequence%20quality%20R1.png" width="100%">|<img src="/images/ngs-handbook/02_Variant_Calling/Per%20base%20sequence%20quality%20R2.png" width="100%">|
 
 #### **Per sequence quality scores**
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20quality%20scores%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20quality%20scores%20R2.png" width="100%">|
+|<img src="/images/ngs-handbook/02_Variant_Calling/Per%20sequence%20quality%20scores%20R1.png" width="100%">|<img src="/images/ngs-handbook/02_Variant_Calling/Per%20sequence%20quality%20scores%20R2.png" width="100%">|
 
 #### **Per base sequence content**
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20base%20sequence%20content%20R2.png" width="100%">|
+|<img src="/images/ngs-handbook/02_Variant_Calling/Per%20base%20sequence%20content%20R1.png" width="100%">|<img src="/images/ngs-handbook/02_Variant_Calling/Per%20base%20sequence%20content%20R2.png" width="100%">|
 
 #### **Per sequence GC content**
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20GC%20content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Per%20sequence%20GC%20content%20R2.png" width="100%">|
+|<img src="/images/ngs-handbook/02_Variant_Calling/Per%20sequence%20GC%20content%20R1.png" width="100%">|<img src="/images/ngs-handbook/02_Variant_Calling/Per%20sequence%20GC%20content%20R2.png" width="100%">|
 
 #### **Adapter Content**
 
 |Forward read|Reverse read|
 |-|-|
-|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Adapter%20Content%20R1.png" width="100%">|<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/02_Genomic_Variation_Analysis/imgs/Adapter%20Content%20R2.png" width="100%">|
+|<img src="/images/ngs-handbook/02_Variant_Calling/Adapter%20Content%20R1.png" width="100%">|<img src="/images/ngs-handbook/02_Variant_Calling/Adapter%20Content%20R2.png" width="100%">|
 
 The main problem is `Per base sequence quality`. So we will solve it using `trimmomatic`.<br>
 Details on `trimmomatic` and QC in the [Quality Control manual](1%20-%20Quality%20Control).
