@@ -7,11 +7,39 @@ We will use the `FastQC` tool to assess the quality of the raw sequencing data.
 ![CLT](https://img.shields.io/badge/Language-Command Line Tools-steelblue)<br>
 ![IDE](https://img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue)
 
+???+ question
+    Where to get the data?
+
+Download it from GitHub repository:
+
+```bash
+wget https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/data/01_Quality_Control.zip
+```
+
+```bash
+unzip 01_Quality_Control.zip && rm -rf 01_Quality_Control.zip
+```
+
+These are the data we will be working with:
+
+```
+Archive:  01_Quality_Control.zip
+   creating: adapters/
+  inflating: adapters/NexteraPE-PE.fa  
+   creating: data/
+  inflating: data/Sample_1.R1.fastq.gz  
+  inflating: data/Sample_1.R2.fastq.gz
+```
+
 You can run commands below in your `terminal`.<br>
 But if you want to write a convenient to read laboratory journal you can use `Jupyter Notebook`.<br>
 In that case write `!` in the beggining of each cell to make it understand `bash` commands.
 
 To recreate any of the steps of this manual please install:
+
+```bash
+wget https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/envs/qc.yaml
+```
 
 ```bash
 conda env create -f qc.yaml

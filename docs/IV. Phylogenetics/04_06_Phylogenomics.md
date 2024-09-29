@@ -1,5 +1,28 @@
 # **Phylogenomics**
 
+## **Instruction**
+![CLT](https://img.shields.io/badge/Language-Command Line Tools & Bash-steelblue)<br>
+![IDE](https://img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue)
+
+???+ question
+    Where to get the data?
+
+Download it from GitHub repository:
+
+```bash
+wget https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/data/04_Phylogenetics/04_06_Phylogenomics.zip
+```
+
+```bash
+unzip 04_06_Phylogenomics.zip && rm -rf 04_06_Phylogenomics.zip
+```
+
+These are the data and scripts we will be working with:
+
+```
+To be written
+```
+
 ## **Introduction**
 
 This guide is about reconstructing phylogeny using more than just one gene.<br>

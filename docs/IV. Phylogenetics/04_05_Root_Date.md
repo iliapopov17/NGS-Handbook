@@ -4,6 +4,30 @@
 ![CLT](https://img.shields.io/badge/Language-Command Line Tools & Python-steelblue)<br>
 ![IDE](https://img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue)
 
+???+ question
+    Where to get the data?
+
+Download it from GitHub repository:
+
+```bash
+wget https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/data/04_Phylogenetics/04_05_Root_Date.zip
+```
+
+```bash
+unzip 04_05_Root_Date.zip && rm -rf 04_05_Root_Date.zip
+```
+
+These are the data and scripts we will be working with:
+
+```
+Archive:  04_05_Root_Date.zip
+   creating: scripts/
+  inflating: scripts/draw_tree.R     
+  inflating: scripts/draw_tree_max.R  
+   creating: data/
+  inflating: data/SUP35_aln_prank.trim.fas
+```
+
 >For this work, we will use a filtered alignment (this is the same one we got in the [Trees step](https://github.com/iliapopov17/NGS-Handbook/tree/main/04_Phylogenetics/04_04_Trees))
 
 ----------------------------------------------

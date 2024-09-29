@@ -4,6 +4,27 @@
 ![CLT](https://img.shields.io/badge/Language-Command Line Tools & Python-steelblue)<br>
 ![IDE](https://img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue)
 
+???+ question
+    Where to get the data?
+
+Download it from GitHub repository:
+
+```bash
+wget https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/data/04_Phylogenetics/04_04_Trees.zip
+```
+
+```bash
+unzip 04_04_Trees.zip && rm -rf 04_04_Trees.zip
+```
+
+These are the data we will be working with:
+
+```
+Archive:  04_04_Trees.zip
+   creating: data/
+  inflating: data/SUP35_10seqs.fa
+```
+
 >For this work, we will use the alignment of [SUP35 gene](https://www.yeastgenome.org/locus/S000002579) obtained by `prank` considering codons.<br>
 
 **_Input_**

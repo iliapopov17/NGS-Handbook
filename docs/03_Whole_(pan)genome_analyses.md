@@ -13,6 +13,10 @@ It is recommended to use `Jupyter Notebook`. Just write `!` in the beggining of 
 To recreate any of the steps of this manual please install:
 
 ```bash
+wget https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/envs/panacota.yaml
+```
+
+```bash
 conda env create -f panacota.yaml
 ```
 
