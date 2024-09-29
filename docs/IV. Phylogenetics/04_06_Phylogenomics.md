@@ -493,7 +493,7 @@ Rscript scripts/draw_tree.R data/part_1/CYTB_tree/CYTB.treefile imgs/CYTB_tree.p
 Let's take a look at it:
 
 <div style='justify-content: center'>
-<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/CYTB_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/CYTB_tree.png" align='center', width="100%">
 </div>
 
 Well... This is a total mess...<br>
@@ -739,7 +739,7 @@ Rscript scripts/draw_tree.R data/part_1/mt_tree/mt_tree.treefile imgs/mt_protein
 Let's take a look at it:
 
 <div style='justify-content: center'>
-<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/mt_proteins_alns_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/mt_proteins_alns_tree.png" align='center', width="100%">
 </div>
 
 It is sooo much better now!!! *Canis lupus* and *Felis catus* are on the same clade!<br>
@@ -1392,7 +1392,7 @@ Rscript scripts/draw_tree_icons.R data/part_2/tree/tree.treefile imgs/icons_tree
 ```
 
 <div style='justify-content: center'>
-<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/icons_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/icons_tree.png" align='center', width="100%">
 </div>
 
 Wow! Looking goodThe phylogeny and the tree itself with the icons!<br>
@@ -1447,7 +1447,7 @@ Rscript scripts/draw_tree_photos.R data/part_2/tree/tree.treefile photos/ imgs/p
 Let's take a look at the tree!<br>
 
 <div style='justify-content: center'>
-<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/photos_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_06_Phylogenomics/photos_tree.png" align='center', width="100%">
 </div>
 
 Magnificent! So this script just takes a folder with photos as the input and that's all the magic!<br>
