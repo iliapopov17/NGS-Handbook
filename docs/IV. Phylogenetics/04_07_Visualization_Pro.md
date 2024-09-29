@@ -224,7 +224,7 @@ dev.off()
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_07_Visualization_Pro/imgs/1st_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_07_Visualization_Pro//1st_tree.png" align='center', width="100%">
 </div>
 
 Um. Okay, but nothing special! There is a lot of work ahead to make this tree pretty!<br>
@@ -254,7 +254,7 @@ tree_2
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_07_Visualization_Pro/imgs/2nd_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_07_Visualization_Pro//2nd_tree.png" align='center', width="100%">
 </div>
 
 And let's save the tree.<br>
@@ -298,7 +298,7 @@ tree_3
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_07_Visualization_Pro/imgs/3rd_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_07_Visualization_Pro//3rd_tree.png" align='center', width="100%">
 </div>
 
 And let's save the tree.<br>
@@ -365,7 +365,7 @@ final_tree
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_07_Visualization_Pro/imgs/final_tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_07_Visualization_Pro//final_tree.png" align='center', width="100%">
 </div>
 
 And let's save the tree.<br>
