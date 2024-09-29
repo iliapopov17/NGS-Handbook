@@ -45,7 +45,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 plugins:
-  - glightbox
+  #- glightbox
   - search
   
 #repo_url: https://github.com/iliapopov17/NGS-Handbook
