@@ -79,7 +79,7 @@ two_trees
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/two_trees.png" align='center', width="100%">
 </div>
 
 These are the trees we will be working with.<br>
@@ -113,7 +113,7 @@ two_trees_w_ro
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_w_ro.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/two_trees_w_ro.png" align='center', width="100%">
 </div>
 
 Let's save these trees.<br>
@@ -160,7 +160,7 @@ two_trees_w_ro_2
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_w_ro_2.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/two_trees_w_ro_2.png" align='center', width="100%">
 </div>
 
 Looking same good! And let's save these twoo trees.<br>
@@ -198,7 +198,7 @@ ggtree_tanglegram_1
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ggtree_tanglegram_1.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/ggtree_tanglegram_1.png" align='center', width="100%">
 </div>
 
 Hooray! Let's save this tanglegram. But... the connecting lines overlap the tip labels. Now we must solve this problem!<br>
@@ -234,7 +234,7 @@ ggtree_tanglegram_2
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ggtree_tanglegram_2.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/ggtree_tanglegram_2.png" align='center', width="100%">
 </div>
 
 Just perfect! And let's save it.<br>
@@ -294,7 +294,7 @@ two_trees_s
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_s.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/two_trees_s.png" align='center', width="100%">
 </div>
 
 Interesting trees. Let's save them.<br>
@@ -324,7 +324,7 @@ cophyloplot(TreeA_S, TreeB_S, assoc = association, length.line = 4, space = 28, 
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ape_small_tanglegram.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/ape_small_tanglegram.png" align='center', width="100%">
 </div>
 
 Wow! Let's save this plot.<br>
@@ -372,7 +372,7 @@ two_trees_l
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_l.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/two_trees_l.png" align='center', width="100%">
 </div>
 
 Wow! Suppose `cophyloplot()` will not do good with such a large trees. Anyway let's save them.<br>
@@ -402,7 +402,7 @@ cophyloplot(TreeA_L, TreeB_L, assoc = association, length.line = 4, space = 28, 
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ape_large_tanglegram.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/ape_large_tanglegram.png" align='center', width="100%">
 </div>
 
 That looks awful... Anyway let's save it...<br>
@@ -476,7 +476,7 @@ two_trees_l_2
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_l_2.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/two_trees_l_2.png" align='center', width="100%">
 </div>
 
 Yeah. Looking massive. Save it.<br>
@@ -506,7 +506,7 @@ tanglegram(TreeA_L_2, TreeB_L_2,
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/dendextend_large_tanglegram.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_08_Tanglegram/dendextend_large_tanglegram.png" align='center', width="100%">
 </div>
 
 Finally! That large tanglegram looks great! Let's save it.<br>
