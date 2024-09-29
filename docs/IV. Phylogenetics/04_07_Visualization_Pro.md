@@ -39,6 +39,7 @@ Archive:  04_07_Visualization_Pro.zip
   inflating: data/metadata.csv       
   inflating: data/vhsv.fasta
 ```
+
 ----------------------------------------------
 
 ## **Part 1: Making the tree**
