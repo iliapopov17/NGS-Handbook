@@ -167,7 +167,7 @@ figtree data/iqtree_root_auto/SUP35_TIM3_root_auto.rootstrap.nex
 **_Output_**
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-16%20at%2000.24.10.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-16%20at%2000.24.10.png" align='center', width="50%">
 </div>
 
 ???+ success
@@ -272,37 +272,37 @@ In foreign colleagues the tree was based on several genes, we take only 1 piece 
 `Beauti` is the GUI application. So I will just provide as many screenshots as possible.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-07%20at%2021.59.15.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2021.59.15.png" align='center', width="50%">
 </div>
 
 When loading the file, we select that we have nucleotide sequences
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-07%20at%2021.59.21.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2021.59.21.png" align='center', width="50%">
 </div>
 
 Everything is okay.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-07%20at%2022.01.40.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.01.40.png" align='center', width="50%">
 </div>
 
 In `Site model` select TN93 and empirical frequencies
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-07%20at%2022.02.46.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.02.46.png" align='center', width="50%">
 </div>
 
 In `Clock model` we choose 0.02. Why? Because we rely on the known data on the frequency of substitutions in mtDNA (approximately 2% per million years)
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-07%20at%2022.06.15.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.06.15.png" align='center', width="50%">
 </div>
 
 Everything is okay.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-07%20at%2022.07.12.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.07.12.png" align='center', width="50%">
 </div>
 
 Save everything to `felidae_2percent.xml`.
@@ -318,13 +318,13 @@ beast data/atp8/felidae_2percent.xml
 `Tracer` is the GUI application. So I will just provide as many screenshots as possible.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-07%20at%2022.37.25.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.37.25.png" align='center', width="50%">
 </div>
 
 All `ESS` scores are in perfect order.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-07%20at%2022.38.23.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.38.23.png" align='center', width="50%">
 </div>
 
 The so-called "hairy caterpillar".
@@ -334,7 +334,7 @@ The so-called "hairy caterpillar".
 `TreeAnnotator` is the GUI application. So I will just provide as many screenshots as possible.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-07%20at%2022.51.48.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.51.48.png" align='center', width="50%">
 </div>
 
 Set parameters, and set `input` and `output`. Useful hint - output can be named the same way, but not .trees, just .tree!
@@ -344,11 +344,11 @@ Set parameters, and set `input` and `output`. Useful hint - output can be named 
 `FigTree` is the GUI application. So I will just provide as many screenshots as possible.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/Screenshot%202024-03-07%20at%2022.59.15.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.59.15.png" align='center', width="50%">
 </div>
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_05_Root_Date/imgs/felidae_atp8.tree.png" align='center', width="50%">
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/felidae_atp8.tree.png" align='center', width="50%">
 </div>
 
 Fiddled with the parameters and got these results.
