@@ -4,9 +4,7 @@ hide:
 ---
 # **Introduction**
 
-![NGS_workflow](/images/NGS workflow.png)
-
-<img src="/images/NGS workflow.png" width="100%">
+<img src="/images/NGS workflow.png" width="75%">
 
 _Typical workflow of NGS data analysis_
 
