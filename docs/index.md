@@ -4,9 +4,9 @@ hide:
 ---
 # **Introduction**
 
-![NGS_workflow](/imgs/NGS_workflow.png)
+![NGS_workflow](https://github.com/iliapopov17/NGS-Handbook/blob/main/imgs/NGS_workflow.png)
 
-<img src="/imgs/NGS_workflow.png" width="100%">
+<img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/imgs/NGS_workflow.png" width="100%">
 
 _Typical workflow of NGS data analysis_
 
