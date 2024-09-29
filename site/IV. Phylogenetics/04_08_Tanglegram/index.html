@@ -1,0 +1,1392 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iliapopov17.github.io/NGS-Handbook/IV.%20Phylogenetics/04_08_Tanglegram/">
+      
+      
+        <link rel="prev" href="../04_07_Visualization_Pro/">
+      
+      
+        <link rel="next" href="../../V.%2016S_amplicon_analysis/05_01_Introduction/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>Tanglegram - NGS Analysis Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tanglegram" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NGS Analysis Handbook" class="md-header__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NGS Analysis Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tanglegram
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NGS Analysis Handbook" class="md-nav__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    NGS Analysis Handbook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Quality_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I. Quality Control of Raw Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Variant_Calling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    II. Genomic Variation Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Whole_%28pan%29genome_analyses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    III. Whole Genome and Pangenome Analyses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IV. Phylogenetics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            IV. Phylogenetics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_01_Intro_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_02_Mining_Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with NCBI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_03_MSA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Sequence Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_04_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparing the alignment and building trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_05_Root_Date/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rooting and comparing trees; Dating
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_06_Phylogenomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phylogenomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_07_Visualization_Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualization Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tanglegram
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tanglegram
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-manual-tanglegram-with-ggtree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Manual tanglegram with ggtree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Manual tanglegram with ggtree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step1: Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-generate-the-trees-and-prepare-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Generate the trees and prepare them
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-rotate-the-2nd-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Rotate the 2nd tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-plotting-the-tanglegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Plotting the tanglegram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-tanglegram-with-ape-and-cophyloplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Tanglegram with ape and cophyloplot()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Tanglegram with ape and cophyloplot()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-small-tanglegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Small tanglegram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-large-tanglegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Large tanglegram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-tanglegram-with-dendextend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Tanglegram with dendextend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Tanglegram with dendextend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-preparation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-creating-dendrograms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Creating dendrograms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-plotting-tanglegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Plotting tanglegram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    V. 16S amplicon analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            V. 16S amplicon analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../V.%2016S_amplicon_analysis/05_01_Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16S analysis with DADA2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../V.%2016S_amplicon_analysis/05_02_Crohns_disease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crohn's disease
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-manual-tanglegram-with-ggtree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Manual tanglegram with ggtree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Manual tanglegram with ggtree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step1: Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-generate-the-trees-and-prepare-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Generate the trees and prepare them
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-rotate-the-2nd-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Rotate the 2nd tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-plotting-the-tanglegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Plotting the tanglegram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-tanglegram-with-ape-and-cophyloplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Tanglegram with ape and cophyloplot()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Tanglegram with ape and cophyloplot()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-small-tanglegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Small tanglegram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-large-tanglegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Large tanglegram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-tanglegram-with-dendextend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Tanglegram with dendextend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Tanglegram with dendextend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-preparation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-creating-dendrograms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Creating dendrograms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-plotting-tanglegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Plotting tanglegram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tanglegram"><strong>Tanglegram</strong></h1>
+<p>This guide is about making co-phylogeny tanglegrams.<br></p>
+<h2 id="instruction"><strong>Instruction</strong></h2>
+<p><a class="glightbox" href="https://img.shields.io/badge/Language-R-steelblue" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="CLT" src="https://img.shields.io/badge/Language-R-steelblue" /></a><br>
+<a class="glightbox" href="https://img.shields.io/badge/Recommended IDE-RStudio-steelblue" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IDE" src="https://img.shields.io/badge/Recommended IDE-RStudio-steelblue" /></a></p>
+<hr />
+<h2 id="part-1-manual-tanglegram-with-ggtree"><strong>Part 1: Manual tanglegram with <code>ggtree</code></strong></h2>
+<h3 id="step1-preparation"><strong>Step1:  Preparation</strong></h3>
+<p>1st step - install or call libraries.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&quot;pacman&quot;</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;pacman&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pacman</span><span class="o">::</span><span class="nf">p_load</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">,</span><span class="w"> </span><span class="n">ggtree</span><span class="p">,</span><span class="w"> </span><span class="n">phangorn</span><span class="p">,</span><span class="w"> </span><span class="n">dplyr</span><span class="p">)</span>
+</span></code></pre></div>
+<p>2nd step - set the working directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">main_dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dirname</span><span class="p">(</span><span class="n">rstudioapi</span><span class="o">::</span><span class="nf">getSourceEditorContext</span><span class="p">()</span><span class="o">$</span><span class="n">path</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">setwd</span><span class="p">(</span><span class="n">main_dir</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-2-generate-the-trees-and-prepare-them"><strong>Step 2: Generate the trees and prepare them</strong></h3>
+<p>Create a directory for images.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">dir.create</span><span class="p">(</span><span class="s">&quot;imgs&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">showWarnings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">recursive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0777&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Generate 2 small random phylogenetic trees.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Generate two random trees with the same set of tips (for demonstration)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nf">set.seed</span><span class="p">(</span><span class="m">34</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">tips</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">LETTERS</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">]</span><span class="w">  </span><span class="c1"># Shared tip labels</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">tree1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rtree</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">tip.label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tips</span><span class="p">)</span><span class="w">  </span><span class="c1"># Random tree 1</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">tree2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rtree</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">tip.label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tips</span><span class="p">)</span><span class="w">  </span><span class="c1"># Random tree 2</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># Ensure that both trees have the same tip labels for co-phylogeny plotting</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">tree2</span><span class="o">$</span><span class="n">tip.label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tree1</span><span class="o">$</span><span class="n">tip.label</span><span class="w">  </span><span class="c1"># Sync labels</span>
+</span></code></pre></div>
+<p>Display them.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Plot tree1 (left) and tree2 (right)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">t1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggtree</span><span class="p">(</span><span class="n">tree1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">1</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">t2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggtree</span><span class="p">(</span><span class="n">tree2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">1</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># Combine the two plots side by side</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">two_trees</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t2</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">two_trees</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees.png" align='center', width="50%"></a>
+</div>
+
+<p>These are the trees we will be working with.<br>
+Now let's save them.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/two_trees.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">two_trees</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-3-rotate-the-2nd-tree"><strong>Step 3: Rotate the 2nd tree</strong></h3>
+<p>Of course we can rotate the 2nd tree simply using <code>scale_x_reverse()</code>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Rotate the 2nd tree</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">t2_rotated</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggtree</span><span class="p">(</span><span class="n">tree2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-.1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nf">scale_x_reverse</span><span class="p">()</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># Combine the two plots side by side</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">two_trees_w_ro</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t2_rotated</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">two_trees_w_ro</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_w_ro.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_w_ro.png" align='center', width="50%"></a>
+</div>
+
+<p>Let's save these trees.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/two_trees_w_ro.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">two_trees_w_ro</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Looking good! But to manually create the tanglegram we need to adjust the coordinates of labels. And if we use <code>scale_x_reverse()</code> it will be impossible to make the tanglegram. That is why we need to go by more difficult and not obvious way - by manually horizontally mirroring the tree...<br></p>
+<p>Now we are going to grab the backend data frame from both trees and update the tree 2 data frame x-coordinate.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">data_tree_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t1</span><span class="o">$</span><span class="n">data</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">data_tree_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t2</span><span class="o">$</span><span class="n">data</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">data_tree_1</span><span class="o">$</span><span class="n">tree</span><span class="w"> </span><span class="o">&lt;-</span><span class="s">&#39;t1&#39;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">data_tree_2</span><span class="o">$</span><span class="n">tree</span><span class="w"> </span><span class="o">&lt;-</span><span class="s">&#39;t2&#39;</span>
+</span></code></pre></div>
+<p>And now we will use the <code>max(d2$x) - d2$x + max(d1$x) + max(d1$x)*0.3</code> equation to update x coordinates for the 2nd tree. This equation is not universal, <code>0.3</code> is not constant, you can fiddle with different values depending on the branch length unit of your tree to get good visualization.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">data_tree_2</span><span class="o">$</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">data_tree_2</span><span class="o">$</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">data_tree_2</span><span class="o">$</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">data_tree_1</span><span class="o">$</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="nf">max</span><span class="p">(</span><span class="n">data_tree_1</span><span class="o">$</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="m">0.3</span>
+</span></code></pre></div>
+<p>Now we display both trees with manually rotated 2nd tree.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">two_trees_w_ro_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nf">geom_tree</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_tree_2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data_tree_2</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">0.2</span><span class="p">)</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">two_trees_w_ro_2</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_w_ro_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_w_ro_2.png" align='center', width="50%"></a>
+</div>
+
+<p>Looking same good! And let's save these twoo trees.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/two_trees_w_ro_2.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">two_trees_w_ro_2</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-4-plotting-the-tanglegram"><strong>Step 4: Plotting the tanglegram</strong></h3>
+<p>Now let’s merge <code>data_tree_1</code> and <code>data_tree_2</code> to <code>data_combined</code> dataframe so that we can use the coordinates of the tips for making connections between both of the trees.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">data_combined</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">bind_rows</span><span class="p">(</span><span class="n">data_tree_1</span><span class="p">,</span><span class="w"> </span><span class="n">data_tree_2</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">isTip</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Now, we conditionally join the tips of both trees. Connected tips will represent the same isolates.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">ggtree_tanglegram_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">two_trees_w_ro_2</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="o">=</span><span class="n">label</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">data_combined</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="s">&#39;#009E73&#39;</span><span class="p">)</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">ggtree_tanglegram_1</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ggtree_tanglegram_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ggtree_tanglegram_1.png" align='center', width="50%"></a>
+</div>
+
+<p>Hooray! Let's save this tanglegram. But... the connecting lines overlap the tip labels. Now we must solve this problem!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/ggtree_tanglegram_1.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ggtree_tanglegram_1</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Copy the <code>data_combined</code> dataset with coordinates and increase x coordinates for the 1st tree by 0.3 and decrease x coordinated for the 2nd tree by 0.3.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">data_combined_padding</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data_combined</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">data_combined_padding</span><span class="o">$</span><span class="n">x</span><span class="p">[</span><span class="n">data_combined_padding</span><span class="o">$</span><span class="n">tree</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;t1&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data_combined_padding</span><span class="o">$</span><span class="n">x</span><span class="p">[</span><span class="n">data_combined_padding</span><span class="o">$</span><span class="n">tree</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;t1&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.3</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">data_combined_padding</span><span class="o">$</span><span class="n">x</span><span class="p">[</span><span class="n">data_combined_padding</span><span class="o">$</span><span class="n">tree</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;t2&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data_combined_padding</span><span class="o">$</span><span class="n">x</span><span class="p">[</span><span class="n">data_combined_padding</span><span class="o">$</span><span class="n">tree</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;t2&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">0.3</span>
+</span></code></pre></div>
+<p>Finally, let's make one last visualization.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ggtree_tanglegram_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">two_trees_w_ro_2</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="o">=</span><span class="n">label</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">data_combined_padding</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="s">&#39;#009E73&#39;</span><span class="p">)</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">ggtree_tanglegram_2</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ggtree_tanglegram_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ggtree_tanglegram_2.png" align='center', width="50%"></a>
+</div>
+
+<p>Just perfect! And let's save it.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/ggtree_tanglegram_2.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ggtree_tanglegram_2</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="part-2-tanglegram-with-ape-and-cophyloplot"><strong>Part 2: Tanglegram with <code>ape</code> and <code>cophyloplot()</code></strong></h2>
+<h3 id="step-1-preparation"><strong>Step 1: Preparation</strong></h3>
+<p>1st and the last step - install or call libraries.<br></p>
+<p>This time the preparation is simple - just install/call <code>ape</code> library.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">pacman</span><span class="o">::</span><span class="nf">p_load</span><span class="p">(</span><span class="n">ape</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-2-small-tanglegram"><strong>Step 2: Small tanglegram</strong></h3>
+<p>Generate 2 small random phylogenetic trees.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">TreeA_S</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rtree</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">TreeB_S</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rtree</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Now let's take a look at these trees.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># Plot tree1 (left) and tree2 (right)</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">t1s</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggtree</span><span class="p">(</span><span class="n">TreeA_S</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">1</span><span class="p">)</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">t2s</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggtree</span><span class="p">(</span><span class="n">TreeB_S</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">1</span><span class="p">)</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="c1"># Combine the two plots side by side</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="n">two_trees_s</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t1s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t2s</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="n">two_trees_s</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_s.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_s.png" align='center', width="50%"></a>
+</div>
+
+<p>Interesting trees. Let's save them.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/two_trees_s.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">two_trees_s</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Create the association matrix.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">association</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cbind</span><span class="p">(</span><span class="n">TreeB_S</span><span class="o">$</span><span class="n">tip.label</span><span class="p">,</span><span class="w"> </span><span class="n">TreeB_S</span><span class="o">$</span><span class="n">tip.label</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Now let's display the tanglegram.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nf">cophyloplot</span><span class="p">(</span><span class="n">TreeA_S</span><span class="p">,</span><span class="w"> </span><span class="n">TreeB_S</span><span class="p">,</span><span class="w"> </span><span class="n">assoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">association</span><span class="p">,</span><span class="w"> </span><span class="n">length.line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">28</span><span class="p">,</span><span class="w"> </span><span class="n">gap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ape_small_tanglegram.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ape_small_tanglegram.png" align='center', width="50%"></a>
+</div>
+
+<p>Wow! Let's save this plot.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nf">png</span><span class="p">(</span><span class="s">&quot;imgs/ape_small_tanglegram.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nf">cophyloplot</span><span class="p">(</span><span class="n">TreeA_S</span><span class="p">,</span><span class="w"> </span><span class="n">TreeB_S</span><span class="p">,</span><span class="w"> </span><span class="n">assoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">association</span><span class="p">,</span><span class="w"> </span><span class="n">length.line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">28</span><span class="p">,</span><span class="w"> </span><span class="n">gap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="nf">dev.off</span><span class="p">()</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-3-large-tanglegram"><strong>Step 3: Large tanglegram</strong></h3>
+<p><code>cophyloplot()</code> function of <code>ape</code> package workid just fine for the small trees. But will it work for large trees! Let's find it out!<br></p>
+<p>Generate 2 large random phylogenetic trees.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">TreeA_L</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rtree</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="n">TreeB_L</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rtree</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Now let's take a look at these trees.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># Plot tree1 (left) and tree2 (right)</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">t1l</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggtree</span><span class="p">(</span><span class="n">TreeA_L</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">1</span><span class="p">)</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="n">t2l</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggtree</span><span class="p">(</span><span class="n">TreeB_L</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">1</span><span class="p">)</span>
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="c1"># Combine the two plots side by side</span>
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="n">two_trees_l</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t1l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t2l</span>
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="n">two_trees_l</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_l.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_l.png" align='center', width="50%"></a>
+</div>
+
+<p>Wow! Suppose <code>cophyloplot()</code> will not do good with such a large trees. Anyway let's save them.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/two_trees_l.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">two_trees_l</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Create the association matrix.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">association</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cbind</span><span class="p">(</span><span class="n">TreeB_L</span><span class="o">$</span><span class="n">tip.label</span><span class="p">,</span><span class="w"> </span><span class="n">TreeB_L</span><span class="o">$</span><span class="n">tip.label</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Now let's display the tanglegram.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nf">cophyloplot</span><span class="p">(</span><span class="n">TreeA_L</span><span class="p">,</span><span class="w"> </span><span class="n">TreeB_L</span><span class="p">,</span><span class="w"> </span><span class="n">assoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">association</span><span class="p">,</span><span class="w"> </span><span class="n">length.line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">28</span><span class="p">,</span><span class="w"> </span><span class="n">gap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ape_large_tanglegram.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/ape_large_tanglegram.png" align='center', width="50%"></a>
+</div>
+
+<p>That looks awful... Anyway let's save it...<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nf">png</span><span class="p">(</span><span class="s">&quot;imgs/ape_large_tanglegram.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="nf">cophyloplot</span><span class="p">(</span><span class="n">TreeA_L</span><span class="p">,</span><span class="w"> </span><span class="n">TreeB_L</span><span class="p">,</span><span class="w"> </span><span class="n">assoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">association</span><span class="p">,</span><span class="w"> </span><span class="n">length.line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">28</span><span class="p">,</span><span class="w"> </span><span class="n">gap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="nf">dev.off</span><span class="p">()</span>
+</span></code></pre></div>
+<hr />
+<h2 id="part-3-tanglegram-with-dendextend"><strong>Part 3: Tanglegram with <code>dendextend</code></strong></h2>
+<blockquote>
+<p>For more guides <code>dendextend</code> package please visit <a href="https://cran.r-project.org/web/packages/dendextend/vignettes/dendextend.html">official guide</a></p>
+</blockquote>
+<p>How do we make large tanglegram look good? Use <code>dendextend</code>!<br></p>
+<h3 id="step-1-preparation_1"><strong>Step 1: Preparation</strong></h3>
+<p>1st and the last step - install or call libraries.<br></p>
+<p>This time the preparation is also simple - just install/call <code>dendextend</code> library.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">pacman</span><span class="o">::</span><span class="nf">p_load</span><span class="p">(</span><span class="n">dendextend</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set another seed to make the trees look different.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nf">set.seed</span><span class="p">(</span><span class="m">42</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-2-creating-dendrograms"><strong>Step 2: Creating dendrograms</strong></h3>
+<p><code>tanglegram</code> function in <code>dendextend</code> package uses <code>ultrametric</code> trees. That's why to generate 2 large random phylogenetic trees we will use <code>rcoal()</code> function.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">TreeA_L_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rcoal</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="n">TreeB_L_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rcoal</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Now let's take a look at these trees.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1"># Plot tree1 (left) and tree2 (right)</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="n">t1l2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggtree</span><span class="p">(</span><span class="n">TreeA_L_2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">1</span><span class="p">)</span>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="n">t2l2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggtree</span><span class="p">(</span><span class="n">TreeB_L_2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="w">  </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">1</span><span class="p">)</span>
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="c1"># Combine the two plots side by side</span>
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="n">two_trees_l_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t1l2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t2l2</span>
+</span><span id="__span-34-10"><a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="n">two_trees_l_2</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_l_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/two_trees_l_2.png" align='center', width="50%"></a>
+</div>
+
+<p>Yeah. Looking massive. Save it.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/two_trees_l_2.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">two_trees_l_2</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-3-plotting-tanglegram"><strong>Step 3: Plotting tanglegram</strong></h3>
+<p>Now let's use <code>tanglegram</code> function!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nf">tanglegram</span><span class="p">(</span><span class="n">TreeA_L_2</span><span class="p">,</span><span class="w"> </span><span class="n">TreeB_L_2</span><span class="p">,</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">           </span><span class="n">sort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">           </span><span class="n">common_subtrees_color_lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span>
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">           </span><span class="n">highlight_distinct_edges</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span>
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="w">           </span><span class="n">highlight_branches_lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/dendextend_large_tanglegram.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/04_Phylogenetics/04_08_Tanglegram/imgs/dendextend_large_tanglegram.png" align='center', width="50%"></a>
+</div>
+
+<p>Finally! That large tanglegram looks great! Let's save it.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nf">png</span><span class="p">(</span><span class="s">&quot;imgs/dendextend_large_tanglegram.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="p">)</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="nf">tanglegram</span><span class="p">(</span><span class="n">TreeA_L_2</span><span class="p">,</span><span class="w"> </span><span class="n">TreeB_L_2</span><span class="p">,</span>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">           </span><span class="n">sort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="w">           </span><span class="n">common_subtrees_color_lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span>
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="w">           </span><span class="n">highlight_distinct_edges</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span>
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a><span class="w">           </span><span class="n">highlight_branches_lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="nf">dev.off</span><span class="p">()</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Ilia Popov
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "search", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

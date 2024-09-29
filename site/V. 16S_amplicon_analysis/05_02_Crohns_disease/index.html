@@ -1,0 +1,1251 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iliapopov17.github.io/NGS-Handbook/V.%2016S_amplicon_analysis/05_02_Crohns_disease/">
+      
+      
+        <link rel="prev" href="../05_01_Introduction/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>Crohn's disease - NGS Analysis Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#crohns-disease" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NGS Analysis Handbook" class="md-header__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NGS Analysis Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Crohn's disease
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NGS Analysis Handbook" class="md-nav__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    NGS Analysis Handbook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Quality_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I. Quality Control of Raw Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Variant_Calling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    II. Genomic Variation Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Whole_%28pan%29genome_analyses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    III. Whole Genome and Pangenome Analyses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IV. Phylogenetics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            IV. Phylogenetics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_01_Intro_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_02_Mining_Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with NCBI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_03_MSA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Sequence Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_04_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparing the alignment and building trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_05_Root_Date/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rooting and comparing trees; Dating
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_06_Phylogenomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phylogenomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_07_Visualization_Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualization Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_08_Tanglegram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tanglegram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    V. 16S amplicon analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            V. 16S amplicon analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_01_Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16S analysis with DADA2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Crohn's disease
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Crohn's disease
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-loading-libraries-and-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Loading libraries and data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-check-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Check the data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-filtration-from-rare-and-under-represented-taxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Filtration from rare and under-represented taxa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-counting-alpha-diversity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Counting alpha diversity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-aitchisons-beta-diversity-is-there-a-difference-in-proportions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Aitchison's beta diversity: is there a difference in proportions?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-what-exactly-is-the-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: What exactly is the difference?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-loading-libraries-and-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Loading libraries and data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-check-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Check the data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-filtration-from-rare-and-under-represented-taxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Filtration from rare and under-represented taxa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-counting-alpha-diversity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Counting alpha diversity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-aitchisons-beta-diversity-is-there-a-difference-in-proportions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Aitchison's beta diversity: is there a difference in proportions?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-what-exactly-is-the-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: What exactly is the difference?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="crohns-disease"><strong>Crohn's disease</strong></h1>
+<blockquote>
+<p>This folder contains a training data for 16S amplicon analysis and an example of analysis.</p>
+</blockquote>
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>In this study, the gut microbiome composition in individuals with Crohn’s Disease (CD) and Healthy Controls (HC) was investigated. The goal was to identify taxonomic shifts, potential functional implications, and associations with disease. High-throughput sequencing data and various bioinformatics tools were employed to analyze microbial diversity and abundance.<br></p>
+<p>Data obtained from the article <a href="https://pubmed.ncbi.nlm.nih.gov/28179361/">«<em>A microbial signature for Crohn's disease</em>»</a> was used. These data include information on microbial samples from healthy individuals and patients with Crohn's disease.<br></p>
+<h2 id="instruction"><strong>Instruction</strong></h2>
+<p>You can run commands below in your <code>RStudio</code> in <code>R script</code>.<br>
+Or if you want to write a beautiful &amp; convenient to read laboratory journal you can use <code>R Markdown</code>.<br></p>
+<h2 id="step-1-loading-libraries-and-data"><strong>Step 1: Loading libraries and data</strong></h2>
+<p>In this 16S amplicon analysis pipeline we will use <code>MicrobeR</code>, <code>balance</code>, <code>NearestBalance</code> &amp; <code>selbal</code> packages. Their installation is a bit difficult. Please follow the code below:<br></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&quot;BiocManager&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">))</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;BiocManager&quot;</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">BiocManager</span><span class="o">::</span><span class="nf">install</span><span class="p">(</span><span class="s">&quot;philr&quot;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">BiocManager</span><span class="o">::</span><span class="nf">install</span><span class="p">(</span><span class="s">&quot;DECIPHER&quot;</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;jbisanz/MicrobeR&quot;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;tpq/balance&quot;</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">install_bitbucket</span><span class="p">(</span><span class="s">&quot;knomics/nearestbalance&quot;</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="n">repo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;malucalle/selbal&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>First, load all the libraries needed for the data analysis.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">openxlsx</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nf">library</span><span class="p">(</span><span class="n">MicrobeR</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nf">library</span><span class="p">(</span><span class="n">zCompositions</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nf">library</span><span class="p">(</span><span class="n">NearestBalance</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nf">library</span><span class="p">(</span><span class="n">GUniFrac</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nf">library</span><span class="p">(</span><span class="n">vegan</span><span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nf">library</span><span class="p">(</span><span class="n">ape</span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nf">library</span><span class="p">(</span><span class="n">selbal</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Then set the working directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">main_dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dirname</span><span class="p">(</span><span class="n">rstudioapi</span><span class="o">::</span><span class="nf">getSourceEditorContext</span><span class="p">()</span><span class="o">$</span><span class="n">path</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">setwd</span><span class="p">(</span><span class="n">main_dir</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Load metadata and sort it by participant number.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">fread</span><span class="p">(</span><span class="s">&quot;data_Crohns_disease/metadata.csv&quot;</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">metadata</span><span class="p">[,</span><span class="w"> </span><span class="n">.N</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diagnosis_full</span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>diagnosis_full  N
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&lt;chr&gt; &lt;int&gt;
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>CD  34
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>HC  34
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2 rows
+</span></code></pre></div>
+<p>Load the <code>Counts</code> table.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">counts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;data_Crohns_disease/counts.csv&quot;</span><span class="p">,</span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">counts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">counts</span><span class="p">[</span><span class="n">metadata</span><span class="o">$</span><span class="n">sample</span><span class="p">,</span><span class="w"> </span><span class="nf">colSums</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="m">0</span><span class="p">]</span>
+</span></code></pre></div>
+<h2 id="step-2-check-the-data"><strong>Step 2: Check the data</strong></h2>
+<p>How many samples and microbial samples?<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">dim</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>[1]  68 210
+</span></code></pre></div>
+<p>What's the coverage?<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">range</span><span class="p">(</span><span class="nf">rowSums</span><span class="p">(</span><span class="n">counts</span><span class="p">))</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[1]  19414 121234
+</span></code></pre></div>
+<p>Composition of samples.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">raw_abund</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">counts</span><span class="o">/</span><span class="nf">rowSums</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">metadata</span><span class="o">$</span><span class="n">SampleID</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">metadata</span><span class="o">$</span><span class="n">sample</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">Microbiome.Barplot</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">raw_abund</span><span class="p">),</span><span class="w"> </span><span class="n">metadata</span><span class="p">,</span><span class="w"> </span><span class="n">CATEGORY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;diagnosis_full&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/microbiome_barplot.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/microbiome_barplot.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/microbiome_barplot.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.5</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Is there enough coverage?<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">metadata</span><span class="o">$</span><span class="n">coverage</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rowSums</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">coverage</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;N samples&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/coverage_quality.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/coverage_quality.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/coverage_quality.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.5</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Sequencing quality is sufficient.<br></p>
+<h2 id="step-3-filtration-from-rare-and-under-represented-taxa"><strong>Step 3: Filtration from rare and under-represented taxa</strong></h2>
+<p>Keeping the microbes that occur in &gt;30% of samples.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">filt_counts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">counts</span><span class="p">[,</span><span class="w"> </span><span class="nf">colSums</span><span class="p">(</span><span class="n">counts</span><span class="o">&gt;</span><span class="m">0</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.3</span><span class="o">*</span><span class="nf">nrow</span><span class="p">(</span><span class="n">counts</span><span class="p">)]</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">metadata</span><span class="p">[,</span><span class="w"> </span><span class="n">filt_coverage</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">rowSums</span><span class="p">(</span><span class="n">filt_counts</span><span class="p">)]</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">metadata</span><span class="p">[,</span><span class="w"> </span><span class="n">proportion_of_prevalent_taxa</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="m">100</span><span class="o">*</span><span class="n">filt_coverage</span><span class="o">/</span><span class="n">coverage</span><span class="p">]</span>
+</span></code></pre></div>
+<p>Coverage of samples after filtration.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span><span class="o">+</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">filt_coverage</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="o">+</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">  </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Post-filtration coverage&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">  </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;N samples&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/post-filtration_coverage.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/post-filtration_coverage.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/post-filtration_coverage.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.5</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<p>What proportion of the microbes remained in the analysis.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span><span class="o">+</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">proportion_of_prevalent_taxa</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">  </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Proportion of microbes remaining in the assay&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">  </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;N samples&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/remaining_proportion.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/remaining_proportion.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/remaining_proportion.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.5</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<p>How many samples and microbial samples?<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nf">dim</span><span class="p">(</span><span class="n">filt_counts</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>[1] 68 89
+</span></code></pre></div>
+<p>What's the coverage?<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nf">range</span><span class="p">(</span><span class="nf">rowSums</span><span class="p">(</span><span class="n">filt_counts</span><span class="p">))</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>[1]  12981 120882
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">matrix_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Before&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">210</span><span class="p">,</span><span class="w"> </span><span class="m">19412</span><span class="p">,</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">                         </span><span class="s">&quot;After&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">89</span><span class="p">,</span><span class="w"> </span><span class="m">12981</span><span class="p">),</span><span class="w"> </span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">                      </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.data.frame</span><span class="p">(</span><span class="n">matrix_data</span><span class="p">)</span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="nf">colnames</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;N microbes&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Minimum coverage&quot;</span><span class="p">)</span>
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>  N microbes  Minimum coverage
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>&lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Before  210 19412
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>After   89  12981
+</span></code></pre></div>
+<p>Calculating relative abundances.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">abundance</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cmultRepl</span><span class="p">(</span><span class="n">filt_counts</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>No. adjusted imputations:  694 
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nf">heatmap_with_split</span><span class="p">(</span><span class="n">abundance</span><span class="p">,</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">                   </span><span class="n">metadata</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">diagnosis_full</span><span class="p">,</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">                   </span><span class="n">show_samp_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="m">5</span><span class="p">))</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/relative_abundance.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/relative_abundance.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/relative_abundance.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="step-4-counting-alpha-diversity"><strong>Step 4: Counting alpha diversity</strong></h2>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">alpha_div</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rowMeans</span><span class="p">(</span><span class="nf">sapply</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">i</span><span class="p">){</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">  </span><span class="n">counts_rar_i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Rarefy</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span><span class="w"> </span><span class="m">19000</span><span class="p">)</span><span class="o">$</span><span class="n">otu.tab.rff</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">  </span><span class="n">alpha_div_i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vegan</span><span class="o">::</span><span class="nf">diversity</span><span class="p">(</span><span class="n">counts_rar_i</span><span class="p">)</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="p">}))</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="n">metadata</span><span class="o">$</span><span class="n">Shannon.index</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">alpha_div</span><span class="p">[</span><span class="n">metadata</span><span class="o">$</span><span class="n">sample</span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">  </span><span class="nf">geom_boxplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">diagnosis_full</span><span class="p">,</span><span class="w"> </span><span class="n">Shannon.index</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diagnosis_full</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;none&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="w">  </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/alpha_diversity.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/alpha_diversity.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/alpha_diversity.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Is it different?<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nf">wilcox.test</span><span class="p">(</span><span class="n">Shannon.index</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">diagnosis_full</span><span class="p">,</span><span class="w"> </span><span class="n">metadata</span><span class="p">)</span><span class="o">$</span><span class="n">p.value</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>[1] 1.314773e-09
+</span></code></pre></div>
+The <em>p</em>-value of <code>1.314773e-09</code> indicates a significant difference in alpha diversity between the two groups. CD samples exhibit lower alpha diversity compared to HC samples.<br></p>
+<h2 id="step-5-aitchisons-beta-diversity-is-there-a-difference-in-proportions"><strong>Step 5: Aitchison's beta diversity: is there a difference in proportions?</strong></h2>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">clr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="n">abundance</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">rowMeans</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">abundance</span><span class="p">))</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="n">beta_div</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dist</span><span class="p">(</span><span class="n">clr</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">pcoa_res</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pcoa</span><span class="p">(</span><span class="n">beta_div</span><span class="p">)</span><span class="o">$</span><span class="n">vectors</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="n">var</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="n">pcoa_res</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="p">)</span>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="n">var_rel</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">var</span><span class="o">*</span><span class="m">100</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">var</span><span class="p">),</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="nf">cbind</span><span class="p">(</span><span class="n">metadata</span><span class="p">,</span><span class="n">pcoa_res</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">Axis.1</span><span class="p">,</span><span class="w"> </span><span class="n">Axis.2</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">diagnosis_full</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">  </span><span class="nf">coord_fixed</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="w">  </span><span class="nf">xlab</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;Axis.1 (&quot;</span><span class="p">,</span><span class="n">var_rel</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;%)&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="w">  </span><span class="nf">ylab</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;Axis.2 (&quot;</span><span class="p">,</span><span class="n">var_rel</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;%)&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/beta_diversity.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/beta_diversity.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/beta_diversity.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Is the difference statistically significant?<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="nf">adonis2</span><span class="p">(</span><span class="n">beta_div</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">metadata</span><span class="o">$</span><span class="n">diagnosis_full</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Permutation test for adonis under reduced model
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>Terms added sequentially (first to last)
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>Permutation: free
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>Number of permutations: 999
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>adonis2(formula = beta_div ~ metadata$diagnosis_full)
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>                        Df SumOfSqs      R2      F Pr(&gt;F)    
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>metadata$diagnosis_full  1     5400 0.16562 13.101  0.001 ***
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>Residual                66    27205 0.83438                  
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>Total                   67    32605 1.00000                  
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>---
+</span><span id="__span-42-12"><a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+</span></code></pre></div>
+<p>The statistical analysis using the <code>adonis2</code> test shows that the difference in beta diversity between the two groups is statistically significant (p-value = 0.001).<br></p>
+<h2 id="step-6-what-exactly-is-the-difference"><strong>Step 6: What exactly is the difference?</strong></h2>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">nb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nb_lm</span><span class="p">(</span><span class="n">abundance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abundance</span><span class="p">,</span>
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">            </span><span class="n">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metadata</span><span class="p">,</span>
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">            </span><span class="n">pred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;diagnosis_full&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nf">heatmap_with_split</span><span class="p">(</span><span class="n">abundance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abundance</span><span class="p">[,</span><span class="w"> </span><span class="nf">unlist</span><span class="p">(</span><span class="n">nb</span><span class="o">$</span><span class="n">nb</span><span class="o">$</span><span class="n">b1</span><span class="p">)],</span>
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">                   </span><span class="n">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metadata</span><span class="p">,</span>
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">                   </span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">diagnosis_full</span><span class="p">,</span>
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">                   </span><span class="n">num_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;health-related&quot;</span><span class="p">,</span>
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">                   </span><span class="n">den_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;disease-related&quot;</span><span class="p">,</span>
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="w">                   </span><span class="n">show_samp_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">,</span>
+</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="w">                   </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nb</span><span class="o">$</span><span class="n">nb</span><span class="o">$</span><span class="n">b1</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/heatmap_w_split.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/heatmap_w_split.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/heatmap_w_split.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Illustrating the difference between the average microbiota of healthy and sick people.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">psi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">make_psi_from_sbp</span><span class="p">(</span><span class="n">nb</span><span class="o">$</span><span class="n">coord</span><span class="o">$</span><span class="n">sbp</span><span class="p">)</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="n">mean_diff_clr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">drop</span><span class="p">(</span><span class="n">nb</span><span class="o">$</span><span class="n">lm_res</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">2</span><span class="p">,]</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">psi</span><span class="p">)</span>
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="n">bal_unit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">balance_to_clr</span><span class="p">(</span><span class="n">nb</span><span class="o">$</span><span class="n">nb</span><span class="o">$</span><span class="n">b1</span><span class="p">,</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">abundance</span><span class="p">))</span>
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="n">bal_diff_clr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">drop</span><span class="p">(</span><span class="n">bal_unit</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">mean_diff_clr</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bal_unit</span>
+</span><span id="__span-46-5"><a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="n">tab</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.table</span><span class="p">(</span><span class="n">taxon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">mean_diff_clr</span><span class="p">),</span>
+</span><span id="__span-46-6"><a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a><span class="w">                  </span><span class="n">clr_diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean_diff_clr</span><span class="p">,</span>
+</span><span id="__span-46-7"><a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="w">                  </span><span class="n">bal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bal_diff_clr</span><span class="p">)</span>
+</span><span id="__span-46-8"><a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a><span class="nf">setorderv</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;clr_diff&quot;</span><span class="p">)</span>
+</span><span id="__span-46-9"><a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a><span class="n">tab</span><span class="o">$</span><span class="n">taxon</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">tab</span><span class="o">$</span><span class="n">taxon</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab</span><span class="o">$</span><span class="n">taxon</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Mean difference between sick and healthy individuals.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="w">  </span><span class="nf">geom_col</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">clr_diff</span><span class="p">,</span><span class="w"> </span><span class="n">taxon</span><span class="p">),</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;CLR(v)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-47-4"><a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="m">5</span><span class="p">))</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/mean_difference.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/mean_difference.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/mean_difference.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Approximate, simplified difference.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="w">  </span><span class="nf">geom_col</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">bal</span><span class="p">,</span><span class="w"> </span><span class="n">taxon</span><span class="p">),</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;CLR(b)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-49-4"><a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="m">5</span><span class="p">))</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/approximate_difference.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/approximate_difference.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/approximate_difference.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Balance value in each sample.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="n">metadata</span><span class="o">$</span><span class="n">balance</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">balance.fromSBP</span><span class="p">(</span><span class="n">abundance</span><span class="p">,</span><span class="w"> </span><span class="n">nb</span><span class="o">$</span><span class="n">nb</span><span class="o">$</span><span class="n">sbp</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="w">  </span><span class="nf">geom_boxplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">diagnosis_full</span><span class="p">,</span><span class="w"> </span><span class="n">balance</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diagnosis_full</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-52-3"><a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a><span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-52-4"><a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a><span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;none&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-52-5"><a id="__codelineno-52-5" name="__codelineno-52-5" href="#__codelineno-52-5"></a><span class="w">  </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><a class="glightbox" href="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/balance_value.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/iliapopov17/NGS-Handbook/blob/main/05_16S_amplicon_analysis/05_02_Crohns_disease/imgs/balance_value.jpg" width="100%"></a></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;imgs/balance_value.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Has it changed?<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="nf">wilcox.test</span><span class="p">(</span><span class="n">balance</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">diagnosis_full</span><span class="p">,</span><span class="w"> </span><span class="n">metadata</span><span class="p">)</span><span class="o">$</span><span class="n">p.value</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>[1] 2.621864e-17
+</span></code></pre></div>
+<p>The p-value of <code>2.621864e-17</code> indicates a significant difference in balance between the two groups.<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Ilia Popov
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "search", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
