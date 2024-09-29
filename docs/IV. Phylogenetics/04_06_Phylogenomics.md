@@ -5,7 +5,7 @@
 ![IDE](https://img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue)
 
 ???+ question
-    Where to get the data?
+    In this chapter we will use a lot of prewritten scripts and even some images for visualization. Where to get them?
 
 Download it from GitHub repository:
 
@@ -17,10 +17,29 @@ wget https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/data/04_Phy
 unzip 04_06_Phylogenomics.zip && rm -rf 04_06_Phylogenomics.zip
 ```
 
-These are the data and scripts we will be working with:
+These are the scripts and images we will be working with:
 
 ```
-To be written
+Archive:  04_06_Phylogenomics.zip
+   creating: photos/
+  inflating: photos/Canis lupus familiaris.jpeg  
+  inflating: photos/Equus caballus.jpeg  
+  inflating: photos/Felis catus.jpeg  
+  inflating: photos/Macaca mulatta.jpeg  
+  inflating: photos/Marmota marmota.jpeg  
+  inflating: photos/Mus musculus.jpeg  
+  inflating: photos/Mus spretus.jpeg  
+  inflating: photos/Myotis lucifugus.jpeg  
+  inflating: photos/Ornithorhynchus anatinus.jpeg  
+  inflating: photos/Ovis aries.jpeg  
+  inflating: photos/Physeter catodon.jpeg  
+  inflating: photos/Vombatus ursinus.jpeg  
+   creating: scripts/
+  inflating: scripts/draw_tree.R     
+  inflating: scripts/draw_tree_icons.R  
+  inflating: scripts/draw_tree_photos.R  
+  inflating: scripts/one_gene_tree.sh  
+  inflating: scripts/write_family_names.R  
 ```
 
 ## **Introduction**
