@@ -1,0 +1,60 @@
+site_name: NGS Analysis Handbook
+site_url: https://iliapopov17.github.io/NGS-Handbook/
+copyright: Copyright &copy; 2024 Ilia Popov
+theme:
+  #logo: assets/logo.svg
+  name: material
+  #custom_dir: overrides
+  font:
+    text: Roboto
+  features:
+    - navigation.expand
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/weather-sunny
+        primary: white
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+  icon:
+    repo: fontawesome/brands/github 
+
+  features:
+    - content.code.copy
+    - search
+    - search.suggest
+    - search.highlight
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+plugins:
+  - glightbox
+  - search
+  
+#repo_url: https://github.com/iliapopov17/NGS-Handbook
+#repo_name: iliapopov17/NGS-Handbook
+
+#extra:
+  #analytics:
+    #provider: google
+    #property: G-XXXXXXXXXX
