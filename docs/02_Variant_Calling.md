@@ -2,8 +2,8 @@
 >This chapter contains a manual on variant calling pipeline. Details are described here only on how to conduct such a study from the time the data are downloaded to the time the genetic variant annotation files are received. The biological interpretation of the results is not given here.
 
 ## **Instruction**
-![CLT](https:/img.shields.io/badge/Language-Command Line Tools-steelblue)<br>
-![IDE](https:/img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue)
+![CLT](https://img.shields.io/badge/Language-Command Line Tools-steelblue)<br>
+![IDE](https://img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue)
 
 You can run commands below in your `terminal`.<br>
 But if you want to write a convenient to read laboratory journal you can use `Jupyter Notebook`.<br>
