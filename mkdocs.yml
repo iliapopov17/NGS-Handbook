@@ -68,3 +68,6 @@ extra:
   analytics:
     provider: google
     property: G-4RBMQR50GK
+
+extra_templates:
+  - meta_tags.html
