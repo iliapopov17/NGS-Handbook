@@ -65,8 +65,6 @@ extra:
       link: mailto:<iljapopov17@gmail.com>
     - icon: fontawesome/brands/github 
       link: https://github.com/iliapopov17
-
-#extra:
-  #analytics:
-    #provider: google
-    #property: G-XXXXXXXXXX
+  analytics:
+    provider: google
+    property: G-4RBMQR50GK
