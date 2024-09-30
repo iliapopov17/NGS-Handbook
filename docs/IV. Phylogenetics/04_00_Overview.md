@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # **Overview**
 
 >This chapter contains a manual on phylogenetic analysis 
