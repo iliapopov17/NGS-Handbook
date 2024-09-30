@@ -135,7 +135,7 @@ Rscript scripts/draw_tree.R data/iqtree_ufb_alrt_abayes/SUP35_TIM3_ufb_alrt_abay
 
 |SUP35_TIM3_ufb.png|SUP35_TIM3_ufb_midpoint.png|SUP35_TIM3_root_outgroup.png|SUP35_TIM3_ufb_alrt_abayes_rooted.png|
 |------------------|---------------------------|----------------------------|-------------------------------------|
-|<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_ufb.png", width="100%">|<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_ufb_midpoint.png", width="100%">|<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_root_outgroup.png", width="100%">|<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_ufb_alrt_abayes_rooted.png", width="100%">|
+|<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_ufb.png"|<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_ufb_midpoint.png"|<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_root_outgroup.png"|<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_ufb_alrt_abayes_rooted.png"|
 
 - Unrooted and rooted by external group are completely identical. 0 differences.<br>
 - Rooted by `midpoint` looks neater. Topology looks better.<br>
