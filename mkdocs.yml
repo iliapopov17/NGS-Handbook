@@ -4,7 +4,7 @@ copyright: Copyright &copy; 2024 Ilia Popov
 theme:
   #logo: assets/logo.svg
   name: material
-  #custom_dir: overrides
+  custom_dir: overrides
   font:
     text: Roboto
   features:
