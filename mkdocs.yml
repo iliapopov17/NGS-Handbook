@@ -2,7 +2,7 @@ site_name: NGS Analysis Handbook
 site_url: https://iliapopov17.github.io/NGS-Handbook/
 copyright: Copyright &copy; 2024 Ilia Popov
 theme:
-  #logo: assets/logo.svg
+  logo: NGS-Handbook/assets/logo.svg
   name: material
   custom_dir: overrides
   font:
