@@ -5,6 +5,25 @@
 ![CLT](https://img.shields.io/badge/Language-Python, Bash & R-steelblue)<br>
 ![IDE](https://img.shields.io/badge/Recommended IDE-Jupyter Notebook & RStudio-steelblue)
 
+???+ note
+    Before working with NCBI using `Python` or `R` languages user must call the library and set the email.
+
+    === "Python"
+
+        ``` python
+        from Bio import Entrez
+        Entrez.email = 'example@example.com'
+        ```
+
+    === "R"
+
+        ``` R
+        library(reutils)
+        options(reutils.email = "example@example.com")
+        ```
+    
+    Do not forget to change the `example@example.com` to your actuall email address!
+
 ----------------------------------------------
 
 ## **Step 1: Find articles in PubMed for a query of interest to you and return abstracts of those articles in plain text format**
@@ -24,7 +43,7 @@
 === "Bash"
 
     ``` bash
-    esearch -email iljapopov17@gmail.com \
+    esearch -email example@example.com \
     -db pubmed \
     -query "Cyclophilin A AND Open reading frame AND Real-time PCR" \
     | efetch -mode text -format abstract
@@ -266,7 +285,7 @@
 === "Bash"
 
     ``` bash
-    esearch -email iljapopov17@gmail.com \
+    esearch -email example@example.com \
     -db taxonomy -query "Procambarus clarkii" \
     | esummary | grep TaxId
     ```
@@ -318,7 +337,7 @@
 === "Bash"
 
     ``` bash
-    esearch -email iljapopov17@gmail.com \
+    esearch -email example@example.com \
     -db nucleotide -query "cyclophilin AND Procambarus clarkii[orgn]" \
     | esummary -mode xml \
     | xtract -pattern DocumentSummary -element Id Caption Slen
@@ -379,7 +398,7 @@
 === "Bash"
 
     ``` bash
-    esearch -email iljapopov17@gmail.com \
+    esearch -email example@example.com \
     -db protein -query "cyclophilin AND Procambarus clarkii[orgn]" \
     | efetch -format fasta -mode text >cyclophilin.fa
     head cyclophilin.fa
