@@ -125,7 +125,7 @@ Please open them in any web browser you use:<br>
 |<img src="/images/ngs-handbook/02_Genomic_Variation_Analysis/Adapter%20Content%20R1.png" width="100%">|<img src="/images/ngs-handbook/02_Genomic_Variation_Analysis/Adapter%20Content%20R2.png" width="100%">|
 
 The main problem is `Per base sequence quality`. So we will solve it using `trimmomatic`.<br>
-Details on `trimmomatic` and QC in the [Quality Control manual](1%20-%20Quality%20Control).
+Details on `trimmomatic` and QC in the [Quality Control chapter](../01_Quality_Control).
 
 ----------------------------------------------
 
