@@ -6,8 +6,10 @@ hide:
 
 <img src="/images/ngs-handbook/metatag.png" width="25%" align="left">
 
-Welcome to handbook on NGS data analysis!<br>
-Once this was the library of manuals I used in work. Then I decided to deploy a website to make it more convenient for me to use. The best part of it that now anyone can use it too! Please enjoy!<br>
+Welcome to the handbook on NGS data analysis!<br>
+Once this was the library of manuals I used in work.<br>
+Then I decided to deploy a website to make it more convenient for me to use.<br>
+The best part of it that now anyone can use it too! Please enjoy!<br>
 
 ----------------------------------------------
 
