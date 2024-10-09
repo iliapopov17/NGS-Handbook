@@ -3,6 +3,7 @@ site_url: https://iliapopov17.github.io/NGS-Handbook/
 copyright: Copyright &copy; 2024 Ilia Popov
 theme:
   logo: assets/logo.svg
+  favicon: assets/favicon.svg
   name: material
   custom_dir: overrides
   font:
