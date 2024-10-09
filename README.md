@@ -1,12 +1,8 @@
 # NGS Data Analysis Handbook
 
-> Helpful repository with cheat-sheets for NGS studies!
-
-<div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/NGS-Data-Analysis-Manual/blob/main/imgs/NGS_workflow.png" align='center', width="100%">
-</div>
-
-_Typical workflow of NGS data analysis_
+This is the repository for the helpful website with cheat-sheets for NGS studies!<br>
+Please welcome (picture is clickable)!<br>
+<a href="https://iliapopov17.github.io/NGS-Handbook/"><img src='https://github.com/iliapopov17/iliapopov17.github.io/blob/main/images/ngs-handbook/metatag.png' title="Please welcome!" width="50%"/></a>
 
 📚NGS-Handbook<br>
  ┣ 📕01_Quality_Control<br>
