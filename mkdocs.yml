@@ -62,7 +62,9 @@ repo_name: iliapopov17/NGS-Handbook
 
 extra:
   social:
-    - icon: fontawesome/solid/paper-plane
+    - icon: fontawesome/solid/address-card
+      link: https://iliapopov17.github.io/
+    - icon: fontawesome/solid/envelope
       link: mailto:<iljapopov17@gmail.com>
     - icon: fontawesome/brands/github 
       link: https://github.com/iliapopov17
