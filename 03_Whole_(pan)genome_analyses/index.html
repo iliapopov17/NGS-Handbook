@@ -1,0 +1,2007 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iliapopov17.github.io/NGS-Handbook/03_Whole_%28pan%29genome_analyses/">
+      
+      
+        <link rel="prev" href="../02_Variant_Calling/">
+      
+      
+        <link rel="next" href="../IV.%20Phylogenetics/04_00_Overview/">
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+    
+    
+      
+        <title>III. Whole Genome and Pangenome Analyses - NGS Analysis Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-4RBMQR50GK"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-4RBMQR50GK",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-4RBMQR50GK",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    <html data-lt-installed="true">
+        <head>
+            <!-- HTML Meta Tags -->
+            <title>NGS Data Analysis Handbook</title>
+            <meta name="description" content="">
+
+            <!-- Facebook Meta Tags -->
+            <meta property="og:url" content="https://iliapopov17.github.io/NGS-Handbook/">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="NGS Data Analysis Handbook">
+            <meta property="og:description" content="">
+            <meta property="og:image" content="https://iliapopov17.github.io/images/ngs-handbook/metatag.png">
+
+            <!-- Twitter Meta Tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta property="twitter:domain" content="iliapopov17.github.io">
+            <meta property="twitter:url" content="https://iliapopov17.github.io/NGS-Handbook/">
+            <meta name="twitter:title" content="NGS Data Analysis Handbook">
+            <meta name="twitter:description" content="">
+            <meta name="twitter:image" content="https://iliapopov17.github.io/images/ngs-handbook/metatag.png">
+
+            <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        </head>
+        <body>
+        </body>
+    </html>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#iii-whole-genome-and-pangenome-analyses" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="NGS Analysis Handbook" class="md-header__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NGS Analysis Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              III. Whole Genome and Pangenome Analyses
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/iliapopov17/NGS-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    iliapopov17/NGS-Handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NGS Analysis Handbook" class="md-nav__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    NGS Analysis Handbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/iliapopov17/NGS-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    iliapopov17/NGS-Handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_Quality_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I. Quality Control of Raw Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_Variant_Calling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    II. Genomic Variation Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    III. Whole Genome and Pangenome Analyses
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    III. Whole Genome and Pangenome Analyses
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-download-genomes-from-the-database-and-check-their-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Download genomes from the database and check their quality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-annotate-the-genomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Annotate the genomes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Annotate the genomes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-21-proteins-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.1. Proteins directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-22-lstinfo-lst-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.2. LSTINFO-.lst file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-23-genes-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.3. Genes directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-24-replicons-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.4. Replicons directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-25-lstinfo-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.5. LSTINFO directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-26-tmp_files-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.6. tmp_files directory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-build-orthological-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Build orthological series
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-extract-pangenome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Extract pangenome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-aligning-the-sequence-of-core-gene-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Aligning the sequence of core gene sequences
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Aligning the sequence of core gene sequences">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-51-align-esma-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5.1. Align-EsMa directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-52-phylo-esma-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5.2. Phylo-EsMa directory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-build-a-phylogenomic-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Build a phylogenomic tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Build a phylogenomic tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-61-tree-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6.1. Tree visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IV. Phylogenetics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            IV. Phylogenetics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IV.%20Phylogenetics/04_00_Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IV.%20Phylogenetics/04_01_Intro_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IV.%20Phylogenetics/04_02_Mining_Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with NCBI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IV.%20Phylogenetics/04_03_MSA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Sequence Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IV.%20Phylogenetics/04_04_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparing the alignment and building trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IV.%20Phylogenetics/04_05_Root_Date/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rooting and comparing trees; Dating
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IV.%20Phylogenetics/04_06_Phylogenomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phylogenomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IV.%20Phylogenetics/04_07_Visualization_Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualization Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IV.%20Phylogenetics/04_08_Tanglegram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tanglegram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    V. 16S amplicon analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            V. 16S amplicon analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../V.%2016S_amplicon_analysis/05_00_Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../V.%2016S_amplicon_analysis/05_01_Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16S analysis with DADA2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../V.%2016S_amplicon_analysis/05_02_Crohns_disease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crohn's disease
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-download-genomes-from-the-database-and-check-their-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Download genomes from the database and check their quality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-annotate-the-genomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Annotate the genomes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Annotate the genomes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-21-proteins-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.1. Proteins directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-22-lstinfo-lst-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.2. LSTINFO-.lst file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-23-genes-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.3. Genes directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-24-replicons-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.4. Replicons directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-25-lstinfo-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.5. LSTINFO directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-26-tmp_files-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.6. tmp_files directory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-build-orthological-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Build orthological series
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-extract-pangenome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Extract pangenome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-aligning-the-sequence-of-core-gene-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Aligning the sequence of core gene sequences
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Aligning the sequence of core gene sequences">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-51-align-esma-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5.1. Align-EsMa directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-52-phylo-esma-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5.2. Phylo-EsMa directory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-build-a-phylogenomic-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Build a phylogenomic tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Build a phylogenomic tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-61-tree-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6.1. Tree visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="iii-whole-genome-and-pangenome-analyses"><strong>III. Whole Genome and Pangenome Analyses</strong></h1>
+<blockquote>
+<p>This chapter contains a manual on whole genome and pangenome analyses.</p>
+</blockquote>
+<p>We will use the <code>PanACoTA</code> tool to perform the pangenome analysis.</p>
+<h2 id="instruction"><strong>Instruction</strong></h2>
+<p><img alt="CLT" src="https://img.shields.io/badge/Language-Command Line Tools &amp; Python-steelblue" /><br>
+<img alt="IDE" src="https://img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue" /></p>
+<p>Every step of this pipeline can be done in <code>terminal</code> except <strong>Step 6.1.</strong>, which needs <code>Python</code>.<br>
+It is recommended to use <code>Jupyter Notebook</code>. Just write <code>!</code> in the beggining of each cell to make it understand <code>bash</code> commands.</p>
+<p>To recreate any of the steps of this manual please install:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget<span class="w"> </span>https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/envs/panacota.yaml
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>panacota.yaml
+</span></code></pre></div>
+<p>And of cource do not forget to activate the envinronment!</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>panacota
+</span></code></pre></div>
+<hr />
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>Here we will work with <code>PanACoTA</code> pipeline. This tool has many dependecies:</p>
+<ul>
+<li>For <code>prepare</code> module: <code>mash</code> (to filter genomes)</li>
+<li>For <code>annotate</code> module: <code>prokka</code> and/or <code>prodigal</code> (to uniformly annotate your genomes)</li>
+<li>For <code>pangenome</code> module: <code>mmseqs</code> (to generate pangenomes)</li>
+<li>For <code>align</code> module: <code>mafft</code> (to align persistent genome)</li>
+<li>For <code>tree</code> module: At least one of those softwares, to infer a phylogenetic tree:<ul>
+<li><code>IQ Tree</code></li>
+<li><code>FastTreeMP</code></li>
+<li><code>FastME</code></li>
+<li><code>Quicktree</code></li>
+</ul>
+</li>
+</ul>
+<p>All of them but one will be installed with the <code>panacota.yaml</code> conda environment.<br>
+The last one - <code>mash</code> please install yourself.<br>
+For more details please visit <a href="https://github.com/gem-pasteur/PanACoTA"><code>PanACoTA</code> GitHub repository</a></p>
+<h2 id="task"><strong>Task</strong></h2>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>We've sequenced and assembled the genome.<br>
+It's the genome of some organism, and we even know what kind of organism it is.<br></p>
+<ul>
+<li>We download the genomes of its close relatives from public databases.<br></li>
+<li>We annotate them all together (so that there is a homogeneous annotation).<br></li>
+<li>Build orthologous series.<br></li>
+<li>Extract the pangenome.<br></li>
+<li>Make genes alignment.<br></li>
+<li>Build a phylogenetic tree.<br></li>
+</ul>
+<p>We'll be working with the <em>Shigella flexneri</em> genome.<br>
+It's genetically nested within <em>Escherichia</em>, but it's a very aggressive pathogen.<br>
+The same pathogenicity factors are found in <em>E. marmotae</em> isolated from other mammals.<br>
+So our target is <em>Shigella flexneri</em>. And for comparison, we want to download the genomes of <em>E. marmotae</em> isolated from marmosets and analyse them further.</p>
+</details>
+<hr />
+<h2 id="step-1-download-genomes-from-the-database-and-check-their-quality"><strong>Step 1: Download genomes from the database and check their quality</strong></h2>
+<p>As it was mention in the <strong>Introduction</strong> we will run <code>PanACoTA</code> pipeline.
+It has many dependecies and in the <code>panacota.yaml</code> cona environment all but one are already installed.
+The one missing is <code>mash</code>.
+It is needed for this step, but it is not available in <code>conda</code> or <code>pip</code>.
+It is distributed as binary. To install it on <code>Ubuntu</code> run this command in your terminal:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo apt install mash
+</span></code></pre></div>
+<p>For more details read the <a href="https://mash.readthedocs.io/en/latest/"><code>mash</code> tutorial</a></p>
+<p><code>Mash</code> measures the distances between genomes:<br></p>
+<ul>
+<li>if the distances are any small (i.e. we have some copies).<br></li>
+<li>if the distances are too large (i.e. genomes so far away that nothing can be counted on them further).<br></li>
+</ul>
+<p>The programme discards them (this is a configurable parameter).<br></p>
+<details class="info" open="open">
+<summary>Info</summary>
+<ul>
+<li><code>GenBank</code> - in general, all possible <code>.fasta</code> files uploaded to <code>NCBI's GenBank</code> database.<br></li>
+<li><code>RefSeq</code> - an attempt to structure <code>GenBank</code>, a so-called ‘quality mark’ meaning that <code>NCBI</code> staff have analysed the data according to their own pipeline and approved its quality at a high level.<br></li>
+</ul>
+</details>
+<p>Let's break down the command below in parts:<br></p>
+<ul>
+<li><code>PanACoTA</code> - the name of the tool we are running.<br></li>
+<li><code>prepare</code> - one of the modules of this tool.<br></li>
+<li>By key <code>-g</code> we pass what genomes we are downloading - quotes are very important.<br></li>
+<li>By key <code>-s</code> we choose between GenBank and RefSeq.<br></li>
+<li>By key <code>-l</code> we choose the level of assembly.<br></li>
+</ul>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>PanACoTA<span class="w"> </span>prepare<span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;Escherichia marmotae&#39;</span><span class="w"> </span>-s<span class="w"> </span>refseq<span class="w"> </span>-l<span class="w"> </span><span class="nb">complete</span>
+</span></code></pre></div>
+<p>Let's see what we have after executing this command</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ls<span class="w"> </span>Escherichia_marmotae
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Database_init
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>LSTINFO-Escherichia_marmotae-filtered-0.0001_0.06.txt
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>PanACoTA_prepare_Escherichia_marmotae.log
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>PanACoTA_prepare_Escherichia_marmotae.log.details
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>PanACoTA_prepare_Escherichia_marmotae.log.err
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>assembly_summary-Escherichia_marmotae.txt
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>discarded-by-L90_nbcont-Escherichia_marmotae.lst
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>discarded-by-minhash-Escherichia_marmotae-0.0001_0.06.txt
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>mash_files
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>refseq
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>tmp_files
+</span></code></pre></div>
+<ul>
+<li><code>PanACoTA_prepare_Escherichia_marmotae.log</code> - file with log of command execution.<br></li>
+<li><code>PanACoTA_prepare_Escherichia_marmotae.log.details</code> - file with detailed log of command execution.<br></li>
+<li><code>PanACoTA_prepare_Escherichia_marmotae.log.err</code> - error log (if there were any), it is always created, but if there were no errors, the file will be empty.<br></li>
+<li><code>assembly_summary-Escherichia_marmotae.txt</code> - statistics on a specific assembly of <em>Escherichia marmotae</em>.<br></li>
+<li><code>discarded-by-minhash-Escherichia_marmotae-0.0001_0.06.txt</code> - file with what <code>mash</code> discarded (it discarded anything closer than <code>0.0001</code> and anything further than <code>0.06</code>).<br></li>
+<li><code>LSTINFO-Escherichia_marmotae-filtered-0.0001e_0.06.txt</code> - a list of all the files that <code>PanACoTA</code> fragmented.<br></li>
+</ul>
+<p>Now let's look in the <code>Database_init</code> directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ls<span class="w"> </span>Escherichia_marmotae/Database_init
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>GCF_002900365.1_ASM290036v1_genomic.fna
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>GCF_013636045.1_ASM1363604v1_genomic.fna
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>GCF_013636235.1_ASM1363623v1_genomic.fna
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>GCF_013732895.1_ASM1373289v1_genomic.fna
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>GCF_013745515.1_ASM1374551v1_genomic.fna
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>GCF_013746655.1_ASM1374665v1_genomic.fna
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>GCF_022592155.1_ASM2259215v1_genomic.fna
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>GCF_029717905.1_ASM2971790v1_genomic.fna
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>GCF_029719265.1_ASM2971926v1_genomic.fna
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>GCF_029962465.1_ASM2996246v1_genomic.fna
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>GCF_037055335.1_ASM3705533v1_genomic.fna
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>GCF_900636405.1_41767_E01_genomic.fna
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>GCF_900637015.1_46514_C01_genomic.fna
+</span></code></pre></div>
+Thus <code>PanACoTA</code> downloaded 12 complete genomes (nucleotide genomic sequences) of <em>Escherichia marmotae</em> from <code>RefSeq</code> into the <code>Escherichia_marmotae/Database_init directory</code>.<br></p>
+<p>Now we will add to all this our <em>Shigella flexneri</em>.</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>wget<span class="w"> </span>https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/405/GCF_000007405.1_ASM740v1/GCF_000007405.1_ASM740v1_genomic.fna.gz<span class="w"> </span>-P<span class="w"> </span>Escherichia_marmotae/Database_init/
+</span></code></pre></div>
+<p>Let's unpack the archive.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>gzip<span class="w"> </span>-d<span class="w"> </span>Escherichia_marmotae/Database_init/GCF_000007405.1_ASM740v1_genomic.fna.gz
+</span></code></pre></div>
+<p>The next step of <code>PanACoTA</code> takes as input a text file with a list of files containing genomes.<br>
+That's why we'll create it!</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ls<span class="w"> </span>Escherichia_marmotae/Database_init/<span class="w"> </span>&gt;<span class="w"> </span>listFile<span class="w"> </span>
+</span></code></pre></div>
+<p>Let's check this list</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>cat<span class="w"> </span>listFile
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>GCF_000007405.1_ASM740v1_genomic.fna
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>GCF_002900365.1_ASM290036v1_genomic.fna
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>GCF_013636045.1_ASM1363604v1_genomic.fna
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>GCF_013636235.1_ASM1363623v1_genomic.fna
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>GCF_013732895.1_ASM1373289v1_genomic.fna
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>GCF_013745515.1_ASM1374551v1_genomic.fna
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>GCF_013746655.1_ASM1374665v1_genomic.fna
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>GCF_022592155.1_ASM2259215v1_genomic.fna
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>GCF_029717905.1_ASM2971790v1_genomic.fna
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>GCF_029719265.1_ASM2971926v1_genomic.fna
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>GCF_029962465.1_ASM2996246v1_genomic.fna
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>GCF_037055335.1_ASM3705533v1_genomic.fna
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>GCF_900636405.1_41767_E01_genomic.fna
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>GCF_900637015.1_46514_C01_genomic.fna
+</span></code></pre></div>
+<p>That's right!<br>
+These are the files that will be given as input in the next step of <code>PanACoTA</code> pipeline.<br></p>
+<hr />
+<h2 id="step-2-annotate-the-genomes"><strong>Step 2: Annotate the genomes</strong></h2>
+<p>Running <code>PanACoTA</code> with the <code>annotate</code> mode.<br>
+This mode of <code>PanACoTA</code> is basically a shell for using the <code>prokka</code> tool.<br>
+Let's also break down the command below in parts:<br></p>
+<ul>
+<li><code>PanACoTA</code> - the name of the tool we are running.<br></li>
+<li><code>annotate</code> - module of this tool that annotates genomes.<br></li>
+<li>By key <code>-d</code> we pass the directory with the genomes.<br></li>
+<li>By key <code>-r</code> we specify where to store the output files.<br></li>
+<li>By key <code>-n</code> we set some four-character name for the data, which will then be used in the pipeline.<br></li>
+<li>By key <code>-l</code> we specify what exactly genomes from the directory in <code>-d</code> key must be annotated.<br></li>
+<li>By key <code>--threads</code> we specify how much threads this command can use (if use <code>0</code> - automatically uses all available cores).<br></li>
+</ul>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>It takes a long time to execute the command (it took me 19 minutes)</p>
+</details>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>PanACoTA<span class="w"> </span>annotate<span class="w"> </span>-d<span class="w"> </span>Escherichia_marmotae/Database_init/<span class="w"> </span>-r<span class="w"> </span>Annotation<span class="w"> </span>-n<span class="w"> </span>EsMa<span class="w"> </span>-l<span class="w"> </span>listFile<span class="w"> </span>--threads<span class="w"> </span><span class="m">24</span>
+</span></code></pre></div>
+<p>Let's see what we got as a result of the annotation</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>ls<span class="w"> </span>Annotation
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Genes                   QC_L90-listFile.png
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>LSTINFO                 QC_nb-contigs-listFile.png
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>LSTINFO-.lst                Replicons
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>PanACoTA-annotate_listFile.log      discarded-.lst
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>PanACoTA-annotate_listFile.log.details  gff3
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>PanACoTA-annotate_listFile.log.err  tmp_files
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>Proteins
+</span></code></pre></div>
+<p>We now have an <code>Annotation</code> folder, and in it:<br></p>
+<ul>
+<li><code>Proteins</code><br></li>
+<li><code>Genes</code><br></li>
+<li><code>Replicons</code><br></li>
+<li><code>gff3</code><br></li>
+<li><code>LSTINFO</code><br></li>
+</ul>
+<h3 id="step-21-proteins-directory"><strong>Step 2.1. <code>Proteins</code> directory</strong></h3>
+<p>Let's look at the <code>Annotation/Proteins/</code> directory. What is stored in it?</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>ls<span class="w"> </span>Annotation/Proteins/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>EsMa.0824.00001.prt  EsMa.0824.00006.prt  EsMa.0824.00011.prt
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>EsMa.0824.00002.prt  EsMa.0824.00007.prt  EsMa.0824.00012.prt
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>EsMa.0824.00003.prt  EsMa.0824.00008.prt  EsMa.0824.00013.prt
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>EsMa.0824.00004.prt  EsMa.0824.00009.prt  EsMa.0824.00014.prt
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>EsMa.0824.00005.prt  EsMa.0824.00010.prt  EsMa.All.prt
+</span></code></pre></div>
+<p>So, we have 15 files in this folder (14 files for each organism and 1 common file).<br></p>
+<ul>
+<li><code>EsMa</code> is the name we set in the <code>-n</code> key.<br></li>
+<li><code>0824</code> is the launch ID - August 24.<br></li>
+<li><code>00001-00014</code> - organism sequence number (IMPORTANT: the files are not always in the exact order in which they were uploaded to listFile).<br></li>
+</ul>
+<p>Let's take a look at <code>Annotation/Proteins/EsMa.0824.00001.prt</code>.</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>head<span class="w"> </span>-10<span class="w"> </span>Annotation/Proteins/EsMa.0824.00001.prt
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>&gt;EsMa.0824.00001.0001b_00001 2463 thrA | Bifunctional aspartokinase/homoserine dehydrogenase 1 | NA | similar to AA sequence:UniProtKB:P00561 | COG:COG0460
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>MRVLKFGGTSVANAERFLRVADILESNARQGQVATVLSAPAKITNHLVAMIEKTISGQDA
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>LPNISDAERIFAELLTGLAAAQPGFPLAQLKTFVDQEFAQIKHVLHGISLLGQCPDSINA
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>ALICRGEKMSIAIMAGVLEARGHNVTVIDPVEKLLAVGHYLESTVDIAESTRRIAASRIP
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>ADHMVLMAGFTAGNEKGELVVLGRNGSDYSAAVLAACLRADCCEIWTDVDGVYTCDPRQV
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>PDARLLKSMSYQEAMELSYFGAKVLHPRTITPIAQFQIPCLIKNTGNPQAPGTLIGASRD
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>EDELPVKGISNLNNMAMFSVSGPGMKGMVGMAARVFAAMSRARISVVLITQSSSEYSISF
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>CVPQSDCVRAERAMQEEFYLELKEGLLEPLAVTERLAIISVVGDGMRTLRGISAKFFAAL
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>ARANINIVAIAQGSSERSISVVVNNDDATTGVRVTHQMLFNTDQVIEVFVIGVGGVGGAL
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>LEQLKRQQSWLKNKHIDLRVCGVANSKALLTSVHGLNLENWQEELAQAKEPFNLGRLIRL
+</span></code></pre></div>
+<p>And inside each <code>.prt</code> file, we see the amino acid sequences of all the proteins that <code>PanACoTA</code> predicted for us!<br>
+Let's turn our attention to line 1:<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>head<span class="w"> </span>-1<span class="w"> </span>Annotation/Proteins/EsMa.0824.00001.prt
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>&gt;EsMa.0824.00001.0001b_00001 2463 thrA | Bifunctional aspartokinase/homoserine dehydrogenase 1 | NA | similar to AA sequence:UniProtKB:P00561 | COG:COG0460
+</span></code></pre></div>
+<ul>
+<li><code>&gt;EsMa.0824.00001.</code> - the name of the genome in the <code>PanACoTA</code>'s annotation.<br></li>
+<li><code>0001b</code> - replicon number.<br></li>
+<li><code>_00001</code> - frame number.<br></li>
+<li><code>2463</code> - length.<br></li>
+<li><code>thrA</code> - protein's name.<br></li>
+<li><code>Bifunctional aspartokinase/homoserine dehydrogenase 1</code> - protein's function.<br></li>
+<li><code>similar to AA sequence:UniProtKB:P00561</code> - the basis for predicting the protein and its function.<br></li>
+<li><code>COG:COG0460</code> - COG ID.<br></li>
+</ul>
+<h3 id="step-22-lstinfo-lst-file"><strong>Step 2.2. <code>LSTINFO-.lst</code> file</strong></h3>
+<p>Now, let's look at the <code>Annotation/LSTINFO-.lst</code> file.</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>cat<span class="w"> </span>Annotation/LSTINFO-.lst
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>gembase_name    orig_name   to_annotate gsize   nb_conts    L90
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>EsMa.0824.00001 GCF_000007405.1_ASM740v1_genomic.fna    Annotation/tmp_files/GCF_000007405.1_ASM740v1_genomic.fna_prokka-split5N.fna    4599354 1   1
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>EsMa.0824.00002 GCF_900636405.1_41767_E01_genomic.fna   Annotation/tmp_files/GCF_900636405.1_41767_E01_genomic.fna_prokka-split5N.fna   4857140 1   1
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>EsMa.0824.00003 GCF_900637015.1_46514_C01_genomic.fna   Annotation/tmp_files/GCF_900637015.1_46514_C01_genomic.fna_prokka-split5N.fna   4450344 1   1
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>EsMa.0824.00004 GCF_013636045.1_ASM1363604v1_genomic.fna    Annotation/tmp_files/GCF_013636045.1_ASM1363604v1_genomic.fna_prokka-split5N.fna    4637518 2   1
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>EsMa.0824.00005 GCF_029962465.1_ASM2996246v1_genomic.fna    Annotation/tmp_files/GCF_029962465.1_ASM2996246v1_genomic.fna_prokka-split5N.fna    4669757 2   1
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>EsMa.0824.00006 GCF_002900365.1_ASM290036v1_genomic.fna Annotation/tmp_files/GCF_002900365.1_ASM290036v1_genomic.fna_prokka-split5N.fna 4896291 3   1
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>EsMa.0824.00007 GCF_013636235.1_ASM1363623v1_genomic.fna    Annotation/tmp_files/GCF_013636235.1_ASM1363623v1_genomic.fna_prokka-split5N.fna    4981845 3   1
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>EsMa.0824.00008 GCF_013745515.1_ASM1374551v1_genomic.fna    Annotation/tmp_files/GCF_013745515.1_ASM1374551v1_genomic.fna_prokka-split5N.fna    4887958 3   1
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>EsMa.0824.00009 GCF_022592155.1_ASM2259215v1_genomic.fna    Annotation/tmp_files/GCF_022592155.1_ASM2259215v1_genomic.fna_prokka-split5N.fna    5200167 3   1
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>EsMa.0824.00010 GCF_013746655.1_ASM1374665v1_genomic.fna    Annotation/tmp_files/GCF_013746655.1_ASM1374665v1_genomic.fna_prokka-split5N.fna    5094503 4   1
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>EsMa.0824.00011 GCF_037055335.1_ASM3705533v1_genomic.fna    Annotation/tmp_files/GCF_037055335.1_ASM3705533v1_genomic.fna_prokka-split5N.fna    5022908 4   1
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>EsMa.0824.00012 GCF_029719265.1_ASM2971926v1_genomic.fna    Annotation/tmp_files/GCF_029719265.1_ASM2971926v1_genomic.fna_prokka-split5N.fna    5075061 5   1
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>EsMa.0824.00013 GCF_013732895.1_ASM1373289v1_genomic.fna    Annotation/tmp_files/GCF_013732895.1_ASM1373289v1_genomic.fna_prokka-split5N.fna    5083937 6   1
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>EsMa.0824.00014 GCF_029717905.1_ASM2971790v1_genomic.fna    Annotation/tmp_files/GCF_029717905.1_ASM2971790v1_genomic.fna_prokka-split5N.fna    4780041 7   1
+</span></code></pre></div>
+<ul>
+<li><code>EsMa.0824.00001</code> - the name that <code>PanACoTA</code> renamed the file to (by <code>-n</code> key).<br></li>
+<li><code>GCF_000007405.1_ASM740v1_genomic.fna</code> - the name from which <code>PanACoTA</code> was renaming.<br></li>
+<li><code>Annotation/tmp_files/GCF_000007405.1_ASM740v1_genomic.fna_prokka-split5N.fna</code>- a folder containing what <code>PanACoTA</code> eventually annotated.<br></li>
+<li><code>4599354</code> - genome size.<br></li>
+</ul>
+<h3 id="step-23-genes-directory"><strong>Step 2.3. <code>Genes</code> directory</strong></h3>
+<p>Let's take a look at the contents of the <code>Genes</code> directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>ls<span class="w"> </span>Annotation/Genes/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>EsMa.0824.00001.gen  EsMa.0824.00006.gen  EsMa.0824.00011.gen
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>EsMa.0824.00002.gen  EsMa.0824.00007.gen  EsMa.0824.00012.gen
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>EsMa.0824.00003.gen  EsMa.0824.00008.gen  EsMa.0824.00013.gen
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>EsMa.0824.00004.gen  EsMa.0824.00009.gen  EsMa.0824.00014.gen
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>EsMa.0824.00005.gen  EsMa.0824.00010.gen
+</span></code></pre></div>
+<p>So we have 14 files in this folder (14 files for each organism).<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>head<span class="w"> </span>-10<span class="w"> </span>Annotation/Genes/EsMa.0824.00001.gen
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>&gt;EsMa.0824.00001.0001b_00001 2463 thrA | Bifunctional aspartokinase/homoserine dehydrogenase 1 | NA | similar to AA sequence:UniProtKB:P00561 | COG:COG0460
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>ATGCGAGTGTTGAAGTTCGGCGGTACATCAGTGGCAAATGCAGAACGTTTTCTGCGTGTT
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>GCCGATATTCTGGAAAGCAATGCCAGGCAGGGGCAGGTGGCCACCGTCCTCTCTGCCCCC
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>GCCAAAATCACCAACCACCTGGTGGCGATGATTGAAAAAACCATTAGCGGCCAGGATGCT
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>TTACCCAATATCAGCGATGCCGAACGTATTTTTGCCGAACTTTTGACGGGACTCGCCGCC
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>GCCCAGCCGGGGTTCCCGCTGGCGCAATTGAAAACTTTCGTCGATCAGGAATTTGCCCAA
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>ATAAAACATGTCCTGCATGGCATTAGTTTGTTGGGGCAGTGCCCGGATAGCATCAACGCT
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>GCGCTGATTTGCCGTGGCGAGAAAATGTCGATCGCCATTATGGCCGGCGTGTTAGAAGCG
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>CGTGGTCACAACGTTACCGTTATCGATCCGGTCGAAAAACTGCTGGCAGTGGGGCATTAC
+</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>CTCGAATCTACCGTCGATATTGCTGAGTCCACCCGCCGTATTGCGGCAAGCCGCATTCCG
+</span></code></pre></div>
+<p>So here we have nucleotide sequences! The names of genes and proteins are the same!<br></p>
+<h3 id="step-24-replicons-directory"><strong>Step 2.4. <code>Replicons</code> directory</strong></h3>
+<p>We also have a directory called <code>Replicons</code>, but it's a boring directory that just holds actually the original nucleotide sequences, but just under code numbers specified in the <code>-n</code> key.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>ls<span class="w"> </span>Annotation/Replicons/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>EsMa.0824.00001.fna  EsMa.0824.00006.fna  EsMa.0824.00011.fna
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>EsMa.0824.00002.fna  EsMa.0824.00007.fna  EsMa.0824.00012.fna
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>EsMa.0824.00003.fna  EsMa.0824.00008.fna  EsMa.0824.00013.fna
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>EsMa.0824.00004.fna  EsMa.0824.00009.fna  EsMa.0824.00014.fna
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>EsMa.0824.00005.fna  EsMa.0824.00010.fna
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>head<span class="w"> </span>Annotation/Replicons/EsMa.0824.00001.fna
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>&gt;EsMa.0824.00001.0001 4599354
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTC
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>TGATAGCAGCTTCTGAACTGGTTACCTGCCGTGAGTAAATTAAAATTTTATTGACTTAGG
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>TCACTAAATACTTTAACCAATATAGGCATAGCGCACAGACAGATAAAAATTACAGAGTAC
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>ACAACATCCATGAAACGCATTAGCACCACCATTACCACCACCATCACCATTACCACAGGT
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>AACGGTGCGGGCTGACGCGTACAGGAAACACAGAAAAAAGCCCGCACCTGACAGTGCGGG
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>CTTTTTTTTCGACCAAAGGTAACGAGGTAACAACCATGCGAGTGTTGAAGTTCGGCGGTA
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>CATCAGTGGCAAATGCAGAACGTTTTCTGCGTGTTGCCGATATTCTGGAAAGCAATGCCA
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>GGCAGGGGCAGGTGGCCACCGTCCTCTCTGCCCCCGCCAAAATCACCAACCACCTGGTGG
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>CGATGATTGAAAAAACCATTAGCGGCCAGGATGCTTTACCCAATATCAGCGATGCCGAAC
+</span></code></pre></div>
+<h3 id="step-25-lstinfo-directory"><strong>Step 2.5. <code>LSTINFO</code> directory</strong></h3>
+<p>And we have a directory called <code>LSTINFO</code>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>ls<span class="w"> </span>Annotation/LSTINFO/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>EsMa.0824.00001.lst  EsMa.0824.00006.lst  EsMa.0824.00011.lst
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>EsMa.0824.00002.lst  EsMa.0824.00007.lst  EsMa.0824.00012.lst
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>EsMa.0824.00003.lst  EsMa.0824.00008.lst  EsMa.0824.00013.lst
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>EsMa.0824.00004.lst  EsMa.0824.00009.lst  EsMa.0824.00014.lst
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>EsMa.0824.00005.lst  EsMa.0824.00010.lst
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>head<span class="w"> </span>-10<span class="w"> </span>Annotation/LSTINFO/EsMa.0824.00001.lst
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>336 2798    D   CDS EsMa.0824.00001.0001b_00001 thrA    | Bifunctional aspartokinase/homoserine dehydrogenase 1 | NA | similar to AA sequence:UniProtKB:P00561 | COG:COG0460
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>2800    3732    D   CDS EsMa.0824.00001.0001i_00002 thrB    | Homoserine kinase | 2.7.1.39 | similar to AA sequence:UniProtKB:P00547 | COG:COG0083
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>3733    5019    D   CDS EsMa.0824.00001.0001i_00003 thrC    | Threonine synthase | 4.2.3.1 | similar to AA sequence:UniProtKB:P00934 | COG:COG0498
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>5233    5529    D   CDS EsMa.0824.00001.0001i_00004 NA  | hypothetical protein | NA | NA | NA
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>5682    6458    C   CDS EsMa.0824.00001.0001i_00005 yaaA    | Peroxide stress resistance protein YaaA | NA | similar to AA sequence:UniProtKB:P0A8I3 | COG:COG3022
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>6528    6896    C   CDS EsMa.0824.00001.0001i_00006 alsT_1  | Amino-acid carrier protein AlsT | NA | similar to AA sequence:UniProtKB:Q45068 | COG:COG1115
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>6918    7958    C   CDS EsMa.0824.00001.0001i_00007 alsT_2  | Amino-acid carrier protein AlsT | NA | similar to AA sequence:UniProtKB:Q45068 | COG:COG1115
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>8237    9190    D   CDS EsMa.0824.00001.0001i_00008 talB    | Transaldolase B | 2.2.1.2 | similar to AA sequence:UniProtKB:P0A870 | COG:COG0176
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>9305    9892    D   CDS EsMa.0824.00001.0001i_00009 mog | Molybdopterin adenylyltransferase | 2.7.7.75 | similar to AA sequence:UniProtKB:P0AF03 | COG:COG0521
+</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>9927    10493   C   CDS EsMa.0824.00001.0001i_00010 satP    | Succinate-acetate/proton symporter SatP | NA | similar to AA sequence:UniProtKB:P0AC98 | COG:COG1584
+</span></code></pre></div>
+<p>This is a tabular format of all annotated features in the organism!<br>
+This is especially convenient if we work with genomes using programming languages (e.g. <code>Python</code> and <code>pandas</code>).<br></p>
+<h3 id="step-26-tmp_files-directory"><strong>Step 2.6. <code>tmp_files</code> directory</strong></h3>
+<p><strong><em>Input</em></strong></p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>ls<span class="w"> </span>-U<span class="w"> </span>Annotation/tmp_files/<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+</span></code></pre></div>
+<strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>GCF_000007405.1_ASM740v1_genomic.fna_prokka-split5N.fna
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>GCF_000007405.1_ASM740v1_genomic.fna_prokka-split5N.fna-prokka.log
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>GCF_000007405.1_ASM740v1_genomic.fna_prokka-split5N.fna-prokkaRes
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>GCF_002900365.1_ASM290036v1_genomic.fna_prokka-split5N.fna
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>GCF_002900365.1_ASM290036v1_genomic.fna_prokka-split5N.fna-prokka.log
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>GCF_002900365.1_ASM290036v1_genomic.fna_prokka-split5N.fna-prokkaRes
+</span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>GCF_013636045.1_ASM1363604v1_genomic.fna_prokka-split5N.fna
+</span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>GCF_013636045.1_ASM1363604v1_genomic.fna_prokka-split5N.fna-prokka.log
+</span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>GCF_013636045.1_ASM1363604v1_genomic.fna_prokka-split5N.fna-prokkaRes
+</span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>GCF_013636235.1_ASM1363623v1_genomic.fna_prokka-split5N.fna
+</span></code></pre></div>
+<p>The <code>tmp_files</code> directory contains logs on temporary files.<br>
+What is it for?<br>
+If, let's say, something that should be there is not found in the genome under study, the first thing to do is to study these files - most likely <code>prokka</code> crashed with an error and you can read the details in these temporary files.<br></p>
+<hr />
+<h2 id="step-3-build-orthological-series"><strong>Step 3: Build orthological series</strong></h2>
+<p>This command builds the pangenome.<br>
+Let's also break down the command below in parts:<br></p>
+<ul>
+<li><code>PanACoTA</code> - the name of the tool we are running.<br></li>
+<li><code>pangenome</code> - module of this tool that builds the pangenome.<br></li>
+<li>By key <code>-l</code> we pass the <code>LSTINFO-.lst</code> file from the <strong>Step 2.2.</strong>.<br></li>
+<li>By key <code>-n</code> we pass the four-character name for the data, which was set previously.<br></li>
+<li>By key <code>-d</code> we pass the directory with the proteins (since <code>PanACoTA</code> builds the pangenome by protein sequence similarity, it only needs the protein directory).<br></li>
+<li>By key <code>-o</code> we specify where to store the output files.<br></li>
+<li>By the key <code>-i</code> we establish the level of similarity (identity) of the sequences.<br></li>
+</ul>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>PanACoTA<span class="w"> </span>pangenome<span class="w"> </span>-l<span class="w"> </span>Annotation/LSTINFO-.lst<span class="w"> </span>-n<span class="w"> </span>EsMa<span class="w"> </span>-d<span class="w"> </span>Annotation/Proteins/<span class="w"> </span>-o<span class="w"> </span>Pangenome<span class="w"> </span>-i<span class="w"> </span><span class="m">0</span>.8<span class="w"> </span>
+</span></code></pre></div>
+<p>Let's take a look at the log file.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>cat<span class="w"> </span>Pangenome/PanACoTA-pangenome_EsMa.log
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>[2024-08-25 18:54:07] :: INFO :: PanACoTA version 1.4.0
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>[2024-08-25 18:54:07] :: INFO :: Command used
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>     &gt; PanACoTA pangenome -l Annotation/LSTINFO-.lst -n EsMa -d Annotation/Proteins/ -o Pangenome -i 0.8
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>[2024-08-25 18:54:07] :: INFO :: Building bank with all proteins to Annotation/Proteins/EsMa.All.prt
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>[2024-08-25 18:54:08] :: INFO :: Will run MMseqs2 with:
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>    - minimum sequence identity = 80.0%
+</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>    - cluster mode 1
+</span><span id="__span-41-8"><a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>[2024-08-25 18:54:08] :: INFO :: Creating database
+</span><span id="__span-41-9"><a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>[2024-08-25 18:54:11] :: INFO :: Clustering proteins...
+</span><span id="__span-41-10"><a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>[2024-08-25 18:54:36] :: INFO :: Converting mmseqs results to pangenome file
+</span><span id="__span-41-11"><a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a>[2024-08-25 18:54:36] :: INFO :: Pangenome has 9694 families.
+</span><span id="__span-41-12"><a id="__codelineno-41-12" name="__codelineno-41-12" href="#__codelineno-41-12"></a>[2024-08-25 18:54:36] :: INFO :: Retrieving information from pan families
+</span><span id="__span-41-13"><a id="__codelineno-41-13" name="__codelineno-41-13" href="#__codelineno-41-13"></a>[2024-08-25 18:54:36] :: INFO :: Generating qualitative and quantitative matrix, and summary file
+</span><span id="__span-41-14"><a id="__codelineno-41-14" name="__codelineno-41-14" href="#__codelineno-41-14"></a>[2024-08-25 18:54:37] :: INFO :: DONE
+</span></code></pre></div>
+<details class="info" open="open">
+<summary>Info</summary>
+<p><code>[2024-08-25 18:54:36] :: INFO :: Pangenome has 9694 families.</code><br></p>
+</details>
+<p>That is, in this command, <code>PanACoTA</code> counted a total of <code>9694</code> protein families.</p>
+<p>In this step, we took the annotated genomes, we took the proteins from them.<br>
+And then the orthology table is constructed with them.<br>
+The outcome of this step will be lists of genes grouped together.<br>
+As output, we're going to see a bunch of logs, and one single table.</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>ls<span class="w"> </span>Pangenome/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>PanACoTA-pangenome_EsMa.log
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>PanACoTA-pangenome_EsMa.log.details
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>PanACoTA-pangenome_EsMa.log.err
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>PanGenome-EsMa.All.prt-clust-0.8-mode1.lst
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>PanGenome-EsMa.All.prt-clust-0.8-mode1.lst.bin
+</span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>PanGenome-EsMa.All.prt-clust-0.8-mode1.lst.quali.txt
+</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>PanGenome-EsMa.All.prt-clust-0.8-mode1.lst.quanti.txt
+</span><span id="__span-43-8"><a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a>PanGenome-EsMa.All.prt-clust-0.8-mode1.lst.summary.txt
+</span><span id="__span-43-9"><a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>mmseq_EsMa.All.prt_0.8-mode1.log
+</span><span id="__span-43-10"><a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a>tmp_EsMa.All.prt_0.8-mode1
+</span></code></pre></div>
+<p>The only file of interest is <code>PanGenome-EsMa.All.prt-clust-0.8-mode1.lst</code>.<br>
+Let's take a look at it.</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>head<span class="w"> </span>-10<span class="w"> </span>Pangenome/PanGenome-EsMa.All.prt-clust-0.8-mode1.lst
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>1 EsMa.0824.00001.0001i_04241 EsMa.0824.00002.0001i_00106 EsMa.0824.00003.0001i_00093 EsMa.0824.00004.0001i_00095 EsMa.0824.00005.0001i_00094 EsMa.0824.00006.0001i_03340 EsMa.0824.00007.0001i_02672 EsMa.0824.00008.0001i_00094 EsMa.0824.00009.0001i_00094 EsMa.0824.00010.0001i_04572 EsMa.0824.00011.0001i_02424 EsMa.0824.00012.0001i_02999 EsMa.0824.00013.0001i_02846 EsMa.0824.00014.0001i_00094
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>2 EsMa.0824.00001.0001i_03873 EsMa.0824.00002.0001i_00130 EsMa.0824.00003.0001i_00117 EsMa.0824.00004.0001i_00119 EsMa.0824.00005.0001i_00118 EsMa.0824.00006.0001i_03364 EsMa.0824.00007.0001i_02648 EsMa.0824.00008.0001i_00118 EsMa.0824.00009.0001i_00126 EsMa.0824.00010.0001i_04604 EsMa.0824.00011.0001i_02400 EsMa.0824.00012.0001i_03032 EsMa.0824.00013.0001i_02821 EsMa.0824.00014.0001i_00126
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>3 EsMa.0824.00008.0002i_04583 EsMa.0824.00010.0002i_04636 EsMa.0824.00012.0002i_04658
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>4 EsMa.0824.00008.0002i_04649 EsMa.0824.00010.0002i_04668 EsMa.0824.00012.0002i_04736
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>5 EsMa.0824.00007.0003i_04731 EsMa.0824.00008.0002i_04616 EsMa.0824.00010.0002i_04700 EsMa.0824.00012.0002i_04701 EsMa.0824.00012.0003i_04789
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>6 EsMa.0824.00010.0003i_04833
+</span><span id="__span-45-7"><a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>7 EsMa.0824.00001.0001i_02181 EsMa.0824.00002.0001i_02692 EsMa.0824.00003.0001i_02407 EsMa.0824.00004.0001i_02595 EsMa.0824.00005.0001i_02480 EsMa.0824.00006.0001i_00413 EsMa.0824.00007.0001i_00212 EsMa.0824.00008.0001i_02711 EsMa.0824.00009.0001i_02866 EsMa.0824.00010.0001i_02477 EsMa.0824.00011.0001i_00009 EsMa.0824.00011.0001i_04359 EsMa.0824.00012.0001i_01000 EsMa.0824.00013.0001i_01030 EsMa.0824.00014.0001i_02416
+</span><span id="__span-45-8"><a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>8 EsMa.0824.00005.0001i_02448 EsMa.0824.00011.0001i_00041 EsMa.0824.00011.0001i_04391 EsMa.0824.00011.0001i_04451
+</span><span id="__span-45-9"><a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a>9 EsMa.0824.00002.0001i_03089 EsMa.0824.00003.0001i_02788 EsMa.0824.00005.0001i_02414 EsMa.0824.00008.0001i_02644 EsMa.0824.00008.0001i_02862 EsMa.0824.00011.0001i_00075 EsMa.0824.00011.0001i_04425 EsMa.0824.00011.0001i_04485 EsMa.0824.00014.0001i_02479
+</span><span id="__span-45-10"><a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a>10 EsMa.0824.00001.0001i_02131 EsMa.0824.00002.0001i_02651 EsMa.0824.00003.0001i_02366 EsMa.0824.00004.0001i_02431 EsMa.0824.00005.0001i_02379 EsMa.0824.00006.0001i_00454 EsMa.0824.00007.0001i_00253 EsMa.0824.00008.0001i_02607 EsMa.0824.00009.0001i_02686 EsMa.0824.00010.0001i_02436 EsMa.0824.00011.0001i_00110 EsMa.0824.00012.0001i_00951 EsMa.0824.00013.0001i_00978 EsMa.0824.00014.0001i_02375
+</span></code></pre></div>
+<p>In this file, each line corresponds to one orthologous row.<br>
+The identifiers of all the genes that fall into this row are written in the line with a separator.<br>
+For example, in line 6 we have one gene - it means that it is a singleton (it is so one, and no one has anything similar).<br>
+Long rows are orthologous groups with many genes in them.<br></p>
+<p>Further after this step, from the orthologous series, we identify the <code>core</code> - that is, the genes encoding proteins that occur in a single copy in each genome.<br></p>
+<hr />
+<h2 id="step-4-extract-pangenome"><strong>Step 4: Extract pangenome</strong></h2>
+<p>Let's also break down the command below in parts:<br></p>
+<ul>
+<li><code>PanACoTA</code> - the name of the tool we are running.<br></li>
+<li><code>corepers</code> - module of this tool that identifies and extracts <code>core</code>.<br></li>
+<li>By key <code>-p</code> we pass the <code>PanGenome-EsMa.All.prt-clust-0.8-mode1.lst</code> file.<br></li>
+<li>By key <code>-o</code> we specify where to store the output files.<br></li>
+</ul>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>PanACoTA<span class="w"> </span>corepers<span class="w"> </span>-p<span class="w"> </span>Pangenome/PanGenome-EsMa.All.prt-clust-0.8-mode1.lst<span class="w"> </span>-o<span class="w"> </span>Coregenome
+</span></code></pre></div>
+<p>Let's look at the log file.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>cat<span class="w"> </span>Coregenome/PanACoTA-corepers.log
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>[2024-08-25 18:54:45] :: INFO :: PanACoTA version 1.4.0
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>[2024-08-25 18:54:45] :: INFO :: Command used
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>     &gt; PanACoTA corepers -p Pangenome/PanGenome-EsMa.All.prt-clust-0.8-mode1.lst -o Coregenome
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>[2024-08-25 18:54:45] :: INFO :: Will generate a CoreGenome.
+</span><span id="__span-48-5"><a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>[2024-08-25 18:54:45] :: INFO :: Retrieving info from binary file
+</span><span id="__span-48-6"><a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a>[2024-08-25 18:54:45] :: INFO :: Generating Persistent genome of a dataset containing 14 genomes
+</span><span id="__span-48-7"><a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a>[2024-08-25 18:54:45] :: INFO :: The core genome contains 2709 families, each one having exactly 14 members, from the 14 different genomes.
+</span><span id="__span-48-8"><a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a>[2024-08-25 18:54:45] :: INFO :: Persistent genome step done.
+</span></code></pre></div>
+<details class="info" open="open">
+<summary>Info</summary>
+<p><code>[2024-08-25 18:54:45] :: INFO :: The core genome contains 2709 families, each one having exactly 14 members, from the 14 different genomes.</code><br></p>
+</details>
+<p>That is, out of <code>9694</code> protein families, <code>2709</code> are single-copy and universal families.<br></p>
+<p>Now let's take a look at the output.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>ls<span class="w"> </span>Coregenome/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>PanACoTA-corepers.log
+</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>PanACoTA-corepers.log.err
+</span><span id="__span-50-3"><a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>PersGenome_PanGenome-EsMa.All.prt-clust-0.8-mode1.lst-all_1.lst
+</span></code></pre></div>
+<p>We only have logs and one table - <code>PersGenome_PanGenome-EsMa.All.prt-clust-0.8-mode1.lst-all_1.lst</code>.<br>
+Let's take a look at it.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>head<span class="w"> </span>-10<span class="w"> </span>Coregenome/PersGenome_PanGenome-EsMa.All.prt-clust-0.8-mode1.lst-all_1.lst
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>1 EsMa.0824.00001.0001i_04241 EsMa.0824.00002.0001i_00106 EsMa.0824.00003.0001i_00093 EsMa.0824.00004.0001i_00095 EsMa.0824.00005.0001i_00094 EsMa.0824.00006.0001i_03340 EsMa.0824.00007.0001i_02672 EsMa.0824.00008.0001i_00094 EsMa.0824.00009.0001i_00094 EsMa.0824.00010.0001i_04572 EsMa.0824.00011.0001i_02424 EsMa.0824.00012.0001i_02999 EsMa.0824.00013.0001i_02846 EsMa.0824.00014.0001i_00094
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>2 EsMa.0824.00001.0001i_03873 EsMa.0824.00002.0001i_00130 EsMa.0824.00003.0001i_00117 EsMa.0824.00004.0001i_00119 EsMa.0824.00005.0001i_00118 EsMa.0824.00006.0001i_03364 EsMa.0824.00007.0001i_02648 EsMa.0824.00008.0001i_00118 EsMa.0824.00009.0001i_00126 EsMa.0824.00010.0001i_04604 EsMa.0824.00011.0001i_02400 EsMa.0824.00012.0001i_03032 EsMa.0824.00013.0001i_02821 EsMa.0824.00014.0001i_00126
+</span><span id="__span-52-3"><a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>10 EsMa.0824.00001.0001i_02131 EsMa.0824.00002.0001i_02651 EsMa.0824.00003.0001i_02366 EsMa.0824.00004.0001i_02431 EsMa.0824.00005.0001i_02379 EsMa.0824.00006.0001i_00454 EsMa.0824.00007.0001i_00253 EsMa.0824.00008.0001i_02607 EsMa.0824.00009.0001i_02686 EsMa.0824.00010.0001i_02436 EsMa.0824.00011.0001i_00110 EsMa.0824.00012.0001i_00951 EsMa.0824.00013.0001i_00978 EsMa.0824.00014.0001i_02375
+</span><span id="__span-52-4"><a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a>11 EsMa.0824.00001.0001i_02083 EsMa.0824.00002.0001i_02617 EsMa.0824.00003.0001i_02332 EsMa.0824.00004.0001i_02399 EsMa.0824.00005.0001i_02347 EsMa.0824.00006.0001i_00487 EsMa.0824.00007.0001i_00287 EsMa.0824.00008.0001i_02575 EsMa.0824.00009.0001i_02653 EsMa.0824.00010.0001i_02404 EsMa.0824.00011.0001i_00142 EsMa.0824.00012.0001i_00918 EsMa.0824.00013.0001i_00944 EsMa.0824.00014.0001i_02342
+</span><span id="__span-52-5"><a id="__codelineno-52-5" name="__codelineno-52-5" href="#__codelineno-52-5"></a>12 EsMa.0824.00001.0001i_01323 EsMa.0824.00002.0001i_02588 EsMa.0824.00003.0001i_02303 EsMa.0824.00004.0001i_02370 EsMa.0824.00005.0001i_02318 EsMa.0824.00006.0001i_01160 EsMa.0824.00007.0001i_00316 EsMa.0824.00008.0001i_02546 EsMa.0824.00009.0001i_02534 EsMa.0824.00010.0001i_02375 EsMa.0824.00011.0001i_00174 EsMa.0824.00012.0001i_00889 EsMa.0824.00013.0001i_00915 EsMa.0824.00014.0001i_02313
+</span><span id="__span-52-6"><a id="__codelineno-52-6" name="__codelineno-52-6" href="#__codelineno-52-6"></a>14 EsMa.0824.00001.0001i_01389 EsMa.0824.00002.0001i_02519 EsMa.0824.00003.0001i_02241 EsMa.0824.00004.0001i_02307 EsMa.0824.00005.0001i_02256 EsMa.0824.00006.0001i_01096 EsMa.0824.00007.0001i_00379 EsMa.0824.00008.0001i_02424 EsMa.0824.00009.0001i_02389 EsMa.0824.00010.0001i_02244 EsMa.0824.00011.0001i_00240 EsMa.0824.00012.0001i_00759 EsMa.0824.00013.0001i_00851 EsMa.0824.00014.0001i_02250
+</span><span id="__span-52-7"><a id="__codelineno-52-7" name="__codelineno-52-7" href="#__codelineno-52-7"></a>15 EsMa.0824.00001.0001i_01420 EsMa.0824.00002.0001i_02486 EsMa.0824.00003.0001i_02209 EsMa.0824.00004.0001i_02275 EsMa.0824.00005.0001i_02224 EsMa.0824.00006.0001i_01062 EsMa.0824.00007.0001i_00411 EsMa.0824.00008.0001i_02391 EsMa.0824.00009.0001i_02356 EsMa.0824.00010.0001i_02211 EsMa.0824.00011.0001i_00272 EsMa.0824.00012.0001i_00727 EsMa.0824.00013.0001i_00819 EsMa.0824.00014.0001i_02217
+</span><span id="__span-52-8"><a id="__codelineno-52-8" name="__codelineno-52-8" href="#__codelineno-52-8"></a>16 EsMa.0824.00001.0001i_01485 EsMa.0824.00002.0001i_02455 EsMa.0824.00003.0001i_02177 EsMa.0824.00004.0001i_02244 EsMa.0824.00005.0001i_02192 EsMa.0824.00006.0001i_01030 EsMa.0824.00007.0001i_00442 EsMa.0824.00008.0001i_02360 EsMa.0824.00009.0001i_02325 EsMa.0824.00010.0001i_02180 EsMa.0824.00011.0001i_00304 EsMa.0824.00012.0001i_00696 EsMa.0824.00013.0001i_00787 EsMa.0824.00014.0001i_02174
+</span><span id="__span-52-9"><a id="__codelineno-52-9" name="__codelineno-52-9" href="#__codelineno-52-9"></a>20 EsMa.0824.00001.0001i_01791 EsMa.0824.00002.0001i_02262 EsMa.0824.00003.0001i_01989 EsMa.0824.00004.0001i_02098 EsMa.0824.00005.0001i_01999 EsMa.0824.00006.0001i_00822 EsMa.0824.00007.0001i_00574 EsMa.0824.00008.0001i_02152 EsMa.0824.00009.0001i_02124 EsMa.0824.00010.0001i_01983 EsMa.0824.00011.0001i_00496 EsMa.0824.00012.0001i_00561 EsMa.0824.00013.0001i_00575 EsMa.0824.00014.0001i_02021
+</span><span id="__span-52-10"><a id="__codelineno-52-10" name="__codelineno-52-10" href="#__codelineno-52-10"></a>22 EsMa.0824.00001.0001i_01879 EsMa.0824.00002.0001i_02202 EsMa.0824.00003.0001i_01929 EsMa.0824.00004.0001i_02038 EsMa.0824.00005.0001i_01936 EsMa.0824.00006.0001i_00757 EsMa.0824.00007.0001i_00637 EsMa.0824.00008.0001i_02089 EsMa.0824.00009.0001i_02064 EsMa.0824.00010.0001i_01923 EsMa.0824.00011.0001i_00560 EsMa.0824.00012.0001i_00501 EsMa.0824.00013.0001i_00512 EsMa.0824.00014.0001i_01961
+</span></code></pre></div>
+<p>So here we are left with only those genes, those orthologues, which are in a single copy in all the organisms we have analysed.<br></p>
+<p>At this step, it is possible to build more than just coregens.<br>
+The <code>corepers</code> module has many more arguments, such as:<br></p>
+<ul>
+<li><code>-t</code> <tol>: % (between 0 and 1) of the persistent genome: a family is considered as persistent if it contains exactly one member in at least tol% of the genomes, and is absent in all other genomes. Default value for t is 1, meaning that all genomes must have a unique member. This corresponds to the coregenome (so no need to put this option if you want a coregenome). More relaxed definitions of a persistent genome can be used by using -X or -M options (see below).<br></li>
+<li><code>-X</code>: add this option if you want to relax a little the definition of the persistent genome, to get a mixed persistent genome. With -X option, a family is considered as persistent if at least tol% (tol defined by -t <tol> parameter, see above) of the genomes have exactly one member in the family, but the other genomes can have either 0, either several members in the family. This is useful to add the families where, in some genomes, 1 protein has been split in several parts, because of sequencing or assembly error(s).<br></li>
+<li><code>-M</code>: not compatible with -X. With this option, you get the multi persistent genome. It includes the strict and mixed persistent, but is even wider: the only condition for a family to be persistent is that it must have at least one member in at least tol% (tol still defined by -t <tol> parameter) of the genomes (independent of the copy number).<br></li>
+</ul>
+<hr />
+<h2 id="step-5-aligning-the-sequence-of-core-gene-sequences"><strong>Step 5: Aligning the sequence of core gene sequences</strong></h2>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>For each of our objects, we have an amino acid sequence and a nucleotide sequence. That is, we can do alignments of both.<br>
+For biological analysis, the protein sequence is preferred because:<br></p>
+<ol>
+<li>Larger alphabet = more letter variants - 20 vs. 4 for nucleotide sequences.<br></li>
+<li>Amino acids have a more conservative structure (nucleotides are more variable, there are nonsynonymous substitutions, and amino acids are under stronger selection and it is easier for us to match conservative parts).<br></li>
+</ol>
+<p>However, when aligning amino acid sequences, we find it difficult to ‘go back’ and account for nucleotide substitutions.<br>
+But there is a trick - we take the nucleotide sequences, translate them into amino acids and sort of align the amino acids, preserving the original triplets of nucleotides that were underneath those amino acids.<br></p>
+<p>Then:<br></p>
+<ul>
+<li>We can account for honest correct reading frame shifts - like a single nucleotide dropout in a nucleotide alignment (i.e. we allow for a situation that is impossible in an amino acid alignment).<br></li>
+<li>And at the same time we have information about the amino acid structure of the protein - a combination of two levels of information.<br></li>
+</ul>
+</details>
+<p>Let's also break down the command below in parts:<br></p>
+<ul>
+<li><code>PanACoTA</code> - the name of the tool we are running.<br></li>
+<li><code>align</code> - module of this tool that aligns sequences with <code>mafft</code>.<br></li>
+<li>By key <code>-c</code> we pass the <code>PersGenome_PanGenome-EsMa.All.prt-clust-0.8-mode1.lst-all_1.lst</code> file.<br></li>
+<li>By key <code>-l</code> we pass the <code>LSTINFO-.lst</code> file from the <strong>Step 2.2.</strong>.<br></li>
+<li>By key <code>-n</code> we pass the four-character name for the data, which was set previously.<br></li>
+<li>By key <code>-d</code> we pass the path to the output directory from <strong>Step 2.</strong>.<br></li>
+<li>By key <code>-o</code> we specify where to store the output files.<br></li>
+</ul>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>PanACoTA<span class="w"> </span>align<span class="w"> </span>-c<span class="w"> </span>Coregenome/PersGenome_PanGenome-EsMa.All.prt-clust-0.8-mode1.lst-all_1.lst<span class="w"> </span>-l<span class="w"> </span>Annotation/LSTINFO-.lst<span class="w"> </span>-n<span class="w"> </span>EsMa<span class="w"> </span>-d<span class="w"> </span>Annotation/<span class="w"> </span>-o<span class="w"> </span>Alignment
+</span></code></pre></div>
+<p>Let's go into the directory and look at the results.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>ls Alignment
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>Align-EsMa  PanACoTA-align_EsMa.log      PanACoTA-align_EsMa.log.err
+</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>List-EsMa   PanACoTA-align_EsMa.log.details  Phylo-EsMa
+</span></code></pre></div>
+<p>We see a lot of log files.<br>
+But now we are interested in the contents of the <code>Align-EsMa</code> directory.<br></p>
+<h4 id="step-51-align-esma-directory"><strong>Step 5.1. <code>Align-EsMa</code> directory</strong></h4>
+<p><strong><em>Input</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>ls -U Alignment/Align-EsMa | head -20
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>EsMa-complete.nucl.cat.aln
+</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>EsMa-current.1.gen
+</span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>EsMa-current.1.miss.lst
+</span><span id="__span-57-4"><a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a>EsMa-current.1.prt
+</span><span id="__span-57-5"><a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a>EsMa-current.10.gen
+</span><span id="__span-57-6"><a id="__codelineno-57-6" name="__codelineno-57-6" href="#__codelineno-57-6"></a>EsMa-current.10.miss.lst
+</span><span id="__span-57-7"><a id="__codelineno-57-7" name="__codelineno-57-7" href="#__codelineno-57-7"></a>EsMa-current.10.prt
+</span><span id="__span-57-8"><a id="__codelineno-57-8" name="__codelineno-57-8" href="#__codelineno-57-8"></a>EsMa-current.1000.gen
+</span><span id="__span-57-9"><a id="__codelineno-57-9" name="__codelineno-57-9" href="#__codelineno-57-9"></a>EsMa-current.1000.miss.lst
+</span><span id="__span-57-10"><a id="__codelineno-57-10" name="__codelineno-57-10" href="#__codelineno-57-10"></a>EsMa-current.1000.prt
+</span><span id="__span-57-11"><a id="__codelineno-57-11" name="__codelineno-57-11" href="#__codelineno-57-11"></a>EsMa-current.1007.gen
+</span><span id="__span-57-12"><a id="__codelineno-57-12" name="__codelineno-57-12" href="#__codelineno-57-12"></a>EsMa-current.1007.miss.lst
+</span><span id="__span-57-13"><a id="__codelineno-57-13" name="__codelineno-57-13" href="#__codelineno-57-13"></a>EsMa-current.1007.prt
+</span><span id="__span-57-14"><a id="__codelineno-57-14" name="__codelineno-57-14" href="#__codelineno-57-14"></a>EsMa-current.1009.gen
+</span><span id="__span-57-15"><a id="__codelineno-57-15" name="__codelineno-57-15" href="#__codelineno-57-15"></a>EsMa-current.1009.miss.lst
+</span><span id="__span-57-16"><a id="__codelineno-57-16" name="__codelineno-57-16" href="#__codelineno-57-16"></a>EsMa-current.1009.prt
+</span><span id="__span-57-17"><a id="__codelineno-57-17" name="__codelineno-57-17" href="#__codelineno-57-17"></a>EsMa-current.1011.gen
+</span><span id="__span-57-18"><a id="__codelineno-57-18" name="__codelineno-57-18" href="#__codelineno-57-18"></a>EsMa-current.1011.miss.lst
+</span><span id="__span-57-19"><a id="__codelineno-57-19" name="__codelineno-57-19" href="#__codelineno-57-19"></a>EsMa-current.1011.prt
+</span><span id="__span-57-20"><a id="__codelineno-57-20" name="__codelineno-57-20" href="#__codelineno-57-20"></a>EsMa-current.1012.gen
+</span><span id="__span-57-21"><a id="__codelineno-57-21" name="__codelineno-57-21" href="#__codelineno-57-21"></a>ls: write error: Broken pipe
+</span></code></pre></div>
+<p>There are a lot of files in this folder (more than 1000), so we displayed only 20 of them on the screen.<br>
+But now each separate file is not one organism (as it was in the previous steps), but one orthologous series (and it contains sequences from different organisms that were glued together).<br></p>
+<ul>
+<li><code>.prt</code> files correspond to protein, i.e. there will be amino acid sequences inside.<br></li>
+<li><code>.gen</code> files correspond to nucleotides, so there will be nucleotide sequences inside.<br></li>
+</ul>
+<h3 id="step-52-phylo-esma-directory"><strong>Step 5.2. <code>Phylo-EsMa</code> directory</strong></h3>
+<p>And now let's have a look at the contents of the <code>Phylo-EsMa</code> directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>ls Alignment/Phylo-EsMa/
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>EsMa.nucl.grp.aln
+</span></code></pre></div>
+<p><code>EsMa.nucl.grp.aln</code> is the alignment itselft, the main result of running the <code>PanACoTA</code>'s pipeline <code>align</code> module.<br>
+It is the concatenate of the core genes alignment.<br>
+It is from this alignment that we will build the phylogenetic tree in the next step.<br></p>
+<hr />
+<h2 id="step-6-build-a-phylogenomic-tree"><strong>Step 6: Build a phylogenomic tree</strong></h2>
+<p>Let's also break down the command below in parts:<br></p>
+<ul>
+<li><code>PanACoTA</code> - the name of the tool we are running.<br></li>
+<li><code>tree</code> - module of this tool for phylogenetic tree construction.<br></li>
+<li>By key <code>-a</code> we pass the alignment file (<code>EsMa.nucl.grp.aln</code>).<br></li>
+<li>By key <code>-s</code> we specify which tree building tool we want to use.<br></li>
+<li>By key <code>-o</code> we specify where to store the output files.<br></li>
+</ul>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>PanACoTA<span class="w"> </span>tree<span class="w"> </span>-a<span class="w"> </span>Alignment/Phylo-EsMa/EsMa.nucl.grp.aln<span class="w"> </span>-s<span class="w"> </span>iqtree2<span class="w"> </span>-o<span class="w"> </span>Tree
+</span></code></pre></div>
+<p>Let's look at the output!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>ls<span class="w"> </span>Tree
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>EsMa.nucl.grp.aln.iqtree_tree.bionj   EsMa.nucl.grp.aln.iqtree_tree.treefile
+</span><span id="__span-62-2"><a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>EsMa.nucl.grp.aln.iqtree_tree.ckp.gz  PanACoTA-tree-iqtree2.log
+</span><span id="__span-62-3"><a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>EsMa.nucl.grp.aln.iqtree_tree.iqtree  PanACoTA-tree-iqtree2.log.details
+</span><span id="__span-62-4"><a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a>EsMa.nucl.grp.aln.iqtree_tree.log     PanACoTA-tree-iqtree2.log.err
+</span><span id="__span-62-5"><a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a>EsMa.nucl.grp.aln.iqtree_tree.mldist
+</span></code></pre></div>
+<ul>
+<li><code>PanACoTA-tree-iqtree2.log</code>.<br></li>
+<li><code>PanACoTA-tree-iqtree2.log.details</code>.<br></li>
+<li><code>PanACoTA-tree-iqtree2.log.err</code>.<br></li>
+</ul>
+<p>It's all <code>PanACoTA</code>'s own logs</p>
+<ul>
+<li><code>EsMa.nucl.grp.aln.iqtree_tree.bionj</code> - this file contains the initial tree representation (tree draft).<br></li>
+<li><code>EsMa.nucl.grp.aln.iqtree_tree.treefile</code> - the very tree file we are interested in.<br></li>
+</ul>
+<p>Let's take a look at it!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>cat<span class="w"> </span>Tree/EsMa.nucl.grp.aln.iqtree_tree.treefile
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>(EsMa.0824.00001:0.0899533237,((EsMa.0824.00002:0.0014558718,(((EsMa.0824.00003:0.0012307785,EsMa.0824.00012:0.0012870353):0.0002683664,(EsMa.0824.00004:0.0013314298,(EsMa.0824.00006:0.0026908476,((EsMa.0824.00009:0.0000384090,EsMa.0824.00010:0.0000274042):0.0015596552,EsMa.0824.00013:0.0014403274):0.0002421241):0.0003947757):0.0002574774):0.0000880096,(EsMa.0824.00007:0.0012606069,EsMa.0824.00008:0.0011876549):0.0002556339):0.0001349309):0.0002322047,EsMa.0824.00014:0.0012843745):0.0012230243,(EsMa.0824.00005:0.0000163401,EsMa.0824.00011:0.0001690095):0.0009982711);
+</span></code></pre></div>
+<p>This is a tree in <code>Newick</code> format.<br></p>
+<h3 id="step-61-tree-visualization"><strong>Step 6.1. Tree visualization</strong></h3>
+<p>For more details please visit <a href="https://github.com/iliapopov17/NGS-Handbook/tree/main/04_Phylogenetics">Phylogenetics handbook</a>.<br>
+Here we will not use <code>iTOL</code> or <code>FigTree</code> but we will visualize the tree in the fastest way possible - using pseudo-graphics.<br></p>
+<p>Import <code>Phylo</code> module from <code>Biopython</code>.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">Phylo</span>
+</span></code></pre></div>
+<p>Read the <code>EsMa.nucl.grp.aln.iqtree_tree.treefile</code> file to the <code>tree</code> variable.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="n">tree</span> <span class="o">=</span> <span class="n">Phylo</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;Tree/EsMa.nucl.grp.aln.iqtree_tree.treefile&quot;</span><span class="p">,</span> <span class="s2">&quot;newick&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Visualize the tree!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="n">Phylo</span><span class="o">.</span><span class="n">draw_ascii</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>  __________________________________________________________ EsMa.0824.00001
+</span><span id="__span-68-2"><a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a> |
+</span><span id="__span-68-3"><a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a> , EsMa.0824.00002
+</span><span id="__span-68-4"><a id="__codelineno-68-4" name="__codelineno-68-4" href="#__codelineno-68-4"></a> |
+</span><span id="__span-68-5"><a id="__codelineno-68-5" name="__codelineno-68-5" href="#__codelineno-68-5"></a> |, EsMa.0824.00003
+</span><span id="__span-68-6"><a id="__codelineno-68-6" name="__codelineno-68-6" href="#__codelineno-68-6"></a> ||
+</span><span id="__span-68-7"><a id="__codelineno-68-7" name="__codelineno-68-7" href="#__codelineno-68-7"></a> || EsMa.0824.00012
+</span><span id="__span-68-8"><a id="__codelineno-68-8" name="__codelineno-68-8" href="#__codelineno-68-8"></a> ||
+</span><span id="__span-68-9"><a id="__codelineno-68-9" name="__codelineno-68-9" href="#__codelineno-68-9"></a> |, EsMa.0824.00004
+</span><span id="__span-68-10"><a id="__codelineno-68-10" name="__codelineno-68-10" href="#__codelineno-68-10"></a> ||
+</span><span id="__span-68-11"><a id="__codelineno-68-11" name="__codelineno-68-11" href="#__codelineno-68-11"></a> ||_ EsMa.0824.00006
+</span><span id="__span-68-12"><a id="__codelineno-68-12" name="__codelineno-68-12" href="#__codelineno-68-12"></a> ||
+</span><span id="__span-68-13"><a id="__codelineno-68-13" name="__codelineno-68-13" href="#__codelineno-68-13"></a>_||, EsMa.0824.00009
+</span><span id="__span-68-14"><a id="__codelineno-68-14" name="__codelineno-68-14" href="#__codelineno-68-14"></a> |,|
+</span><span id="__span-68-15"><a id="__codelineno-68-15" name="__codelineno-68-15" href="#__codelineno-68-15"></a> ||| EsMa.0824.00010
+</span><span id="__span-68-16"><a id="__codelineno-68-16" name="__codelineno-68-16" href="#__codelineno-68-16"></a> ||
+</span><span id="__span-68-17"><a id="__codelineno-68-17" name="__codelineno-68-17" href="#__codelineno-68-17"></a> || EsMa.0824.00013
+</span><span id="__span-68-18"><a id="__codelineno-68-18" name="__codelineno-68-18" href="#__codelineno-68-18"></a> ||
+</span><span id="__span-68-19"><a id="__codelineno-68-19" name="__codelineno-68-19" href="#__codelineno-68-19"></a> |, EsMa.0824.00007
+</span><span id="__span-68-20"><a id="__codelineno-68-20" name="__codelineno-68-20" href="#__codelineno-68-20"></a> ||
+</span><span id="__span-68-21"><a id="__codelineno-68-21" name="__codelineno-68-21" href="#__codelineno-68-21"></a> || EsMa.0824.00008
+</span><span id="__span-68-22"><a id="__codelineno-68-22" name="__codelineno-68-22" href="#__codelineno-68-22"></a> |
+</span><span id="__span-68-23"><a id="__codelineno-68-23" name="__codelineno-68-23" href="#__codelineno-68-23"></a> | EsMa.0824.00014
+</span><span id="__span-68-24"><a id="__codelineno-68-24" name="__codelineno-68-24" href="#__codelineno-68-24"></a> |
+</span><span id="__span-68-25"><a id="__codelineno-68-25" name="__codelineno-68-25" href="#__codelineno-68-25"></a> , EsMa.0824.00005
+</span><span id="__span-68-26"><a id="__codelineno-68-26" name="__codelineno-68-26" href="#__codelineno-68-26"></a> |
+</span><span id="__span-68-27"><a id="__codelineno-68-27" name="__codelineno-68-27" href="#__codelineno-68-27"></a> | EsMa.0824.00011
+</span></code></pre></div>
+<p>That's right! The longest branch is <em>Shigella flexneri</em>.<br></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02_Variant_Calling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: II. Genomic Variation Analysis">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                II. Genomic Variation Analysis
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../IV.%20Phylogenetics/04_00_Overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Ilia Popov
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://iliapopov17.github.io/" target="_blank" rel="noopener" title="iliapopov17.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm80 256h64c44.2 0 80 35.8 80 80 0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16 0-44.2 35.8-80 80-80m-32-96a64 64 0 1 1 128 0 64 64 0 1 1-128 0m256-32h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16m0 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16m0 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<iljapopov17@gmail.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/iliapopov17" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "content.code.copy", "search", "search.suggest", "search.highlight", "navigation.footer"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>
