@@ -1,5 +1,5 @@
 # **Crohn's disease**
->This folder contains a training data for 16S amplicon analysis and an example of analysis.
+>This chapter contains a training data for 16S amplicon analysis and an example of analysis.
 
 ## **Introduction**
 
