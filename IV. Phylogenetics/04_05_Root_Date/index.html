@@ -1,0 +1,1432 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iliapopov17.github.io/NGS-Handbook/IV.%20Phylogenetics/04_05_Root_Date/">
+      
+      
+        <link rel="prev" href="../04_04_Trees/">
+      
+      
+        <link rel="next" href="../04_06_Phylogenomics/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Rooting and comparing trees; Dating - NGS Analysis Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-4RBMQR50GK"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-4RBMQR50GK",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-4RBMQR50GK",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    <html data-lt-installed="true">
+        <head>
+            <!-- HTML Meta Tags -->
+            <title>NGS Data Analysis Handbook</title>
+            <meta name="description" content="">
+
+            <!-- Facebook Meta Tags -->
+            <meta property="og:url" content="https://iliapopov17.github.io/NGS-Handbook/">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="NGS Data Analysis Handbook">
+            <meta property="og:description" content="">
+            <meta property="og:image" content="https://iliapopov17.github.io/images/ngs-handbook/metatag.png">
+
+            <!-- Twitter Meta Tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta property="twitter:domain" content="iliapopov17.github.io">
+            <meta property="twitter:url" content="https://iliapopov17.github.io/NGS-Handbook/">
+            <meta name="twitter:title" content="NGS Data Analysis Handbook">
+            <meta name="twitter:description" content="">
+            <meta name="twitter:image" content="https://iliapopov17.github.io/images/ngs-handbook/metatag.png">
+
+            <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        </head>
+        <body>
+        </body>
+    </html>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rooting-and-comparing-trees-dating" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NGS Analysis Handbook" class="md-header__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NGS Analysis Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Rooting and comparing trees; Dating
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/iliapopov17/NGS-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    iliapopov17/NGS-Handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NGS Analysis Handbook" class="md-nav__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    NGS Analysis Handbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/iliapopov17/NGS-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    iliapopov17/NGS-Handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Quality_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I. Quality Control of Raw Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Variant_Calling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    II. Genomic Variation Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Whole_%28pan%29genome_analyses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    III. Whole Genome and Pangenome Analyses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IV. Phylogenetics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            IV. Phylogenetics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_00_Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_01_Intro_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_02_Mining_Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with NCBI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_03_MSA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Sequence Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_04_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparing the alignment and building trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Rooting and comparing trees; Dating
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Rooting and comparing trees; Dating
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-rooting-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Rooting trees
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Rooting trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-rooting-a-tree-by-a-known-external-clade-in-iq-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Rooting a tree by a known external clade in IQ-TREE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-rooting-a-tree-using-midpoint-rooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Rooting a tree using midpoint rooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Rooting a tree using midpoint rooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-21-visualisation-of-the-rooted-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.1: Visualisation of the rooted trees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-rooting-a-tree-using-an-irreversible-non-reversible-model-iq-tree2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Rooting a tree using an irreversible (non-reversible) model (iq-tree2)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-root-supported-tree-visualisation-rootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Root-supported tree visualisation (rootstrap)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-dating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Dating
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_06_Phylogenomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phylogenomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_07_Visualization_Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualization Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_08_Tanglegram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tanglegram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    V. 16S amplicon analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            V. 16S amplicon analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../V.%2016S_amplicon_analysis/05_00_Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../V.%2016S_amplicon_analysis/05_01_Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16S analysis with DADA2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../V.%2016S_amplicon_analysis/05_02_Crohns_disease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crohn's disease
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../V.%2016S_amplicon_analysis/05_03_Parkinsons_disease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parkinson's disease
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-rooting-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Rooting trees
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Rooting trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-rooting-a-tree-by-a-known-external-clade-in-iq-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Rooting a tree by a known external clade in IQ-TREE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-rooting-a-tree-using-midpoint-rooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Rooting a tree using midpoint rooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Rooting a tree using midpoint rooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-21-visualisation-of-the-rooted-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2.1: Visualisation of the rooted trees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-rooting-a-tree-using-an-irreversible-non-reversible-model-iq-tree2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Rooting a tree using an irreversible (non-reversible) model (iq-tree2)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-root-supported-tree-visualisation-rootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Root-supported tree visualisation (rootstrap)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-dating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Dating
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="rooting-and-comparing-trees-dating"><strong>Rooting and comparing trees; Dating</strong></h1>
+<h2 id="instruction"><strong>Instruction</strong></h2>
+<p><img alt="CLT" src="https://img.shields.io/badge/Language-Command Line Tools &amp; Python-steelblue" /><br>
+<img alt="IDE" src="https://img.shields.io/badge/Recommended IDE-Jupyter Notebook-steelblue" /></p>
+<details class="question" open="open">
+<summary>Question</summary>
+<p>Where to get the data?</p>
+</details>
+<p>Download it from GitHub repository:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget<span class="w"> </span>https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/data/04_Phylogenetics/04_05_Root_Date.zip
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>unzip<span class="w"> </span>04_05_Root_Date.zip<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>04_05_Root_Date.zip
+</span></code></pre></div>
+<p>These are the data and scripts we will be working with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Archive:  04_05_Root_Date.zip
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>   creating: scripts/
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  inflating: scripts/draw_tree.R     
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  inflating: scripts/draw_tree_max.R  
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>   creating: data/
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  inflating: data/SUP35_aln_prank.trim.fas
+</span></code></pre></div>
+<blockquote>
+<p>For this work, we will use a filtered alignment (this is the same one we got in the <a href="https://github.com/iliapopov17/NGS-Handbook/tree/main/04_Phylogenetics/04_04_Trees">Trees step</a>)</p>
+</blockquote>
+<hr />
+<h2 id="part-1-rooting-trees"><strong>Part 1: Rooting trees</strong></h2>
+<h3 id="step-1-rooting-a-tree-by-a-known-external-clade-in-iq-tree"><strong>Step 1: Rooting a tree by a known external clade in <code>IQ-TREE</code></strong></h3>
+<p>Our goal in this part of the manual is to compare different rooting methods.<br>
+That's why we shall start by making different trees.<br>
+First, let's make a 1000 ufb tree.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>iqtree2<span class="w"> </span>-s<span class="w"> </span>data/SUP35_aln_prank.trim.fas<span class="w"> </span>-m<span class="w"> </span>TIM3+F+G4<span class="w"> </span>-pre<span class="w"> </span>data/iqtree_ufb/SUP35_TIM3_ufb<span class="w"> </span>-bb<span class="w"> </span><span class="m">1000</span>
+</span></code></pre></div>
+<p>Then let's make a <code>-bb 1000 -alrt 1000 -abayes</code> tree.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>iqtree2<span class="w"> </span>-s<span class="w"> </span>data/SUP35_aln_prank.trim.fas<span class="w"> </span>-m<span class="w"> </span>TIM3+F+G4<span class="w"> </span>-pre<span class="w"> </span>data/iqtree_ufb_alrt_abayes/SUP35_TIM3_ufb_alrt_abayes<span class="w"> </span>-bb<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-alrt<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-abayes
+</span></code></pre></div>
+<p>Finally, let's make a tree rooted by the outgroup!<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>iqtree2<span class="w"> </span>-s<span class="w"> </span>data/SUP35_aln_prank.trim.fas<span class="w"> </span>-m<span class="w"> </span>TIM3+F+G4<span class="w"> </span>-pre<span class="w"> </span>data/iqtree_root_outgroup/SUP35_TIM3_root_outgroup<span class="w"> </span>-bb<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-alrt<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-abayes<span class="w">  </span>-o<span class="w"> </span>SUP35_Kla_AB039749,SUP35_Agos_ATCC_10895_NM_211584
+</span></code></pre></div>
+<hr />
+<h3 id="step-2-rooting-a-tree-using-midpoint-rooting"><strong>Step 2: Rooting a tree using <code>midpoint rooting</code></strong></h3>
+<p>There are two ways to root the tree at the midpoint: by using Python or R.<br>
+Below we will use prewritten scripts.<br>
+Let's take a look at them:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">R</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">midpoint_root.py</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">sys</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">ete3</span> <span class="kn">import</span> <span class="n">Tree</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">intre</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">tre</span> <span class="o">=</span> <span class="n">Tree</span><span class="p">(</span><span class="n">intre</span><span class="p">,</span> <span class="n">quoted_node_names</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">midpoint</span> <span class="o">=</span> <span class="n">tre</span><span class="o">.</span><span class="n">get_midpoint_outgroup</span><span class="p">()</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">tre</span><span class="o">.</span><span class="n">set_outgroup</span><span class="p">(</span><span class="n">midpoint</span><span class="p">)</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">tre</span><span class="o">.</span><span class="n">write</span><span class="p">())</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-R highlight"><span class="filename">midpoint_root.R</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">#install.packages(&quot;phytools&quot;)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">phytools</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">tree_alrt_abayes_ufb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.tree</span><span class="p">(</span><span class="s">&quot;iqtree_ufb_alrt_abayes/SUP35_TIM3_ufb_alrt_abayes.treefile&quot;</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nf">midpoint.root</span><span class="p">(</span><span class="n">tree_alrt_abayes_ufb</span><span class="p">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nf">write.tree</span><span class="p">(</span><span class="n">tree_alrt_abayes_ufb</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;iqtree_ufb_alrt_abayes/SUP35_TIM3_ufb_alrt_abayes_rooted.treefile&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p><strong><em>Input</em></strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Python script</label><label for="__tabbed_2_2">R script</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3<span class="w"> </span>scripts/midpoint_root.py<span class="w"> </span>data/iqtree_ufb/SUP35_TIM3_ufb.treefile<span class="w"> </span>&gt;data/iqtree_ufb/SUP35_TIM3_ufb_midpoint.treefile
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Rscript<span class="w"> </span>scripts/midpoint_root.R
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="step-21-visualisation-of-the-rooted-trees"><strong>Step 2.1: Visualisation of the rooted trees</strong></h4>
+<p>For drawing trees we will use a simple prewritten R script. Let's take a look at it to understand how it works:</p>
+<div class="language-R highlight"><span class="filename">draw_tree.R</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">#!/usr/bin/env Rscript</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">args</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">commandArgs</span><span class="p">(</span><span class="n">trailingOnly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nf">library</span><span class="p">(</span><span class="n">ggtree</span><span class="p">)</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">tr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.tree</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="w"> </span><span class="c1">##SUP35_raxml.raxml.bestTree</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="nf">ggtree</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">geom_tiplab</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">xlim</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="nf">geom_treescale</span><span class="p">()</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="nf">ggsave</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">2</span><span class="p">])</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Rscript<span class="w"> </span>scripts/draw_tree.R<span class="w"> </span>data/iqtree_ufb/SUP35_TIM3_ufb.treefile<span class="w"> </span>imgs/SUP35_TIM3_ufb.png
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Rscript<span class="w"> </span>scripts/draw_tree.R<span class="w"> </span>data/iqtree_ufb/SUP35_TIM3_ufb_midpoint.treefile<span class="w"> </span>imgs/SUP35_TIM3_ufb_midpoint.png
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Rscript<span class="w"> </span>scripts/draw_tree.R<span class="w"> </span>data/iqtree_root_outgroup/SUP35_TIM3_root_outgroup.treefile<span class="w"> </span>imgs/SUP35_TIM3_root_outgroup.png
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Rscript<span class="w"> </span>scripts/draw_tree.R<span class="w"> </span>data/iqtree_ufb_alrt_abayes/SUP35_TIM3_ufb_alrt_abayes_rooted.treefile<span class="w"> </span>imgs/SUP35_TIM3_ufb_alrt_abayes_rooted.png
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<table>
+<thead>
+<tr>
+<th>SUP35_TIM3_ufb.png</th>
+<th>SUP35_TIM3_ufb_midpoint.png</th>
+<th>SUP35_TIM3_root_outgroup.png</th>
+<th>SUP35_TIM3_ufb_alrt_abayes_rooted.png</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_ufb.png"></td>
+<td><img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_ufb_midpoint.png"></td>
+<td><img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_root_outgroup.png"></td>
+<td><img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/SUP35_TIM3_ufb_alrt_abayes_rooted.png"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Unrooted and rooted by external group are completely identical. 0 differences.<br></li>
+<li>Rooted by <code>midpoint</code> looks neater. Topology looks better.<br></li>
+</ul>
+<hr />
+<h3 id="step-3-rooting-a-tree-using-an-irreversible-non-reversible-model-iq-tree2"><strong>Step 3: Rooting a tree using an irreversible (<code>non-reversible</code>) model (<code>iq-tree2</code>)</strong></h3>
+<p>If we have a rather complex tree structure (it is huge, there are long branches, imbalance in sampling by different taxa), rooting the tree by external group will not give us the result we expect.<br>
+There are more intelligent models for this.<br>
+One of them is the easy-to-apply <code>non-reversible</code> model <code>iq-tree2</code>.<br>
+The idea is that they allow you to predict where the root was! This, by analogy with <code>bootstrap</code> is called <code>rootstrap</code>.</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>iqtree2<span class="w"> </span>-s<span class="w"> </span>data/SUP35_aln_prank.trim.fas<span class="w"> </span>-m<span class="w"> </span>TIM3+F+G4<span class="w"> </span>-pre<span class="w"> </span>data/iqtree_root_auto/SUP35_TIM3_root_auto<span class="w"> </span>--model-joint<span class="w"> </span><span class="m">12</span>.12<span class="w"> </span>-B<span class="w"> </span><span class="m">1000</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="c1"># -B 1000 -  it&#39;s not `bootstrap`, it&#39;s how many times to run `rootstrap`</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>cat<span class="w"> </span>data/iqtree_root_auto/SUP35_TIM3_root_auto.rootstrap.nex
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1"># - contains information about the algorithm&#39;s confidence in where the root is located</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>#NEXUS
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>[ This file is best viewed in FigTree. ]
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>begin trees;
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  tree tree_1 = ((SUP35_Kla_AB039749:0.2581582648[&amp;id=&quot;2&quot;,rootstrap=&quot;26.8&quot;],SUP35_Agos_ATCC_10895_NM_211584:0.3420323394[&amp;id=&quot;3&quot;,rootstrap=&quot;5.4&quot;]):0.1209998432[&amp;id=&quot;1&quot;,rootstrap=&quot;42.4&quot;],(((((((SUP35_Scer_74-D694_GCA_001578265.1:0.0004800339[&amp;id=&quot;11&quot;,rootstrap=&quot;0&quot;],SUP35_Scer_beer078_CM005938:0.0000010000[&amp;id=&quot;12&quot;,rootstrap=&quot;0&quot;]):0.0000010000[&amp;id=&quot;10&quot;,rootstrap=&quot;0&quot;],SUP35_Sbou_unique28_CM003560:0.0004800702[&amp;id=&quot;13&quot;,rootstrap=&quot;0&quot;]):0.0463459057[&amp;id=&quot;9&quot;,rootstrap=&quot;0&quot;],SUP35_Spar_A12_Liti:0.0325384431[&amp;id=&quot;14&quot;,rootstrap=&quot;0.1&quot;]):0.0354767121[&amp;id=&quot;8&quot;,rootstrap=&quot;0.2&quot;],SUP35_Smik_IFO1815T_30:0.0736998639[&amp;id=&quot;15&quot;,rootstrap=&quot;0.6&quot;]):0.0322607827[&amp;id=&quot;7&quot;,rootstrap=&quot;0.5&quot;],SUP35_Skud_IFO1802T_36:0.0970836557[&amp;id=&quot;16&quot;,rootstrap=&quot;0.7&quot;]):0.0154599513[&amp;id=&quot;6&quot;,rootstrap=&quot;1.8&quot;],SUP35_Sarb_H-6_chrXIII_CM001575:0.0787155739[&amp;id=&quot;17&quot;,rootstrap=&quot;4.8&quot;]):0.0099429593[&amp;id=&quot;5&quot;,rootstrap=&quot;8.6&quot;],SUP35_Seub_CBS12357_chr_II_IV_DF968535:0.0912344001[&amp;id=&quot;18&quot;,rootstrap=&quot;5.1&quot;]):0.1942253516[&amp;id=&quot;4&quot;,rootstrap=&quot;42.4&quot;]):0.0000010000[&amp;id=&quot;0&quot;,rootstrap=&quot;42.4&quot;];
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>end;
+</span></code></pre></div>
+<p>This is basically a <code>Newick</code> file, but strange <code>Newick</code>  because it has square brackets in it.<br>
+Programs that read <code>Newick</code> format will not be able to read this tree. According to the developers of <code>iqtree</code> it is better to read this tree in <code>FigTree</code>.<br></p>
+<hr />
+<h3 id="step-4-root-supported-tree-visualisation-rootstrap"><strong>Step 4: Root-supported tree visualisation (<code>rootstrap</code>)</strong></h3>
+<details class="question" open="open">
+<summary>Question</summary>
+<p>What can we say about the algorithm's confidence in root selection?</p>
+</details>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>figtree<span class="w"> </span>data/iqtree_root_auto/SUP35_TIM3_root_auto.rootstrap.nex
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-16%20at%2000.24.10.png" align='center', width="100%">
+</div>
+
+<details class="success" open="open">
+<summary>Success</summary>
+<p>It can't say anything specific about where the tree splits. There's a 42.4% chance the root is either in one place or the other.<br></p>
+</details>
+<hr />
+<h2 id="part-2-dating"><strong>Part 2: Dating</strong></h2>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>Analyze the age of the common ancestor of the two species of smoky leopards from the article https://doi.org/10.1016/j.cub.2006.08.066 based on sequencing data of the <code>atp8</code> gene region, relying on known data on the frequency of substitutions in mtDNA (approximately 2% per million years) in <code>beauti</code> and <code>beast</code><br></p>
+<ul>
+<li>Check the quality in <code>Tracer</code><br></li>
+<li>Combine trees in <code>treeannotator</code>.<br></li>
+<li>Draw the final tree.<br></li>
+<li>Be sure to show estimates of the age of the common ancestor at the nodes!<br></li>
+</ul>
+</details>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>efetch<span class="w"> </span>-db<span class="w"> </span>popset<span class="w"> </span>-id<span class="w"> </span><span class="m">126256179</span><span class="w"> </span>-format<span class="w"> </span>fasta<span class="w"> </span>&gt;data/atp8/felidae_atp8.fa
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">1</span>,2,3<span class="w"> </span>data/atp8/felidae_atp8.fa<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ /_/g&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>data/atp8/felidae_atp8.renamed.fa
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>mafft<span class="w"> </span>--auto<span class="w"> </span>data/atp8/felidae_atp8.renamed.fa<span class="w"> </span>&gt;data/atp8/felidae_atp8.aln
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>trimal<span class="w"> </span>-in<span class="w"> </span>data/atp8/felidae_atp8.aln<span class="w"> </span>-out<span class="w"> </span>data/atp8/felidae_atp8.trim.fas<span class="w"> </span>-nogaps
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>iqtree2<span class="w"> </span>-s<span class="w"> </span>data/atp8/felidae_atp8.trim.fas<span class="w"> </span>-o<span class="w"> </span>EF437591.1_Felis_catus<span class="w"> </span>-alrt<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-abayes
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">Phylo</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">tree</span> <span class="o">=</span> <span class="n">Phylo</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;data/atp8/felidae_atp8.trim.fas.treefile&quot;</span><span class="p">,</span> <span class="s2">&quot;newick&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">Phylo</span><span class="o">.</span><span class="n">draw_ascii</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>                                          , EF437567.1_Neofelis_nebulosa
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>                                          |
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>                                          | EF437569.1_Neofelis_nebulosa
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>                                          |
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>                                          | EF437570.1_Neofelis_nebulosa
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>                                          |
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>                                   _______| EF437568.1_Neofelis_nebulosa
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>                                  |       |
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>  ________________________________|       |_ EF437571.1_Neofelis_nebulosa
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a> |                                |
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a> |                                |            , EF437572.1_Neofelis_diardi
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a> |                                |____________|
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a> |                                             | EF437573.1_Neofelis_diardi
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a> |
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a> |                             __ EF437581.1_Panthera_onca
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a> |                           ,|
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>_|                      _____||____ EF437587.1_Panthera_tigris
+</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a> |                     |     |
+</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a> |            _________|     |_______ EF437583.1_Uncia_uncia
+</span><span id="__span-24-20"><a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a> |           |         |
+</span><span id="__span-24-21"><a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a> |___________|         |________ EF437585.1_Panthera_leo
+</span><span id="__span-24-22"><a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a> |           |
+</span><span id="__span-24-23"><a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a> |           |______________ EF437589.1_Panthera_pardus
+</span><span id="__span-24-24"><a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a> |
+</span><span id="__span-24-25"><a id="__codelineno-24-25" name="__codelineno-24-25" href="#__codelineno-24-25"></a> |______________ EF437591.1_Felis_catus
+</span></code></pre></div>
+<p>The outside group is the house cat. Because everyone else is a big cat.<br>
+Fundamentally our tree is similar to that published in articles.<br>
+In foreign colleagues the tree was based on several genes, we take only 1 piece of data.<br></p>
+<p><strong>Beauti</strong></p>
+<p><code>Beauti</code> is the GUI application. So I will just provide as many screenshots as possible.</p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2021.59.15.png" align='center', width="100%">
+</div>
+
+<p>When loading the file, we select that we have nucleotide sequences</p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2021.59.21.png" align='center', width="100%">
+</div>
+
+<p>Everything is okay.</p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.01.40.png" align='center', width="100%">
+</div>
+
+<p>In <code>Site model</code> select TN93 and empirical frequencies</p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.02.46.png" align='center', width="100%">
+</div>
+
+<p>In <code>Clock model</code> we choose 0.02. Why? Because we rely on the known data on the frequency of substitutions in mtDNA (approximately 2% per million years)</p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.06.15.png" align='center', width="100%">
+</div>
+
+<p>Everything is okay.</p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.07.12.png" align='center', width="100%">
+</div>
+
+<p>Save everything to <code>felidae_2percent.xml</code>.</p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>beast<span class="w"> </span>data/atp8/felidae_2percent.xml
+</span></code></pre></div>
+<p><strong>Tracer</strong></p>
+<p><code>Tracer</code> is the GUI application. So I will just provide as many screenshots as possible.</p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.37.25.png" align='center', width="100%">
+</div>
+
+<p>All <code>ESS</code> scores are in perfect order.</p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.38.23.png" align='center', width="100%">
+</div>
+
+<p>The so-called "hairy caterpillar".</p>
+<p><strong>TreeAnnotator</strong></p>
+<p><code>TreeAnnotator</code> is the GUI application. So I will just provide as many screenshots as possible.</p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.51.48.png" align='center', width="100%">
+</div>
+
+<p>Set parameters, and set <code>input</code> and <code>output</code>. Useful hint - output can be named the same way, but not .trees, just .tree!</p>
+<p><strong>FigTree</strong></p>
+<p><code>FigTree</code> is the GUI application. So I will just provide as many screenshots as possible.</p>
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/Screenshot%202024-03-07%20at%2022.59.15.png" align='center', width="100%">
+</div>
+
+<div style='justify-content: center'>
+<img src="/images/ngs-handbook/04_Phylogenetics/04_05_Root_Date/felidae_atp8.tree.png" align='center', width="100%">
+</div>
+
+<p>Fiddled with the parameters and got these results.</p>
+<details class="success" open="open">
+<summary>Success</summary>
+<p>Well. The common ancestor of our smoky leopards is about 2.5 million years old.</p>
+</details>
+<hr />
+<details class="question" open="open">
+<summary>Question</summary>
+<p>Compare the results of this analysis (age of the last common ancestor of <em>Neofelis</em>) with published articles (https://www.science.org/doi/10.1126/sciadv.adh9143, https://www.sciencedirect.com/science/article/pii/S2589004222019198).<br>
+What conclusions can be drawn?</p>
+</details>
+<details class="success" open="open">
+<summary>Success</summary>
+<p>In the first article - https://www.science.org/doi/10.1126/sciadv.adh9143 there was a full genome analysis. Their estimate of the age of the common ancestor of smoky leopards is 2.2 million years.<br>
+And we hit 100 nucleotides pretty good!<br></p>
+<p>But in the second article - https://www.sciencedirect.com/science/article/pii/S2589004222019198 - the age of the ancestor is 5.1 million years old.... Well. Interesting. Can't explain it yet.<br></p>
+</details>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../04_04_Trees/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Preparing the alignment and building trees">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Preparing the alignment and building trees
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04_06_Phylogenomics/" class="md-footer__link md-footer__link--next" aria-label="Next: Phylogenomics">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Phylogenomics
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Ilia Popov
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://iliapopov17.github.io/" target="_blank" rel="noopener" title="iliapopov17.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm80 256h64c44.2 0 80 35.8 80 80 0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16 0-44.2 35.8-80 80-80m-32-96a64 64 0 1 1 128 0 64 64 0 1 1-128 0m256-32h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16m0 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16m0 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<iljapopov17@gmail.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/iliapopov17" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "content.code.copy", "search", "search.suggest", "search.highlight", "navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
