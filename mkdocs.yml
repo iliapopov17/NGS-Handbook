@@ -75,7 +75,7 @@ extra:
     - icon: fontawesome/brands/github 
       link: https://github.com/iliapopov17
     - icon: rsf/RSF_vertical
-      link: https://rscf.ru/project/25-24-00351/
+      link: https://rscf.ru/en/project/25-24-00351/
   analytics:
     provider: google
     property: G-4RBMQR50GK
