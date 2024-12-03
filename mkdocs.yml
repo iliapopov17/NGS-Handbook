@@ -54,6 +54,12 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
 plugins:
   - search
   
@@ -68,6 +74,8 @@ extra:
       link: mailto:<iljapopov17@gmail.com>
     - icon: fontawesome/brands/github 
       link: https://github.com/iliapopov17
+    - icon: rsf/RSF_vertical
+      link: https://rscf.ru/project/25-24-00351/
   analytics:
     provider: google
     property: G-4RBMQR50GK
