@@ -5,7 +5,7 @@ hide:
 # **Introduction**
 
 <figure markdown="span">
-  ![NGS-Handbook](/images/ngs-handbook/metatag.png){ width="50%" }
+  ![NGS-Handbook](/images/metatag.png){ width="50%" }
 </figure>
 
 Welcome to the handbook on NGS data analysis!<br>
