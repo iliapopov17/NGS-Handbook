@@ -4,10 +4,8 @@ hide:
 ---
 # **Introduction**
 
-<img src="/images/ngs-handbook/metatag.png" width="33%" align="center">
-
 <figure markdown="span">
-  ![NGS-Handbook](/images/ngs-handbook/metatag.png){ width="33%" }
+  ![NGS-Handbook](/images/ngs-handbook/metatag.png){ width="50%" }
 </figure>
 
 Welcome to the handbook on NGS data analysis!<br>
