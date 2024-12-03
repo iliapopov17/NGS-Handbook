@@ -6,6 +6,10 @@ hide:
 
 <img src="/images/ngs-handbook/metatag.png" width="33%" align="center">
 
+<figure markdown="span">
+  ![NGS-Handbook](https://github.com/iliapopov17/iliapopov17.github.io/blob/main/images/ngs-handbook/metatag.png){ width="33%" }
+</figure>
+
 Welcome to the handbook on NGS data analysis!<br>
 Once this was the library of manuals I used in work. Then I decided to deploy a website to make it more convenient for me to use. The best part of it that now anyone can use it too! Please enjoy!<br>
 
