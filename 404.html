@@ -1,0 +1,889 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="/NGS-Handbook/assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>NGS Analysis Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="/NGS-Handbook/assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="/NGS-Handbook/assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("/NGS-Handbook/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-4RBMQR50GK"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-4RBMQR50GK",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-4RBMQR50GK",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    <html data-lt-installed="true">
+        <head>
+            <!-- HTML Meta Tags -->
+            <title>NGS Data Analysis Handbook</title>
+            <meta name="description" content="">
+
+            <!-- Facebook Meta Tags -->
+            <meta property="og:url" content="https://iliapopov17.github.io/NGS-Handbook/">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="NGS Data Analysis Handbook">
+            <meta property="og:description" content="">
+            <meta property="og:image" content="https://iliapopov17.github.io/images/ngs-handbook/metatag.png">
+
+            <!-- Twitter Meta Tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta property="twitter:domain" content="iliapopov17.github.io">
+            <meta property="twitter:url" content="https://iliapopov17.github.io/NGS-Handbook/">
+            <meta name="twitter:title" content="NGS Data Analysis Handbook">
+            <meta name="twitter:description" content="">
+            <meta name="twitter:image" content="https://iliapopov17.github.io/images/ngs-handbook/metatag.png">
+
+            <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        </head>
+        <body>
+        </body>
+    </html>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/NGS-Handbook/." title="NGS Analysis Handbook" class="md-header__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  <img src="/NGS-Handbook/assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NGS Analysis Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/iliapopov17/NGS-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    iliapopov17/NGS-Handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/NGS-Handbook/." title="NGS Analysis Handbook" class="md-nav__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  <img src="/NGS-Handbook/assets/logo.svg" alt="logo">
+
+    </a>
+    NGS Analysis Handbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/iliapopov17/NGS-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    iliapopov17/NGS-Handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/01_Quality_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I. Quality Control of Raw Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/02_Variant_Calling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    II. Genomic Variation Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/03_Whole_%28pan%29genome_analyses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    III. Whole Genome and Pangenome Analyses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IV. Phylogenetics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            IV. Phylogenetics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/IV.%20Phylogenetics/04_00_Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/IV.%20Phylogenetics/04_01_Intro_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/IV.%20Phylogenetics/04_02_Mining_Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with NCBI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/IV.%20Phylogenetics/04_03_MSA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Sequence Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/IV.%20Phylogenetics/04_04_Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparing the alignment and building trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/IV.%20Phylogenetics/04_05_Root_Date/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rooting and comparing trees; Dating
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/IV.%20Phylogenetics/04_06_Phylogenomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phylogenomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/IV.%20Phylogenetics/04_07_Visualization_Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualization Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/IV.%20Phylogenetics/04_08_Tanglegram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tanglegram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    V. 16S amplicon analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            V. 16S amplicon analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/V.%2016S_amplicon_analysis/05_00_Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/V.%2016S_amplicon_analysis/05_01_Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16S analysis with DADA2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/V.%2016S_amplicon_analysis/05_02_Crohns_disease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practice 1: Crohn's disease
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/NGS-Handbook/V.%2016S_amplicon_analysis/05_03_Parkinsons_disease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practice 2: Parkinson's disease
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  <h1>404 - Not found</h1>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href="https://iliapopov17.github.io/">Ilia Popov</a>. Funded by RSF grant No. <a href="https://rscf.ru/en/project/25-24-00351/">25-24-00351</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://iliapopov17.github.io/" target="_blank" rel="noopener" title="iliapopov17.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm80 256h64c44.2 0 80 35.8 80 80 0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16 0-44.2 35.8-80 80-80m-32-96a64 64 0 1 1 128 0 64 64 0 1 1-128 0m256-32h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16m0 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16m0 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<iljapopov17@gmail.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/iliapopov17" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://rscf.ru/en/project/25-24-00351/" target="_blank" rel="noopener" title="rscf.ru" class="md-social__link">
+      <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated by Pixelmator Pro 3.6.12 -->
+<svg width="1785" height="1341" viewBox="0 0 1785 1341" xmlns="http://www.w3.org/2000/svg">
+    <g id="-1">
+        <g id="Group">
+            <g id="g1">
+                <g id="g2">
+                    <path id="Path" d="M 126.074524 926.216187 C 126.074524 930.877441 125.486938 935.489136 124.325317 940.066162 C 123.162476 944.64209 121.371094 948.891724 118.96228 952.795532 C 116.546082 956.706909 113.507568 960.199097 109.851685 963.274902 C 106.189575 966.361816 101.86792 968.728394 96.873108 970.393311 L 96.873108 970.641235 C 104.022522 972.971924 109.179749 976.881958 112.345947 982.366455 C 115.505981 987.862183 117.999084 993.934326 119.833801 1000.592773 L 133.562439 1048.505127 L 96.873108 1048.505127 L 83.894531 1003.582886 C 81.231689 994.104004 77.527405 987.693604 72.787964 984.369873 C 68.047302 981.04126 62.18219 979.376221 55.190247 979.376221 L 36.722229 979.376221 L 36.722229 1048.505127 L 0.287048 1048.505127 L 0.287048 877.04541 L 69.91803 877.04541 C 79.736511 877.04541 88.175293 878.340942 95.251587 880.91333 C 102.321655 883.498047 108.144592 887.032471 112.720398 891.525146 C 117.291199 896.016724 120.663208 901.258301 122.8302 907.244751 C 124.991028 913.237549 126.074524 919.563843 126.074524 926.216187 Z M 62.926025 954.17041 C 65.922424 954.17041 68.918823 953.758911 71.915222 952.929443 C 74.906616 952.100098 77.653809 950.695435 80.154358 948.70459 C 82.648621 946.718506 84.681763 944.072998 86.26239 940.755493 C 87.847961 937.445435 88.635193 933.30481 88.635193 928.340942 C 88.635193 919.732422 86.218994 913.39502 81.401489 909.339966 C 76.570374 905.289795 70.32959 903.255371 62.678101 903.255371 L 36.722229 903.255371 L 36.722229 954.17041 L 62.926025 954.17041 Z"/>
+                    <path id="path1" d="M 190.185059 1051.252441 C 182.031494 1051.252441 175.499512 1050.168823 170.596313 1048.008057 C 165.680908 1045.84729 161.897339 1042.85083 159.240601 1039.025146 C 156.576416 1035.199341 154.827271 1030.787231 153.997803 1025.798584 C 153.163452 1020.805054 152.750732 1015.398682 152.750732 1009.575684 L 152.750732 925.968262 L 188.442139 925.968262 L 188.937988 1010.320801 C 189.270142 1012.983643 190.015259 1015.314453 191.182983 1017.311523 C 192.345825 1019.303711 194.010864 1020.895508 196.177979 1022.057129 C 198.338623 1023.219971 201.328857 1023.801514 205.160767 1023.801514 C 208.653076 1023.801514 212.770142 1022.886475 217.515869 1021.052979 C 222.255249 1019.224365 226.87439 1016.313599 231.365845 1012.317993 L 231.365845 925.968262 L 267.055908 925.720215 L 267.055908 1048.505127 L 233.865234 1048.505127 L 232.860962 1035.278687 L 231.861816 1034.781616 C 228.036011 1038.11145 224.168091 1040.810303 220.258057 1042.892944 C 216.346802 1044.975708 212.564453 1046.634399 208.901001 1047.881592 C 205.238892 1049.133667 201.788818 1050.005249 198.544434 1050.502441 L 190.185059 1051.252441 Z"/>
+                    <path id="path2" d="M 341.753662 922.965698 C 348.24231 922.965698 355.43396 923.679688 363.3396 925.090454 C 371.239014 926.506226 378.441772 928.958374 384.925415 932.456909 L 377.189697 954.418335 C 370.536133 951.917847 364.379761 950.216919 358.720459 949.297119 C 353.067261 948.383545 347.824585 947.929688 342.999634 947.929688 C 338.508057 947.929688 334.392212 948.637573 330.645874 950.053345 C 326.904419 951.464111 325.033691 954.502686 325.033691 959.157837 C 325.033691 960.822754 325.736572 962.275757 327.152344 963.522827 C 328.56311 964.77002 330.312378 965.89563 332.39502 966.893555 L 362.468018 976.506348 C 367.78894 978.419312 372.654785 980.955688 377.068115 984.121826 C 381.475342 987.281982 385.093994 991.227905 387.921875 995.973633 C 390.754639 1000.714233 392.165405 1006.664795 392.165405 1013.81311 C 392.165405 1025.628662 387.424683 1034.703491 377.939697 1041.022217 C 368.45459 1047.342285 354.144653 1050.502441 335.015869 1050.502441 L 323.405884 1050.005249 L 310.305908 1048.255981 L 297.079346 1045.139404 C 292.751587 1043.892212 288.757202 1042.35498 285.099976 1040.520142 L 292.837036 1018.310669 C 302.981689 1021.972778 311.716675 1024.255127 319.040894 1025.168823 C 326.360229 1026.088623 332.097534 1026.543701 336.262939 1026.543701 C 342.085938 1026.543701 346.995117 1025.58667 350.984619 1023.673706 C 354.979004 1021.760864 356.977295 1018.22644 356.977295 1013.069214 C 356.977295 1010.574829 356.311646 1008.534424 354.979004 1006.954956 C 353.647461 1005.369385 351.862305 1004.000732 349.615967 1002.833008 L 317.545898 991.979248 C 312.21875 990.066284 307.515259 987.777832 303.441528 985.11499 C 299.361694 982.450806 296.081421 979.128296 293.580933 975.132813 C 291.086548 971.137207 289.840698 966.143555 289.840698 960.157104 C 289.840698 948.341309 294.246582 939.194702 303.06604 932.704834 C 311.886475 926.216187 324.779541 922.965698 341.753662 922.965698 Z"/>
+                    <path id="path3" d="M 460.203369 922.965698 C 466.693237 922.965698 473.884766 923.679688 481.790405 925.090454 C 489.689941 926.506226 496.892578 928.958374 503.376343 932.456909 L 495.639282 954.418335 C 488.986938 951.917847 482.830566 950.216919 477.171387 949.297119 C 471.516968 948.383545 466.275391 947.929688 461.450439 947.929688 C 456.958984 947.929688 452.836914 948.637573 449.095459 950.053345 C 445.355225 951.464111 443.484497 954.502686 443.484497 959.157837 C 443.484497 960.822754 444.186279 962.275757 445.603149 963.522827 C 447.014038 964.77002 448.763184 965.89563 450.845947 966.893555 L 480.917725 976.506348 C 486.238525 978.419312 491.105713 980.955688 495.519043 984.121826 C 499.925049 987.281982 503.538696 991.227905 506.372681 995.973633 C 509.199341 1000.714233 510.61499 1006.664795 510.61499 1013.81311 C 510.61499 1025.628662 505.87561 1034.703491 496.390503 1041.022217 C 486.904297 1047.342285 472.595459 1050.502441 453.460571 1050.502441 L 441.856812 1050.005249 L 428.756714 1048.255981 L 415.524048 1045.139404 C 411.202393 1043.892212 407.206787 1042.35498 403.550903 1040.520142 L 411.286743 1018.310669 C 421.432495 1021.972778 430.16748 1024.255127 437.491699 1025.168823 C 444.809814 1026.088623 450.548462 1026.543701 454.713867 1026.543701 C 460.536743 1026.543701 465.439819 1025.58667 469.435547 1023.673706 C 473.42981 1021.760864 475.428223 1018.22644 475.428223 1013.069214 C 475.428223 1010.574829 474.762451 1008.534424 473.42981 1006.954956 C 472.098389 1005.369385 470.31311 1004.000732 468.060669 1002.833008 L 435.996704 991.979248 C 430.663452 990.066284 425.966187 987.777832 421.892456 985.11499 C 417.8125 982.450806 414.532349 979.128296 412.031738 975.132813 C 409.537476 971.137207 408.290283 966.143555 408.290283 960.157104 C 408.290283 948.341309 412.69751 939.194702 421.516846 932.704834 C 430.337402 926.216187 443.230347 922.965698 460.203369 922.965698 Z"/>
+                    <path id="path4" d="M 570.439819 892.021118 C 570.439819 897.348145 568.648438 901.845825 565.070679 905.501709 C 561.494019 909.163818 556.215454 910.992432 549.223511 910.992432 C 542.571045 910.992432 537.498169 909.163818 533.999756 905.501709 C 530.506226 901.845825 528.756958 897.348145 528.756958 892.021118 C 528.756958 886.536621 530.549683 881.960815 534.126221 878.298706 C 537.703979 874.635376 542.734741 872.808105 549.223511 872.808105 C 556.215454 872.808105 561.494019 874.635376 565.070679 878.298706 C 568.648438 881.960815 570.439819 886.536621 570.439819 892.021118 Z M 531.505371 1048.505127 L 531.505371 925.968262 L 567.195557 925.968262 L 567.195557 1048.505127 L 531.505371 1048.505127 Z"/>
+                    <path id="path5" d="M 701.064697 1024.799438 L 717.038452 1024.799438 L 718.787598 1044.763672 C 714.793335 1046.597168 710.131958 1048.092285 704.811157 1049.255127 C 699.484131 1050.416748 694.156982 1050.998291 688.836182 1050.998291 C 683.509155 1050.998291 679.059814 1050.090698 675.483276 1048.255981 C 671.905518 1046.428711 669.780518 1042.439331 669.121094 1036.276611 L 668.619019 1035.774536 C 664.289917 1039.606567 659.968262 1042.517334 655.640503 1044.509521 C 651.312622 1046.513062 647.281006 1048.008057 643.539551 1049.007324 C 639.793213 1050.005249 636.385132 1050.58667 633.303223 1050.750366 L 626.19104 1050.998291 C 618.539551 1050.998291 612.256592 1049.799561 607.347412 1047.384399 C 602.43811 1044.975708 598.57019 1041.97937 595.742432 1038.401611 C 592.909668 1034.823608 590.960815 1030.955811 589.883545 1026.791504 C 588.793823 1022.638672 588.254517 1018.806641 588.254517 1015.314453 C 588.254517 1008.98938 589.417358 1003.461548 591.754272 998.715698 C 594.078735 993.970093 597.280884 989.980713 601.360718 986.73645 C 605.434448 983.492188 610.22229 980.955688 615.706787 979.128296 C 621.203613 977.293579 627.190186 976.216309 633.678833 975.877808 L 667.123901 973.88562 L 667.123901 970.88916 C 667.123901 963.903442 665.628784 958.619751 662.632446 955.04187 C 659.635986 951.464111 653.557739 949.672729 644.411133 949.672729 C 638.418213 949.672729 631.887573 950.259155 624.822388 951.421997 C 617.746094 952.589844 611.299561 954.084961 605.476685 955.913452 L 599.738037 933.703979 C 607.056152 930.543945 615.543091 928.044678 625.191772 926.216187 C 634.841797 924.387573 644.078857 923.473877 652.898193 923.473877 C 660.216187 923.473877 666.874756 924.218872 672.861206 925.720215 C 678.854004 927.215332 683.92688 929.630371 688.086182 932.952759 C 692.244141 936.282593 695.446289 940.647705 697.698975 946.05896 C 699.94397 951.464111 701.064697 958.15979 701.064697 966.143555 L 701.064697 1024.799438 Z M 642.41394 995.599121 C 630.93042 996.597168 625.191772 1002.172119 625.191772 1012.317993 C 625.191772 1017.47522 626.524536 1021.391479 629.187378 1024.049438 C 631.845337 1026.712158 636.087646 1028.038696 641.917969 1028.038696 C 645.742554 1028.038696 649.901733 1027.087891 654.393311 1025.168823 C 658.884644 1023.262207 663.128296 1020.550781 667.123901 1017.063599 L 667.123901 993.600708 L 642.41394 995.599121 Z"/>
+                    <path id="path6" d="M 815.47168 1048.505127 L 814.968384 963.903442 C 814.636108 961.240601 813.842773 958.909912 812.584351 956.912598 C 811.331055 954.920532 809.527222 953.377075 807.19043 952.299683 C 804.84729 951.216187 801.748047 950.670654 797.904907 950.670654 C 793.722046 950.670654 789.042236 951.591797 783.855225 953.419189 C 778.666992 955.253906 773.975952 957.414795 769.799316 959.909058 L 769.799316 1048.505127 L 734.109375 1048.505127 L 734.109375 925.968262 L 767.807251 925.968262 L 768.298218 937.196289 L 769.302368 937.693481 C 776.47644 932.86853 784.030151 929.206421 791.954346 926.712036 C 799.883423 924.218872 806.766479 922.965698 812.60791 922.965698 C 820.786377 922.965698 827.37793 924.091309 832.383789 926.337646 C 837.389771 928.588867 841.270142 931.621338 844.02478 935.447144 C 846.779419 939.278931 848.655029 943.770508 849.6604 948.927734 C 850.658447 954.084961 851.161743 959.491211 851.161743 965.150635 L 851.161743 1048.505127 L 815.47168 1048.505127 Z"/>
+                    <path id="path7" d="M 1014.624268 873.55188 C 1023.111328 873.55188 1032.178589 874.429565 1041.828491 876.173828 C 1051.477173 877.923096 1060.550659 881.125244 1069.031494 885.786621 L 1059.551392 910.743286 C 1051.065552 907.244751 1042.784302 904.962402 1034.714966 903.872803 C 1026.645752 902.79541 1019.533447 902.257446 1013.377075 902.257446 C 1005.556885 902.257446 999.400513 904.084839 994.908936 907.741943 C 990.417603 911.404053 988.171265 916.899658 988.171265 924.218872 C 988.171265 927.547607 989.128174 930.331909 991.041138 932.578369 C 992.954102 934.82959 995.490479 936.778564 998.655396 938.443359 C 1001.809204 940.108398 1005.429321 941.525269 1009.509155 942.687012 L 1041.204956 951.174072 C 1047.947754 953.164917 1054.182129 956.083374 1059.927002 959.909058 C 1065.665649 963.739868 1070.405029 968.812744 1074.15271 975.132813 C 1077.892944 981.457764 1079.763672 989.690674 1079.763672 999.842773 C 1079.763672 1016.149902 1073.7771 1028.752808 1061.797729 1037.651489 C 1049.818359 1046.555054 1031.760742 1050.998291 1007.638428 1050.998291 L 993.286255 1050.254517 C 988.0448 1049.751221 982.681763 1048.965088 977.19104 1047.881592 C 971.700317 1046.803101 966.209595 1045.387329 960.720093 1043.644287 C 955.229614 1041.893799 949.988037 1039.775146 944.993164 1037.282104 L 954.47937 1011.318726 C 966.621216 1016.149902 977.523193 1019.224365 987.173096 1020.550781 C 996.821899 1021.88855 1004.557739 1022.554321 1010.386841 1022.554321 C 1020.532715 1022.554321 1028.184204 1020.84729 1033.347534 1017.432983 C 1038.498535 1014.025024 1041.083374 1008.164917 1041.083374 999.842773 C 1041.083374 996.179321 1040.417725 993.147095 1039.086182 990.732056 C 1037.75354 988.323242 1035.840698 986.234375 1033.347534 984.491333 C 1030.847168 982.748291 1027.856934 981.289185 1024.364502 980.126343 L 988.668213 970.0177 C 981.016724 967.771362 974.278931 964.818359 968.455933 961.15625 C 962.626831 957.499146 958.013916 952.881104 954.605957 947.306152 C 951.191772 941.731201 949.490845 934.533325 949.490845 925.720215 C 949.490845 910.077637 954.933228 897.474609 965.835205 887.905273 C 976.731079 878.340942 992.996216 873.55188 1014.624268 873.55188 Z"/>
+                    <path id="path8" d="M 1133.668823 987.112061 C 1133.668823 998.431885 1135.79248 1007.287231 1140.036133 1013.691528 C 1144.279541 1020.095825 1151.973267 1023.304321 1163.123291 1023.304321 C 1168.941162 1023.304321 1174.516357 1022.718018 1179.843262 1021.548828 C 1185.17041 1020.387329 1190.575439 1018.892212 1196.066162 1017.063599 L 1202.802734 1040.768066 C 1196.64624 1043.934448 1189.53418 1046.349365 1181.464844 1048.008057 C 1173.390625 1049.666748 1165.115479 1050.502441 1156.634644 1050.502441 C 1144.81897 1050.502441 1135.126831 1048.885742 1127.554688 1045.635254 C 1119.982422 1042.397095 1113.952515 1037.941528 1109.46106 1032.287231 C 1104.969482 1026.62793 1101.852905 1020.053833 1100.102417 1012.565918 C 1098.359375 1005.078003 1097.481567 997.094238 1097.481567 988.607178 C 1097.481567 981.457764 1098.317261 974.013306 1099.975952 966.276245 C 1101.640869 958.534302 1104.721558 951.464111 1109.213135 945.059692 C 1113.704468 938.655396 1119.860962 933.413818 1127.68103 929.333984 C 1135.496338 925.259033 1145.648315 923.219727 1158.129761 923.219727 C 1163.450562 923.219727 1169.401123 923.595337 1175.975342 924.345459 C 1182.54834 925.090454 1189.328369 926.712036 1196.313965 929.206421 L 1190.823486 954.17041 C 1185.496338 952.669189 1180.62915 951.712036 1176.223389 951.300415 L 1164.122437 950.670654 C 1154.140259 950.670654 1146.56189 953.879028 1141.410889 960.283447 C 1136.253662 966.687866 1133.668823 975.62854 1133.668823 987.112061 Z"/>
+                    <path id="path9" d="M 1260.479248 892.021118 C 1260.479248 897.348145 1258.686768 901.845825 1255.110107 905.501709 C 1251.532227 909.163818 1246.253418 910.992432 1239.261475 910.992432 C 1232.609131 910.992432 1227.536133 909.163818 1224.037842 905.501709 C 1220.54541 901.845825 1218.796143 897.348145 1218.796143 892.021118 C 1218.796143 886.536621 1220.587646 881.960815 1224.165527 878.298706 C 1227.742188 874.635376 1232.772705 872.808105 1239.261475 872.808105 C 1246.253418 872.808105 1251.532227 874.635376 1255.110107 878.298706 C 1258.686768 881.960815 1260.479248 886.536621 1260.479248 892.021118 Z M 1221.543457 1048.505127 L 1221.543457 925.968262 L 1257.233643 925.968262 L 1257.233643 1048.505127 L 1221.543457 1048.505127 Z"/>
+                    <path id="path10" d="M 1340.260986 922.717651 C 1353.40918 922.717651 1363.723633 924.80542 1371.21167 928.958374 C 1378.699463 933.116455 1384.31665 938.279785 1388.058105 944.429932 C 1391.804443 950.592529 1394.128906 957.124634 1395.048828 964.024902 C 1395.95752 970.931396 1396.41748 977.129883 1396.41748 982.620605 L 1396.41748 995.351196 L 1316.054199 995.351196 C 1316.054199 1004.914429 1318.427002 1012.130737 1323.166504 1016.996704 C 1327.912109 1021.86377 1335.769531 1024.297241 1346.749512 1024.297241 C 1353.40918 1024.297241 1360.061523 1023.595581 1366.720215 1022.178711 C 1373.372559 1020.767944 1379.861084 1018.892212 1386.187256 1016.561523 L 1393.420898 1038.395386 C 1385.267578 1042.838501 1376.702393 1045.968628 1367.719238 1047.783691 C 1358.730225 1049.593628 1350.001465 1050.502441 1341.51416 1050.502441 C 1329.195313 1050.502441 1319.067871 1048.795288 1311.120117 1045.387329 C 1303.172363 1041.97937 1296.925537 1037.366455 1292.385742 1031.537231 C 1287.8396 1025.714233 1284.704346 1019.018555 1282.966309 1011.446411 C 1281.229492 1003.874268 1280.370361 995.847046 1280.370361 987.359985 C 1280.370361 980.707764 1281.198486 973.553345 1282.863525 965.89563 C 1284.522217 958.244141 1287.604004 951.258423 1292.095459 944.93335 C 1296.587158 938.613281 1302.706299 933.328369 1310.442139 929.084839 C 1318.179199 924.842529 1328.11792 922.717651 1340.260986 922.717651 Z M 1341.646973 945.429321 C 1337.131836 945.429321 1333.366943 946.185425 1330.358154 947.680542 C 1327.343018 949.175659 1324.879883 951.216187 1322.95459 953.7948 C 1321.029297 956.379639 1319.565186 959.369873 1318.559814 962.77771 C 1317.555664 966.191895 1316.889893 969.727661 1316.556396 973.383545 L 1363.977783 973.383545 C 1363.802002 965.236084 1362.174072 958.534302 1359.081055 953.292725 C 1355.981689 948.049927 1350.169922 945.429321 1341.646973 945.429321 Z"/>
+                    <path id="path11" d="M 1498.445801 1048.505127 L 1497.942627 963.903442 C 1497.604248 961.240601 1496.810791 958.909912 1495.558594 956.912598 C 1494.305176 954.920532 1492.501465 953.377075 1490.158447 952.299683 C 1487.81665 951.216187 1484.722168 950.670654 1480.873047 950.670654 C 1476.696289 950.670654 1472.011475 951.591797 1466.829346 953.419189 C 1461.641357 955.253906 1456.950195 957.414795 1452.773682 959.909058 L 1452.773682 1048.505127 L 1417.083496 1048.505127 L 1417.083496 925.968262 L 1450.78125 925.968262 L 1451.272217 937.196289 L 1452.277588 937.693481 C 1459.450684 932.86853 1467.00415 929.206421 1474.928467 926.712036 C 1482.858887 924.218872 1489.740479 922.965698 1495.582031 922.965698 C 1503.760498 922.965698 1510.352051 924.091309 1515.358154 926.337646 C 1520.364014 928.588867 1524.244141 931.621338 1526.999023 935.447144 C 1529.753662 939.278931 1531.62915 943.770508 1532.634766 948.927734 C 1533.627686 954.084961 1534.135986 959.491211 1534.135986 965.150635 L 1534.135986 1048.505127 L 1498.445801 1048.505127 Z"/>
+                    <path id="path12" d="M 1590.48584 987.112061 C 1590.48584 998.431885 1592.604492 1007.287231 1596.848145 1013.691528 C 1601.091553 1020.095825 1608.7854 1023.304321 1619.935303 1023.304321 C 1625.758301 1023.304321 1631.333252 1022.718018 1636.654053 1021.548828 C 1641.981201 1020.387329 1647.386475 1018.892212 1652.883057 1017.063599 L 1659.614746 1040.768066 C 1653.4646 1043.934448 1646.346191 1046.349365 1638.282959 1048.008057 C 1630.20752 1049.666748 1621.932373 1050.502441 1613.445313 1050.502441 C 1601.629639 1050.502441 1591.938965 1048.885742 1584.371582 1045.635254 C 1576.799561 1042.397095 1570.770752 1037.941528 1566.279053 1032.287231 C 1561.787842 1026.62793 1558.663574 1020.053833 1556.914551 1012.565918 C 1555.171387 1005.078003 1554.298584 997.094238 1554.298584 988.607178 C 1554.298584 981.457764 1555.12793 974.013306 1556.792969 966.276245 C 1558.45166 958.534302 1561.532471 951.464111 1566.023926 945.059692 C 1570.521484 938.655396 1576.671875 933.413818 1584.499268 929.333984 C 1592.314453 925.259033 1602.465332 923.219727 1614.946777 923.219727 C 1620.267578 923.219727 1626.211914 923.595337 1632.786133 924.345459 C 1639.360352 925.090454 1646.13916 926.712036 1653.131104 929.206421 L 1647.635498 954.17041 C 1642.30835 952.669189 1637.441162 951.712036 1633.03418 951.300415 L 1620.933105 950.670654 C 1610.952393 950.670654 1603.378906 953.879028 1598.22168 960.283447 C 1593.064453 966.687866 1590.48584 975.62854 1590.48584 987.112061 Z"/>
+                    <path id="path13" d="M 1728.870117 922.717651 C 1742.010986 922.717651 1752.333008 924.80542 1759.820801 928.958374 C 1767.30249 933.116455 1772.919678 938.279785 1776.660889 944.429932 C 1780.407471 950.592529 1782.731934 957.124634 1783.651855 964.024902 C 1784.56665 970.931396 1785.020508 977.129883 1785.020508 982.620605 L 1785.020508 995.351196 L 1704.66333 995.351196 C 1704.66333 1004.914429 1707.030029 1012.130737 1711.775635 1016.996704 C 1716.515137 1021.86377 1724.378662 1024.297241 1735.358643 1024.297241 C 1742.010986 1024.297241 1748.664551 1023.595581 1755.322998 1022.178711 C 1761.975342 1020.767944 1768.464111 1018.892212 1774.790283 1016.561523 L 1782.030273 1038.395386 C 1773.876709 1042.838501 1765.305176 1045.968628 1756.321045 1047.783691 C 1747.338135 1049.593628 1738.603271 1050.502441 1730.117188 1050.502441 C 1717.804443 1050.502441 1707.671143 1048.795288 1699.729248 1045.387329 C 1691.781494 1041.97937 1685.534668 1037.366455 1680.988525 1031.537231 C 1676.44873 1025.714233 1673.307373 1019.018555 1671.569336 1011.446411 C 1669.838623 1003.874268 1668.972168 995.847046 1668.972168 987.359985 C 1668.972168 980.707764 1669.801514 973.553345 1671.466309 965.89563 C 1673.125244 958.244141 1676.211914 951.258423 1680.703613 944.93335 C 1685.195068 938.613281 1691.309326 933.328369 1699.045166 929.084839 C 1706.781982 924.842529 1716.720947 922.717651 1728.870117 922.717651 Z M 1730.249756 945.429321 C 1725.734863 945.429321 1721.96875 946.185425 1718.960938 947.680542 C 1715.952148 949.175659 1713.482666 951.216187 1711.557373 953.7948 C 1709.632324 956.379639 1708.168213 959.369873 1707.168945 962.77771 C 1706.163574 966.191895 1705.497803 969.727661 1705.159424 973.383545 L 1752.580811 973.383545 C 1752.410889 965.236084 1750.783203 958.534302 1747.684082 953.292725 C 1744.591064 948.049927 1738.779053 945.429321 1730.249756 945.429321 Z"/>
+                </g>
+                <g id="g3">
+                    <path id="path14" d="M 268.656372 1337.826904 L 268.656372 1166.119263 L 385.708984 1166.119263 L 385.708984 1192.330566 L 305.59375 1192.330566 L 305.59375 1238.746582 L 368.238892 1238.746582 L 368.238892 1263.70459 L 305.59375 1263.70459 L 305.59375 1337.826904 L 268.656372 1337.826904 Z"/>
+                    <path id="path15" d="M 517.307007 1276.435303 C 517.307007 1284.920898 516.223511 1293.032471 514.056519 1300.769409 C 511.89563 1308.505371 508.317871 1315.33374 503.330444 1321.229736 C 498.336914 1327.143311 491.847046 1331.804565 483.863281 1335.206299 C 475.873291 1338.614258 466.059814 1340.321289 454.413818 1340.321289 C 443.093994 1340.321289 433.529663 1338.662598 425.709595 1335.332642 C 417.888184 1332.010254 411.568115 1327.470337 406.744385 1321.731689 C 401.913208 1315.993164 398.463135 1309.255371 396.386597 1301.519409 C 394.305176 1293.783691 393.269897 1285.502563 393.269897 1276.683228 C 393.269897 1268.032471 394.431519 1259.836792 396.762207 1252.10083 C 399.08667 1244.365112 402.748779 1237.585083 407.742432 1231.762085 C 412.730957 1225.937866 419.17749 1221.277832 427.083252 1217.784302 C 434.982544 1214.292114 444.595337 1212.542847 455.908936 1212.542847 C 467.392456 1212.542847 477.034912 1214.249878 484.861206 1217.657837 C 492.682495 1221.072021 499.002563 1225.732056 503.826294 1231.634399 C 508.651245 1237.542847 512.10144 1244.365112 514.190308 1252.10083 C 516.266846 1259.836792 517.307007 1267.94812 517.307007 1276.435303 Z M 480.369751 1276.683228 C 480.369751 1271.858154 480.031372 1267.118774 479.371826 1262.457397 C 478.706055 1257.802246 477.501099 1253.638062 475.751831 1249.975952 C 474.002563 1246.319946 471.544189 1243.365845 468.384155 1241.119507 C 465.225464 1238.868164 461.066162 1237.748657 455.908936 1237.748657 C 450.751709 1237.748657 446.508179 1238.868164 443.178345 1241.119507 C 439.849731 1243.365845 437.191772 1246.319946 435.19458 1249.975952 C 433.197388 1253.638062 431.828735 1257.802246 431.078735 1262.457397 C 430.327515 1267.118774 429.951782 1271.858154 429.951782 1276.683228 C 429.951782 1282.173828 430.285278 1287.245361 430.95105 1291.906616 C 431.610596 1296.568237 432.906006 1300.605957 434.81897 1304.013794 C 436.731812 1307.421753 439.353882 1310.126953 442.682495 1312.125366 C 446.006104 1314.122437 450.418213 1315.115479 455.908936 1315.115479 C 460.902588 1315.115479 465.019653 1314.086548 468.263916 1311.997681 C 471.508179 1309.916138 474.002563 1307.094482 475.751831 1303.511719 C 477.501099 1299.934082 478.706055 1295.816772 479.371826 1291.156738 C 480.031372 1286.501709 480.369751 1281.676636 480.369751 1276.683228 Z"/>
+                    <path id="path16" d="M 574.383423 1340.575317 C 566.229736 1340.575317 559.698975 1339.491943 554.789795 1337.331055 C 549.880493 1335.17041 546.096924 1332.173828 543.43396 1328.348145 C 540.769775 1324.522339 539.026733 1320.109009 538.197388 1315.115479 C 537.361816 1310.126953 536.94397 1304.721802 536.94397 1298.898682 L 536.94397 1215.290039 L 572.634155 1215.290039 L 573.137451 1299.642578 C 573.469727 1302.306763 574.214722 1304.637329 575.382568 1306.634644 C 576.545532 1308.626709 578.209106 1310.212402 580.376221 1311.374023 C 582.531982 1312.536743 585.528442 1313.123291 589.359131 1313.123291 C 592.852661 1313.123291 596.968506 1312.209473 601.707886 1310.376099 C 606.454834 1308.547363 611.072632 1305.635254 615.564209 1301.640991 L 615.564209 1215.290039 L 651.254272 1215.035889 L 651.254272 1337.826904 L 618.058472 1337.826904 L 617.059326 1324.600342 L 616.061279 1324.104736 C 612.235474 1327.433228 608.367676 1330.133179 604.456299 1332.216064 C 600.546265 1334.298828 596.762695 1335.956177 593.100586 1337.203369 C 589.438477 1338.456909 585.988403 1339.328125 582.744019 1339.825317 L 574.383423 1340.575317 Z"/>
+                    <path id="path17" d="M 757.047729 1337.826904 L 756.545532 1253.22644 C 756.212158 1250.563477 755.420044 1248.23291 754.1604 1246.234497 C 752.906982 1244.237427 751.103271 1242.700073 748.766357 1241.616455 C 746.424561 1240.539185 743.325317 1239.993652 739.480957 1239.993652 C 735.298218 1239.993652 730.619507 1240.913574 725.431274 1242.735962 C 720.244263 1244.575684 715.552124 1246.731689 711.375488 1249.230835 L 711.375488 1337.826904 L 675.685303 1337.826904 L 675.685303 1215.290039 L 709.384399 1215.290039 L 709.874268 1226.519409 L 710.879517 1227.015381 C 718.05249 1222.191528 725.607422 1218.529419 733.530396 1216.035156 C 741.460693 1213.540771 748.34375 1212.288574 754.185181 1212.288574 C 762.362305 1212.288574 768.9552 1213.414429 773.96106 1215.659546 C 778.967163 1217.911987 782.847412 1220.944336 785.600708 1224.77002 C 788.355469 1228.602051 790.232422 1233.093384 791.236572 1238.25061 C 792.235718 1243.407837 792.737793 1248.812988 792.737793 1254.473511 L 792.737793 1337.826904 L 757.047729 1337.826904 Z"/>
+                    <path id="path18" d="M 866.182129 1212.288574 C 870.177734 1212.288574 875.292847 1212.839111 881.533447 1213.928955 C 887.77417 1215.02478 893.470703 1217.082642 898.62793 1220.102661 L 898.62793 1159.382568 L 934.317993 1159.382568 L 934.317993 1337.826904 L 901.128418 1337.826904 L 900.377075 1326.853149 L 899.627075 1326.344727 C 893.640625 1331.174683 887.187866 1334.588745 880.286377 1336.579834 C 873.380005 1338.578247 867.265625 1339.576172 861.939819 1339.576172 C 852.459839 1339.576172 844.554077 1337.95459 838.229004 1334.710327 C 831.909058 1331.464844 826.915527 1327.101074 823.258423 1321.610474 C 819.596191 1316.114746 817.017578 1309.710327 815.522583 1302.384888 C 814.02124 1295.07312 813.277344 1287.331055 813.277344 1279.17749 C 813.277344 1269.697266 814.184937 1260.87793 816.019653 1252.724365 C 817.847046 1244.575684 820.885498 1237.49939 825.129028 1231.506714 C 829.372559 1225.520264 834.821167 1220.822876 841.479614 1217.408691 C 848.12561 1214.00061 856.363647 1212.288574 866.182129 1212.288574 Z M 898.62793 1245.21167 C 895.789063 1243.389282 891.939575 1241.816162 887.091309 1240.490845 C 882.241333 1239.164429 877.810669 1238.498657 873.797729 1238.498657 C 870.789063 1238.498657 867.775146 1239.037964 864.766357 1240.115234 C 861.751465 1241.192505 859.082397 1243.227051 856.739258 1246.217285 C 854.397461 1249.195068 852.508057 1253.3479 851.092407 1258.644043 C 849.669189 1263.952515 848.961304 1270.757202 848.961304 1279.043457 C 848.961304 1286.344116 849.584961 1292.276123 850.84314 1296.834717 C 852.102783 1301.398071 853.809814 1305.006836 855.989258 1307.651123 C 858.162354 1310.30896 860.752197 1312.137817 863.760986 1313.129395 C 866.769775 1314.122437 869.947144 1314.619629 873.295654 1314.619629 C 875.135376 1314.619629 877.224243 1314.334473 879.559937 1313.746826 L 886.587891 1311.634277 L 898.62793 1305.418335 L 898.62793 1245.21167 Z"/>
+                    <path id="path19" d="M 1065.293701 1314.122437 L 1081.267456 1314.122437 L 1083.017944 1334.086792 C 1079.022339 1335.92041 1074.360962 1337.415527 1069.040161 1338.578247 C 1063.713135 1339.739868 1058.386108 1340.321289 1053.065186 1340.321289 C 1047.73938 1340.321289 1043.290039 1339.413818 1039.712402 1337.578979 C 1036.134399 1335.750488 1034.009644 1331.762329 1033.350098 1325.599609 L 1032.8479 1325.097534 C 1028.520142 1328.928345 1024.197266 1331.840454 1019.875488 1333.832764 C 1015.541504 1335.835938 1011.51001 1337.331055 1007.768555 1338.328979 C 1004.022217 1339.328125 1000.614136 1339.90979 997.533447 1340.073364 L 990.419922 1340.321289 C 982.768433 1340.321289 976.485596 1339.116333 971.576416 1336.70752 C 966.67334 1334.298828 962.799194 1331.302246 959.972656 1327.718262 C 957.144897 1324.146729 955.189819 1320.272705 954.112549 1316.114746 C 953.022827 1311.961548 952.484863 1308.129517 952.484863 1304.637329 C 952.484863 1298.311035 953.646362 1292.784546 955.983276 1288.038818 C 958.307739 1283.293335 961.509888 1279.303955 965.589844 1276.059692 C 969.663452 1272.815063 974.451294 1270.278809 979.942017 1268.450073 C 985.432617 1266.616699 991.419189 1265.539185 997.907837 1265.199707 L 1031.352783 1263.202637 L 1031.352783 1260.212402 C 1031.352783 1253.22644 1029.857666 1247.941528 1026.86145 1244.365112 C 1023.86499 1240.787109 1017.786743 1238.995728 1008.640137 1238.995728 C 1002.648438 1238.995728 996.116455 1239.582275 989.052612 1240.744995 C 981.976318 1241.91272 975.529785 1243.407837 969.705688 1245.236572 L 963.966919 1223.026978 C 971.286255 1219.867065 979.772095 1217.366455 989.421997 1215.539185 C 999.070679 1213.704346 1008.307861 1212.796997 1017.127197 1212.796997 C 1024.446411 1212.796997 1031.104858 1213.540771 1037.091553 1215.035889 C 1043.084229 1216.537109 1048.155884 1218.953369 1052.315186 1222.275757 C 1056.473267 1225.605713 1059.675293 1229.969482 1061.927979 1235.380737 C 1064.173096 1240.787109 1065.293701 1247.481689 1065.293701 1255.466675 L 1065.293701 1314.122437 Z M 1006.642822 1284.920898 C 995.165527 1285.914063 989.421997 1291.495117 989.421997 1301.640991 C 989.421997 1306.798218 990.75354 1310.714355 993.416382 1313.372437 C 996.074341 1316.0354 1000.317871 1317.360596 1006.146973 1317.360596 C 1009.972656 1317.360596 1014.130737 1316.404663 1018.628418 1314.491943 C 1023.119995 1312.578979 1027.3573 1309.872559 1031.352783 1306.386719 L 1031.352783 1282.923828 L 1006.642822 1284.920898 Z"/>
+                    <path id="path20" d="M 1137.297485 1181.344238 L 1137.297485 1215.035889 L 1172.981445 1215.035889 L 1172.981445 1238.498657 L 1137.297485 1238.498657 L 1137.297485 1293.905273 C 1137.297485 1300.393799 1138.459106 1305.181519 1140.789795 1308.257446 C 1143.114258 1311.331909 1147.442017 1312.875244 1153.768311 1312.875244 L 1174.978516 1309.624634 L 1179.476318 1332.833496 C 1174.143066 1335.17041 1168.326294 1336.919556 1162.001221 1338.081055 C 1155.675049 1339.244019 1149.858276 1339.825317 1144.53125 1339.825317 C 1136.044189 1339.825317 1129.05835 1338.826172 1123.56897 1336.833862 C 1118.078247 1334.836792 1113.750366 1332.173828 1110.590454 1328.844116 C 1107.430298 1325.520264 1105.221069 1321.652344 1103.973999 1317.240356 C 1102.726929 1312.833008 1102.103271 1308.213989 1102.103271 1303.384033 L 1102.103271 1238.498657 L 1084.882446 1238.498657 L 1084.882446 1219.031494 L 1104.349731 1213.292847 L 1113.084717 1183.843384 L 1137.297485 1181.344238 Z"/>
+                    <path id="path21" d="M 1235.626709 1181.344238 C 1235.626709 1186.670044 1233.841309 1191.167603 1230.263672 1194.824951 C 1226.686035 1198.480591 1221.407227 1200.314209 1214.41626 1200.314209 C 1207.757813 1200.314209 1202.685059 1198.480591 1199.192627 1194.824951 C 1195.699219 1191.167603 1193.949951 1186.670044 1193.949951 1181.344238 C 1193.949951 1175.853394 1195.735107 1171.282593 1199.319092 1167.620483 C 1202.890625 1163.958374 1207.926514 1162.131104 1214.41626 1162.131104 C 1221.407227 1162.131104 1226.686035 1163.958374 1230.263672 1167.620483 C 1233.841309 1171.282593 1235.626709 1175.853394 1235.626709 1181.344238 Z M 1196.698242 1337.826904 L 1196.698242 1215.290039 L 1232.382324 1215.290039 L 1232.382324 1337.826904 L 1196.698242 1337.826904 Z"/>
+                    <path id="path22" d="M 1379.556152 1276.435303 C 1379.556152 1284.920898 1378.472656 1293.032471 1376.311768 1300.769409 C 1374.149658 1308.505371 1370.572998 1315.33374 1365.584473 1321.229736 C 1360.591064 1327.143311 1354.102295 1331.804565 1346.117432 1335.206299 C 1338.127441 1338.614258 1328.308838 1340.321289 1316.667969 1340.321289 C 1305.348145 1340.321289 1295.784912 1338.662598 1287.963623 1335.332642 C 1280.142334 1332.010254 1273.817383 1327.470337 1268.992188 1321.731689 C 1264.168457 1315.993164 1260.717285 1309.255371 1258.635742 1301.519409 C 1256.559082 1293.783691 1255.517822 1285.502563 1255.517822 1276.683228 C 1255.517822 1268.032471 1256.680664 1259.836792 1259.016357 1252.10083 C 1261.34082 1244.365112 1265.00293 1237.585083 1269.991455 1231.762085 C 1274.985107 1225.937866 1281.431641 1221.277832 1289.337158 1217.784302 C 1297.236816 1214.292114 1306.843018 1212.542847 1318.163086 1212.542847 C 1329.640381 1212.542847 1339.289063 1214.249878 1347.116455 1217.657837 C 1354.931641 1221.072021 1361.250488 1225.732056 1366.081787 1231.634399 C 1370.905273 1237.542847 1374.355469 1244.365112 1376.438232 1252.10083 C 1378.514648 1259.836792 1379.556152 1267.94812 1379.556152 1276.435303 Z M 1342.625 1276.683228 C 1342.625 1271.858154 1342.2854 1267.118774 1341.619629 1262.457397 C 1340.953857 1257.802246 1339.748779 1253.638062 1337.999756 1249.975952 C 1336.256592 1246.319946 1333.799561 1243.365845 1330.639404 1241.119507 C 1327.479492 1238.868164 1323.315186 1237.748657 1318.163086 1237.748657 C 1313.005859 1237.748657 1308.762207 1238.868164 1305.433594 1241.119507 C 1302.10376 1243.365845 1299.447021 1246.319946 1297.44873 1249.975952 C 1295.451416 1253.638062 1294.077881 1257.802246 1293.332764 1262.457397 C 1292.582764 1267.118774 1292.207275 1271.858154 1292.207275 1276.683228 C 1292.207275 1282.173828 1292.539307 1287.245361 1293.206299 1291.906616 C 1293.865967 1296.568237 1295.161377 1300.605957 1297.074219 1304.013794 C 1298.987061 1307.421753 1301.601807 1310.126953 1304.936523 1312.125366 C 1308.260254 1314.122437 1312.673584 1315.115479 1318.163086 1315.115479 C 1323.151611 1315.115479 1327.273682 1314.086548 1330.518066 1311.997681 C 1333.762207 1309.916138 1336.256592 1307.094482 1337.999756 1303.511719 C 1339.748779 1299.934082 1340.953857 1295.816772 1341.619629 1291.156738 C 1342.2854 1286.501709 1342.625 1281.676636 1342.625 1276.683228 Z"/>
+                    <path id="path23" d="M 1480.960938 1337.826904 L 1480.45752 1253.22644 C 1480.119141 1250.563477 1479.325684 1248.23291 1478.073486 1246.234497 C 1476.820313 1244.237427 1475.016357 1242.700073 1472.679688 1241.616455 C 1470.33667 1240.539185 1467.237305 1239.993652 1463.387939 1239.993652 C 1459.211426 1239.993652 1454.531494 1240.913574 1449.344482 1242.735962 C 1444.15625 1244.575684 1439.465332 1246.731689 1435.288574 1249.230835 L 1435.288574 1337.826904 L 1399.598633 1337.826904 L 1399.598633 1215.290039 L 1433.296631 1215.290039 L 1433.787354 1226.519409 L 1434.791504 1227.015381 C 1441.965576 1222.191528 1449.519287 1218.529419 1457.443604 1216.035156 C 1465.372803 1213.540771 1472.255615 1212.288574 1478.097168 1212.288574 C 1486.275635 1212.288574 1492.867188 1213.414429 1497.873047 1215.659546 C 1502.878906 1217.911987 1506.759277 1220.944336 1509.51416 1224.77002 C 1512.268555 1228.602051 1514.144287 1233.093384 1515.149658 1238.25061 C 1516.142822 1243.407837 1516.650879 1248.812988 1516.650879 1254.473511 L 1516.650879 1337.826904 L 1480.960938 1337.826904 Z"/>
+                </g>
+            </g>
+            <g id="g4">
+                <path id="path24" d="M 1034.123657 272.993408 C 1008.632935 267.929199 981.682007 264.599609 954.509155 261.636963 L 949.974243 261.136475 C 894.325684 254.953857 848.390747 245.233154 851.924316 198.419434 C 857.227051 125.097168 1023.290527 118.03125 1023.290527 200.189941 L 1173.462646 200.189941 C 1174.674072 108.787354 1119.052856 48.713379 1045.626831 19.945557 C 904.744995 -35.260742 698.271118 24.812012 701.758179 200.189941 C 703.143433 305.777832 758.088623 356.712646 846.784912 378.389404 C 870.883179 384.28125 897.445557 388.029297 926.131104 390.107178 C 937.941772 390.777344 949.368774 391.685547 960.13269 393.006592 C 1005.670532 398.589355 1039.199951 411.628052 1039.199951 446.63562 C 1039.199951 506.784546 905.897827 516.319458 860.639038 472.830933 C 851.401001 463.942139 845.743042 452.89917 845.743042 439.569824 L 692.921875 439.569824 C 692.51416 470.391724 698.678833 497.634766 709.832642 521.389648 C 729.670044 563.680176 765.434692 594.828857 808.912598 614.998901 L 822.673584 620.883301 C 970.820313 679.834229 1192.899658 620.01062 1192.899658 447.521362 C 1192.899658 329.07373 1122.342041 290.520752 1034.123657 272.993408 Z"/>
+                <path id="path25" d="M 1484.785645 151.601074 L 1667.636963 151.601074 L 1667.636963 10.259277 L 1282.491211 10.259277 L 1282.491211 628.608521 L 1443.26416 628.608521 L 1443.26416 428.090454 L 1642.011719 428.090454 L 1642.011719 286.754639 L 1443.26416 286.754639 L 1443.26416 151.601074 L 1484.785645 151.601074 Z"/>
+                <path id="path26" d="M 519.792358 409.544189 C 579.70166 368.925049 610.12915 300.939941 611.258057 232.467529 C 612.748169 141.739746 562.745728 50.163086 461.400635 20.330566 C 439.647339 13.921631 415.536011 10.358154 389.055908 10.259277 L 117.864563 10.259277 L 117.864563 135.226807 C 126.67218 139.155029 134.797913 144.318359 142.08551 150.442383 L 149.728394 157.474854 C 158.047363 164.884033 167.57019 170.973633 177.978882 175.373779 C 190.261719 180.566895 203.748535 183.442383 217.917358 183.442383 C 232.074219 183.442383 245.572876 180.566895 257.837769 175.373779 C 263.677002 172.90625 269.153687 169.792236 274.375366 166.317139 L 275.988281 165.309814 C 279.498047 162.882568 282.902832 160.309814 286.087158 157.474854 L 292.427002 151.524902 C 300.536011 144.464844 309.726318 138.61377 319.779907 134.36499 C 332.056641 129.171875 345.543457 126.296631 359.706299 126.296631 C 373.875 126.296631 387.367798 129.171875 399.633911 134.36499 C 411.903564 139.550781 422.952393 147.060303 432.24292 156.338867 C 441.521484 165.612549 449.036743 176.6604 454.223877 188.925293 C 455.783203 192.62793 457.057617 196.470215 458.187744 200.375732 C 460.800903 209.433838 462.279297 218.974609 462.279297 228.869629 C 462.279297 243.03833 459.409668 256.526367 454.223877 268.813965 C 449.036743 281.090576 441.521484 292.133545 432.24292 301.400146 C 422.952393 310.684814 411.903564 318.194092 399.633911 323.386963 C 387.367798 328.579102 373.875 331.448486 359.706299 331.448486 C 347.342407 331.448486 335.555542 329.149902 324.581787 325.144287 L 319.779907 323.386963 C 309.715576 319.137207 300.518188 313.263428 292.409058 306.191406 L 286.914429 301.137939 C 283.491821 298.018066 279.800903 295.200928 275.988281 292.569824 C 270.306519 288.658447 264.27063 285.23584 257.837769 282.516602 C 251.586182 279.868652 244.99707 277.842041 238.174438 276.474609 C 231.619995 275.158447 224.849731 274.455078 217.917358 274.455078 C 203.748535 274.455078 190.261719 277.324707 177.978882 282.516602 C 167.226929 287.063477 157.419067 293.390137 148.902222 301.137939 L 145.130249 304.753662 C 137.109497 312.053223 127.894104 318.042725 117.864563 322.525146 L 117.864563 628.608521 L 275.988281 628.608521 L 275.988281 446.63562 L 358.129028 446.63562 L 464.136597 628.608521 L 655.666992 628.608521 L 519.792358 409.544189 Z"/>
+            </g>
+        </g>
+    </g>
+</svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "/NGS-Handbook/", "features": ["navigation.expand", "content.code.copy", "search", "search.suggest", "search.highlight", "navigation.footer"], "search": "/NGS-Handbook/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="/NGS-Handbook/assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
