@@ -1,0 +1,1917 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iliapopov17.github.io/NGS-Handbook/V.%2016S_amplicon_analysis/05_03_Parkinsons_disease/">
+      
+      
+        <link rel="prev" href="../05_02_Crohns_disease/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Practice 2: Parkinson's disease - NGS Analysis Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-4RBMQR50GK"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-4RBMQR50GK",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-4RBMQR50GK",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    <html data-lt-installed="true">
+        <head>
+            <!-- HTML Meta Tags -->
+            <title>NGS Data Analysis Handbook</title>
+            <meta name="description" content="">
+
+            <!-- Facebook Meta Tags -->
+            <meta property="og:url" content="https://iliapopov17.github.io/NGS-Handbook/">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="NGS Data Analysis Handbook">
+            <meta property="og:description" content="">
+            <meta property="og:image" content="https://iliapopov17.github.io/images/ngs-handbook/metatag.png">
+
+            <!-- Twitter Meta Tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta property="twitter:domain" content="iliapopov17.github.io">
+            <meta property="twitter:url" content="https://iliapopov17.github.io/NGS-Handbook/">
+            <meta name="twitter:title" content="NGS Data Analysis Handbook">
+            <meta name="twitter:description" content="">
+            <meta name="twitter:image" content="https://iliapopov17.github.io/images/ngs-handbook/metatag.png">
+
+            <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        </head>
+        <body>
+        </body>
+    </html>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practice-2-parkinsons-disease" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NGS Analysis Handbook" class="md-header__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NGS Analysis Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practice 2: Parkinson's disease
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/iliapopov17/NGS-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    iliapopov17/NGS-Handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NGS Analysis Handbook" class="md-nav__button md-logo" aria-label="NGS Analysis Handbook" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    NGS Analysis Handbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/iliapopov17/NGS-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    iliapopov17/NGS-Handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Quality_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I. Quality Control of Raw Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Variant_Calling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    II. Genomic Variation Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Whole_%28pan%29genome_analyses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    III. Whole Genome and Pangenome Analyses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IV. Phylogenetics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IV. Phylogenetics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_00_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_01_Intro_Trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drawing Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_02_Mining_Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with NCBI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_03_MSA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multiple Sequence Alignment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_04_Trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparing the alignment and building trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_05_Root_Date/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rooting and comparing trees; Dating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_06_Phylogenomics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phylogenomics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_07_Visualization_Pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualization Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IV.%20Phylogenetics/04_08_Tanglegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tanglegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    V. 16S amplicon analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    V. 16S amplicon analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_00_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_01_Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16S analysis with DADA2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_02_Crohns_disease/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practice 1: Crohn's disease
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practice 2: Parkinson's disease
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practice 2: Parkinson's disease
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instruction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-data-loading-and-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Data Loading and Preprocessing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-statistical-tests-normality-u-test-and-glm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Statistical Tests (Normality, U-Test, and GLM)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Statistical Tests (Normality, U-Test, and GLM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normality-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normality test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wilcoxon-rank-sum-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wilcoxon rank-sum test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generalized-linear-model-glm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generalized Linear Model (GLM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-permanova-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: PERMANOVA Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-balance-and-compositional-analysis-selbal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Balance and Compositional Analysis (Selbal)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-machine-learning-random-forest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Machine Learning: Random Forest
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Machine Learning: Random Forest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-roc-receiver-operating-characteristic-curve-and-calculate-auc-area-under-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make ROC (Receiver Operating Characteristic) curve and calculate AUC (Area Under Curve)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instruction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-data-loading-and-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Data Loading and Preprocessing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-statistical-tests-normality-u-test-and-glm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Statistical Tests (Normality, U-Test, and GLM)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Statistical Tests (Normality, U-Test, and GLM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normality-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normality test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wilcoxon-rank-sum-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wilcoxon rank-sum test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generalized-linear-model-glm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generalized Linear Model (GLM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-permanova-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: PERMANOVA Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-balance-and-compositional-analysis-selbal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Balance and Compositional Analysis (Selbal)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-machine-learning-random-forest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Machine Learning: Random Forest
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Machine Learning: Random Forest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-roc-receiver-operating-characteristic-curve-and-calculate-auc-area-under-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make ROC (Receiver Operating Characteristic) curve and calculate AUC (Area Under Curve)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="practice-2-parkinsons-disease"><strong>Practice 2: Parkinson's disease</strong></h1>
+<blockquote>
+<p>This chapter contains a training data for 16S amplicon analysis and an example of analysis.</p>
+</blockquote>
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>In this study, the gut microbiome composition in individuals with Parkinson’s Disease and Healthy Controls was investigated. The goal was to identify taxonomic shifts and associations with disease. High-throughput sequencing data and various bioinformatics tools were employed to analyze microbial diversity and abundance.<br></p>
+<p>Data obtained from the article <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5469442/">«<em>Parkinson’s Disease and PD Medications Have Distinct Signatures of the Gut Microbiome</em>»</a> was used. These data include information on microbial samples from healthy individuals and patients with Parkinson’s's disease.<br></p>
+<h2 id="instruction"><strong>Instruction</strong></h2>
+<p>You can run commands below in your <code>RStudio</code> in <code>R script</code>.<br>
+Or if you want to write a beautiful &amp; convenient to read laboratory journal you can use <code>R Markdown</code>.<br></p>
+<hr />
+<h2 id="step-1-data-loading-and-preprocessing"><strong>Step 1: Data Loading and Preprocessing</strong></h2>
+<p>Install or call libraries<br></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&quot;pacman&quot;</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;pacman&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pacman</span><span class="o">::</span><span class="nf">p_load</span><span class="p">(</span><span class="n">readr</span><span class="p">,</span><span class="w"> </span><span class="n">dplyr</span><span class="p">,</span><span class="w"> </span><span class="n">ROCR</span><span class="p">,</span><span class="w"> </span><span class="n">PERMANOVA</span><span class="p">,</span><span class="w"> </span><span class="n">plyr</span><span class="p">,</span><span class="w"> </span><span class="n">data.table</span><span class="p">,</span><span class="w"> </span><span class="n">ggplot2</span><span class="p">,</span><span class="w"> </span><span class="n">e1071</span><span class="p">,</span><span class="w"> </span><span class="n">randomForest</span><span class="p">,</span><span class="w"> </span><span class="n">caret</span><span class="p">,</span><span class="w"> </span><span class="n">NearestBalance</span><span class="p">,</span><span class="w"> </span><span class="n">zCompositions</span><span class="p">,</span><span class="w"> </span><span class="n">selbal</span><span class="p">)</span>
+</span></code></pre></div>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If you experience any troubles in installing <code>NearestBalance</code> &amp; <code>selbal</code> packages please go to <a href="../05_02_Crohns_disease">previous chapter</a></p>
+</details>
+<p>Then set the working directory.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">main_dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dirname</span><span class="p">(</span><span class="n">rstudioapi</span><span class="o">::</span><span class="nf">getSourceEditorContext</span><span class="p">()</span><span class="o">$</span><span class="n">path</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">setwd</span><span class="p">(</span><span class="n">main_dir</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Download the data to work with.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;https://github.com/iliapopov17/NGS-Handbook/raw/refs/heads/main/data/05_16S_amplicon_analysis/05_03_Parkinsons_disease.zip&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">zipF</span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;05_03_Parkinsons_disease.zip&quot;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nf">download.file</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">zipF</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">outDir</span><span class="o">&lt;-</span><span class="s">&quot;.&quot;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nf">unzip</span><span class="p">(</span><span class="n">zipF</span><span class="p">,</span><span class="n">exdir</span><span class="o">=</span><span class="n">outDir</span><span class="p">)</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nf">file.exists</span><span class="p">(</span><span class="n">zipF</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="nf">file.remove</span><span class="p">(</span><span class="n">zipF</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Load data from various files.<br>
+- <code>Parkinson_otu_table_L6.tsv</code> is an OTU (Operational Taxonomic Units) table at level 6 taxonomy (genus level).<br>
+- <code>Parkinson_chao1.tsv</code> contains alpha diversity metrics (Chao1 richness estimate).<br>
+- <code>sample_info.txt</code> is metadata, which contains sample information, such as case/control labels.<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">biomeData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_delim</span><span class="p">(</span><span class="s">&#39;data/Parkinson_otu_table_L6.tsv&#39;</span><span class="p">,</span><span class="w">  </span><span class="s">&quot;\t&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">col_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">escape_double</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">trim_ws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">alphaDivData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_delim</span><span class="p">(</span><span class="s">&#39;data/Parkinson_chao1.tsv&#39;</span><span class="p">,</span><span class="w">  </span><span class="s">&quot;\t&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">col_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="n">escape_double</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">trim_ws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">metaData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_delim</span><span class="p">(</span><span class="s">&#39;data/sample_info.txt&#39;</span><span class="p">,</span><span class="w">  </span><span class="s">&quot;\t&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">col_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">escape_double</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">trim_ws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Check if data is loaded correctly as a data frame<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">is.data.frame</span><span class="p">(</span><span class="n">biomeData</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[1] TRUE
+</span></code></pre></div>
+<p>Ensure that the first column name (<code>sample_name</code>) in all datasets matches for merging later<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">colnames</span><span class="p">(</span><span class="n">biomeData</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span><span class="o">&lt;-</span><span class="nf">colnames</span><span class="p">(</span><span class="n">metaData</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nf">colnames</span><span class="p">(</span><span class="n">alphaDivData</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span><span class="o">&lt;-</span><span class="nf">colnames</span><span class="p">(</span><span class="n">metaData</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span>
+</span></code></pre></div>
+<p>Find the common sample names between the three datasets (<code>biomeData</code>, <code>alphaDivData</code>, and <code>metaData</code>)<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">commonSamples</span><span class="o">&lt;-</span><span class="nf">Reduce</span><span class="p">(</span><span class="n">intersect</span><span class="p">,</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">biomeData</span><span class="o">$</span><span class="n">sample_name</span><span class="p">,</span><span class="n">alphaDivData</span><span class="o">$</span><span class="n">sample_name</span><span class="p">,</span><span class="n">metaData</span><span class="o">$</span><span class="n">sample_name</span><span class="p">))</span>
+</span></code></pre></div>
+<p>Set the row names of the data frames to the sample names for easier subsetting later<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">biomeData</span><span class="p">)</span><span class="o">&lt;-</span><span class="n">biomeData</span><span class="o">$</span><span class="n">sample_name</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">alphaDivData</span><span class="p">)</span><span class="o">&lt;-</span><span class="n">alphaDivData</span><span class="o">$</span><span class="n">sample_name</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">metaData</span><span class="p">)</span><span class="o">&lt;-</span><span class="n">metaData</span><span class="o">$</span><span class="n">sample_name</span>
+</span></code></pre></div>
+<p>Subset the data to include only the common samples across the datasets<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">alphaDivDataS</span><span class="o">&lt;-</span><span class="n">alphaDivData</span><span class="p">[</span><span class="n">commonSamples</span><span class="p">,]</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">biomeDataS</span><span class="o">&lt;-</span><span class="n">biomeData</span><span class="p">[</span><span class="n">commonSamples</span><span class="p">,]</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">metaDataS</span><span class="o">&lt;-</span><span class="n">metaData</span><span class="p">[</span><span class="n">commonSamples</span><span class="p">,]</span>
+</span></code></pre></div>
+<p>Remove the first column (sample name) from biomeDataS as it's redundant now<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">biomeDataS</span><span class="o">&lt;-</span><span class="n">biomeDataS</span><span class="p">[,</span><span class="m">-1</span><span class="p">]</span>
+</span></code></pre></div>
+<p>Reassign row names based on sample names from metadata (just to ensure they match)<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">biomeDataS</span><span class="p">)</span><span class="o">&lt;-</span><span class="n">metaDataS</span><span class="o">$</span><span class="n">sample_name</span>
+</span></code></pre></div>
+<hr />
+<h2 id="step-2-statistical-tests-normality-u-test-and-glm"><strong>Step 2: Statistical Tests (Normality, U-Test, and GLM)</strong></h2>
+<h3 id="normality-test"><strong>Normality test</strong></h3>
+<p>Shapiro-Wilk test to check if the Chao1 alpha diversity values follow a normal distribution<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">shapiro.test</span><span class="p">(</span><span class="n">alphaDivDataS</span><span class="o">$</span><span class="n">mean_chao1</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>    Shapiro-Wilk normality test
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>data:  alphaDivDataS$mean_chao1
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>W = 0.98753, p-value = 0.0146
+</span></code></pre></div>
+<p>The data is not normally distributed, the p-value is very small<br></p>
+<h3 id="wilcoxon-rank-sum-test"><strong>Wilcoxon rank-sum test</strong></h3>
+<p>Wilcoxon rank-sum test (non-parametric test) to compare cases and controls<br>
+Extract sample names for controls and cases based on <code>case_control</code> metadata<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">controls</span><span class="o">&lt;-</span><span class="n">metaDataS</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">metaDataS</span><span class="o">$</span><span class="n">case_control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;Control&#39;</span><span class="p">),</span><span class="s">&#39;sample_name&#39;</span><span class="p">]</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">cases</span><span class="o">&lt;-</span><span class="n">metaDataS</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">metaDataS</span><span class="o">$</span><span class="n">case_control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;Case&#39;</span><span class="p">),</span><span class="s">&#39;sample_name&#39;</span><span class="p">]</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">cases</span><span class="o">&lt;-</span><span class="n">cases</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">controls</span><span class="o">&lt;-</span><span class="n">controls</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
+</span></code></pre></div>
+<p>Initialize a matrix to store Wilcoxon test results for each taxonomic group<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">wilcoxRes</span><span class="o">&lt;-</span><span class="nf">matrix</span><span class="p">(</span><span class="n">ncol</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="n">nrow</span><span class="o">=</span><span class="m">0</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Loop through each taxonomic group (each column of biomeDataS) and perform Wilcoxon test between cases and controls<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">biomeDataS</span><span class="p">))</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="p">{</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="n">wt</span><span class="o">&lt;-</span><span class="nf">wilcox.test</span><span class="p">(</span><span class="n">biomeDataS</span><span class="p">[</span><span class="n">cases</span><span class="p">,</span><span class="n">i</span><span class="p">][[</span><span class="m">1</span><span class="p">]],</span><span class="n">biomeDataS</span><span class="p">[</span><span class="n">controls</span><span class="p">,</span><span class="n">i</span><span class="p">][[</span><span class="m">1</span><span class="p">]])</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="n">wilcoxRes</span><span class="o">&lt;-</span><span class="nf">rbind</span><span class="p">(</span><span class="n">wilcoxRes</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">wt</span><span class="o">$</span><span class="n">statistic</span><span class="p">,</span><span class="w"> </span><span class="n">wt</span><span class="o">$</span><span class="n">p.value</span><span class="p">))</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Adjust p-values using the False Discovery Rate (FDR) method to control for multiple comparisons<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">wicoxPvalAdj</span><span class="o">&lt;-</span><span class="nf">p.adjust</span><span class="p">(</span><span class="n">wilcoxRes</span><span class="p">[,</span><span class="m">3</span><span class="p">],</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;fdr&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Combine the Wilcoxon test results with adjusted p-values into a data frame<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">wilcoxRes</span><span class="o">&lt;-</span><span class="nf">cbind</span><span class="p">(</span><span class="n">wilcoxRes</span><span class="p">,</span><span class="w"> </span><span class="n">wicoxPvalAdj</span><span class="p">)</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nf">colnames</span><span class="p">(</span><span class="n">wilcoxRes</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;tax&#39;</span><span class="p">,</span><span class="s">&#39;stat&#39;</span><span class="p">,</span><span class="s">&#39;pval&#39;</span><span class="p">,</span><span class="s">&#39;pval_adj&#39;</span><span class="p">)</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">wilcoxRes</span><span class="o">&lt;-</span><span class="nf">as.data.frame</span><span class="p">(</span><span class="n">wilcoxRes</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Convert p-values to numeric and round them to 3 decimal places for readability<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">wilcoxRes</span><span class="o">$</span><span class="n">pval</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">wilcoxRes</span><span class="o">$</span><span class="n">pval</span><span class="p">)),</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">wilcoxRes</span><span class="o">$</span><span class="n">pval_adj</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">wilcoxRes</span><span class="o">$</span><span class="n">pval_adj</span><span class="p">)),</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Extract significant results where the adjusted p-value is less than 0.05<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">wilcoxResSign</span><span class="o">&lt;-</span><span class="n">wilcoxRes</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">wilcoxRes</span><span class="o">$</span><span class="n">pval_adj</span><span class="w"> </span><span class="o">&lt;</span><span class="m">0.05</span><span class="p">),]</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">wilcoxResSign</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>tax
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>4                  Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Actinomycetaceae;Mobiluncus
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>18        Bacteria;Actinobacteria;Actinobacteria;Bifidobacteriales;Bifidobacteriaceae;Bifidobacterium
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>23            Bacteria;Actinobacteria;Actinobacteria;Coriobacteriales;Coriobacteriaceae;Gordonibacter
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>33                  Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Porphyromonas
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>64         Bacteria;Firmicutes;Clostridia;Clostridiales;(Eubacteriaceae/Lachnospiraceae);unclassified
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>65       Bacteria;Firmicutes;Clostridia;Clostridiales;(Eubacteriaceae/Lachnospiraceae)_2;unclassified
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>75  Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiales_Family_XI._Incertae_Sedis;Anaerococcus
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>81                            Bacteria;Firmicutes;Clostridia;Clostridiales;Eubacteriaceae;Eubacterium
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>84      Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;(Lachnoclostridium/unclassified)
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>85                          Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Anaerostipes
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>96                             Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Roseburia
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>211      Bacteria;Verrucomicrobia;Verrucomicrobiae;Verrucomicrobiales;Verrucomicrobiaceae;Akkermansia
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>     stat  pval pval_adj
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>4   11589 0.000    0.003
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>18  12781 0.000    0.002
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>23  11125 0.002    0.042
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>33  12098 0.000    0.009
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>64   7651 0.002    0.042
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>65   7098 0.000    0.004
+</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>75  11803 0.001    0.040
+</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>81   7436 0.001    0.020
+</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>84   7313 0.000    0.009
+</span><span id="__span-21-24"><a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>85   6923 0.000    0.002
+</span><span id="__span-21-25"><a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>96   6692 0.000    0.002
+</span><span id="__span-21-26"><a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a>211 12039 0.001    0.035
+</span></code></pre></div>
+<p>Perform Wilcoxon test for alpha diversity (Chao1) between cases and controls<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">wt</span><span class="o">&lt;-</span><span class="nf">wilcox.test</span><span class="p">(</span><span class="n">alphaDivDataS</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">alphaDivDataS</span><span class="o">$</span><span class="n">sample_name</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">cases</span><span class="p">),</span><span class="s">&#39;mean_chao1&#39;</span><span class="p">][[</span><span class="m">1</span><span class="p">]],</span><span class="w"> </span><span class="n">alphaDivDataS</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">alphaDivDataS</span><span class="o">$</span><span class="n">sample_name</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">controls</span><span class="p">),</span><span class="s">&#39;mean_chao1&#39;</span><span class="p">][[</span><span class="m">1</span><span class="p">]])</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">wt</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>    Wilcoxon rank sum test with continuity correction
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>data:  alphaDivDataS[which(alphaDivDataS$sample_name %in% cases), &quot;mean_chao1&quot;][[1]] and alphaDivDataS[which(alphaDivDataS$sample_name %in% controls), &quot;mean_chao1&quot;][[1]]
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>W = 10352, p-value = 0.4215
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>alternative hypothesis: true location shift is not equal to 0
+</span></code></pre></div>
+<h3 id="generalized-linear-model-glm"><strong>Generalized Linear Model (GLM)</strong></h3>
+<p>GLM to test associations between microbiome features and metadata (case/control, BMI, sex, age)<br></p>
+<p>Join the metadata with biome data<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">glmDF</span><span class="o">&lt;-</span><span class="nf">inner_join</span><span class="p">(</span><span class="n">metaDataS</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;sample_name&#39;</span><span class="p">,</span><span class="s">&#39;case_control&#39;</span><span class="p">,</span><span class="s">&#39;sex&#39;</span><span class="p">,</span><span class="s">&#39;age&#39;</span><span class="p">,</span><span class="s">&#39;bmi&#39;</span><span class="p">)],</span><span class="n">biomeData</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;sample_name&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Filter out samples with missing BMI, age, or sex data<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">glmDF</span><span class="o">&lt;-</span><span class="n">glmDF</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">glmDF</span><span class="o">$</span><span class="n">bmi</span><span class="p">)),]</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="n">glmDF</span><span class="o">&lt;-</span><span class="n">glmDF</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">glmDF</span><span class="o">$</span><span class="n">age</span><span class="p">)),]</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="n">glmDF</span><span class="o">&lt;-</span><span class="n">glmDF</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">glmDF</span><span class="o">$</span><span class="n">sex</span><span class="p">)),]</span>
+</span></code></pre></div>
+<p>Convert age and BMI columns to numeric type<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">glmDF</span><span class="o">$</span><span class="n">age</span><span class="o">&lt;-</span><span class="nf">as.numeric</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">glmDF</span><span class="o">$</span><span class="n">age</span><span class="p">))</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">glmDF</span><span class="o">$</span><span class="n">bmi</span><span class="o">&lt;-</span><span class="nf">as.numeric</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">glmDF</span><span class="o">$</span><span class="n">bmi</span><span class="p">))</span>
+</span></code></pre></div>
+<p>Initialize a matrix to store the results of GLM models<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">resGLM</span><span class="o">&lt;-</span><span class="nf">matrix</span><span class="p">(</span><span class="n">nrow</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="o">=</span><span class="m">6</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Loop through each taxonomic group and fit a GLM with covariates BMI, sex, age, and case/control status<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">biomeDataS</span><span class="p">))</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="p">{</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">  </span><span class="n">model0</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glm</span><span class="p">(</span><span class="n">glmDF</span><span class="p">[,</span><span class="n">i</span><span class="p">][[</span><span class="m">1</span><span class="p">]]</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">glmDF</span><span class="p">[,</span><span class="s">&#39;bmi&#39;</span><span class="p">][[</span><span class="m">1</span><span class="p">]]</span><span class="o">+</span><span class="n">glmDF</span><span class="p">[,</span><span class="s">&#39;sex&#39;</span><span class="p">][[</span><span class="m">1</span><span class="p">]]</span><span class="o">+</span><span class="n">glmDF</span><span class="p">[,</span><span class="s">&#39;age&#39;</span><span class="p">][[</span><span class="m">1</span><span class="p">]]</span><span class="o">+</span><span class="n">glmDF</span><span class="p">[,</span><span class="s">&#39;case_control&#39;</span><span class="p">][[</span><span class="m">1</span><span class="p">]])</span>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">  </span><span class="n">tr</span><span class="o">&lt;-</span><span class="nf">summary</span><span class="p">(</span><span class="n">model0</span><span class="p">)</span>
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="w">  </span><span class="n">tr</span><span class="o">&lt;-</span><span class="n">tr</span><span class="o">$</span><span class="n">coefficients</span>
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="w">  </span><span class="n">tr</span><span class="p">[,</span><span class="s">&#39;Pr(&gt;|t|)&#39;</span><span class="p">]</span><span class="o">&lt;-</span><span class="nf">round</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">tr</span><span class="p">[,</span><span class="s">&#39;Pr(&gt;|t|)&#39;</span><span class="p">]),</span><span class="m">2</span><span class="p">)</span>
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="w">  </span><span class="n">tr</span><span class="o">&lt;-</span><span class="nf">cbind</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="nf">nrow</span><span class="p">(</span><span class="n">tr</span><span class="p">)),</span><span class="n">tr</span><span class="p">)</span>
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="w">  </span><span class="n">tr</span><span class="o">&lt;-</span><span class="nf">cbind</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;intercept&#39;</span><span class="p">,</span><span class="s">&#39;BMI&#39;</span><span class="p">,</span><span class="s">&#39;SEX&#39;</span><span class="p">,</span><span class="s">&#39;AGE&#39;</span><span class="p">,</span><span class="s">&#39;control_vs_case&#39;</span><span class="p">),</span><span class="n">tr</span><span class="p">)</span>
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="w">  </span><span class="nf">rownames</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">()</span>
+</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a><span class="w">  </span><span class="n">resGLM</span><span class="o">&lt;-</span><span class="nf">rbind</span><span class="p">(</span><span class="n">resGLM</span><span class="p">,</span><span class="w"> </span><span class="n">tr</span><span class="p">)</span>
+</span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Assign column names to the GLM results and adjust p-values using FDR method<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nf">colnames</span><span class="p">(</span><span class="n">resGLM</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;factor&#39;</span><span class="p">,</span><span class="s">&#39;tax&#39;</span><span class="p">,</span><span class="s">&#39;estimate&#39;</span><span class="p">,</span><span class="s">&#39;std_error&#39;</span><span class="p">,</span><span class="s">&#39;t_val&#39;</span><span class="p">,</span><span class="s">&#39;pval&#39;</span><span class="p">)</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="n">resGLM</span><span class="o">&lt;-</span><span class="nf">as.data.frame</span><span class="p">(</span><span class="n">resGLM</span><span class="p">)</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="n">resGLM</span><span class="o">&lt;-</span><span class="nf">cbind</span><span class="p">(</span><span class="n">resGLM</span><span class="p">,</span><span class="w"> </span><span class="nf">p.adjust</span><span class="p">(</span><span class="n">resGLM</span><span class="o">$</span><span class="n">pval</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;fdr&#39;</span><span class="p">))</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="nf">colnames</span><span class="p">(</span><span class="n">resGLM</span><span class="p">)[</span><span class="nf">length</span><span class="p">(</span><span class="nf">colnames</span><span class="p">(</span><span class="n">resGLM</span><span class="p">))]</span><span class="o">&lt;-</span><span class="s">&#39;pval_adj&#39;</span>
+</span></code></pre></div>
+<p>Filter results to show only significant associations with case/control status<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">resGLM</span><span class="o">&lt;-</span><span class="n">resGLM</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">resGLM</span><span class="o">$</span><span class="n">factor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;control_vs_case&#39;</span><span class="p">),]</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="n">resGLMFilt</span><span class="o">&lt;-</span><span class="n">resGLM</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">resGLM</span><span class="o">$</span><span class="n">pval_adj</span><span class="o">&lt;</span><span class="m">0.05</span><span class="p">),]</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="n">resGLMFilt</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>              factor
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>5    control_vs_case
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>325  control_vs_case
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>405  control_vs_case
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>420  control_vs_case
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>480  control_vs_case
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>570  control_vs_case
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>625  control_vs_case
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>1055 control_vs_case
+</span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>                                                                                                     tax
+</span><span id="__span-31-11"><a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>5        Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanobrevibacter
+</span><span id="__span-31-12"><a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>325         Bacteria;Firmicutes;Clostridia;Clostridiales;(Eubacteriaceae/Lachnospiraceae)_2;unclassified
+</span><span id="__span-31-13"><a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a>405                              Bacteria;Firmicutes;Clostridia;Clostridiales;Eubacteriaceae;Eubacterium
+</span><span id="__span-31-14"><a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a>420        Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;(Lachnoclostridium/unclassified)
+</span><span id="__span-31-15"><a id="__codelineno-31-15" name="__codelineno-31-15" href="#__codelineno-31-15"></a>480                               Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Roseburia
+</span><span id="__span-31-16"><a id="__codelineno-31-16" name="__codelineno-31-16" href="#__codelineno-31-16"></a>570                                Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Gemmiger
+</span><span id="__span-31-17"><a id="__codelineno-31-17" name="__codelineno-31-17" href="#__codelineno-31-17"></a>625  Bacteria;Firmicutes;Erysipelotrichia;Erysipelotrichales;Erysipelotrichaceae;Candidatus_Stoquefichus
+</span><span id="__span-31-18"><a id="__codelineno-31-18" name="__codelineno-31-18" href="#__codelineno-31-18"></a>1055        Bacteria;Verrucomicrobia;Verrucomicrobiae;Verrucomicrobiales;Verrucomicrobiaceae;Akkermansia
+</span><span id="__span-31-19"><a id="__codelineno-31-19" name="__codelineno-31-19" href="#__codelineno-31-19"></a>                estimate          std_error             t_val pval
+</span><span id="__span-31-20"><a id="__codelineno-31-20" name="__codelineno-31-20" href="#__codelineno-31-20"></a>5    -0.0472473208760292 0.0136202994412748  -3.4688900254903    0
+</span><span id="__span-31-21"><a id="__codelineno-31-21" name="__codelineno-31-21" href="#__codelineno-31-21"></a>325     1.49958472903816  0.488411879979953   3.0703281195775    0
+</span><span id="__span-31-22"><a id="__codelineno-31-22" name="__codelineno-31-22" href="#__codelineno-31-22"></a>405    0.519189420564998  0.181942484855474  2.85359090801369    0
+</span><span id="__span-31-23"><a id="__codelineno-31-23" name="__codelineno-31-23" href="#__codelineno-31-23"></a>420    0.132428236193973 0.0406417659361785  3.25842721504598    0
+</span><span id="__span-31-24"><a id="__codelineno-31-24" name="__codelineno-31-24" href="#__codelineno-31-24"></a>480     1.19150475309103  0.332437879526919  3.58414256157155    0
+</span><span id="__span-31-25"><a id="__codelineno-31-25" name="__codelineno-31-25" href="#__codelineno-31-25"></a>570   0.0341504148648222 0.0118551276702192  2.88064505206554    0
+</span><span id="__span-31-26"><a id="__codelineno-31-26" name="__codelineno-31-26" href="#__codelineno-31-26"></a>625   -0.287410863591875 0.0917414127348212 -3.13283668764331    0
+</span><span id="__span-31-27"><a id="__codelineno-31-27" name="__codelineno-31-27" href="#__codelineno-31-27"></a>1055   -2.73511147819197  0.826501709219534 -3.30926294245022    0
+</span><span id="__span-31-28"><a id="__codelineno-31-28" name="__codelineno-31-28" href="#__codelineno-31-28"></a>     pval_adj
+</span><span id="__span-31-29"><a id="__codelineno-31-29" name="__codelineno-31-29" href="#__codelineno-31-29"></a>5           0
+</span><span id="__span-31-30"><a id="__codelineno-31-30" name="__codelineno-31-30" href="#__codelineno-31-30"></a>325         0
+</span><span id="__span-31-31"><a id="__codelineno-31-31" name="__codelineno-31-31" href="#__codelineno-31-31"></a>405         0
+</span><span id="__span-31-32"><a id="__codelineno-31-32" name="__codelineno-31-32" href="#__codelineno-31-32"></a>420         0
+</span><span id="__span-31-33"><a id="__codelineno-31-33" name="__codelineno-31-33" href="#__codelineno-31-33"></a>480         0
+</span><span id="__span-31-34"><a id="__codelineno-31-34" name="__codelineno-31-34" href="#__codelineno-31-34"></a>570         0
+</span><span id="__span-31-35"><a id="__codelineno-31-35" name="__codelineno-31-35" href="#__codelineno-31-35"></a>625         0
+</span><span id="__span-31-36"><a id="__codelineno-31-36" name="__codelineno-31-36" href="#__codelineno-31-36"></a>1055        0
+</span></code></pre></div>
+<p>Check for overlap between GLM and Wilcoxon test results (significant taxa)<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">resGLMFilt</span><span class="o">$</span><span class="n">tax</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">resGLMFilt</span><span class="o">$</span><span class="n">tax</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">wilcoxResSign</span><span class="o">$</span><span class="n">tax</span><span class="p">)]</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>[1] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;(Eubacteriaceae/Lachnospiraceae)_2;unclassified&quot; 
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>[2] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Eubacteriaceae;Eubacterium&quot;                      
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>[3] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;(Lachnoclostridium/unclassified)&quot;
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>[4] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Roseburia&quot;                       
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>[5] &quot;Bacteria;Verrucomicrobia;Verrucomicrobiae;Verrucomicrobiales;Verrucomicrobiaceae;Akkermansia&quot; 
+</span></code></pre></div>
+<h2 id="step-3-permanova-analysis"><strong>Step 3: PERMANOVA Analysis</strong></h2>
+<p>PERMANOVA to test if there is a significant difference in community composition between cases and controls<br></p>
+<p>Calculate Bray-Curtis distance matrix on biome data<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">biomeDist</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">DistContinuous</span><span class="p">(</span><span class="n">biomeDataS</span><span class="p">,</span><span class="w"> </span><span class="n">coef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Bray_Curtis&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Perform PERMANOVA on the distance matrix using case/control status as the grouping factor<br></p>
+<p><strong><em>Input</em></strong></p>
+<p><div class="language-r highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">biomePERM</span><span class="o">=</span><span class="nf">PERMANOVA</span><span class="p">(</span><span class="n">biomeDist</span><span class="p">,</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">metaDataS</span><span class="o">$</span><span class="n">case_control</span><span class="p">),</span><span class="w">  </span><span class="n">CoordPrinc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">PostHoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;fdr&#39;</span><span class="p">)</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="n">biomePERM</span><span class="o">$</span><span class="n">pvalue</span>
+</span></code></pre></div>
+<strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>[1] 0.001998002
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nf">summary</span><span class="p">(</span><span class="n">biomePERM</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a> ###### PERMANOVA Analysis #######
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>Call
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>PERMANOVA(Distance = biomeDist, group = as.factor(metaDataS$case_control), 
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>    CoordPrinc = TRUE, PostHoc = &quot;fdr&quot;)
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>________________________________________________
+</span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>
+</span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>Contrast Matrix
+</span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>          Case Control
+</span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>C Case       1       0
+</span><span id="__span-38-11"><a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>C Control    0       1
+</span><span id="__span-38-12"><a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a>________________________________________________
+</span><span id="__span-38-13"><a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a>
+</span><span id="__span-38-14"><a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a>PerMANOVA
+</span><span id="__span-38-15"><a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a>      Explained Residual df Num df Denom    F-exp     p-value
+</span><span id="__span-38-16"><a id="__codelineno-38-16" name="__codelineno-38-16" href="#__codelineno-38-16"></a>Total 0.6153953 50.81976      1      283 3.426952 0.001998002
+</span><span id="__span-38-17"><a id="__codelineno-38-17" name="__codelineno-38-17" href="#__codelineno-38-17"></a>      p-value adj.
+</span><span id="__span-38-18"><a id="__codelineno-38-18" name="__codelineno-38-18" href="#__codelineno-38-18"></a>Total  0.001998002
+</span><span id="__span-38-19"><a id="__codelineno-38-19" name="__codelineno-38-19" href="#__codelineno-38-19"></a>________________________________________________
+</span><span id="__span-38-20"><a id="__codelineno-38-20" name="__codelineno-38-20" href="#__codelineno-38-20"></a>
+</span><span id="__span-38-21"><a id="__codelineno-38-21" name="__codelineno-38-21" href="#__codelineno-38-21"></a>Contrasts
+</span><span id="__span-38-22"><a id="__codelineno-38-22" name="__codelineno-38-22" href="#__codelineno-38-22"></a>          Explained Residual df Num df Denom    F-exp     p-value
+</span><span id="__span-38-23"><a id="__codelineno-38-23" name="__codelineno-38-23" href="#__codelineno-38-23"></a>C Case    0.2504767 50.81976      1      283 1.394829 0.001998002
+</span><span id="__span-38-24"><a id="__codelineno-38-24" name="__codelineno-38-24" href="#__codelineno-38-24"></a>C Control 0.3649186 50.81976      1      283 2.032122 0.001998002
+</span><span id="__span-38-25"><a id="__codelineno-38-25" name="__codelineno-38-25" href="#__codelineno-38-25"></a>Total     0.6153953 50.81976      1      283 3.426952 0.001998002
+</span><span id="__span-38-26"><a id="__codelineno-38-26" name="__codelineno-38-26" href="#__codelineno-38-26"></a>          p-value adj.
+</span><span id="__span-38-27"><a id="__codelineno-38-27" name="__codelineno-38-27" href="#__codelineno-38-27"></a>C Case     0.002000000
+</span><span id="__span-38-28"><a id="__codelineno-38-28" name="__codelineno-38-28" href="#__codelineno-38-28"></a>C Control  0.002000000
+</span><span id="__span-38-29"><a id="__codelineno-38-29" name="__codelineno-38-29" href="#__codelineno-38-29"></a>Total      0.001998002
+</span><span id="__span-38-30"><a id="__codelineno-38-30" name="__codelineno-38-30" href="#__codelineno-38-30"></a>________________________________________________
+</span></code></pre></div>
+<h2 id="step-4-balance-and-compositional-analysis-selbal"><strong>Step 4: Balance and Compositional Analysis (<code>Selbal</code>)</strong></h2>
+<p>Add a small constant (pseudo count) to the biomeDataS to avoid log(0) issues for balance analysis<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">biomeDataS_pseudo</span><span class="o">&lt;-</span><span class="n">biomeDataS</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.0001</span>
+</span></code></pre></div>
+<p>Perform Nearest Balance (NB) analysis to identify microbial taxa associated with case/control status<br>
+<code>abundance</code> is the transformed microbiome data, <code>metadata</code> contains case/control labels<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">nb_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nb_lm</span><span class="p">(</span><span class="n">abundance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">biomeDataS_pseudo</span><span class="p">,</span>
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">              </span><span class="n">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metaDataS</span><span class="p">,</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">              </span><span class="n">pred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;case_control&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieve the identified taxa that contribute to the balance in cases and controls<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="n">nb_2</span><span class="o">$</span><span class="n">nb</span><span class="o">$</span><span class="n">b1</span><span class="o">$</span><span class="n">num</span><span class="w"> </span><span class="c1"># Taxa associated with case group</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a> [1] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;(Eubacteriaceae/Lachnospiraceae)_2;unclassified&quot;          
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a> [2] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Anaerostipes&quot;                             
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a> [3] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;(Eubacteriaceae/Lachnospiraceae);unclassified&quot;            
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a> [4] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;(Lachnoclostridium/unclassified)&quot;         
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a> [5] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Roseburia&quot;                                
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a> [6] &quot;Bacteria;Firmicutes;(Bacilli/Clostridia);unclassified;unclassified;unclassified&quot;                       
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a> [7] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;(Blautia/unclassified)&quot;                   
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a> [8] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Lachnospira&quot;                              
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a> [9] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiaceae;unclassified&quot;                              
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>[10] &quot;Bacteria;Proteobacteria;Gammaproteobacteria;Pasteurellales;Pasteurellaceae;Haemophilus&quot;                
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>[11] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Gemmiger&quot;                                 
+</span><span id="__span-42-12"><a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>[12] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Faecalibacterium&quot;                         
+</span><span id="__span-42-13"><a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a>[13] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Eubacteriaceae;Eubacterium&quot;                               
+</span><span id="__span-42-14"><a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a>[14] &quot;Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Serratia&quot;             
+</span><span id="__span-42-15"><a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a>[15] &quot;Bacteria;Firmicutes;Erysipelotrichia;Erysipelotrichales;Erysipelotrichaceae;Holdemania&quot;                
+</span><span id="__span-42-16"><a id="__codelineno-42-16" name="__codelineno-42-16" href="#__codelineno-42-16"></a>[16] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Peptostreptococcaceae;unclassified&quot;                       
+</span><span id="__span-42-17"><a id="__codelineno-42-17" name="__codelineno-42-17" href="#__codelineno-42-17"></a>[17] &quot;Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Micrococcaceae;Rothia&quot;                          
+</span><span id="__span-42-18"><a id="__codelineno-42-18" name="__codelineno-42-18" href="#__codelineno-42-18"></a>[18] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;unclassified&quot;                             
+</span><span id="__span-42-19"><a id="__codelineno-42-19" name="__codelineno-42-19" href="#__codelineno-42-19"></a>[19] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Tyzzerella&quot;                               
+</span><span id="__span-42-20"><a id="__codelineno-42-20" name="__codelineno-42-20" href="#__codelineno-42-20"></a>[20] &quot;Bacteria;Proteobacteria;Alphaproteobacteria;RF32;unclassified;unclassified&quot;                            
+</span><span id="__span-42-21"><a id="__codelineno-42-21" name="__codelineno-42-21" href="#__codelineno-42-21"></a>[21] &quot;Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Escherichia&quot;          
+</span><span id="__span-42-22"><a id="__codelineno-42-22" name="__codelineno-42-22" href="#__codelineno-42-22"></a>[22] &quot;Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Comamonadaceae;Comamonas&quot;                   
+</span><span id="__span-42-23"><a id="__codelineno-42-23" name="__codelineno-42-23" href="#__codelineno-42-23"></a>[23] &quot;Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Moraxellaceae;Acinetobacter&quot;               
+</span><span id="__span-42-24"><a id="__codelineno-42-24" name="__codelineno-42-24" href="#__codelineno-42-24"></a>[24] &quot;Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Alcaligenaceae;Alcaligenes&quot;                 
+</span><span id="__span-42-25"><a id="__codelineno-42-25" name="__codelineno-42-25" href="#__codelineno-42-25"></a>[25] &quot;Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Providencia&quot;          
+</span><span id="__span-42-26"><a id="__codelineno-42-26" name="__codelineno-42-26" href="#__codelineno-42-26"></a>[26] &quot;Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;unclassified&quot;         
+</span><span id="__span-42-27"><a id="__codelineno-42-27" name="__codelineno-42-27" href="#__codelineno-42-27"></a>[27] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;(Clostridiaceae/unclassified);unclassified&quot;               
+</span><span id="__span-42-28"><a id="__codelineno-42-28" name="__codelineno-42-28" href="#__codelineno-42-28"></a>[28] &quot;Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Lactococcus&quot;                              
+</span><span id="__span-42-29"><a id="__codelineno-42-29" name="__codelineno-42-29" href="#__codelineno-42-29"></a>[29] &quot;Bacteria;Firmicutes;Bacilli;Lactobacillales;Carnobacteriaceae;Granulicatella&quot;                          
+</span><span id="__span-42-30"><a id="__codelineno-42-30" name="__codelineno-42-30" href="#__codelineno-42-30"></a>[30] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Peptococcus&quot;                               
+</span><span id="__span-42-31"><a id="__codelineno-42-31" name="__codelineno-42-31" href="#__codelineno-42-31"></a>[31] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;(Ruminococcus/unclassified)&quot;              
+</span><span id="__span-42-32"><a id="__codelineno-42-32" name="__codelineno-42-32" href="#__codelineno-42-32"></a>[32] &quot;Bacteria;Firmicutes;unclassified;unclassified;unclassified;unclassified&quot;                               
+</span><span id="__span-42-33"><a id="__codelineno-42-33" name="__codelineno-42-33" href="#__codelineno-42-33"></a>[33] &quot;Bacteria;Firmicutes;Negativicutes;Veillonellales;Veillonellaceae;Veillonella&quot;                          
+</span><span id="__span-42-34"><a id="__codelineno-42-34" name="__codelineno-42-34" href="#__codelineno-42-34"></a>[34] &quot;Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Stenotrophomonas&quot;         
+</span><span id="__span-42-35"><a id="__codelineno-42-35" name="__codelineno-42-35" href="#__codelineno-42-35"></a>[35] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Blautia&quot;                                  
+</span><span id="__span-42-36"><a id="__codelineno-42-36" name="__codelineno-42-36" href="#__codelineno-42-36"></a>[36] &quot;Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Comamonadaceae;(Diaphorobacter/Hylemonella)&quot;
+</span><span id="__span-42-37"><a id="__codelineno-42-37" name="__codelineno-42-37" href="#__codelineno-42-37"></a>[37] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiaceae;Clostridium&quot;                               
+</span><span id="__span-42-38"><a id="__codelineno-42-38" name="__codelineno-42-38" href="#__codelineno-42-38"></a>[38] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Lachnoclostridium&quot; 
+</span></code></pre></div>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">nb_2</span><span class="o">$</span><span class="n">nb</span><span class="o">$</span><span class="n">b1</span><span class="o">$</span><span class="n">den</span><span class="w"> </span><span class="c1"># Taxa associated with control group</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a> [1] &quot;Bacteria;Verrucomicrobia;Verrucomicrobiae;Verrucomicrobiales;Verrucomicrobiaceae;Akkermansia&quot;                                  
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a> [2] &quot;Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Porphyromonas&quot;                                             
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a> [3] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Christensenellaceae;Christensenella&quot;                                              
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a> [4] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiales_Family_XI._Incertae_Sedis;Anaerococcus&quot;                             
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a> [5] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Christensenellaceae;unclassified&quot;                                                 
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a> [6] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiales_Family_XI._Incertae_Sedis;Peptoniphilus&quot;                            
+</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a> [7] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;(Ruminococcaceae/unclassified);unclassified&quot;                                      
+</span><span id="__span-44-8"><a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a> [8] &quot;Bacteria;Firmicutes;Bacilli;Lactobacillales;Lactobacillaceae;Lactobacillus&quot;                                                    
+</span><span id="__span-44-9"><a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a> [9] &quot;Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Corynebacteriaceae;Corynebacterium&quot;                                     
+</span><span id="__span-44-10"><a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a>[10] &quot;Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Actinomycetaceae;Mobiluncus&quot;                                            
+</span><span id="__span-44-11"><a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a>[11] &quot;Bacteria;Proteobacteria;Deltaproteobacteria;Desulfovibrionales;Desulfovibrionaceae;Desulfovibrio&quot;                              
+</span><span id="__span-44-12"><a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a>[12] &quot;Bacteria;Firmicutes;Erysipelotrichia;Erysipelotrichales;Erysipelotrichaceae;Candidatus_Stoquefichus&quot;                           
+</span><span id="__span-44-13"><a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a>[13] &quot;Bacteria;Actinobacteria;Actinobacteria;Bifidobacteriales;Bifidobacteriaceae;Bifidobacterium&quot;                                   
+</span><span id="__span-44-14"><a id="__codelineno-44-14" name="__codelineno-44-14" href="#__codelineno-44-14"></a>[14] &quot;Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Prevotellaceae;Paraprevotella&quot;                                                
+</span><span id="__span-44-15"><a id="__codelineno-44-15" name="__codelineno-44-15" href="#__codelineno-44-15"></a>[15] &quot;Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Actinomycetaceae;Varibaculum&quot;                                           
+</span><span id="__span-44-16"><a id="__codelineno-44-16" name="__codelineno-44-16" href="#__codelineno-44-16"></a>[16] &quot;Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanobrevibacter&quot;                               
+</span><span id="__span-44-17"><a id="__codelineno-44-17" name="__codelineno-44-17" href="#__codelineno-44-17"></a>[17] &quot;Bacteria;Proteobacteria;Epsilonproteobacteria;Campylobacterales;Campylobacteraceae;Campylobacter&quot;                              
+</span><span id="__span-44-18"><a id="__codelineno-44-18" name="__codelineno-44-18" href="#__codelineno-44-18"></a>[18] &quot;Bacteria;Proteobacteria;Deltaproteobacteria;Desulfovibrionales;Desulfovibrionaceae;Bilophila&quot;                                  
+</span><span id="__span-44-19"><a id="__codelineno-44-19" name="__codelineno-44-19" href="#__codelineno-44-19"></a>[19] &quot;Bacteria;Firmicutes;Negativicutes;Veillonellales;Veillonellaceae;Megasphaera&quot;                                                  
+</span><span id="__span-44-20"><a id="__codelineno-44-20" name="__codelineno-44-20" href="#__codelineno-44-20"></a>[20] &quot;Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Sutterellaceae;unclassified&quot;                                        
+</span><span id="__span-44-21"><a id="__codelineno-44-21" name="__codelineno-44-21" href="#__codelineno-44-21"></a>[21] &quot;Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Odoribacter&quot;                                               
+</span><span id="__span-44-22"><a id="__codelineno-44-22" name="__codelineno-44-22" href="#__codelineno-44-22"></a>[22] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;[Mogibacteriaceae];unclassified&quot;                                                  
+</span><span id="__span-44-23"><a id="__codelineno-44-23" name="__codelineno-44-23" href="#__codelineno-44-23"></a>[23] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiales_Family_XI._Incertae_Sedis;(Finegoldia/Unclassified_Tissierellaceae)&quot;
+</span><span id="__span-44-24"><a id="__codelineno-44-24" name="__codelineno-44-24" href="#__codelineno-44-24"></a>[24] &quot;Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Butyricimonas&quot;                                             
+</span><span id="__span-44-25"><a id="__codelineno-44-25" name="__codelineno-44-25" href="#__codelineno-44-25"></a>[25] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Anoxystipes&quot;                                                      
+</span><span id="__span-44-26"><a id="__codelineno-44-26" name="__codelineno-44-26" href="#__codelineno-44-26"></a>[26] &quot;Bacteria;Firmicutes;Bacilli;Bacillales;Staphylococcaceae;Staphylococcus&quot;                                                       
+</span><span id="__span-44-27"><a id="__codelineno-44-27" name="__codelineno-44-27" href="#__codelineno-44-27"></a>[27] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Catabacteriaceae;Catabacter&quot;                                                      
+</span><span id="__span-44-28"><a id="__codelineno-44-28" name="__codelineno-44-28" href="#__codelineno-44-28"></a>[28] &quot;Bacteria;Synergistetes;Synergistia;Synergistales;Synergistaceae;Cloacibacillus&quot;                                                
+</span><span id="__span-44-29"><a id="__codelineno-44-29" name="__codelineno-44-29" href="#__codelineno-44-29"></a>[29] &quot;Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Proteus&quot;                                      
+</span><span id="__span-44-30"><a id="__codelineno-44-30" name="__codelineno-44-30" href="#__codelineno-44-30"></a>[30] &quot;Bacteria;Actinobacteria;Actinobacteria;Coriobacteriales;Coriobacteriaceae;Gordonibacter&quot;                                       
+</span><span id="__span-44-31"><a id="__codelineno-44-31" name="__codelineno-44-31" href="#__codelineno-44-31"></a>[31] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;[Ruminococcus]&quot;                                                   
+</span><span id="__span-44-32"><a id="__codelineno-44-32" name="__codelineno-44-32" href="#__codelineno-44-32"></a>[32] &quot;Bacteria;Firmicutes;Erysipelotrichia;Erysipelotrichales;Erysipelotrichaceae;Holdemanella&quot;                                      
+</span><span id="__span-44-33"><a id="__codelineno-44-33" name="__codelineno-44-33" href="#__codelineno-44-33"></a>[33] &quot;Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;(Citrobacter/Raoultella)&quot;                     
+</span><span id="__span-44-34"><a id="__codelineno-44-34" name="__codelineno-44-34" href="#__codelineno-44-34"></a>[34] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;(Faecalibacterium/Gemmiger)&quot;                                      
+</span><span id="__span-44-35"><a id="__codelineno-44-35" name="__codelineno-44-35" href="#__codelineno-44-35"></a>[35] &quot;Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Parabacteroides&quot;                                           
+</span><span id="__span-44-36"><a id="__codelineno-44-36" name="__codelineno-44-36" href="#__codelineno-44-36"></a>[36] &quot;Bacteria;Firmicutes;Negativicutes;Acidaminococcales;Acidaminococcaceae;Acidaminococcus&quot;                                        
+</span><span id="__span-44-37"><a id="__codelineno-44-37" name="__codelineno-44-37" href="#__codelineno-44-37"></a>[37] &quot;Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Oxalobacteraceae;Oxalobacter&quot;                                       
+</span><span id="__span-44-38"><a id="__codelineno-44-38" name="__codelineno-44-38" href="#__codelineno-44-38"></a>[38] &quot;Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Rikenellaceae;Alistipes&quot;                                                      
+</span><span id="__span-44-39"><a id="__codelineno-44-39" name="__codelineno-44-39" href="#__codelineno-44-39"></a>[39] &quot;Bacteria;Lentisphaerae;Lentisphaeria;Victivallales;Victivallaceae;Victivallis&quot;                                                 
+</span><span id="__span-44-40"><a id="__codelineno-44-40" name="__codelineno-44-40" href="#__codelineno-44-40"></a>[40] &quot;Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Candidatus_Soleaferrea&quot; 
+</span></code></pre></div>
+<p>Create a heatmap showing the association of microbial taxa with case and control samples<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nf">heatmap_with_split</span><span class="p">(</span>
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">  </span><span class="n">abundance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">biomeDataS_pseudo</span><span class="p">,</span><span class="w">         </span><span class="c1"># Pseudocount-adjusted biome data</span>
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">  </span><span class="n">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metaDataS</span><span class="p">,</span><span class="w">                  </span><span class="c1"># Metadata with case/control status</span>
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="w">  </span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">case_control</span><span class="p">,</span><span class="w">              </span><span class="c1"># The grouping factor (case vs control)</span>
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a><span class="w">  </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nb_2</span><span class="o">$</span><span class="n">nb</span><span class="o">$</span><span class="n">b1</span><span class="p">,</span><span class="w">                  </span><span class="c1"># Taxa that define the balance</span>
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="w">  </span><span class="n">show_samp_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">               </span><span class="c1"># Hide sample names for clarity</span>
+</span><span id="__span-45-7"><a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a><span class="w">  </span><span class="n">num_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;taxa_case&quot;</span><span class="p">,</span><span class="w">                </span><span class="c1"># Label for case-associated taxa</span>
+</span><span id="__span-45-8"><a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a><span class="w">  </span><span class="n">den_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;taxa_control&quot;</span><span class="p">,</span><span class="w">             </span><span class="c1"># Label for control-associated taxa</span>
+</span><span id="__span-45-9"><a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a><span class="w">  </span><span class="n">others_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;not associated with Parkinson&quot;</span><span class="w">  </span><span class="c1"># Other taxa</span>
+</span><span id="__span-45-10"><a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_03_Parkinsons_disease/heatmap.png" width="100%"></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>This heatmap is not perfect at all. It is not in "publication ready quality". Yet it serves well for the aim of analysis.</p>
+</details>
+<h2 id="step-5-machine-learning-random-forest"><strong>Step 5: Machine Learning: Random Forest</strong></h2>
+<p>Random Forest classifier for case/control prediction<br></p>
+<p>Split the data into training (80%) and testing (20%) sets<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">train_index</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">createDataPartition</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metaDataS</span><span class="o">$</span><span class="n">case_control</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="n">train_set</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">biomeDataS</span><span class="p">[</span><span class="n">train_index</span><span class="p">,]</span>
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="n">test_set</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">biomeDataS</span><span class="p">[</span><span class="o">-</span><span class="n">train_index</span><span class="p">,]</span>
+</span></code></pre></div>
+<p>Train the Random Forest model with 500 trees<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="n">modRF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">randomForest</span><span class="p">(</span><span class="n">train_set</span><span class="p">,</span><span class="nf">as.factor</span><span class="p">(</span><span class="n">metaDataS</span><span class="o">$</span><span class="n">case_control</span><span class="p">[</span><span class="n">train_index</span><span class="p">]),</span><span class="w"> </span><span class="n">nTree</span><span class="o">=</span><span class="m">500</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Evaluate the importance of each variable (taxon) in the Random Forest model<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="n">imp</span><span class="o">&lt;-</span><span class="nf">as.data.frame</span><span class="p">(</span><span class="nf">importance</span><span class="p">(</span><span class="n">modRF</span><span class="p">))</span>
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="n">imp</span><span class="o">&lt;-</span><span class="nf">cbind</span><span class="p">(</span><span class="nf">rownames</span><span class="p">(</span><span class="n">imp</span><span class="p">),</span><span class="n">imp</span><span class="p">)</span>
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="n">imp</span><span class="o">&lt;-</span><span class="n">imp</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">imp</span><span class="o">$</span><span class="n">MeanDecreaseGini</span><span class="p">,</span><span class="w"> </span><span class="n">decreasing</span><span class="w"> </span><span class="o">=</span><span class="bp">T</span><span class="p">),]</span>
+</span></code></pre></div>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Run the cell below by yourself to see the dataframe with the importance of each variable (taxon) in the Random Forest model</p>
+</details>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="nf">View</span><span class="p">(</span><span class="n">imp</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Plot variable importance (Mean Decrease in Gini index)<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="nf">varImpPlot</span><span class="p">(</span><span class="n">modRF</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_03_Parkinsons_disease/varimpplot.png" width="100%"></p>
+<p>Predict case/control status for the test set using the trained Random Forest model<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="n">predictionTree</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">modRF</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="o">=</span><span class="n">test_set</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&#39;prob&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Convert the predicted probabilities into percentages and merge with actual case/control labels<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="n">predictionTreePerc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.data.frame</span><span class="p">(</span><span class="m">100</span><span class="o">*</span><span class="n">predictionTree</span><span class="p">)</span>
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="n">predictionTreePerc</span><span class="o">&lt;-</span><span class="nf">cbind</span><span class="p">(</span><span class="nf">rownames</span><span class="p">(</span><span class="n">biomeDataS</span><span class="p">)[</span><span class="o">-</span><span class="n">train_index</span><span class="p">],</span><span class="n">predictionTreePerc</span><span class="p">)</span>
+</span><span id="__span-52-3"><a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a><span class="n">predictionTree</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">modRF</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="o">=</span><span class="n">test_set</span><span class="p">)</span>
+</span><span id="__span-52-4"><a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a><span class="n">predictionTreePerc</span><span class="o">&lt;-</span><span class="nf">cbind</span><span class="p">(</span><span class="n">predictionTreePerc</span><span class="p">,</span><span class="n">predictionTree</span><span class="p">)</span>
+</span><span id="__span-52-5"><a id="__codelineno-52-5" name="__codelineno-52-5" href="#__codelineno-52-5"></a><span class="nf">colnames</span><span class="p">(</span><span class="n">predictionTreePerc</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span><span class="o">&lt;-</span><span class="s">&#39;sample_name&#39;</span>
+</span></code></pre></div>
+<p>Merge predictions with the actual case/control status from metadata<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="n">predictionTreePerc</span><span class="o">&lt;-</span><span class="nf">inner_join</span><span class="p">(</span><span class="n">predictionTreePerc</span><span class="p">,</span><span class="w"> </span><span class="n">metaDataS</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;sample_name&#39;</span><span class="p">,</span><span class="s">&#39;case_control&#39;</span><span class="p">)])</span>
+</span></code></pre></div>
+<p>Confusion matrix to assess Random Forest performance<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="n">confmatRF</span><span class="o">&lt;-</span><span class="nf">confusionMatrix</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="nf">as.factor</span><span class="p">(</span><span class="n">predictionTreePerc</span><span class="o">$</span><span class="n">predictionTree</span><span class="p">),</span><span class="w"> </span><span class="n">reference</span><span class="o">=</span><span class="nf">as.factor</span><span class="p">(</span><span class="n">predictionTreePerc</span><span class="o">$</span><span class="n">case_control</span><span class="p">))</span>
+</span><span id="__span-54-2"><a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="n">confmatRF</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>Confusion Matrix and Statistics
+</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>
+</span><span id="__span-55-3"><a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>          Reference
+</span><span id="__span-55-4"><a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a>Prediction Case Control
+</span><span id="__span-55-5"><a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a>   Case      25      12
+</span><span id="__span-55-6"><a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a>   Control    8      11
+</span><span id="__span-55-7"><a id="__codelineno-55-7" name="__codelineno-55-7" href="#__codelineno-55-7"></a>
+</span><span id="__span-55-8"><a id="__codelineno-55-8" name="__codelineno-55-8" href="#__codelineno-55-8"></a>               Accuracy : 0.6429          
+</span><span id="__span-55-9"><a id="__codelineno-55-9" name="__codelineno-55-9" href="#__codelineno-55-9"></a>                 95% CI : (0.5036, 0.7664)
+</span><span id="__span-55-10"><a id="__codelineno-55-10" name="__codelineno-55-10" href="#__codelineno-55-10"></a>    No Information Rate : 0.5893          
+</span><span id="__span-55-11"><a id="__codelineno-55-11" name="__codelineno-55-11" href="#__codelineno-55-11"></a>    P-Value [Acc &gt; NIR] : 0.2501          
+</span><span id="__span-55-12"><a id="__codelineno-55-12" name="__codelineno-55-12" href="#__codelineno-55-12"></a>
+</span><span id="__span-55-13"><a id="__codelineno-55-13" name="__codelineno-55-13" href="#__codelineno-55-13"></a>                  Kappa : 0.2422          
+</span><span id="__span-55-14"><a id="__codelineno-55-14" name="__codelineno-55-14" href="#__codelineno-55-14"></a>
+</span><span id="__span-55-15"><a id="__codelineno-55-15" name="__codelineno-55-15" href="#__codelineno-55-15"></a> Mcnemar&#39;s Test P-Value : 0.5023          
+</span><span id="__span-55-16"><a id="__codelineno-55-16" name="__codelineno-55-16" href="#__codelineno-55-16"></a>
+</span><span id="__span-55-17"><a id="__codelineno-55-17" name="__codelineno-55-17" href="#__codelineno-55-17"></a>            Sensitivity : 0.7576          
+</span><span id="__span-55-18"><a id="__codelineno-55-18" name="__codelineno-55-18" href="#__codelineno-55-18"></a>            Specificity : 0.4783          
+</span><span id="__span-55-19"><a id="__codelineno-55-19" name="__codelineno-55-19" href="#__codelineno-55-19"></a>         Pos Pred Value : 0.6757          
+</span><span id="__span-55-20"><a id="__codelineno-55-20" name="__codelineno-55-20" href="#__codelineno-55-20"></a>         Neg Pred Value : 0.5789          
+</span><span id="__span-55-21"><a id="__codelineno-55-21" name="__codelineno-55-21" href="#__codelineno-55-21"></a>             Prevalence : 0.5893          
+</span><span id="__span-55-22"><a id="__codelineno-55-22" name="__codelineno-55-22" href="#__codelineno-55-22"></a>         Detection Rate : 0.4464          
+</span><span id="__span-55-23"><a id="__codelineno-55-23" name="__codelineno-55-23" href="#__codelineno-55-23"></a>   Detection Prevalence : 0.6607          
+</span><span id="__span-55-24"><a id="__codelineno-55-24" name="__codelineno-55-24" href="#__codelineno-55-24"></a>      Balanced Accuracy : 0.6179          
+</span><span id="__span-55-25"><a id="__codelineno-55-25" name="__codelineno-55-25" href="#__codelineno-55-25"></a>
+</span><span id="__span-55-26"><a id="__codelineno-55-26" name="__codelineno-55-26" href="#__codelineno-55-26"></a>       &#39;Positive&#39; Class : Case     
+</span></code></pre></div>
+<h3 id="make-roc-receiver-operating-characteristic-curve-and-calculate-auc-area-under-curve"><strong>Make ROC (Receiver Operating Characteristic) curve and calculate AUC (Area Under Curve)</strong></h3>
+<p>Obtain predicted probabilities for the test set for ROC curve creation<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="n">prediction_for_roc_curve</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">modRF</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="o">=</span><span class="n">test_set</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&#39;prob&#39;</span><span class="p">)</span>
+</span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="n">classes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">levels</span><span class="p">(</span><span class="nf">as.factor</span><span class="p">(</span><span class="n">predictionTreePerc</span><span class="o">$</span><span class="n">case_control</span><span class="p">))</span>
+</span></code></pre></div>
+<p>Use the second column of predicted probabilities (i.e., for the "case" class)<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="n">pred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">prediction</span><span class="p">(</span><span class="n">prediction_for_roc_curve</span><span class="p">[,</span><span class="m">2</span><span class="p">],</span><span class="n">predictionTreePerc</span><span class="o">$</span><span class="n">case_control</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Create a performance object for the true positive rate (TPR) and false positive rate (FPR)<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="n">perf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">performance</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;tpr&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fpr&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Calculate the AUC for the ROC curve<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="n">aucRF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">performance</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;auc&quot;</span><span class="p">)</span>
+</span><span id="__span-59-2"><a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="n">aucRF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">aucRF</span><span class="o">@</span><span class="n">y.values</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
+</span><span id="__span-59-3"><a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a><span class="n">aucRF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">aucRF</span><span class="p">,</span><span class="m">2</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Plot the ROC curve with AUC displayed<br></p>
+<p><strong><em>Input</em></strong></p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="nf">plot</span><span class="p">(</span><span class="n">perf</span><span class="p">,</span><span class="n">main</span><span class="o">=</span><span class="s">&quot;ROC Curve&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;AUC = &quot;</span><span class="p">,</span><span class="n">aucRF</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong><em>Output</em></strong></p>
+<p><img src="/images/ngs-handbook/05_16S_Amplicon_Analysis/05_03_Parkinsons_disease/roccurve.png" width="100%"></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../05_02_Crohns_disease/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Practice 1: Crohn&#39;s disease">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Practice 1: Crohn's disease
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 <a href="https://iliapopov17.github.io/">Ilia Popov</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://iliapopov17.github.io/" target="_blank" rel="noopener" title="iliapopov17.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm80 256h64c44.2 0 80 35.8 80 80 0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16 0-44.2 35.8-80 80-80m-24-96a56 56 0 1 1 112 0 56 56 0 1 1-112 0m240-48h112c13.3 0 24 10.7 24 24s-10.7 24-24 24H360c-13.3 0-24-10.7-24-24s10.7-24 24-24m0 96h112c13.3 0 24 10.7 24 24s-10.7 24-24 24H360c-13.3 0-24-10.7-24-24s10.7-24 24-24"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<iljapopov17@gmail.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/iliapopov17" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "content.code.copy", "search", "search.suggest", "search.highlight", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
