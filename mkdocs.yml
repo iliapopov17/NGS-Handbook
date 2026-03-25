@@ -25,7 +25,7 @@ theme:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-auto
+        icon: lucide/sun-moon
         name: Switch to light mode
 
     # Palette toggle for light mode
@@ -33,7 +33,7 @@ theme:
       scheme: default
       primary: white
       toggle:
-        icon: material/brightness-7
+        icon: lucide/sun
         name: Switch to dark mode
 
     # Palette toggle for dark mode
@@ -41,7 +41,7 @@ theme:
       scheme: slate
       primary: black
       toggle:
-        icon: material/brightness-4
+        icon: lucide/moon
         name: Switch to system preference
   icon:
     repo: fontawesome/brands/github
