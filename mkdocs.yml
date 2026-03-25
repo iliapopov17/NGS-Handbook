@@ -1,6 +1,6 @@
 site_name: NGS Analysis Handbook
 site_url: https://iliapopov17.github.io/NGS-Handbook/
-copyright: Copyright &copy; 2025 <a href="https://iliapopov17.github.io/">Ilia Popov</a>. Funded by RSF grant No. <a href="https://rscf.ru/en/project/25-24-00351/">25-24-00351</a>.
+copyright: Copyright &copy; 2026 <a href="https://iliapopov17.github.io/">Ilia Popov</a>.
 theme:
   logo: assets/logo.svg
   favicon: assets/favicon.svg
@@ -74,8 +74,6 @@ extra:
       link: mailto:<iljapopov17@gmail.com>
     - icon: fontawesome/brands/github 
       link: https://github.com/iliapopov17
-    - icon: rsf/RSF_vertical
-      link: https://rscf.ru/en/project/25-24-00351/
   analytics:
     provider: google
     property: G-4RBMQR50GK
