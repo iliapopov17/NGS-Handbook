@@ -1,3 +1,7 @@
+---
+icon: lucide/tree-deciduous
+---
+
 # **Drawing Trees**
 >This chapter contains a manual on drawing simple phylogenetic trees.
 

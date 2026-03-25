@@ -1,6 +1,7 @@
 ---
 hide:
   - toc
+icon: lucide/house
 ---
 # **Introduction**
 

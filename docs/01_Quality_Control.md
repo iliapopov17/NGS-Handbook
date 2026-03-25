@@ -2,7 +2,7 @@
 icon: lucide/badge-check
 ---
 
-# **I. Quality Control of Raw Data**
+# **Quality Control of Raw Data**
 >This chapter contains a manual on quality control of raw data in NGS data analysis.
 
 We will use the `FastQC` tool to assess the quality of the raw sequencing data.

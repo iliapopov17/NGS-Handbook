@@ -1,3 +1,7 @@
+---
+icon: lucide/tree-deciduous
+---
+
 # **Tanglegram**
 
 This guide is about making co-phylogeny tanglegrams.<br>

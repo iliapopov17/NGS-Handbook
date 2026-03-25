@@ -2,7 +2,7 @@
 icon: lucide/dna
 ---
 
-# **III. Whole Genome and Pangenome Analyses**
+# **Whole Genome and Pangenome Analyses**
 >This chapter contains a manual on whole genome and pangenome analyses.
 
 We will use the `PanACoTA` tool to perform the pangenome analysis.

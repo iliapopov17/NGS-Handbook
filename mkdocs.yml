@@ -15,6 +15,7 @@ theme:
     - search.suggest
     - search.highlight
     - navigation.footer
+    - navigation.sections
   palette:
 
     # Palette toggle for automatic mode
@@ -80,3 +81,24 @@ extra:
 
 extra_templates:
   - meta_tags.html
+
+nav:
+  - index.md
+  - 01_Quality_Control.md
+  - 02_Variant_Calling.md
+  - 03_Whole_(pan)genome_analyses.md
+  - Phylogenetics:
+    - Phylogenetics/04_00_Overview.md
+    - Phylogenetics/04_01_Intro_Trees.md
+    - Phylogenetics/04_02_Mining_Data.md
+    - Phylogenetics/04_03_MSA.md
+    - Phylogenetics/04_04_Trees.md
+    - Phylogenetics/04_05_Root_Date.md
+    - Phylogenetics/04_06_Phylogenomics.md
+    - Phylogenetics/04_07_Visualization_Pro.md
+    - Phylogenetics/04_08_Tanglegram.md
+  - 16S Amplicon Analysis:
+    - 16S_amplicon_analysis/05_00_Overview.md
+    - 16S_amplicon_analysis/05_01_Introduction.md
+    - 16S_amplicon_analysis/05_02_Crohns_disease.md
+    - 16S_amplicon_analysis/05_03_Parkinsons_disease.md

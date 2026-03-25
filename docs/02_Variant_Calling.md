@@ -2,7 +2,7 @@
 icon: lucide/briefcase-medical
 ---
 
-# **II. Genomic Variation Analysis**
+# **Genomic Variation Analysis**
 >This chapter contains a manual on variant calling pipeline. Details are described here only on how to conduct such a study from the time the data are downloaded to the time the genetic variant annotation files are received. The biological interpretation of the results is not given here.
 
 ## **Instruction**

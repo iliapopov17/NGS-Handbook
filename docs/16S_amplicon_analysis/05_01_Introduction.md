@@ -1,3 +1,7 @@
+---
+icon: lucide/microscope
+---
+
 # **16S analysis with DADA2**
 >This chapter contains a manual on 16S analysis with DADA2
 
