@@ -1,7 +1,3 @@
----
-icon: lucide/microscope
----
-
 # **Practice 2: Parkinson's disease**
 >This chapter contains a training data for 16S amplicon analysis and an example of analysis.
 

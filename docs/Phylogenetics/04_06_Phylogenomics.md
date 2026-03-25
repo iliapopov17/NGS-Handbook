@@ -1,7 +1,3 @@
----
-icon: lucide/tree-deciduous
----
-
 # **Phylogenomics**
 
 ## **Instruction**

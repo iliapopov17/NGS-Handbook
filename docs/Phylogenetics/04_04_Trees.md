@@ -1,7 +1,3 @@
----
-icon: lucide/tree-deciduous
----
-
 # **Preparing the alignment and building trees**
 
 ## **Instruction**

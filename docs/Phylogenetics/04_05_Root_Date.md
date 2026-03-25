@@ -1,7 +1,3 @@
----
-icon: lucide/tree-deciduous
----
-
 # **Rooting and comparing trees; Dating**
 
 ## **Instruction**

@@ -1,7 +1,3 @@
----
-icon: lucide/microscope
----
-
 # **Practice 1: Crohn's disease**
 >This chapter contains a training data for 16S amplicon analysis and an example of analysis.
 

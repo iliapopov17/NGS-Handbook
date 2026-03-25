@@ -1,7 +1,3 @@
----
-icon: lucide/tree-deciduous
----
-
 # **Working with NCBI**
 >This chapter contains a manual on working with NCBI's databases using Python, Bash and R.
 
