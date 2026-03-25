@@ -1,0 +1,14 @@
+name: Test conda envs
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        env: [qc.yaml, varcall.yaml, panacota.yaml]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: conda-incubator/setup-miniconda@v2
+      - run: conda env create -f envs/${{ matrix.env }} --dry-run
