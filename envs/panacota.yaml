@@ -10,6 +10,7 @@ dependencies:
   - mafft>=7.520
   - iqtree>=2.2.6
   - wget>=1.20.3
+  - pip
   - pip:
     - panacota>=1.4.0
     - ncbi-genome-download>=0.3.1
