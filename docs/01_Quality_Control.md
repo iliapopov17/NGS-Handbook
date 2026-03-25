@@ -1,3 +1,7 @@
+---
+icon: lucide/badge-check
+---
+
 # **I. Quality Control of Raw Data**
 >This chapter contains a manual on quality control of raw data in NGS data analysis.
 

@@ -1,3 +1,7 @@
+---
+icon: lucide/dna
+---
+
 # **III. Whole Genome and Pangenome Analyses**
 >This chapter contains a manual on whole genome and pangenome analyses.
 
