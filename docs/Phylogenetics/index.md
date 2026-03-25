@@ -3,7 +3,7 @@ hide:
   - toc
 icon: lucide/tree-deciduous
 ---
-# **Overview**
+# **Phylogenetics**
 
 >This chapter contains a manual on phylogenetic analysis 
 

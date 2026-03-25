@@ -3,7 +3,7 @@ hide:
   - toc
 icon: lucide/microscope
 ---
-# **Overview**
+# **16S Amplicon Analysis**
 
 >This chapter contains a manual on 16S amplicon analysis 
 
