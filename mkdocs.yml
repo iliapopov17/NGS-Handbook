@@ -4,7 +4,7 @@ copyright: Copyright &copy; 2026 <a href="https://iliapopov17.github.io/">Ilia P
 theme:
   logo: assets/logo.svg
   favicon: assets/favicon.svg
-  variant: classic
+  name: material
   custom_dir: overrides
   font:
     text: Roboto
