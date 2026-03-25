@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        env: [qc.yaml, varcall.yaml, panacota.yaml]
+        env: [qc.yaml, varcall.yaml, panacota.yaml, phylo.yaml]
     steps:
       - uses: actions/checkout@v3
       - uses: conda-incubator/setup-miniconda@v2
