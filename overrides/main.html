@@ -1,30 +1,31 @@
 {% extends "base.html" %}
 
 {% block extrahead %}
-    <html data-lt-installed="true">
-        <head>
-            <!-- HTML Meta Tags -->
-            <title>NGS Data Analysis Handbook</title>
-            <meta name="description" content="">
+  {# Favicons with absolute URLs + scoped manifest to mitigate same-origin
+     collision with https://ilypopv.github.io (see AGENTS.md). Browsers cache
+     favicons per-origin; explicit links + manifest scope improve bookmark
+     hit-rate for /NGS-Handbook/ but cannot fully isolate without a custom domain. #}
+  <link rel="icon" href="https://ilypopv.github.io/NGS-Handbook/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="https://ilypopv.github.io/NGS-Handbook/assets/favicon.svg" type="image/x-icon" sizes="any">
+  <link rel="apple-touch-icon" href="https://ilypopv.github.io/NGS-Handbook/assets/favicon.svg">
+  <link rel="manifest" href="https://ilypopv.github.io/NGS-Handbook/manifest.webmanifest">
 
-            <!-- Facebook Meta Tags -->
-            <meta property="og:url" content="https://ilypopv.github.io/NGS-Handbook/">
-            <meta property="og:type" content="website">
-            <meta property="og:title" content="NGS Data Analysis Handbook">
-            <meta property="og:description" content="">
-            <meta property="og:image" content="https://ilypopv.github.ioimgs/metatag.png">
+  <!-- HTML Meta Tags -->
+  <meta name="description" content="Cheat-sheets for NGS data analysis: QC, variant calling, pangenomics, phylogenetics, 16S amplicon analysis.">
 
-            <!-- Twitter Meta Tags -->
-            <meta name="twitter:card" content="summary_large_image">
-            <meta property="twitter:domain" content="ilypopv.github.io">
-            <meta property="twitter:url" content="https://ilypopv.github.io/NGS-Handbook/">
-            <meta name="twitter:title" content="NGS Data Analysis Handbook">
-            <meta name="twitter:description" content="">
-            <meta name="twitter:image" content="https://ilypopv.github.ioimgs/metatag.png">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:url" content="https://ilypopv.github.io/NGS-Handbook/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NGS Data Analysis Handbook">
+  <meta property="og:description" content="Cheat-sheets for NGS data analysis: QC, variant calling, pangenomics, phylogenetics, 16S amplicon analysis.">
+  <meta property="og:image" content="https://ilypopv.github.io/NGS-Handbook/imgs/metatag.png">
 
-            <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-        </head>
-        <body>
-        </body>
-    </html>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="ilypopv.github.io">
+  <meta property="twitter:url" content="https://ilypopv.github.io/NGS-Handbook/">
+  <meta name="twitter:title" content="NGS Data Analysis Handbook">
+  <meta name="twitter:description" content="Cheat-sheets for NGS data analysis: QC, variant calling, pangenomics, phylogenetics, 16S amplicon analysis.">
+  <meta name="twitter:image" content="https://ilypopv.github.io/NGS-Handbook/imgs/metatag.png">
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 {% endblock %}
